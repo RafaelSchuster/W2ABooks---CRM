@@ -17,7 +17,7 @@ const mockBooks = [
     status: 'done',
     meetingDate: '10/01/2021',
     sumMeeting: 'positive, agent interested',
-    genre : 'Classic, Fantasy'
+    genre: 'Classic, Fantasy'
   },
   {
     name: 'Book 2',

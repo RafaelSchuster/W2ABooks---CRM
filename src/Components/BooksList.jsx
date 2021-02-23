@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from 'react'
 import BookItem from './BooksItem';
-import {MainContext} from '../Context/Context'
+import { MainContext } from '../Context/Context'
 
 function BooksList() {
     const { books } = useContext(MainContext);
-    useEffect(()=>{
+    useEffect(() => {
         console.log(books);
     }, [])
     return (
