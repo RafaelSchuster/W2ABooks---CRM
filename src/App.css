@@ -1,6 +1,7 @@
 html body {
   font-family: 'Montserrat', sans-serif;
-  color: #121518
+  color: #121518;
+  overflow: hidden;
 }
 
 .grid-container {
@@ -25,6 +26,10 @@ html body {
 .grid-item-sidebar {
   position: relative;
   padding-top: 30px;
+}
+
+.grid-item-main {
+  overflow-y: scroll;
 }
 
 .logo {
@@ -116,6 +121,7 @@ html body {
   border-radius: 5px;
 }
 
+@media(min-width : 1258px ){
 .search-bar {
   position: absolute;
   top: 25%;
@@ -127,5 +133,91 @@ html body {
   position: absolute;
   left: 32%;
   top: 25%;
+}
+}
+@media(max-width : 1258px) and (min-width:996px){
+  .search-bar {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 300px !important;
+  }
+  
+  .search-btn {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+  }
+}
 
+@media(max-width : 996px){
+  .search-bar {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 300px !important;
+  }
+  
+  .search-btn {
+    position: absolute;
+    left: 10%;
+    top: 55%;
+  }
+}
+
+.tabs {
+  padding: 0px;
+  padding-left: 20px !important;
+}
+
+.tabs>a {
+  background-color: rgb(33, 122, 113) !important;
+  color: white;
+  margin-right: 20px;
+}
+
+.tabs>a:hover {
+  background-color: rgb(68, 218, 203) !important;
+  color: white;
+}
+
+.book-card {
+  left: -38px;
+  top: 0;
+  width: 1510px !important;
+  min-height: 240px;
+  max-height: 240px;
+}
+
+.card-img {
+  width: 100px !important;
+}
+
+.summary-title {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
+.summary-text {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+.book-title {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+
+.book-status {
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+.author-email{
+  position: absolute;
+  left: 10%;
+  top: 30%;
 }

@@ -29,7 +29,7 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 
 function Toggle() {
     return (
-        <Accordion defaultActiveKey="0" >
+        <Accordion >
             <Card className="accordion btn" >
                 <Card.Header className="header">
                     <ContextAwareToggle eventKey="0">Group 1</ContextAwareToggle>
