@@ -1,38 +1,118 @@
-.App {
+html body{
+  font-family: 'Montserrat', sans-serif;
+  color: #121518
+}
+.grid-container{
+  display: grid;
+  grid-template-rows: 100px 850px ;
+  grid-template-columns: 20% 80% ;   
+}
+
+.grid-item{
+  border: 1px solid rgba(128, 128, 128, 0.151);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.26);
+}
+
+.grid-item-header{
+  position: relative;
+}
+
+.grid-item-header2{
+  position: relative;
+}
+
+.grid-item-sidebar{
+  position: relative;
+  padding-top: 30px;
+}
+
+.logo{
+  position: absolute;
+  top: 30%;
+  left: 20% ;
+  padding-top: 10px;
+  width: 50%;
+  height: 40%;
+  background: #FFFFFF;
   text-align: center;
-}
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.377);
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
+@media(max-width:1575px) {
+.hello{
+  position: absolute;
+  top: 9%;
+  font-weight: 900;
+  font-size: 20px;
+  right: 15%;
+}
+.btn-logout{
+  position: absolute;
+  top: 55%;
+  right: 15%;
+  width: 110px;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+}
+}
+@media(min-width: 1575px){
+  .hello{
+    position: absolute;
+    top: 9%;
+    font-weight: 900;
+    font-size: 20px;
+    right: 11%;
   }
+  .btn-logout{
+    position: absolute;
+    top: 55%;
+    right: 11%;
+    width: 110px;  
+}
+}
+.thumbnail{
+  width: 75px;
+  position: absolute;
+  right: 3%;
+  top: 10%;
+}
+.dropdown-toggle{
+  width: 100%;
+  margin-bottom: 5px;
+}
+.dropdown-menu{
+  width: 100%;
+}
+.accordion{
+  background-color: white !important;
+  padding: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header{
+  background-color: #292b2cd8 !important;
+  border-radius: 5px !important;
+  width: 100% !important;
+  margin-bottom: 5px !important;
 }
-
-.App-link {
-  color: #61dafb;
+.toggle-content{
+  background-color: white !important;
+  border-radius: 5px !important;
 }
+.toggle-btn{
+  width: 100%;
+  background-color: rgb(241, 239, 239) !important;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.search-bar{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 300px !important;
+}
+.search-btn{
+  position: absolute;
+  left: 32%;
+  top: 25%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
