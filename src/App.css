@@ -200,12 +200,27 @@ html body {
     left: 20%;
   }
 }
-
-.tabs>a {
+@media(max-width:873px) {
+  .tabs {
+    position: absolute;
+    margin-top: 10px;
+    padding: 0px;
+    left: 26%;
+  }
+  .tabs>a {
+    background-color: rgb(33, 122, 113) !important;
+    color: white;
+    margin-right: 0px;
+  }
+}
+@media(min-width:873px){
+  .tabs>a {
   background-color: rgb(33, 122, 113) !important;
   color: white;
   margin-right: 30px;
 }
+}
+
 
 .tabs>a:hover {
   background-color: rgb(68, 218, 203) !important;
