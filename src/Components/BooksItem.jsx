@@ -19,7 +19,7 @@ function BookItem(props) {
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="warning" className="profile-internal-card">
-                                <Card.Header className="text-center" >About The Book</Card.Header>
+                                <Card.Header className="text-center" >Book Profile</Card.Header>
                                 <Card.Body>
                                     <Card.Title className="">Author: {props.author}</Card.Title>
                                     <Card.Text className="">Genre: {props.genre}</Card.Text>
