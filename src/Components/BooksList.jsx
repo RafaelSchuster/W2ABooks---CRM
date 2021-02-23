@@ -4,9 +4,7 @@ import { MainContext } from '../Context/Context'
 
 function BooksList() {
     const { books } = useContext(MainContext);
-    useEffect(() => {
-        console.log(books);
-    }, [])
+
     return (
         <ul>
             {books && books.map(book =>
@@ -15,8 +13,18 @@ function BooksList() {
                     name={book.name}
                     author={book.author}
                     email={book.authorEmail}
+                    summaryTitle={book.summaryTitle}
                     summary={book.summary}
                     id={book.id}
+                    proofReaderGrade={book.proofReaderGrade}
+                    stagesDone={book.stagesDone}
+                    processStatus={book.processStatus}
+                    genre={book.genre}
+                    datePresenting={book.datePresenting}
+                    dateResponse={book.dateResponse}
+                    responseStatus={book.responseStatus}
+                    meetingDate={book.meetingDate}
+                    summaryMeeting={book.summaryMeeting}
                 />
             )}
         </ul>

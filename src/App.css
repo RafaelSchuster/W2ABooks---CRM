@@ -163,18 +163,48 @@ html body {
     position: absolute;
     left: 10%;
     top: 55%;
+    width: 300px
   }
 }
 
 .tabs {
+  position: absolute;
+  margin-top: 10px;
   padding: 0px;
-  padding-left: 20px !important;
+  left: 56%;
+}
+
+@media(max-width: 1556px) {
+  .tabs {
+    position: absolute;
+    margin-top: 10px;
+    padding: 0px;
+    left: 40%;
+  }
+}
+
+@media(max-width:1356px) {
+  .tabs {
+    position: absolute;
+    margin-top: 10px;
+    padding: 0px;
+    left: 30%;
+  }
+}
+
+@media(max-width:983px) {
+  .tabs {
+    position: absolute;
+    margin-top: 10px;
+    padding: 0px;
+    left: 20%;
+  }
 }
 
 .tabs>a {
   background-color: rgb(33, 122, 113) !important;
   color: white;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .tabs>a:hover {
@@ -183,15 +213,20 @@ html body {
 }
 
 .book-card {
+  position: relative;
   left: -38px;
   top: 0;
-  width: 1510px !important;
-  min-height: 240px;
-  max-height: 240px;
+  width: 100% !important;
+  min-height: 300px;
+  max-height: 300px;
+  margin-top: 15px;
+  margin-left: 20px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
 }
 
 .card-img {
-  width: 100px !important;
+  width: 250px !important;
+  max-height: 200px;
 }
 
 .summary-title {
@@ -208,18 +243,234 @@ html body {
 
 .book-title {
   position: absolute;
-  left: 10%;
+  left: 50%;
   top: 30%;
 }
 
 .book-status {
   position: absolute;
   left: 10%;
-  top: 30%;
+  top: 40%;
 }
 
-.author-email {
+.status-done {
+  position: absolute;
+  left: 10%;
+  top: 70%;
+}
+
+.status-grade {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+}
+
+.status-process {
   position: absolute;
   left: 10%;
   top: 30%;
+}
+
+.book-author {
+  position: absolute;
+  top: 30%;
+}
+
+@media(min-width : 1900px) {
+  .status-card {
+    position: relative;
+    width: 1100px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .profile-internal-card {
+    position: absolute;
+    width: 1100px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+
+  }
+
+  .summary-card {
+    position: absolute;
+    width: 1100px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .contact-card {
+    position: absolute;
+    width: 1100px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+}
+
+@media(max-width : 1900px) {
+  .status-card {
+    position: relative;
+    width: 900px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .profile-internal-card {
+    position: absolute;
+    width: 900px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+
+  }
+
+  .summary-card {
+    position: absolute;
+    width: 900px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .contact-card {
+    position: absolute;
+    width: 900px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+}
+
+@media(max-width : 1541px) {
+  .status-card {
+    position: relative;
+    width: 800px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .profile-internal-card {
+    position: absolute;
+    width: 800px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+
+  }
+
+  .summary-card {
+    position: absolute;
+    width: 800px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+
+  .contact-card {
+    position: absolute;
+    width: 800px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+}
+
+@media(max-width : 1376px) {
+  .status-card {
+    position: relative;
+    width: 600px;
+    height: 220px;
+    left: 32%;
+    bottom: 215px !important;
+  }
+
+  .profile-internal-card {
+    position: absolute;
+    width: 600px;
+    height: 220px;
+    left: 32%;
+    bottom: 215px !important;
+
+  }
+
+  .summary-card {
+    position: absolute;
+    width: 600px;
+    height: 220px;
+    left: 32%;
+    bottom: 215px !important;
+  }
+
+  .contact-card {
+    position: absolute;
+    width: 600px;
+    height: 220px;
+    left: 32%;
+    bottom: 215px !important;
+  }
+}
+
+@media(max-width : 1175px) {
+  .status-card {
+    position: relative;
+    width: 400px;
+    height: 220px;
+    left: 39%;
+    bottom: 215px !important;
+  }
+
+  .profile-internal-card {
+    position: absolute;
+    width: 400px;
+    height: 220px;
+    left: 39%;
+    bottom: 215px !important;
+
+  }
+
+  .summary-card {
+    position: absolute;
+    width: 400px;
+    height: 220px;
+    left: 39%;
+    bottom: 215px !important;
+  }
+
+  .contact-card {
+    position: absolute;
+    width: 400px;
+    height: 220px;
+    left: 39%;
+    bottom: 215px !important;
+  }
+}
+
+.response-date {
+  position: absolute;
+  left: 50%;
+  top: 31%;
+}
+
+.response-status {
+  position: absolute;
+  left: 50%;
+  top: 49%;
+}
+
+.meeting-date {
+  position: absolute;
+  left: 50%;
+  top: 69%;
+}
+
+.meeting-summary {
+  position: absolute;
+  left: 50%;
+  top: 87%;
 }
