@@ -1,11 +1,11 @@
 import React from 'react'
 import BooksItem from './BooksItem';
 
-function BooksList (){
+function BooksList() {
 
-    return(
+    return (
         <>
-            <BooksItem/>
+            <BooksItem />
         </>
     );
 }

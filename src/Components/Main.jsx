@@ -1,13 +1,13 @@
-import React, { useContext } from 'react'
-import {Form, FormControl, Button} from 'react-bootstrap'
+import React, { useContext } from 'react';
+import { Form, FormControl, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Profile from '../images/profile.png'
+import Profile from '../images/profile.png';
 import Toggle from './Toggle';
 import BooksSection from './BooksSection';
 
 
 function Main() {
-    const basicSearching = () =>{
+    const basicSearching = () => {
 
     }
     return (
@@ -23,8 +23,8 @@ function Main() {
                         id=''
                         rows={1}
                         placeholder='Search Books By Genre...'
-                        // onChange={e => handleTypeInput(e)}
-                        // onKeyUp={e => handleTypeKeyInput(e)}
+                    // onChange={e => handleTypeInput(e)}
+                    // onKeyUp={e => handleTypeKeyInput(e)}
                     >
                     </FormControl>
                     <Button className="btn btn-success search-btn" type="submit">Search</Button>

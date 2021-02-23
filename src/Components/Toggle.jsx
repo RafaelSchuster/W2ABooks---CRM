@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { DropdownButton, Dropdown, ButtonGroup, Accordion, Card, useAccordionToggle } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
