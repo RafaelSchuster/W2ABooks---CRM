@@ -18,7 +18,7 @@ function BookItem(props) {
                     <Tab eventKey="home" title="Book Profile" className="tab">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="warning" className="profile-internal-card">
+                            <Card border="light" className="profile-internal-card">
                                 <Card.Header className="text-center" >Book Profile</Card.Header>
                                 <Card.Body>
                                     <Card.Title className="">Author: {props.author}</Card.Title>
@@ -31,7 +31,7 @@ function BookItem(props) {
                     <Tab eventKey="status" title="Status">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="info" className="status-card">
+                            <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
                                 <Card.Body>
                                     <Card.Text className="">Proofreader's Grade: {props.proofReaderGrade}</Card.Text>
@@ -50,7 +50,7 @@ function BookItem(props) {
                     <Tab eventKey="summary" title="Summary">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="success" className="summary-card" >
+                            <Card border="light" className="summary-card" >
                                 <Card.Header className="text-center" >Summary</Card.Header>
                                 <Card.Body>
                                     <Card.Title className="text-center">{props.summaryTitle}</Card.Title>
@@ -62,7 +62,7 @@ function BookItem(props) {
                     <Tab eventKey="contact" title="Contact">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="danger" className="contact-card" >
+                            <Card border="light" className="contact-card" >
                                 <Card.Header className="text-center ">Contact</Card.Header>
                                 <Card.Body>
                                     <Card.Title className="text-center ">Author's Email : {props.email}</Card.Title>
