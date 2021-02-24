@@ -27,7 +27,7 @@ function Main() {
                     // onKeyUp={e => handleTypeKeyInput(e)}
                     >
                     </FormControl>
-                    <Button className="btn btn-dark search-btn" type="submit">Search</Button>
+                    <Button className="btn btn-secondary search-btn" type="submit">Search</Button>
                 </Form>
                 <span className="hello">Hello Rafael</span>
                 <img src={Profile} alt="No Img" srcset="" className="thumbnail" />

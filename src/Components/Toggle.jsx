@@ -31,7 +31,7 @@ function Toggle() {
     return (
         <Accordion >
             <Card className="accordion btn" >
-                <Card.Header className="header">
+                <Card.Header className="toggle-header">
                     <ContextAwareToggle eventKey="0">Group 1</ContextAwareToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
@@ -43,7 +43,7 @@ function Toggle() {
                 </Accordion.Collapse>
             </Card>
             <Card className="accordion btn">
-                <Card.Header className="header">
+                <Card.Header className="toggle-header">
                     <ContextAwareToggle eventKey="1" className="toggle-btn">Group 2</ContextAwareToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
@@ -55,7 +55,7 @@ function Toggle() {
                 </Accordion.Collapse>
             </Card>
             <Card className="accordion btn">
-                <Card.Header className="header">
+                <Card.Header className="toggle-header">
                     <ContextAwareToggle eventKey="2">Group 3</ContextAwareToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
@@ -67,7 +67,7 @@ function Toggle() {
                 </Accordion.Collapse>
             </Card>
             <Card className="accordion btn">
-                <Card.Header className="header">
+                <Card.Header className="toggle-header">
                     <ContextAwareToggle eventKey="3">Group 4</ContextAwareToggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="3">

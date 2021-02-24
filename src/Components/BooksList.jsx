@@ -25,6 +25,9 @@ function BooksList() {
                     responseStatus={book.responseStatus}
                     meetingDate={book.meetingDate}
                     summaryMeeting={book.summaryMeeting}
+                    wordCount = {book.wordCount}
+                    aboutAuthor={book.aboutAuthor}
+                    progress={book.progress}
                 />
             )}
         </ul>

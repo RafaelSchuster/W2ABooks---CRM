@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
-import { Card, Nav, Button, Tabs, Tab, } from 'react-bootstrap';
+import { Card, Nav, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
+import Modal from 'react-modal';
 import mockImg from '../images/BookCover_MockUp.png'
+import GenreItem from './GenreItem';
 
 function BookItem(props) {
-    const [key, setKey] = useState('home');
+    const [key, setKey] = useState('status');
+    const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
+    const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
+    const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+
     return (
         <>
             <Card className="book-card">
-                <Card.Header><h3>{props.name}</h3> </Card.Header>
+                <Card.Header className="card-title-header"><h3 className="boldening">{props.name}</h3> </Card.Header>
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
@@ -15,36 +21,66 @@ function BookItem(props) {
                     variant="pills"
                     className="tabs"
                 >
-                    <Tab eventKey="home" title="Book Profile" className="tab">
-                        <Card.Body>
-                            <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="light" className="profile-internal-card">
-                                <Card.Header className="text-center" >Book Profile</Card.Header>
-                                <Card.Body>
-                                    <Card.Title className="">Author: {props.author}</Card.Title>
-                                    <Card.Text className="">Genre: {props.genre}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <Card.Text className="book-author"></Card.Text>
-                        </Card.Body>
-                    </Tab>
                     <Tab eventKey="status" title="Status">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
                                 <Card.Body>
-                                    <Card.Text className="">Proofreader's Grade: {props.proofReaderGrade}</Card.Text>
-                                    <Card.Text className="">Stages Done: {props.stagesDone}</Card.Text>
-                                    <Card.Text className="">Process Status: {props.processStatus}</Card.Text>
-                                    <Card.Text className="">Date Presenting: {props.datePresenting}</Card.Text>
-                                    <Card.Text className="response-date">Response Date: {props.dateResponse}</Card.Text>
-                                    <Card.Text className="response-status">Response Status: {props.responseStatus}</Card.Text>
-                                    <Card.Text className="meeting-date">Meeting Date: {props.meetingDate}</Card.Text>
-                                    <Card.Text className="meeting-summary">Meeting Summary: {props.summaryMeeting}</Card.Text>
+                                    <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>
+                                    <Button type="button" className="btn-modal-status" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                                    <Button type="button" className="btn-modal-meeting" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                                    <Card.Text className="status-date"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>
+                                    <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>
+                                    <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>
+                                    <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>
+                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar" />
+                                    <Modal
+                                        className="status-modal"
+                                        overlayClassName="overlay-modal-status"
+                                        isOpen={modalStatusIsOpen}
+                                        onRequestClose={() => setModalStatusIsOpen(false)}
+                                    >
+                                        <Card className="modal-card" border="light">
+                                            <Card.Header as="h1" className="text-center" >Status</Card.Header>
+                                            <Card.Body>
+                                                <Card.Title>Special title treatment</Card.Title>
+                                                {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
+                                                {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                            </Card.Body>
+                                        </Card>
+                                    </Modal>
+                                    <Modal
+                                        className="meeting-modal"
+                                        overlayClassName="overlay-modal-meeting"
+                                        isOpen={modalMeetingIsOpen}
+                                        onRequestClose={() => setModalMeetingIsOpen(false)}
+                                    >
+                                        <Card className="modal-card" border="light">
+                                            <Card.Header as="h1" className="text-center">Meeting</Card.Header>
+                                            <Card.Body>
+                                                <Card.Title>Special title treatment</Card.Title>
+                                                {props.summaryMeeting && <Card.Text className="meeting-summary"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
+                                            </Card.Body>
+                                        </Card>
+                                    </Modal>
                                 </Card.Body>
                             </Card>
-
+                        </Card.Body>
+                    </Tab>
+                    <Tab eventKey="home" title="Book Profile" className="tab">
+                        <Card.Body>
+                            <Card.Img variant="bottom" src={mockImg} className="card-img" />
+                            <Card border="light" className="profile-internal-card">
+                                <Card.Header className="text-center" >Book Profile</Card.Header>
+                                <Card.Body>
+                                    <Card.Text className=""><span className="boldening">Author: </span>{props.author}</Card.Text>
+                                    <Card.Text className="about-author"><span className="boldening">About the Author: </span>{props.aboutAuthor}</Card.Text>
+                                    <Card.Text className=""><span className="boldening">Genre: </span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                    <Card.Text className=""><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <Card.Text className="book-author"></Card.Text>
                         </Card.Body>
                     </Tab>
                     <Tab eventKey="summary" title="Summary">
@@ -53,21 +89,31 @@ function BookItem(props) {
                             <Card border="light" className="summary-card" >
                                 <Card.Header className="text-center" >Summary</Card.Header>
                                 <Card.Body>
-                                    <Card.Title className="text-center">{props.summaryTitle}</Card.Title>
-                                    <Card.Text className="text-center ">{props.summary}</Card.Text>
+                                    <Card.Title className="text-center"><span className="boldening">{props.summaryTitle}</span></Card.Title>
+                                    <Button type="button" className="btn-modal-summary" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Summary</Button>
                                 </Card.Body>
                             </Card>
                         </Card.Body>
+                        <Modal
+                            className="summary-modal"
+                            overlayClassName="overlay-modal-summary"
+                            isOpen={modalSummaryIsOpen}
+                            onRequestClose={() => setModalSummaryIsOpen(false)}
+                        >
+                            <Card className="modal-card" border="light">
+                                <Card.Header as="h1" className="text-center">Full Summary</Card.Header>
+                                <Card.Body>
+                                    <Card.Text className="text-center ">{props.summary}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Modal>
                     </Tab>
                     <Tab eventKey="contact" title="Contact">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="contact-card" >
-                                <Card.Header className="text-center ">Contact</Card.Header>
+                                <Card.Header className="text-center">Contact</Card.Header>
                                 <Card.Body>
-                                    <Card.Title className="text-center ">Author's Email : {props.email}</Card.Title>
-                                    <Card.Text>
-                                    </Card.Text>
                                 </Card.Body>
                             </Card>
                         </Card.Body>
@@ -78,26 +124,3 @@ function BookItem(props) {
     );
 }
 export default BookItem;
-
-
-
-{/* <Card.Body>
-                            <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                            <Card border="warning" className="profile-internal-card">
-                                <Card.Header className="text-center" >About The Book</Card.Header>
-                                <Card.Body>
-                                    <Card.Title className="text-center">By: {props.author}</Card.Title>
-                                           
-                                </Card.Body>
-                            </Card>
-                            <Card.Text className="book-author"></Card.Text>
-                            <Card border="info" className="status-card">
-                                <Card.Header className="text-center">Status</Card.Header>
-                                <Card.Body>
-                                    <Card.Text className="status-grade">Proofreader's Grade: {props.proofReaderGrade}</Card.Text>
-                                    <Card.Text className="status-done">Stages Done: {props.stagesDone}</Card.Text>
-                                    <Card.Text className="status-process">Process Status: {props.processStatus}</Card.Text>
-                                </Card.Body>
-                            </Card>
-                        </Card.Body>
- */}
