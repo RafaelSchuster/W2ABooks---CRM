@@ -59,7 +59,7 @@ function BookItem(props) {
                                         <Card className="modal-card" border="light">
                                             <Card.Header as="h1" className="text-center">Meeting</Card.Header>
                                             <Card.Body>
-                                                <Card.Title>Special title treatment</Card.Title>
+                                                <Card.Title className="text-center">Meeting Summary</Card.Title>
                                                 {props.summaryMeeting && <Card.Text className="meeting-summary"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
                                             </Card.Body>
                                         </Card>

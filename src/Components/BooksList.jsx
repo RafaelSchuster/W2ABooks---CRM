@@ -1,6 +1,6 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react';
 import BookItem from './BooksItem';
-import { MainContext } from '../Context/Context'
+import { MainContext } from '../Context/Context';
 
 function BooksList() {
     const { books } = useContext(MainContext);
@@ -25,7 +25,7 @@ function BooksList() {
                     responseStatus={book.responseStatus}
                     meetingDate={book.meetingDate}
                     summaryMeeting={book.summaryMeeting}
-                    wordCount = {book.wordCount}
+                    wordCount={book.wordCount}
                     aboutAuthor={book.aboutAuthor}
                     progress={book.progress}
                 />
