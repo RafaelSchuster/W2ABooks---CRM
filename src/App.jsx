@@ -1,4 +1,4 @@
-import './App.css';
+import './Styles/Main.css';
 import { MainContext } from './Context/Context';
 import Main from './Components/Main';
 import { useEffect, useState } from 'react';
@@ -81,17 +81,26 @@ const mockBooks = [
     progress: '20'
   }
 ];
+const thisMockUser = {
+  firstName : 'Rafael',
+  lastName : 'Schuster',
+  telephone : '+12345567',
+  email : 'rafael@schuster.com',
+  genres:'Classic, Drama, Satire'
+}
 
 function App() {
   const [books, setBooks] = useState([]);
+  const[thisUser, setThisUser] = useState({})
 
   useEffect(() => {
     setBooks(mockBooks);
+    setThisUser(thisMockUser)
   }, [])
 
   return (
     <>
-      < MainContext.Provider value={{ books }}>
+      < MainContext.Provider value={{ books,thisUser }}>
         <Main />
       </MainContext.Provider >
     </>

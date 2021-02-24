@@ -1,0 +1,18 @@
+.container-profile {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+.card-title-header{
+    background-color: #4285F4 !important;
+    color: white;
+}
+.boldening {
+    font-weight: 900;
+  }
+.date-label{
+    margin-bottom: 5px;
+}
+.upload-image-label{
+    margin-bottom: 15px !important;
+}
