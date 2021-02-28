@@ -30,8 +30,8 @@ function AccountProfile() {
                     <Card.Body>
                         <Col>
                             <input type="file" id="actual-btn" hidden />
-                            <label for="actual-btn"><img src={DefaultImg} className="default-img" /></label>
-                            <div className="upload-image-label">Upload Your Image</div>
+                            <label for="actual-btn"><div className="default-img-circle"> <img src={DefaultImg} className="default-img" alt="" /></div></label>
+                            <div className="upload-image-label">Upload Profile Image</div>
                         </Col>
                         <Card.Text>
                             {error && <Alert variant="danger">{error}</Alert>}

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Card, Nav, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
+import React, { useContext, useState } from 'react';
+import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
+import { MainContext } from '../Context/Context';
 import mockImg from '../images/BookCover_MockUp.png'
 import GenreItem from './GenreItem';
+import StatusProgressList from './StatusProgressList';
 
-function BookItem(props) {
+function BookItemListView(props) {
     const [key, setKey] = useState('status');
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
@@ -34,7 +36,8 @@ function BookItem(props) {
                                     <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>
                                     <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>
                                     <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>
-                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar" />
+                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar"></ProgressBar>
+                                    {props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar"><span className="zero-percent" >0%</span></ProgressBar>}
                                     <Modal
                                         className="status-modal"
                                         overlayClassName="overlay-modal-status"
@@ -45,6 +48,7 @@ function BookItem(props) {
                                             <Card.Header as="h1" className="text-center" >Status</Card.Header>
                                             <Card.Body>
                                                 <Card.Title>Special title treatment</Card.Title>
+                                                <StatusProgressList />
                                                 {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
                                                 {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
                                             </Card.Body>
@@ -103,7 +107,7 @@ function BookItem(props) {
                             <Card className="modal-card" border="light">
                                 <Card.Header as="h1" className="text-center">Full Summary</Card.Header>
                                 <Card.Body>
-                                    <Card.Text className="text-center ">{props.summary}</Card.Text>
+                                    <Card.Text className="text-center summary-on-modal">{props.summary}</Card.Text>
                                 </Card.Body>
                             </Card>
                         </Modal>
@@ -123,4 +127,4 @@ function BookItem(props) {
         </>
     );
 }
-export default BookItem;
+export default BookItemListView;

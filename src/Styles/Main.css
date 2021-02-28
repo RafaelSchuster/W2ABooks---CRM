@@ -115,7 +115,7 @@ html body {
 
 .toggle-btn {
   width: 100%;
-  border: 1px solid rgb(42, 224, 139) !important;
+  border: 1px solid #00C67E !important;
   background-color: rgb(241, 239, 239) !important;
   font-weight: 600;
   font-size: 18px;
@@ -123,7 +123,7 @@ html body {
 }
 
 .toggle-btn:hover {
-  background-color: rgb(42, 224, 139) !important;
+  background-color: #00C67E !important;
   color: white;
 }
 
@@ -216,16 +216,17 @@ html body {
   }
 
   .tabs>a {
-    background-color: rgb(42, 224, 139) !important;
-    color: white;
+    background-color: #00C67E !important;
+    color: white !important;
     margin-right: 0px;
   }
 }
 
 @media(min-width:873px) {
   .tabs>a {
-    background-color: rgb(42, 224, 139) !important;
-    color: white;
+    background-color: #00C67E !important;
+    font-weight: bold;
+    color: white !important;
     margin-right: 30px;
   }
 }
@@ -500,8 +501,9 @@ html body {
 }
 
 .btn-modal-status {
-  background-color: rgb(42, 224, 139) !important;
+  background-color: #00C67E !important;
   border: 0 !important;
+  font-weight: bold !important;
   position: absolute;
   top: 48%;
   left: 2%;
@@ -510,8 +512,9 @@ html body {
 }
 
 .btn-modal-meeting {
-  background-color: rgb(42, 224, 139) !important;
+  background-color: #00C67E !important;
   border: 0 !important;
+  font-weight: bold !important;
   position: absolute;
   top: 75%;
   left: 2%;
@@ -527,7 +530,7 @@ html body {
 .status-modal {
   position: absolute;
   top: 8vh;
-  left: 12vw;
+  left: 3vw;
   right: 40px;
   bottom: 40px;
   border: 1px solid #ccc;
@@ -536,8 +539,9 @@ html body {
   border-radius: 7px;
   outline: none;
   padding: 20px;
-  width: 80vw;
+  width: 95vw;
   height: 80vh;
+  z-index: 3;
 }
 
 .overlay-modal-status {
@@ -606,7 +610,7 @@ html body {
 }
 
 .greening {
-  color: rgb(42, 224, 139);
+  color: #00C67E;
   font-weight: bold;
 }
 
@@ -619,7 +623,8 @@ html body {
   position: absolute;
   left: 25vw;
   top: 12vh;
-  background-color: rgb(42, 224, 139);
+  font-weight: bold !important;
+  background-color: #00C67E;
   border: 0 !important;
 }
 
@@ -650,7 +655,7 @@ html body {
 }
 
 .toggle-link:hover {
-  color: rgb(42, 224, 139);
+  color: white;
 }
 
 a {
@@ -660,5 +665,26 @@ a {
 
 a:hover {
   text-decoration: none !important;
-  color: rgb(42, 224, 139) !important;
+  color: white !important;
+}
+
+.zero-percent {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  font-size: 15px;
+
+}
+
+.main-ul {
+  position: relative;
+  top: 16px;
+  left: 1px;
+}
+
+.grid-list {
+  position: relative;
+  width: 80px;
+  left: 90%;
+  top: 10px;
 }

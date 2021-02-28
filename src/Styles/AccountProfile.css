@@ -16,3 +16,16 @@
 .upload-image-label{
     margin-bottom: 15px !important;
 }
+.default-img-circle{
+    width: 100px;
+    height: 90px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.default-img-circle:hover{
+    width: 100px;
+    height: 90px;
+    border: 1px solid black ;
+    border-radius: 50%;
+}
