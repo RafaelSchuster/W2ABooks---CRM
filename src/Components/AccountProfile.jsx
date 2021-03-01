@@ -7,7 +7,7 @@ import DefaultImg from '../images/default_user.png'
 
 function AccountProfile() {
     const [error, setError] = useState();
-    const [loginValues, setSLoginValues] = useState({});
+    const [loginValues, setLoginValues] = useState({});
     const { thisUser } = useContext(MainContext)
 
 
@@ -15,7 +15,7 @@ function AccountProfile() {
         const { value, name } = e.target;
         const loginValuesCopy = { ...loginValues };
         loginValuesCopy[name] = value;
-        setSLoginValues(loginValuesCopy);
+        setLoginValues(loginValuesCopy);
     };
 
     const submitProfile = () => {
@@ -26,7 +26,7 @@ function AccountProfile() {
         <div>
             <Container className="container-profile">
                 <Card border="light">
-                    <Card.Header as="h2" className="text-center card-title-header"><span className="boldening">Account Profile</span></Card.Header>
+                    <Card.Header as="h2" className="text-center card-title-header"><span className="boldening">Agent's Profile</span></Card.Header>
                     <Card.Body>
                         <Col>
                             <input type="file" id="actual-btn" hidden />
@@ -77,6 +77,9 @@ function AccountProfile() {
                                     <Col>
                                         <div className="date-label">Date of Birth:</div>
                                         <input type="date" onChange={handleInputChange} />
+                                    </Col>
+                                    <Col>
+
                                     </Col>
                                 </Form.Row>
                                 <Form.Group controlId="exampleForm.ControlTextarea1">

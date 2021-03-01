@@ -9,7 +9,8 @@ import Toggle from './Toggle';
 import BooksSection from './BooksSection';
 import Header from './Header';
 import AccountProfile from './AccountProfile';
-import JobProfile from './JobProfile';
+import GenreProfile from './GenreProfile';
+import Requirements from './Requirements';
 
 function Main() {
     return (
@@ -32,8 +33,13 @@ function Main() {
                     </Route>
                 </Switch>
                 <Switch>
-                    <Route path='/job_profile'>
-                        <JobProfile />
+                    <Route path='/genre_profile'>
+                        <GenreProfile />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/requirements'>
+                        <Requirements />
                     </Route>
                 </Switch>
             </div>

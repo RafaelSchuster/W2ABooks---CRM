@@ -139,7 +139,8 @@
     font-size: 14px;
     cursor: pointer;
 }
-.editors-card{
+
+.editors-card {
     position: absolute;
     top: 60%;
     left: 30%;

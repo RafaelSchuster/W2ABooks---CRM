@@ -1,0 +1,102 @@
+html body {
+    overflow-y: auto;
+}
+
+.list-of-ganres {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    padding: 20px;
+}
+
+.genres-header {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+}
+
+.ganer-block {
+    width: 202px;
+    height: 143px;
+    position: relative;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ganer-block.selected {
+    opacity: 1;
+    background-color: darkblue;
+}
+
+.ganer-block:disabled {
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.ganer-block:disabled:hover {
+    pointer-events: none;
+    box-shadow: none;
+}
+
+.ganer-block input[type=checkbox] {
+    display: none;
+}
+
+.ganer-block label {
+    opacity: 0.5;
+    /*margin: 15px;*/
+    width: 202px;
+    height: 143px;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.ganer-block label:hover {
+    box-shadow: 3px 3px 8px #AAA;
+}
+
+.ganer-block input[type=checkbox]:checked+label {
+    opacity: 1;
+    box-shadow: 3px 3px 16px #AAA;
+    box-shadow: 2px 12px 8px #AAA;
+}
+
+.ganer-block input[type=checkbox]:checked+label div {
+    background-color: #1a41ac;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.ganer-block input[type=checkbox]:checked+label:hover {
+    box-shadow: 3px 3px 8px #AAA;
+}
+
+.ganer-block img {
+    height: 143px;
+    width: 42px;
+    position: absolute;
+    border-radius: 5px 0 0 5px;
+    left: 0;
+}
+
+.ganer-block div {
+    height: 143px;
+    width: 160px;
+    background-color: #F6F6F8;
+    position: absolute;
+    left: 42px;
+    text-align: center;
+    line-height: 143px;
+    border-radius: 0 5px 5px 0;
+}
+
+.ganer-block div span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
