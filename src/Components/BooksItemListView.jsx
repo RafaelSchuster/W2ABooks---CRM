@@ -2,9 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import { MainContext } from '../Context/Context';
-import mockImg from '../images/BookCover_MockUp.png'
+import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
-import StatusProgressList from './StatusProgressList';
 
 function BookItemListView(props) {
     const [key, setKey] = useState('status');
@@ -48,7 +47,6 @@ function BookItemListView(props) {
                                             <Card.Header as="h1" className="text-center" >Status</Card.Header>
                                             <Card.Body>
                                                 <Card.Title>Special title treatment</Card.Title>
-                                                <StatusProgressList />
                                                 {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
                                                 {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
                                             </Card.Body>

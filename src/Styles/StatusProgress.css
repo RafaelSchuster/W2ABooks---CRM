@@ -1,5 +1,141 @@
-/* .hex {
+/*https://jtauber.github.io/articles/css-hexagon.html*/
+
+.progress-div {
+    position: relative;
+    top: 10px;
+    left: 0%;
+}
+
+:root {
+    --dedult-color: #F8F8FA;
+    --hover-color: #eee;
+    --selected-color: #79f379;
+    --fin-color: #c0dec4;
+}
+
+.red {
+    border-color: red;
+}
+
+.hex {
     float: left;
     margin-right: -26px;
     margin-bottom: -50px;
-} */
+}
+
+.hex .left {
+    float: left;
+    width: 0;
+    border-right: 30px solid var(--dedult-color);
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.hex .middle {
+    float: left;
+    width: 60px;
+    height: 104px;
+    background: var(--dedult-color);
+    position: relative;
+    z-index: 1;
+}
+
+.hex .right {
+    float: left;
+    width: 0;
+    border-left: 30px solid var(--dedult-color);
+    border-top: 52px solid transparent;
+    border-bottom: 52px solid transparent;
+    position: relative;
+    z-index: 0;
+}
+
+.hex:hover .left {
+    border-right-color: var(--hover-color);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.hex:hover .middle {
+    background-color: var(--hover-color);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.hex:hover .right {
+    border-left-color: var(--hover-color);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.hex.process-fin .left {
+    border-right-color: var(--fin-color);
+}
+
+.hex.process-fin .middle {
+    background-color: var(--fin-color);
+}
+
+.hex.process-fin .right {
+    border-left-color: var(--fin-color);
+}
+
+.hex.process-fin .middle:before {
+    /* content: url(../images/checked.png); */
+    position: absolute;
+    left: 28px;
+    top: 20px;
+    margin-left: -5px;
+}
+
+.hex.selected .left {
+    border-right-color: var(--selected-color);
+}
+
+.hex.selected .middle {
+    background-color: var(--selected-color);
+}
+
+.hex.selected .right {
+    border-left-color: var(--selected-color);
+}
+
+.hex input[type=radio] {
+    display: none;
+}
+
+.hex input[type=radio]:checked+label {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+
+.hex-row {
+    clear: left;
+}
+
+
+.hex.even {
+    margin-top: 53px;
+}
+
+.hex-text {
+    display: flex;
+    width: 150%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0);
+    /*background: linear-gradient(90deg, transparent,transparent, #5cbd5c,transparent, transparent);*/
+    text-align: center;
+    margin-top: 0px;
+    height: 104px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+}

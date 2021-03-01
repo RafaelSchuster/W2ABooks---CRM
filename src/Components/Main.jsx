@@ -33,7 +33,7 @@ function Main() {
                 </Switch>
                 <Switch>
                     <Route path='/job_profile'>
-                        <JobProfile/>
+                        <JobProfile />
                     </Route>
                 </Switch>
             </div>

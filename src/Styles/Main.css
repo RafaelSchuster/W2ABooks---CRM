@@ -4,6 +4,10 @@ html body {
   overflow: hidden;
 }
 
+*:focus {
+  outline: none;
+}
+
 .grid-container {
   display: grid;
   grid-template-rows: 100px 850px;
@@ -541,7 +545,6 @@ html body {
   padding: 20px;
   width: 95vw;
   height: 80vh;
-  z-index: 3;
 }
 
 .overlay-modal-status {
@@ -665,7 +668,7 @@ a {
 
 a:hover {
   text-decoration: none !important;
-  color: white !important;
+  color: #00C67E !important;
 }
 
 .zero-percent {
@@ -687,4 +690,6 @@ a:hover {
   width: 80px;
   left: 90%;
   top: 10px;
+  text-decoration: none;
+
 }

@@ -2,11 +2,12 @@ import './Styles/Main.css';
 import { MainContext } from './Context/Context';
 import Main from './Components/Main';
 import { useEffect, useState } from 'react';
+import Axios from 'axios';
 
 const mockBooks = [
   {
     name: 'Book 1',
-    addedOn :'March, 16, 2020',
+    addedOn: 'March, 16, 2020',
     author: 'Author 1',
     authorEmail: 'test1@test.com',
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
@@ -26,7 +27,7 @@ const mockBooks = [
   },
   {
     name: 'Book 2',
-    addedOn :'March, 16, 2020',
+    addedOn: 'March, 16, 2020',
     author: 'Author 2',
     authorEmail: 'test2@test.com',
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
@@ -46,7 +47,7 @@ const mockBooks = [
 
   }, {
     name: 'Book 3',
-    addedOn :'March, 16, 2020',
+    addedOn: 'March, 16, 2020',
     author: 'Author 3',
     authorEmail: 'test3@test.com',
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
@@ -66,7 +67,7 @@ const mockBooks = [
 
   }, {
     name: 'Book 4',
-    addedOn :'March, 16, 2020',
+    addedOn: 'March, 16, 2020',
     author: 'Author 4',
     authorEmail: 'test4@test.com',
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
@@ -86,17 +87,17 @@ const mockBooks = [
   }
 ];
 const thisMockUser = {
-  firstName : 'Rafael',
-  lastName : 'Schuster',
-  telephone : '+12345567',
-  email : 'rafael@schuster.com',
-  genres:'Classic, Drama, Satire'
+  firstName: 'Rafael',
+  lastName: 'Schuster',
+  telephone: '+12345567',
+  email: 'rafael@schuster.com',
+  genres: 'Classic, Drama, Satire'
 }
 
 function App() {
   const [books, setBooks] = useState([]);
-  const[thisUser, setThisUser] = useState({})
-  const[gridView, setGridView] = useState(true)
+  const [thisUser, setThisUser] = useState({})
+  const [gridView, setGridView] = useState(true)
 
   useEffect(() => {
     setBooks(mockBooks);
@@ -105,7 +106,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ books,thisUser, gridView, setGridView }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView }}>
         <Main />
       </MainContext.Provider >
     </>
