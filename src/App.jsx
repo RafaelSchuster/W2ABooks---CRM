@@ -2,7 +2,6 @@ import './Styles/Main.css';
 import { MainContext } from './Context/Context';
 import Main from './Components/Main';
 import { useEffect, useState } from 'react';
-import Axios from 'axios';
 
 const mockBooks = [
   {
@@ -92,21 +91,22 @@ const thisMockUser = {
   telephone: '+12345567',
   email: 'rafael@schuster.com',
   genres: 'Classic, Drama, Satire'
-}
+};
 
 function App() {
   const [books, setBooks] = useState([]);
-  const [thisUser, setThisUser] = useState({})
-  const [gridView, setGridView] = useState(true)
+  const [thisUser, setThisUser] = useState({});
+  const [gridView, setGridView] = useState(true);
+  const [nationality, setNationality] = useState('')
 
   useEffect(() => {
     setBooks(mockBooks);
-    setThisUser(thisMockUser)
+    setThisUser(thisMockUser);
   }, [])
 
   return (
     <>
-      < MainContext.Provider value={{ books, thisUser, gridView, setGridView }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality }}>
         <Main />
       </MainContext.Provider >
     </>

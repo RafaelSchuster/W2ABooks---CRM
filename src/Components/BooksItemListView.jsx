@@ -1,7 +1,6 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
-import { MainContext } from '../Context/Context';
 import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
 

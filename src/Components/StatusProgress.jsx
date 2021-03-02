@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, ToggleButton, ButtonGroup } from 'react-bootstrap';
 import '../Styles/StatusProgress.css';
 
 function StatusProgress() {
@@ -14,15 +14,12 @@ function StatusProgress() {
     const [digitalPublishing, setDigitalPublishing] = useState('');
     const [agent, setAgent] = useState('');
     const [marketing, setMarketing] = useState('');
-    const [showAllEditors, setShowAllEditors] = useState(false)
+    const [showAllEditors, setShowAllEditors] = useState(false);
+    const [checked, setChecked] = useState(false);
 
     const allEditors = () => {
-        setShowAllEditors(!showAllEditors)
+        setShowAllEditors(!showAllEditors);
     }
-
-    useEffect(() => {
-
-    }, [])
 
     return (
         <>
@@ -140,10 +137,48 @@ function StatusProgress() {
             {showAllEditors && <Card border="light" className="editors-card">
                 <Card.Header className="text-center">Editors</Card.Header>
                 <Card.Body>
-                    <Button variant='success' className="mr-3">Copy Editor</Button>
-                    <Button variant='success' className="mr-3">Page Editor</Button>
-                    <Button variant='secondary' className="mr-3">Line Editor</Button>
-                    <Button variant='secondary' className="mr-3">Developmental Editor</Button>
+                    <ButtonGroup toggle >
+                        <ToggleButton
+                            type="checkbox"
+                            variant="success"
+                            checked={checked}
+                            value="1"
+                            className="mr-3"
+                            onChange={(e) => setChecked(e.currentTarget.checked)}
+                        >
+                            Copy Editor
+                        </ToggleButton>
+                        <ToggleButton
+                            type="checkbox"
+                            variant="success"
+                            checked={checked}
+                            value="1"
+                            className="mr-3"
+                            onChange={(e) => setChecked(e.currentTarget.checked)}
+                        >
+                            Page Editor
+                        </ToggleButton>
+                        <ToggleButton
+                            type="checkbox"
+                            variant="success"
+                            checked={checked}
+                            value="1"
+                            className="mr-3"
+                            onChange={(e) => setChecked(e.currentTarget.checked)}
+                        >
+                            Line Editor
+                        </ToggleButton>
+                        <ToggleButton
+                            type="checkbox"
+                            variant="secondary"
+                            checked={checked}
+                            value="1"
+                            className=""
+                            onChange={(e) => setChecked(e.currentTarget.checked)}
+                        >
+                            Developmental Editor
+                        </ToggleButton>
+                    </ButtonGroup>
                 </Card.Body>
             </Card>}
         </>

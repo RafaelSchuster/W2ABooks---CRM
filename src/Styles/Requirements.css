@@ -4,13 +4,13 @@
     left: 40%;
 }
 
-.list-of-ganres {
+.list-of-requirements {
     position: absolute;
     display: inline-block;
     top: 20%;
-    left: 23%;
+    left: 41%;
     padding: 20px;
-    width: 80%;
+    width: 40%;
 }
 
 .genres-header {
@@ -32,7 +32,7 @@
 
 .ganer-block.selected {
     opacity: 1;
-    background-color: darkblue;
+    background-color: #678aee;
 }
 
 .ganer-block:disabled {
@@ -50,7 +50,7 @@
 }
 
 .ganer-block label {
-    opacity: 0.5;
+    opacity: 0.65;
     /*margin: 15px;*/
     width: 202px;
     height: 143px;
@@ -70,7 +70,7 @@
 }
 
 .ganer-block input[type=checkbox]:checked+label div {
-    background-color: #1a41ac;
+    background-color: #678aee;
     font-weight: bold;
     font-size: 16px;
     color: white;
@@ -91,7 +91,7 @@
 .ganer-block div {
     height: 143px;
     width: 160px;
-    background-color: #F6F6F8;
+    background-color: #e9e9f0;
     position: absolute;
     left: 42px;
     text-align: center;
@@ -103,4 +103,10 @@
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+}
+
+.editors-requirements-card {
+    position: absolute;
+    top: 75%;
+    left: 42%;
 }

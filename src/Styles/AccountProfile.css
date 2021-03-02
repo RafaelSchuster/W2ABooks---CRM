@@ -3,29 +3,60 @@
     top: 20%;
     left: 30%;
 }
-.card-title-header{
+
+.card-title-header {
     background-color: #4285F4 !important;
     color: white;
 }
+
 .boldening {
     font-weight: 900;
-  }
-.date-label{
-    margin-bottom: 5px;
 }
-.upload-image-label{
+
+.date-label {
+    margin-bottom: 0px;
+    position: relative;
+    top: 0px;
+    left: 40%;
+    display: inline;
+}
+
+.upload-image-label {
     margin-bottom: 15px !important;
 }
-.default-img-circle{
+
+.default-img-circle {
     width: 100px;
     height: 90px;
     border: 1px solid white;
     border-radius: 50%;
 }
 
-.default-img-circle:hover{
+.default-img-circle:hover {
     width: 100px;
     height: 90px;
-    border: 1px solid black ;
+    border: 1px solid black;
     border-radius: 50%;
+}
+
+.calendar {
+    position: relative;
+    left: 20%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/calendar.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    border-width: thin;
+}
+
+input[type='date'] {
+    position: relative;
+    left: 9%;
+    top: 0%;
+    width: 320px;
 }

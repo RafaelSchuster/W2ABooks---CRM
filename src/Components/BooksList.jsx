@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import BookItemListView from './BooksItemListView';
 import { MainContext } from '../Context/Context';
 import Grid from "../images/grid_list_toggle.png"

@@ -44,7 +44,8 @@ function GenreProfile() {
     const handleInputChange = (e) => {
         const { id } = e.target;
         const genreValuesCopy = { ...genres };
-        genreValuesCopy[id] = true;
+        if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
+        else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
         setGenres(genreValuesCopy);
         console.log(genres);
     };
@@ -67,7 +68,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="comics" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="comics">
-                        <img src={Comics} />
+                        <img src={Comics} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Comics / Graphic novel
@@ -78,18 +79,18 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="crime" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="crime">
-                        <img src={Crime} />
+                        <img src={Crime} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Crime / detective
-                </span>
+                            </span>
                         </div>
                     </label>
                 </div>
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="fable" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="fable">
-                        <img src={Fable} />
+                        <img src={Fable} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Fable
@@ -100,18 +101,18 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="fairy" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="fairy">
-                        <img src={Fairy} />
+                        <img src={Fairy} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Fairy tale
-                </span>
+                            </span>
                         </div>
                     </label>
                 </div>
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="fan" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="fan">
-                        <img src={Fan} />
+                        <img src={Fan} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Fan fiction
@@ -122,7 +123,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="fantasy" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="fantasy">
-                        <img src={Fantasy} />
+                        <img src={Fantasy} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Fantasy
@@ -132,18 +133,18 @@ function GenreProfile() {
                 </div><div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="folklore" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="folklore">
-                        <img src={Folklore} />
+                        <img src={Folklore} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Folklore
-                </span>
+                            </span>
                         </div>
                     </label>
                 </div>
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="historical" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="historical">
-                        <img src={Historical} />
+                        <img src={Historical} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Historical fiction
@@ -154,7 +155,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="horror" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="horror">
-                        <img src={Horror} />
+                        <img src={Horror} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Horror
@@ -165,7 +166,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="humor" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="humor">
-                        <img src={Humor} />
+                        <img src={Humor} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Humor
@@ -176,7 +177,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="legend" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="legend">
-                        <img src={Legend} />
+                        <img src={Legend} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Legend
@@ -187,7 +188,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="magic" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="magic">
-                        <img src={Magic} />
+                        <img src={Magic} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Magical realism
@@ -198,7 +199,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="meta" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="meta">
-                        <img src={Meta} />
+                        <img src={Meta} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Meta fiction
@@ -209,7 +210,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="mystery" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="mystery">
-                        <img src={Mystery} />
+                        <img src={Mystery} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Mystery
@@ -220,7 +221,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="mythology" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="mythology">
-                        <img src={Mythology} />
+                        <img src={Mythology} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Mythology
@@ -231,7 +232,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="mythopoeia" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="mythopoeia">
-                        <img src={Mythopoeia} />
+                        <img src={Mythopoeia} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Mythopoeia
@@ -242,7 +243,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="picture" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="picture">
-                        <img src={Picture} />
+                        <img src={Picture} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Picture book
@@ -253,7 +254,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="real" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="real">
-                        <img src={Real} />
+                        <img src={Real} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Realistic fiction
@@ -264,7 +265,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="science" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="science">
-                        <img src={Science} />
+                        <img src={Science} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Science fiction
@@ -275,7 +276,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="short" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="short">
-                        <img src={Short} />
+                        <img src={Short} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Short story
@@ -286,7 +287,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="suspense" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="suspense">
-                        <img src={Suspense} />
+                        <img src={Suspense} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Suspense / Thriller
@@ -297,7 +298,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="swash" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="swash">
-                        <img src={Swash} />
+                        <img src={Swash} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Swashbuckler
@@ -308,7 +309,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="tall" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="tall">
-                        <img src={Tall} />
+                        <img src={Tall} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Tall tale
@@ -319,7 +320,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="western" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="western">
-                        <img src={Western} />
+                        <img src={Western} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Western
@@ -330,7 +331,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="biography" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="biography">
-                        <img src={Biography} />
+                        <img src={Biography} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Biography
@@ -341,7 +342,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="essay" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="essay">
-                        <img src={Essay} />
+                        <img src={Essay} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Essay
@@ -352,7 +353,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="guide" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="guide">
-                        <img src={Guide} />
+                        <img src={Guide} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Owner's manual / User's guide
@@ -363,7 +364,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="journalism" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="journalism">
-                        <img src={Journalism} />
+                        <img src={Journalism} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Journalism
@@ -374,7 +375,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="lab" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="lab">
-                        <img src={Lab} />
+                        <img src={Lab} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Lab Report
@@ -385,7 +386,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="memoir" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="memoir">
-                        <img src={Memoir} />
+                        <img src={Memoir} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Memoir
@@ -396,7 +397,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="narrative" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="narrative">
-                        <img src={Narrative} />
+                        <img src={Narrative} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Narrative nonfiction / personal narrative
@@ -407,7 +408,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="reference" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="reference">
-                        <img src={Reference} />
+                        <img src={Reference} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Reference book
@@ -418,7 +419,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="self" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="self">
-                        <img src={Self} />
+                        <img src={Self} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Self-help book
@@ -429,7 +430,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="speech" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="speech">
-                        <img src={Speech} />
+                        <img src={Speech} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Speech
@@ -440,7 +441,7 @@ function GenreProfile() {
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="textbook" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="textbook">
-                        <img src={Textbook} />
+                        <img src={Textbook} alt="" />
                         <div>
                             <span class="ng-binding">
                                 Textbook

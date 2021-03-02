@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { DropdownButton, Dropdown, ButtonGroup, Accordion, Card, useAccordionToggle } from 'react-bootstrap';
+import { Accordion, Card, useAccordionToggle } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const AccordionContext = React.createContext({});
@@ -35,10 +35,10 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="/account_profile" className="toggle-link">Agent's Profile</Card.Link>
-                        <Card.Link href="/genre_profile" className="toggle-link" >Genres</Card.Link>
-                        <Card.Link href="/requirements" className="toggle-link" >Requirements</Card.Link>
-                        <Card.Link href="/job_history" className="toggle-link">Job History</Card.Link>
+                        <Card.Link href="index.html#/account_profile" className="toggle-link">Agent's Profile</Card.Link>
+                        <Card.Link href="index.html#/genre_profile" className="toggle-link" >Genres</Card.Link>
+                        <Card.Link href="index.html#/requirements" className="toggle-link" >Requirements</Card.Link>
+                        <Card.Link href="index.html#/job_history" className="toggle-link">Job History</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -48,9 +48,9 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="/your_works" className="toggle-link">Your works</Card.Link>
-                        <Card.Link href="/remiders" className="toggle-link">Reminders</Card.Link>
-                        <Card.Link href="/calendar_meetings" className="toggle-link">Calendar and Meetings</Card.Link>
+                        <Card.Link href="index.html#/your_works" className="toggle-link">Your works</Card.Link>
+                        <Card.Link href="index.html#/remiders" className="toggle-link">Reminders</Card.Link>
+                        <Card.Link href="index.html#/calendar_meetings" className="toggle-link">Calendar and Meetings</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -60,8 +60,8 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="/upload_files" className="toggle-link">Upload Files</Card.Link>
-                        <Card.Link href="/files_uploaded" className="toggle-link">Files Uploaded</Card.Link>
+                        <Card.Link href="index.html#/upload_files" className="toggle-link">Upload Files</Card.Link>
+                        <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -71,8 +71,8 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="3">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="/account_settings" className="toggle-link">Account Settings</Card.Link>
-                        <Card.Link href="/logout" className="toggle-link">Logout</Card.Link>
+                        <Card.Link href="index.html#/account_settings" className="toggle-link">Account Settings</Card.Link>
+                        <Card.Link href="index.html#/logout" className="toggle-link">Logout</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
