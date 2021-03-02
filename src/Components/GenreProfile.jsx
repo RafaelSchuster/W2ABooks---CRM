@@ -47,7 +47,6 @@ function GenreProfile() {
         if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
         else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
         setGenres(genreValuesCopy);
-        console.log(genres);
     };
 
     return (
