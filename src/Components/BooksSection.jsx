@@ -1,11 +1,11 @@
 import React from 'react';
 import BooksList from './BooksList';
 
-function BooksSection() {
+function BooksSection(props) {
 
     return (
         <>
-            <BooksList />
+            <BooksList isThisBookmarks={props.bookmarking}/>
         </>
     );
 }

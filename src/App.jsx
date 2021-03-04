@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const mockBooks = [
   {
-    name: 'Book 1',
+    bookName: 'Book 1',
     addedOn: 'March, 16, 2020',
     author: 'Author 1',
     authorEmail: 'test1@test.com',
@@ -25,7 +25,7 @@ const mockBooks = [
     progress: '90'
   },
   {
-    name: 'Book 2',
+    bookName: 'Book 2',
     addedOn: 'March, 16, 2020',
     author: 'Author 2',
     authorEmail: 'test2@test.com',
@@ -45,7 +45,7 @@ const mockBooks = [
     progress: '50'
 
   }, {
-    name: 'Book 3',
+    bookName: 'Book 3',
     addedOn: 'March, 16, 2020',
     author: 'Author 3',
     authorEmail: 'test3@test.com',
@@ -65,7 +65,7 @@ const mockBooks = [
     progress: '60'
 
   }, {
-    name: 'Book 4',
+    bookName: 'Book 4',
     addedOn: 'March, 16, 2020',
     author: 'Author 4',
     authorEmail: 'test4@test.com',
@@ -97,7 +97,8 @@ function App() {
   const [books, setBooks] = useState([]);
   const [thisUser, setThisUser] = useState({});
   const [gridView, setGridView] = useState(true);
-  const [nationality, setNationality] = useState('')
+  const [nationality, setNationality] = useState('');
+  const [bookmarks, setBookmarks] = useState([]);
 
   useEffect(() => {
     setBooks(mockBooks);
@@ -106,7 +107,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks }}>
         <Main />
       </MainContext.Provider >
     </>

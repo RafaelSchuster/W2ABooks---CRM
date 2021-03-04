@@ -49,6 +49,7 @@ function Toggle() {
                 <Accordion.Collapse eventKey="1">
                     <Card.Body className="toggle-content">
                         <Card.Link href="index.html#/your_works" className="toggle-link">Your works</Card.Link>
+                        <Card.Link href="index.html#/bookmarks" className="toggle-link">Bookmarks</Card.Link>
                         <Card.Link href="index.html#/remiders" className="toggle-link">Reminders</Card.Link>
                         <Card.Link href="index.html#/calendar_meetings" className="toggle-link">Calendar and Meetings</Card.Link>
                     </Card.Body>

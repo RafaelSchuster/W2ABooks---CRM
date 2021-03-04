@@ -383,3 +383,11 @@
     position: absolute;
     left: 30%;
 }
+.bookmark-icon{
+    position: absolute;
+    top: 3%;
+    left: 90%;
+}
+img:hover {
+    cursor: pointer;
+}

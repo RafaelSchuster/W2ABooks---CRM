@@ -191,6 +191,14 @@ html body {
     padding: 0px;
     left: 40%;
   }
+  .btn-modal-summary {
+    position: absolute;
+    left: 43% !important ;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
+  }
+  
 }
 
 @media(max-width:1356px) {
@@ -238,7 +246,7 @@ html body {
 
 .tabs>a:hover {
   background-color: rgba(39, 202, 126, 0.836) !important;
-  color: white;
+  color: white !important;
 }
 
 .book-card {
@@ -343,7 +351,7 @@ html body {
 @media(max-width : 1900px) {
   .status-card {
     position: relative;
-    width: 900px;
+    width: 1000px;
     height: 220px;
     left: 23%;
     bottom: 215px !important;
@@ -373,7 +381,25 @@ html body {
     left: 23%;
     bottom: 215px !important;
   }
+  .btn-modal-summary {
+    position: absolute;
+    left: 43% !important ;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
+  }
 }
+
+@media(max-width:1696px){
+  .status-card {
+    position: relative;
+    width: 900px;
+    height: 220px;
+    left: 23%;
+    bottom: 215px !important;
+  }
+}
+
 
 @media(max-width : 1541px) {
   .status-card {
@@ -408,14 +434,33 @@ html body {
     left: 23%;
     bottom: 215px !important;
   }
+  .btn-modal-summary {
+    position: absolute;
+    left: 42% !important ;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
+  }
 }
 
 @media(max-width : 1376px) {
+  .book-card {
+    position: relative;
+    left: -38px;
+    top: 0;
+    width: 100% !important;
+    min-height: 300px;
+    max-height: 400px;
+    margin-top: 15px;
+    margin-left: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  }
+
   .status-card {
     position: relative;
-    width: 600px;
+    width: 700px;
     height: 220px;
-    left: 32%;
+    left: 28%;
     bottom: 215px !important;
   }
 
@@ -442,15 +487,22 @@ html body {
     height: 220px;
     left: 32%;
     bottom: 215px !important;
+  }
+  .btn-modal-summary {
+    position: absolute;
+    left: 39% !important;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
   }
 }
 
 @media(max-width : 1175px) {
   .status-card {
     position: relative;
-    width: 400px;
+    width: 600px;
     height: 220px;
-    left: 39%;
+    left: 29%;
     bottom: 215px !important;
   }
 
@@ -465,9 +517,9 @@ html body {
 
   .summary-card {
     position: absolute;
-    width: 400px;
+    width: 500px;
     height: 220px;
-    left: 39%;
+    left: 36%;
     bottom: 215px !important;
   }
 
@@ -478,7 +530,37 @@ html body {
     left: 39%;
     bottom: 215px !important;
   }
+  .btn-modal-summary {
+    position: absolute;
+    left: 36% !important ;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
+  }
+  .response-date {
+    position: absolute;
+    left: 60% !important;
+    top: 31%;
+  }
+  
+  .response-status {
+    position: absolute;
+    left: 60% !important;
+    top: 49%;
+  }
+  
+  .meeting-date {
+    position: absolute;
+    left: 60% !important;
+    top: 69%;
+  }
+  .status-date {
+    position: absolute;
+    top: 88%;
+    left: 60% !important;
+  }
 }
+
 
 .response-date {
   position: absolute;
@@ -642,14 +724,29 @@ html body {
   padding: 5px 15px 5px 15px;
 }
 
-.progressBar {
-  width: 150px;
-  position: absolute;
-  top: 47%;
-  left: 80%;
-  transform: rotate(270deg);
-  height: 75px !important;
+@media(min-width : 1301px){
+  .progressBar {
+    width: 150px;
+    position: absolute;
+    top: 47%;
+    left: 80%;
+    transform: rotate(270deg);
+    height: 75px !important;
+  }
 }
+
+@media(max-width:1300px){
+  .progressBar {
+    width: 330px;
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    height: 45px !important;
+    font-size: 17px !important;
+  }
+}
+
+
 
 .toggle-link {
   display: block;
@@ -692,4 +789,10 @@ a:hover {
   top: 10px;
   text-decoration: none;
 
+}
+
+.bookmark-icon-list {
+  position: absolute;
+  top: 4%;
+  left: 95%;
 }

@@ -23,7 +23,7 @@ function Main() {
                 <Switch>
                     <Route path='/' exact>
                         <div className="grid-item grid-item-main">
-                            <BooksSection />
+                            <BooksSection bookmarking={false} />
                         </div>
                     </Route>
                 </Switch>
@@ -40,6 +40,13 @@ function Main() {
                 <Switch>
                     <Route path='/requirements'>
                         <Requirements />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/bookmarks'>
+                        <div className="grid-item grid-item-main">
+                            <BooksSection bookmarking={true} />
+                        </div>
                     </Route>
                 </Switch>
             </div>

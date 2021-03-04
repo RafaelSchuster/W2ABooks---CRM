@@ -1,21 +1,54 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Card, Button, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
 import '../Styles/BookItemGrid.css';
 import StatusProgress from './StatusProgress';
+import BookMark from "../images/bookmark1.png";
+import { MainContext } from '../Context/Context';
+
 
 function BookItemGridView(props) {
-    const [key, setKey] = useState('status');
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+    const { setBookmarks } = useContext(MainContext);
+
+    const useLocalState = (localItem) => {
+        const [localBMarks, setState] = useState(localStorage.getItem(localItem));
+        const setLocalBookmarks = (newItem) => {
+            localStorage.setItem(localItem, newItem);
+            setState(newItem);
+        }
+        return [localBMarks, setLocalBookmarks];
+    }
+
+    const [localBookmarks, setLocalMarks] = useLocalState('bookmarks');
+
+    useEffect(() => {
+        // console.log(localBookmarks);
+    }, [localBookmarks])
+
+    const bookmarking = (e) => {
+        const arrMarks = [];
+        const { id } = e.target;
+        if (localBookmarks) arrMarks.push(localBookmarks, id)
+        else if (!localBookmarks) arrMarks.push(id)
+        // setLocalMarks(arrMarks)
+        // setBookmarks(arrMarks)
+    }
 
     return (
         <>
             <Card className="book-card-grid">
-                <Card.Header className="card-title-header-grid"><h3 className="boldening">{props.name}</h3> </Card.Header>
+                <Card.Header className="card-title-header-grid">
+                    <h3 className="boldening">{props.bookName}</h3>
+                    <input type="button" id={JSON.stringify(props)} value={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
+                    <label for={JSON.stringify(props)} className="bookmark-icon">
+                        <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
+                    </label>
+                </Card.Header>
                 <Card.Body>
                     <Card.Img variant="top" src={mockImg} className="card-img-grid" />
                     <Card.Text className="about-author-grid"><h4 className="boldening-grid">About the Author: </h4><div>{props.aboutAuthor}</div></Card.Text>

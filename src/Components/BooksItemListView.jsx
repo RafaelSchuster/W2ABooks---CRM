@@ -1,19 +1,34 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
+import BookMark from "../images/bookmark1.png";
+import { MainContext } from '../Context/Context';
+
 
 function BookItemListView(props) {
     const [key, setKey] = useState('status');
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+    const { bookmarks, setBookmarks } = useContext(MainContext);
 
+    const bookmarking = (e) => {
+        const { id } = e.target;
+        const newMark = JSON.parse(id);
+        const copyBookmarks = { ...bookmarks };
+        copyBookmarks[newMark.bookName] = newMark;
+        setBookmarks(Object.values(copyBookmarks));
+    }
     return (
         <>
             <Card className="book-card">
-                <Card.Header className="card-title-header"><h3 className="boldening">{props.name}</h3> </Card.Header>
+                <Card.Header className="card-title-header"><h3 className="boldening">{props.bookName}</h3>
+                    <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
+                    <label for={JSON.stringify(props)} className="bookmark-icon-list">
+                        <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
+                    </label> </Card.Header>
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
@@ -34,8 +49,8 @@ function BookItemListView(props) {
                                     <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>
                                     <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>
                                     <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>
-                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar"></ProgressBar>
-                                    {props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar"><span className="zero-percent" >0%</span></ProgressBar>}
+                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>
+                                    {props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
                                     <Modal
                                         className="status-modal"
                                         overlayClassName="overlay-modal-status"
