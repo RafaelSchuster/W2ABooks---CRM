@@ -98,11 +98,12 @@ function App() {
   const [thisUser, setThisUser] = useState({});
   const [gridView, setGridView] = useState(true);
   const [nationality, setNationality] = useState('');
-  const [bookmarks, setBookmarks] = useState([]);
+  const [bookmarks, setBookmarks] = useState(mockBooks);
 
   useEffect(() => {
     setBooks(mockBooks);
     setThisUser(thisMockUser);
+    setBookmarks(mockBooks)
   }, [])
 
   return (

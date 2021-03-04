@@ -11,10 +11,8 @@ function BooksList(props) {
     const [savedBookmarks, setSavedBookmarks] = useState(localStorage.getItem('bookmarks'))
 
     useEffect(() => {
-        console.log(savedBookmarks);
-        new Array(savedBookmarks)
-                    .map(obj => JSON.parse(obj))
-                    .map(book => console.log(book))
+        console.log(bookmarks);
+        console.log(props.isThisBookmarks);
     }, [])
 
     const changeView = () => {
@@ -49,9 +47,7 @@ function BooksList(props) {
                         addedOn={book.addedOn}
                     />
                 )}
-                {props.isThisBookmarks && !gridView && savedBookmarks && new Array(savedBookmarks)
-                    .map(obj => JSON.parse(obj))
-                    .map(book =>
+                {props.isThisBookmarks && !gridView && bookmarks && bookmarks.map(book =>
                         <BookItemListView
                             key={Math.random()}
                             bookName={book.bookName}
@@ -101,9 +97,7 @@ function BooksList(props) {
                         addedOn={book.addedOn}
                     />
                 )}
-                {props.isThisBookmarks && gridView && savedBookmarks && new Array(savedBookmarks)
-                    .map(obj => JSON.parse(obj))
-                    .map(book =>
+                {props.isThisBookmarks && gridView && bookmarks && bookmarks.map(book =>
                         <BookItemGridView
                             key={Math.random()}
                             bookName={book.bookName}

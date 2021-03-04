@@ -15,11 +15,11 @@ function BookItemListView(props) {
     const { bookmarks, setBookmarks } = useContext(MainContext);
 
     const bookmarking = (e) => {
-        const { id } = e.target;
-        const newMark = JSON.parse(id);
-        const copyBookmarks = { ...bookmarks };
-        copyBookmarks[newMark.bookName] = newMark;
-        setBookmarks(Object.values(copyBookmarks));
+        // const { id } = e.target;
+        // const newMark = JSON.parse(id);
+        // const copyBookmarks = { ...bookmarks };
+        // copyBookmarks[newMark.bookName] = newMark;
+        // setBookmarks(Object.values(copyBookmarks));
     }
     return (
         <>
