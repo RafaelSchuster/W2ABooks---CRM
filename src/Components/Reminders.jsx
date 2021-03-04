@@ -12,7 +12,8 @@ class Reminders extends React.Component {
     }
     handleNewNotes(newNote) {
         this.setState(state => {
-            return { notes: [...state.notes, newNote] };
+            if (state.notes) return { notes: [...state.notes, newNote] }
+            else if (!state.notes) return { notes: [newNote] }
         })
     }
     handleDeletes(date) {
