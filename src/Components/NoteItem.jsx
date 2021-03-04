@@ -78,7 +78,6 @@ function NoteItem(props) {
                                                 type='submit'
                                             >Save your changes</Button>
                                         </div>
-
                                         <button className="btn btn-outline-warning btn-lg btn-block closeModalBtn"
                                             onClick={() => setModal2IsOpen(false)} >
                                             Close Note

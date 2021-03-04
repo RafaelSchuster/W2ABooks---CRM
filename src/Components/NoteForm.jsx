@@ -31,7 +31,7 @@ class MyForm extends React.Component {
                 <h1 className="reminders-header">Your Reminders Note Book</h1>
                 <Form className='mt-5' onSubmit={event => this.onSubmiting(event)}>
                     <Form.Group>
-                        <h1 className='text-white'>Your Notes App For Free</h1>
+                        <h1 className='text-white'>Notes</h1>
                         <Form.Control
                             className='m-3'
                             placeholder='Write Your Title Here...'
