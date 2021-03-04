@@ -38,7 +38,7 @@ function Toggle() {
                         <Card.Link href="index.html#/account_profile" className="toggle-link">Agent's Profile</Card.Link>
                         <Card.Link href="index.html#/genre_profile" className="toggle-link" >Genres</Card.Link>
                         <Card.Link href="index.html#/requirements" className="toggle-link" >Requirements</Card.Link>
-                        <Card.Link href="index.html#/job_history" className="toggle-link">Job History</Card.Link>
+                        {/* <Card.Link href="index.html#/job_history" className="toggle-link">Job History</Card.Link> */}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -48,9 +48,10 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="index.html#/your_works" className="toggle-link">Your works</Card.Link>
+                        {/* <Card.Link href="index.html#/your_works" className="toggle-link">Your works</Card.Link> */}
                         <Card.Link href="index.html#/bookmarks" className="toggle-link">Bookmarks</Card.Link>
-                        <Card.Link href="index.html#/remiders" className="toggle-link">Reminders</Card.Link>
+                        <Card.Link href="index.html#/assignments" className="toggle-link">Assignments</Card.Link>
+                        <Card.Link href="index.html#/reminders" className="toggle-link">Reminders</Card.Link>
                         <Card.Link href="index.html#/calendar_meetings" className="toggle-link">Calendar and Meetings</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
@@ -61,8 +62,20 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
                     <Card.Body className="toggle-content">
-                        <Card.Link href="index.html#/upload_files" className="toggle-link">Upload Files</Card.Link>
-                        <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link>
+                        <Card.Link href="index.html#/file_manager" className="toggle-link">File Manager</Card.Link>
+                        {/* <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link> */}
+                    </Card.Body>
+                </Accordion.Collapse>
+            </Card>
+            <Card className="accordion btn">
+                <Card.Header className="toggle-header">
+                    <ContextAwareToggle eventKey="4">Telephone Book</ContextAwareToggle>
+                </Card.Header>
+                <Accordion.Collapse eventKey="4">
+                    <Card.Body className="toggle-content">
+                        <Card.Link href="index.html#/profiles" className="toggle-link">Professional Profiles</Card.Link>
+                        <Card.Link href="index.html#/job_histories" className="toggle-link">Professional History</Card.Link>
+                        {/* <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link> */}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>

@@ -191,14 +191,15 @@ html body {
     padding: 0px;
     left: 40%;
   }
+
   .btn-modal-summary {
     position: absolute;
-    left: 43% !important ;
+    left: 43% !important;
     top: 12vh;
     font-weight: bold !important;
     border: 0 !important;
   }
-  
+
 }
 
 @media(max-width:1356px) {
@@ -381,16 +382,17 @@ html body {
     left: 23%;
     bottom: 215px !important;
   }
+
   .btn-modal-summary {
     position: absolute;
-    left: 43% !important ;
+    left: 43% !important;
     top: 12vh;
     font-weight: bold !important;
     border: 0 !important;
   }
 }
 
-@media(max-width:1696px){
+@media(max-width:1696px) {
   .status-card {
     position: relative;
     width: 900px;
@@ -434,9 +436,10 @@ html body {
     left: 23%;
     bottom: 215px !important;
   }
+
   .btn-modal-summary {
     position: absolute;
-    left: 42% !important ;
+    left: 42% !important;
     top: 12vh;
     font-weight: bold !important;
     border: 0 !important;
@@ -488,6 +491,7 @@ html body {
     left: 32%;
     bottom: 215px !important;
   }
+
   .btn-modal-summary {
     position: absolute;
     left: 39% !important;
@@ -530,30 +534,33 @@ html body {
     left: 39%;
     bottom: 215px !important;
   }
+
   .btn-modal-summary {
     position: absolute;
-    left: 36% !important ;
+    left: 36% !important;
     top: 12vh;
     font-weight: bold !important;
     border: 0 !important;
   }
+
   .response-date {
     position: absolute;
     left: 60% !important;
     top: 31%;
   }
-  
+
   .response-status {
     position: absolute;
     left: 60% !important;
     top: 49%;
   }
-  
+
   .meeting-date {
     position: absolute;
     left: 60% !important;
     top: 69%;
   }
+
   .status-date {
     position: absolute;
     top: 88%;
@@ -724,7 +731,7 @@ html body {
   padding: 5px 15px 5px 15px;
 }
 
-@media(min-width : 1301px){
+@media(min-width : 1301px) {
   .progressBar {
     width: 150px;
     position: absolute;
@@ -735,7 +742,7 @@ html body {
   }
 }
 
-@media(max-width:1300px){
+@media(max-width:1300px) {
   .progressBar {
     width: 330px;
     position: absolute;
@@ -795,4 +802,8 @@ a:hover {
   position: absolute;
   top: 4%;
   left: 95%;
+}
+
+.reminders-main-div {
+  overflow-y: auto;
 }

@@ -45,9 +45,9 @@ function BookItemGridView(props) {
                 <Card.Header className="card-title-header-grid">
                     <h3 className="boldening">{props.bookName}</h3>
                     <input type="button" id={JSON.stringify(props)} value={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
-                    <label for={JSON.stringify(props)} className="bookmark-icon">
+                    {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon">
                         <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
-                    </label>
+                    </label>}
                 </Card.Header>
                 <Card.Body>
                     <Card.Img variant="top" src={mockImg} className="card-img-grid" />

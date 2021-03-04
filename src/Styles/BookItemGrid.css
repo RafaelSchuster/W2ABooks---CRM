@@ -391,3 +391,10 @@
 img:hover {
     cursor: pointer;
 }
+.bookmarks-header{
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    color: #6C757D !important;
+    font-weight: 500;
+}

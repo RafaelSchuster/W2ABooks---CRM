@@ -14,6 +14,7 @@ function BookItemListView(props) {
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
     const { bookmarks, setBookmarks } = useContext(MainContext);
 
+
     const bookmarking = (e) => {
         // const { id } = e.target;
         // const newMark = JSON.parse(id);
@@ -25,10 +26,10 @@ function BookItemListView(props) {
         <>
             <Card className="book-card">
                 <Card.Header className="card-title-header"><h3 className="boldening">{props.bookName}</h3>
-                    <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
-                    <label for={JSON.stringify(props)} className="bookmark-icon-list">
+                      <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
+                      {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon-list">
                         <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
-                    </label> </Card.Header>
+                    </label>} </Card.Header>
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}

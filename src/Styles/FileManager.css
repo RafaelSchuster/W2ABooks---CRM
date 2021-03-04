@@ -1,0 +1,15 @@
+.file-manager-header {
+    position: absolute;
+    top: 14%;
+    left: 54%;
+    color: #6C757D !important;
+    font-weight: 500;
+}
+.file-manager-container{
+    position: relative;
+    top: 15%;
+}
+.upload-icon{
+    position: absolute;
+    left: 90%;
+}

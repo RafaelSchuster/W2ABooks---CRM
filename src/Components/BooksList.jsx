@@ -22,6 +22,7 @@ function BooksList(props) {
     return (
         <>
             <ul className="main-ul">
+                {props.isThisBookmarks && <h1 className="bookmarks-header">Your Bookmarks</h1>}
                 <input type="image" src={Grid} className="grid-list" onClick={changeView} ></input>
                 {!props.isThisBookmarks && !gridView && books && books.map(book =>
                     <BookItemListView
@@ -45,6 +46,7 @@ function BooksList(props) {
                         aboutAuthor={book.aboutAuthor}
                         progress={book.progress}
                         addedOn={book.addedOn}
+                        isBookmarks = {props.isThisBookmarks}
                     />
                 )}
                 {props.isThisBookmarks && !gridView && bookmarks && bookmarks.map(book =>
@@ -69,6 +71,7 @@ function BooksList(props) {
                             aboutAuthor={book.aboutAuthor}
                             progress={book.progress}
                             addedOn={book.addedOn}
+                            isBookmarks = {props.isThisBookmarks}
                         />
                     )}
             </ul>
@@ -95,6 +98,7 @@ function BooksList(props) {
                         aboutAuthor={book.aboutAuthor}
                         progress={book.progress}
                         addedOn={book.addedOn}
+                        isBookmarks = {props.isThisBookmarks}
                     />
                 )}
                 {props.isThisBookmarks && gridView && bookmarks && bookmarks.map(book =>
@@ -119,6 +123,7 @@ function BooksList(props) {
                             aboutAuthor={book.aboutAuthor}
                             progress={book.progress}
                             addedOn={book.addedOn}
+                            isBookmarks = {props.isThisBookmarks}
                         />
                     )}
             </div>

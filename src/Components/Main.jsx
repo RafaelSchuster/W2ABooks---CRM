@@ -11,6 +11,8 @@ import Header from './Header';
 import AccountProfile from './AccountProfile';
 import GenreProfile from './GenreProfile';
 import Requirements from './Requirements';
+import FileManager from './FileManager';
+import Reminders from './Reminders';
 
 function Main() {
     return (
@@ -46,6 +48,18 @@ function Main() {
                     <Route path='/bookmarks'>
                         <div className="grid-item grid-item-main">
                             <BooksSection bookmarking={true} />
+                        </div>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/file_manager'>
+                        <FileManager />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/Reminders'>
+                        <div className="reminders-main-div">
+                            <Reminders />
                         </div>
                     </Route>
                 </Switch>

@@ -93,12 +93,17 @@ const thisMockUser = {
   genres: 'Classic, Drama, Satire'
 };
 
+const mockReminders = [{title : "Meeting with CEO", date : "10/03/2021"},
+{title : "Meeting with CTO", date : "10/03/2021"},
+{title : "Project Delivery ", date : "30/03/2021"}]
+
 function App() {
   const [books, setBooks] = useState([]);
   const [thisUser, setThisUser] = useState({});
   const [gridView, setGridView] = useState(true);
   const [nationality, setNationality] = useState('');
   const [bookmarks, setBookmarks] = useState(mockBooks);
+  const [reminders, setReminders] = useState(mockReminders)
 
   useEffect(() => {
     setBooks(mockBooks);
@@ -108,7 +113,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks,reminders, setReminders }}>
         <Main />
       </MainContext.Provider >
     </>
