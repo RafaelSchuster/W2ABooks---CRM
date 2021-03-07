@@ -97,23 +97,84 @@ const mockReminders = [{title : "Meeting with CEO", date : "10/03/2021"},
 {title : "Meeting with CTO", date : "10/03/2021"},
 {title : "Project Delivery ", date : "30/03/2021"}]
 
+const mockContacts = [{
+  firstName : 'Bill',
+  lastName : 'Hill',
+  telephone : '01234',
+  email : 'b@h.com',
+  company : 'Apple',
+  jobTitle : 'FE Developer',
+  personalBio : 'Great guy, promised me a job interview!'
+},
+{
+  firstName : 'Mill',
+  lastName : 'Till',
+  telephone : '01234',
+  email : 'bjj@htt.com',
+  company : 'Microsoft',
+  jobTitle : 'BE Developer',
+  personalBio : 'Great guy, promised me a job interview!'
+},{
+  firstName : 'Will',
+  lastName : 'Sill',
+  telephone : '01234',
+  email : 'baa@hbb.com',
+  company : 'Oracle',
+  jobTitle : 'FS Developer',
+  personalBio : 'Great guy, promised me a job interview!'
+},{
+  firstName : 'Till',
+  lastName : 'Vill',
+  telephone : '01234',
+  email : 'baa@hbb.com',
+  company : 'Oracle',
+  jobTitle : 'CTO',
+  personalBio : 'Great guy, promised me a job interview!'
+},{
+  firstName : 'Phill',
+  lastName : 'Pill',
+  telephone : '01234',
+  email : 'baa@hbb.com',
+  company : 'Oracle',
+  jobTitle : 'CEO',
+  personalBio : 'Great guy, promised me a job interview!'
+},{
+  firstName : 'Phill',
+  lastName : 'Pill',
+  telephone : '01234',
+  email : 'baa@hbb.com',
+  company : 'Oracle',
+  jobTitle : 'dev',
+  personalBio : 'Great guy, promised me a job interview!'
+},{
+  firstName : 'Phill',
+  lastName : 'Pill',
+  telephone : '01234',
+  email : 'baa@hbb.com',
+  company : 'Oracle',
+  jobTitle : 'dev',
+  personalBio : 'Great guy, promised me a job interview!'
+}]
+
 function App() {
   const [books, setBooks] = useState([]);
   const [thisUser, setThisUser] = useState({});
   const [gridView, setGridView] = useState(true);
   const [nationality, setNationality] = useState('');
   const [bookmarks, setBookmarks] = useState(mockBooks);
-  const [reminders, setReminders] = useState(mockReminders)
+  const [reminders, setReminders] = useState(mockReminders);
+  const [contacts, setContacts] = useState(mockContacts);
 
   useEffect(() => {
     setBooks(mockBooks);
     setThisUser(thisMockUser);
-    setBookmarks(mockBooks)
+    setBookmarks(mockBooks);
+
   }, [])
 
   return (
     <>
-      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks,reminders, setReminders }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks,reminders, setReminders, contacts, setContacts }}>
         <Main />
       </MainContext.Provider >
     </>

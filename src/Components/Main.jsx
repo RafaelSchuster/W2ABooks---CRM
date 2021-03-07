@@ -14,6 +14,8 @@ import Requirements from './Requirements';
 import FileManager from './FileManager';
 import Reminders from './Reminders';
 import MessageComponent from './MessageComponent';
+import Contacts from './Contacts';
+import ContactAdd from './ContactAdd';
 
 function Main() {
     return (
@@ -67,6 +69,16 @@ function Main() {
                 <Switch>
                     <Route path='/messaging'>
                         <MessageComponent />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/add_contact'>
+                        <ContactAdd />
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/contacts'>
+                        <Contacts/>
                     </Route>
                 </Switch>
             </div>

@@ -1,0 +1,31 @@
+.company-img-contact{
+    width: 32px;
+    
+}
+.trash-contact-card{
+    width: 26px !important;
+    position: relative;
+    left: 58%;
+}
+.contact-bio{
+    position: absolute;
+    display: inline;
+}
+.my-card{
+    min-width: 350px;
+    max-width: 350px;
+    margin-bottom: 30px !important;
+}
+.my-modal {
+    padding: 80px;
+    position: absolute;
+    top: 10%;
+    left: 16%;
+    width: 50%;
+    height: 80%;
+    display: block;
+    left: 26%;
+    opacity: 92%;
+    color: rgb(10, 9, 9);
+    background-color: #eef0f1;
+}
