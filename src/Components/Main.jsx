@@ -13,6 +13,7 @@ import GenreProfile from './GenreProfile';
 import Requirements from './Requirements';
 import FileManager from './FileManager';
 import Reminders from './Reminders';
+import MessageComponent from './MessageComponent';
 
 function Main() {
     return (
@@ -61,6 +62,11 @@ function Main() {
                         <div className="reminders-main-div">
                             <Reminders />
                         </div>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/messaging'>
+                        <MessageComponent />
                     </Route>
                 </Switch>
             </div>

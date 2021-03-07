@@ -807,3 +807,16 @@ a:hover {
 .reminders-main-div {
   overflow-y: auto;
 }
+
+.messaging-btn {
+  position: relative;
+  width: 30%;
+  color: white !important;
+  top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.messaging-btn:hover {
+  color: white !important;
+}

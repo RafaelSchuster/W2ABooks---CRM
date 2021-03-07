@@ -48,12 +48,10 @@ class Reminders extends React.Component {
     }
 
     componentWillMount() {
-        console.log(localStorage.getItem('notes'))
         this.setState({ notes: JSON.parse(localStorage.getItem('notes')) });
     }
 
     componentWillUpdate(nextProps, nextState) {
-        console.log(nextState.notes);
         localStorage.setItem('notes', JSON.stringify(nextState.notes));
     }
 

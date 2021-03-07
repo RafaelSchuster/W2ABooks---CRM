@@ -26,8 +26,8 @@ function BookItemListView(props) {
         <>
             <Card className="book-card">
                 <Card.Header className="card-title-header"><h3 className="boldening">{props.bookName}</h3>
-                      <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
-                      {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon-list">
+                    <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
+                    {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon-list">
                         <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
                     </label>} </Card.Header>
                 <Tabs
@@ -130,6 +130,7 @@ function BookItemListView(props) {
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="contact-card" >
                                 <Card.Header className="text-center">Contact</Card.Header>
+                                <Button href="index.html#/messaging" className="messaging-btn btn btn-secondary">Messaging History</Button>
                                 <Card.Body>
                                 </Card.Body>
                             </Card>

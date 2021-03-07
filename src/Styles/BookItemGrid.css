@@ -51,6 +51,17 @@
         width: 300px;
     }
 
+    .messaging-grid-btn {
+        background-color: #00C67E !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        position: absolute;
+        top: 66%;
+        left: 36%;
+        width: 300px;
+        color: white !important;
+    }
+
     .about-author-grid {
         position: absolute;
         top: 15%;
@@ -110,6 +121,17 @@
         top: 59%;
         left: 42%;
         width: 250px;
+    }
+
+    .messaging-grid-btn {
+        background-color: #00C67E !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        position: absolute;
+        top: 66%;
+        left: 42%;
+        width: 250px;
+        color: white !important;
     }
 
     .progress-bar-grid {
@@ -178,9 +200,20 @@
         width: 190px;
     }
 
+    .messaging-grid-btn {
+        background-color: #00C67E !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        position: absolute;
+        top: 66%;
+        left: 55%;
+        width: 190px;
+        color: white !important;
+    }
+
     .progress-bar-grid {
         position: absolute !important;
-        top: 75%;
+        top: 443px;
         left: 75%;
     }
 
@@ -250,11 +283,23 @@
         width: 190px;
     }
 
+    .messaging-grid-btn {
+        background-color: #00C67E !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        position: absolute;
+        top: 71%;
+        left: 55%;
+        width: 190px;
+        color: white !important;
+    }
+
     .progress-bar-grid {
         position: absolute !important;
         top: 81%;
         left: 75%;
         max-height: 50px;
+        max-width: 110px;
     }
 
     .about-author-grid {
@@ -340,6 +385,17 @@
         width: 300px;
     }
 
+    .messaging-grid-btn {
+        background-color: #00C67E !important;
+        border: 0 !important;
+        font-weight: bold !important;
+        position: absolute;
+        top: 70%;
+        left: 36%;
+        width: 300px;
+        color: white !important;
+    }
+
     .about-author-grid {
         position: absolute;
         top: 15%;
@@ -362,8 +418,9 @@
 
     .progress-bar-grid {
         position: absolute;
-        top: 49%;
-        left: 79%;
+        top: 59%;
+        left: 70%;
+        transform: rotate(270deg);
     }
 
     .summary-title-grid {
@@ -371,6 +428,7 @@
         font-size: 24px;
         left: 25%;
     }
+
 }
 
 .progressbar-modal-grid {
@@ -383,18 +441,25 @@
     position: absolute;
     left: 30%;
 }
-.bookmark-icon{
+
+.bookmark-icon {
     position: absolute;
     top: 3%;
     left: 90%;
 }
+
 img:hover {
     cursor: pointer;
 }
-.bookmarks-header{
+
+.bookmarks-header {
     position: absolute;
     top: 20%;
     left: 40%;
     color: #6C757D !important;
     font-weight: 500;
+}
+
+.messaging-grid-btn:hover {
+    color: white !important;
 }

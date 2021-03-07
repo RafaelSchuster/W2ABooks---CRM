@@ -56,6 +56,7 @@ function BookItemGridView(props) {
                     <Card.Text className="grid-book-length"><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>
                     <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
                     <Button type="button" className="btn-modal-meeting-grid" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                    <Button href="index.html#/messaging" className="messaging-grid-btn ">Contact the Author</Button>
                     <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progress-bar-grid"></ProgressBar>
                     {props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progress-bar-grid"><span className="zero-percent" >0%</span></ProgressBar>}
                     <Modal
