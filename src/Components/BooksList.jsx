@@ -10,11 +10,6 @@ function BooksList(props) {
     const { books, setGridView, gridView, bookmarks } = useContext(MainContext);
     const [savedBookmarks, setSavedBookmarks] = useState(localStorage.getItem('bookmarks'))
 
-    // useEffect(() => {
-    //     console.log(bookmarks);
-    //     console.log(props.isThisBookmarks);
-    // }, [])
-
     const changeView = () => {
         setGridView(!gridView);
     }
