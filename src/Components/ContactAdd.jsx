@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Button, Container, Form, Col, Alert, Card } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
-import '../Styles/AccountProfile.css'
+import '../Styles/AccountProfile.css';
 import NationalitiesDrop from './NationalitiesDrop';
-import '../Styles/ContactAdd.css'
+import '../Styles/ContactAdd.css';
 
 function ContactAdd() {
     const [error, setError] = useState();
@@ -57,7 +57,6 @@ function ContactAdd() {
                                         <Form.Control type='number' placeholder="Telephone Number" name="telephone"
                                             onChange={handleInputChange} />
                                     </Col>
-
                                 </Form.Row>
                                 <Form.Row >
                                     <Col>
@@ -67,7 +66,6 @@ function ContactAdd() {
                                                 onChange={handleInputChange} />
                                         </Form.Group>
                                     </Col>
-
                                     <Col>
                                         <Form.Label></Form.Label>
                                         <Form.Control name="company" placeholder="Company" onChange={handleInputChange}></Form.Control>
@@ -110,7 +108,6 @@ function ContactAdd() {
                     </Card.Body>
                 </Card>
             </Container>
-
         </div>
     )
 }

@@ -1,21 +1,25 @@
-.company-img-contact{
+.company-img-contact {
     width: 32px;
-    
+
 }
-.trash-contact-card{
+
+.trash-contact-card {
     width: 26px !important;
     position: relative;
     left: 75%;
 }
-.contact-bio{
+
+.contact-bio {
     position: absolute;
     display: inline;
 }
-.my-card{
+
+.my-card {
     min-width: 540px;
     max-width: 540px;
     margin-bottom: 30px !important;
 }
+
 .my-modal {
     padding: 80px;
     position: absolute;
@@ -29,7 +33,9 @@
     color: rgb(10, 9, 9);
     background-color: #eef0f1;
 }
-.people-icon{
+
+.work-grid-icon {
     position: absolute;
     left: 84%;
+    width: 32px;
 }

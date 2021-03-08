@@ -5,11 +5,13 @@
     color: #6C757D !important;
     font-weight: 500;
 }
-.file-manager-container{
+
+.file-manager-container {
     position: relative;
     top: 15%;
 }
-.upload-icon{
+
+.upload-icon {
     position: absolute;
     left: 90%;
 }

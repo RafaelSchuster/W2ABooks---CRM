@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Card, CardDeck, Container, CardImg, CardImage, Image, Img, Button } from 'react-bootstrap';
-import Modal from 'react-modal';
+import React, { useContext, useState } from 'react';
+import { Card, CardDeck, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Styles/Contacts.css';
 import { MainContext } from '../Context/Context';
@@ -9,12 +8,9 @@ import Grid from "../images/grid_list_toggle.png"
 import ContactsTable from './ContactsTable';
 
 
-const arrContacts = [];
-
 function Contacts() {
-    const [contactsToDisplay, setContactsToDisplay] = useState([]);
     const [gridContacts, setGridContacts] = useState(true)
-    const { contacts, setContacts, token } = useContext(MainContext);
+    const { contacts } = useContext(MainContext);
 
     const changeView = () => {
         setGridContacts(!gridContacts);

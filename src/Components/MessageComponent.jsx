@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { getMsg } from '../Api/MessageApi';
+// import { getMsg } from '../Api/MessageApi';
 import { MsgContext } from '../Context/Context';
 import MessageForm from './MessageForm';
 // import { getMsg } from './lib/api';
-import MsgForm from './MessageForm';
+// import MsgForm from './MessageForm';
 import MessageList from './MessageList';
 
-let msgResponse;
-let arrItems = [];
-let msgObj = {}
-let listObj = {};
+// let msgResponse;
+// let arrItems = [];
+// let msgObj = {}
+// let listObj = {};
 
 
 const mockMsgs = [{

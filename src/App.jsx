@@ -93,78 +93,78 @@ const thisMockUser = {
   genres: 'Classic, Drama, Satire'
 };
 
-const mockReminders = [{title : "Meeting with CEO", date : "10/03/2021"},
-{title : "Meeting with CTO", date : "10/03/2021"},
-{title : "Project Delivery ", date : "30/03/2021"}]
+const mockReminders = [{ title: "Meeting with CEO", date: "10/03/2021" },
+{ title: "Meeting with CTO", date: "10/03/2021" },
+{ title: "Project Delivery ", date: "30/03/2021" }]
 
 const mockContacts = [{
-  id : 1,
-  firstName : 'Bill',
-  lastName : 'Hill',
-  telephone : '01234',
-  email : 'b@h.com',
-  company : 'Apple',
-  jobTitle : 'FE Developer',
-  personalBio : 'Great guy, promised me a job interview! 0',
-  workHistoryDescription : "Worked together"
+  id: 1,
+  firstName: 'Bill',
+  lastName: 'Hill',
+  telephone: '01234',
+  email: 'b@h.com',
+  company: 'Apple',
+  jobTitle: 'FE Developer',
+  personalBio: 'Great guy, promised me a job interview! 0',
+  workHistoryDescription: "Worked together in Oracle"
 },
 {
-  id : 2,
-  firstName : 'Mill',
-  lastName : 'Till',
-  telephone : '01234',
-  email : 'bjj@htt.com',
-  company : 'Microsoft',
-  jobTitle : 'BE Developer',
-  personalBio : 'Great guy, promised me a job interview! 1 ',
-  workHistoryDescription : "Worked together on FS Project"
-},{
-  id : 3,
-  firstName : 'Will',
-  lastName : 'Sill',
-  telephone : '01234',
-  email : 'baa@hbb.com',
-  company : 'Oracle',
-  jobTitle : 'FS Developer',
-  personalBio : 'Great guy, promised me a job interview! 11'
-},{
-  id : 4,
-  firstName : 'Till',
-  lastName : 'Vill',
-  telephone : '01234',
-  email : 'baa@hbb.com',
-  company : 'Oracle',
-  jobTitle : 'CTO',
-  personalBio : 'Great guy, promised me a job interview! 22 ',
-  workHistoryDescription : "Worked together on Apple"
-},{
-  id : 5,
-  firstName : 'Phill',
-  lastName : 'Pill',
-  telephone : '01234',
-  email : 'baa@hbb.com',
-  company : 'Oracle',
-  jobTitle : 'CEO',
-  personalBio : 'Great guy, promised me a job interview! 33 '
-},{
-  id : 6,
-  firstName : 'Phill',
-  lastName : 'Pill',
-  telephone : '01234',
-  email : 'baa@hbb.com',
-  company : 'Oracle',
-  jobTitle : 'dev',
-  personalBio : 'Great guy, promised me a job interview! 44 '
-},{
-  id : 7,
-  firstName : 'Phill',
-  lastName : 'Pill',
-  telephone : '01234',
-  email : 'baa@hbb.com',
-  company : 'Oracle',
-  jobTitle : 'dev',
-  personalBio : 'Great guy, promised me a job interview! 55 ',
-  workHistoryDescription : "Worked together on Microsoft"
+  id: 2,
+  firstName: 'Mill',
+  lastName: 'Till',
+  telephone: '01234',
+  email: 'bjj@htt.com',
+  company: 'Microsoft',
+  jobTitle: 'BE Developer',
+  personalBio: 'Great guy, promised me a job interview! 1 ',
+  workHistoryDescription: "Worked together on FS Project"
+}, {
+  id: 3,
+  firstName: 'Will',
+  lastName: 'Sill',
+  telephone: '01234',
+  email: 'baa@hbb.com',
+  company: 'Oracle',
+  jobTitle: 'FS Developer',
+  personalBio: 'Great guy, promised me a job interview! 11'
+}, {
+  id: 4,
+  firstName: 'Till',
+  lastName: 'Vill',
+  telephone: '01234',
+  email: 'baa@hbb.com',
+  company: 'Oracle',
+  jobTitle: 'CTO',
+  personalBio: 'Great guy, promised me a job interview! 22 ',
+  workHistoryDescription: "Worked together on Apple"
+}, {
+  id: 5,
+  firstName: 'Lill',
+  lastName: 'Jill',
+  telephone: '01234',
+  email: 'baa@hbb.com',
+  company: 'Oracle',
+  jobTitle: 'CEO',
+  personalBio: 'Great guy, promised me a job interview! 33 '
+}, {
+  id: 6,
+  firstName: 'Nill',
+  lastName: 'Gill',
+  telephone: '01234',
+  email: 'baa@hbb.com',
+  company: 'Oracle',
+  jobTitle: 'dev',
+  personalBio: 'Great guy, promised me a job interview! 44 '
+}, {
+  id: 7,
+  firstName: 'Phill',
+  lastName: 'Pill',
+  telephone: '01234',
+  email: 'baa@hbb.com',
+  company: 'Oracle',
+  jobTitle: 'dev',
+  personalBio: 'Great guy, promised me a job interview! 55 ',
+  workHistoryDescription: "Worked together on Microsoft"
 }]
 
 function App() {
@@ -185,7 +185,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality,bookmarks, setBookmarks,reminders, setReminders, contacts, setContacts }}>
+      < MainContext.Provider value={{ books, thisUser, gridView, setGridView, nationality, setNationality, bookmarks, setBookmarks, reminders, setReminders, contacts, setContacts }}>
         <Main />
       </MainContext.Provider >
     </>

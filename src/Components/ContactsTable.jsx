@@ -3,8 +3,8 @@ import { Container, Table } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
 import TableItems from './TableItems';
 
-function ContactsTable(props) {
-    const { contacts, setContacts, token } = useContext(MainContext);
+function ContactsTable() {
+    const { contacts } = useContext(MainContext);
 
     return (
         <Container >
@@ -18,7 +18,7 @@ function ContactsTable(props) {
                         <th className="text-center">Email</th>
                         <th className="text-center">Company</th>
                         <th className="text-center">Title</th>
-                        <th className="text-center">Actions</th>
+                        <th className="text-center">More</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +33,8 @@ function ContactsTable(props) {
                             company={contact.company}
                             jobTitle={contact.jobTitle}
                             personalBio={contact.personalBio}
+                            workHistoryDescription={contact.workHistoryDescription}
+
                         />
                     )
                     }

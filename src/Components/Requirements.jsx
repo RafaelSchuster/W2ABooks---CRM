@@ -28,12 +28,12 @@ function Requirements() {
     const handleInputChange = (e) => {
         const { id, value } = e.target;
         const genreValuesCopy = { ...genres };
-        if (value !== 'on' ) {
+        if (value !== 'on') {
             if (!genreValuesCopy[value]) genreValuesCopy[value] = true;
             else if (genreValuesCopy[value]) genreValuesCopy[value] = !genreValuesCopy[value];
             setGenres(genreValuesCopy);
         }
-        else if(value === 'on') {
+        else if (value === 'on') {
             if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
             else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
             setGenres(genreValuesCopy);
@@ -144,7 +144,7 @@ function Requirements() {
                 </div>
             </div>
             {showAllEditors && <Card border="light" className="editors-requirements-card">
-                <Card.Header className="text-center">Which Editors You Require?</Card.Header>
+                <Card.Header className="text-center">Which editors do you require?</Card.Header>
                 <Card.Body>
                     <ButtonGroup toggle>
                         {!copyEditor && <ToggleButton
@@ -154,7 +154,7 @@ function Requirements() {
                             id="copyEditor"
                             checked={copyEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setCopyEditor(true);handleInputChange(e)}}
+                            onChange={(e) => { setCopyEditor(true); handleInputChange(e) }}
                         >
                             Copy Editor
                         </ToggleButton>}
@@ -165,7 +165,7 @@ function Requirements() {
                             id="copyEditor"
                             checked={copyEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setCopyEditor(false); handleInputChange(e)}}
+                            onChange={(e) => { setCopyEditor(false); handleInputChange(e) }}
                         >
                             Copy Editor
                         </ToggleButton>}
@@ -176,7 +176,7 @@ function Requirements() {
                             id='pageEditor'
                             checked={pageEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setPageEditor(true); handleInputChange(e)}}
+                            onChange={(e) => { setPageEditor(true); handleInputChange(e) }}
                         >
                             Page Editor
                         </ToggleButton>}
@@ -187,7 +187,7 @@ function Requirements() {
                             id='pageEditor'
                             checked={pageEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setPageEditor(false); handleInputChange(e)}}
+                            onChange={(e) => { setPageEditor(false); handleInputChange(e) }}
                         >
                             Page Editor
                         </ToggleButton>}
@@ -198,7 +198,7 @@ function Requirements() {
                             id="lineEditor"
                             checked={lineEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setLineEditor(true);handleInputChange(e)}}
+                            onChange={(e) => { setLineEditor(true); handleInputChange(e) }}
                         >
                             Line Editor
                         </ToggleButton>}
@@ -209,7 +209,7 @@ function Requirements() {
                             id="lineEditor"
                             checked={lineEditor}
                             className="mr-3 editors-check-req"
-                            onChange={(e) => {setLineEditor(false);handleInputChange(e)}}
+                            onChange={(e) => { setLineEditor(false); handleInputChange(e) }}
                         >
                             Line Editor
                         </ToggleButton>}
@@ -220,7 +220,7 @@ function Requirements() {
                             id="devEditor"
                             checked={devEditor}
                             className="editors-check-req"
-                            onChange={(e) =>{ setDevEditor(true); handleInputChange(e)}}
+                            onChange={(e) => { setDevEditor(true); handleInputChange(e) }}
                         >
                             Developmental Editor
                         </ToggleButton>}
@@ -231,7 +231,7 @@ function Requirements() {
                             id="devEditor"
                             checked={devEditor}
                             className="editors-check-req"
-                            onChange={(e) =>{ setDevEditor(false); handleInputChange(e)}}
+                            onChange={(e) => { setDevEditor(false); handleInputChange(e) }}
                         >
                             Developmental Editor
                         </ToggleButton>}

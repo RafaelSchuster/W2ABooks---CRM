@@ -78,7 +78,7 @@ function Main() {
                 </Switch>
                 <Switch>
                     <Route path='/contacts'>
-                        <Contacts/>
+                        <Contacts />
                     </Route>
                 </Switch>
             </div>

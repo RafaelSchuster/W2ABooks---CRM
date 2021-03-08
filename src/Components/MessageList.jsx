@@ -1,11 +1,10 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react';
 import { MsgContext } from '../Context/Context';
 import MessageItem from './MessageItem';
-import '../Styles/MessageItem.css'
+import '../Styles/MessageItem.css';
 
 function MessageList() {
-    const { msgs, setMsg } = useContext(MsgContext);
-    console.log(msgs);
+    const { msgs } = useContext(MsgContext);
     return (
         <ul className="message-list">
             {msgs && msgs.map(msg =>

@@ -3,36 +3,48 @@
     top: 14%;
     left: 55%;
 }
-.my-contacts{
+
+.my-contacts {
     position: absolute;
-     top: 29%;
-     left: 30%;
+    top: 29%;
+    left: 30%;
 }
-.contact-count-header{
+
+.contact-count-header {
     position: absolute;
     top: 19%;
     width: 20%;
     left: 50%;
 }
 
-@media(max-width:1652px){
-    .contact-count-header{
+@media(max-width:1652px) {
+    .contact-count-header {
         position: absolute;
         top: 19%;
         width: 20%;
         left: 52%;
     }
 }
-.grid-list-contacts{
+
+.grid-list-contacts {
     position: absolute;
     width: 80px;
     left: 92%;
     top: 14%;
     text-decoration: none;
 }
-.contact-table{
+
+.contact-table {
     position: absolute;
     top: 30%;
     left: 21%;
     width: 78%;
+}
+
+.actions-list {
+    max-width: 100px;
+}
+
+.work-list-icon {
+    width: 32px;
 }

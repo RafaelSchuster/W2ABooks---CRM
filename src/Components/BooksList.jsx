@@ -3,12 +3,12 @@ import BookItemListView from './BooksItemListView';
 import { MainContext } from '../Context/Context';
 import Grid from "../images/grid_list_toggle.png"
 import BookItemGridView from './BookItemGridView';
-import '../Styles/BookItemGrid.css'
+import '../Styles/BookItemGrid.css';
 
 
 function BooksList(props) {
     const { books, setGridView, gridView, bookmarks } = useContext(MainContext);
-    const [savedBookmarks, setSavedBookmarks] = useState(localStorage.getItem('bookmarks'))
+    const [savedBookmarks, setSavedBookmarks] = useState(localStorage.getItem('bookmarks'));
 
     const changeView = () => {
         setGridView(!gridView);
