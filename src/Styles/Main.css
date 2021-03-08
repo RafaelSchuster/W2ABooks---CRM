@@ -797,11 +797,18 @@ a:hover {
   text-decoration: none;
 
 }
+.agent-list-card{
+  position: absolute;
+  top: 4%;
+  left: 96%;
+
+}
 
 .bookmark-icon-list {
   position: absolute;
   top: 4%;
-  left: 95%;
+  left: 93%;
+
 }
 
 .reminders-main-div {

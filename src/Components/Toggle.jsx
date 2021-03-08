@@ -38,7 +38,7 @@ function Toggle() {
                         <Card.Link href="index.html#/account_profile" className="toggle-link">Agent's Profile</Card.Link>
                         <Card.Link href="index.html#/genre_profile" className="toggle-link" >Genres</Card.Link>
                         <Card.Link href="index.html#/requirements" className="toggle-link" >Requirements</Card.Link>
-                        {/* <Card.Link href="index.html#/job_history" className="toggle-link">Job History</Card.Link> */}
+                        <Card.Link href="index.html#/job_history" className="toggle-link">Jobs List</Card.Link>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -48,7 +48,6 @@ function Toggle() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body className="toggle-content">
-                        {/* <Card.Link href="index.html#/your_works" className="toggle-link">Your works</Card.Link> */}
                         <Card.Link href="index.html#/bookmarks" className="toggle-link">Bookmarks</Card.Link>
                         <Card.Link href="index.html#/assignments" className="toggle-link">Assignments</Card.Link>
                         <Card.Link href="index.html#/reminders" className="toggle-link">Reminders</Card.Link>

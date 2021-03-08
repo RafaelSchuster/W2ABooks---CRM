@@ -6,7 +6,9 @@ import GenreItem from './GenreItem';
 import '../Styles/BookItemGrid.css';
 import StatusProgress from './StatusProgress';
 import BookMark from "../images/bookmark1.png";
+import Agent from '../images/agent.png';
 import { MainContext } from '../Context/Context';
+
 
 
 function BookItemGridView(props) {
@@ -44,10 +46,16 @@ function BookItemGridView(props) {
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
                     <h3 className="boldening">{props.bookName}</h3>
-                    <input type="button" id={JSON.stringify(props)} value={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
-                    {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon">
+                    {!props.isBookmarks && <input type="image" 
+                    id={JSON.stringify(props)}  
+                    src={BookMark} 
+                    className="bookmark-icon" 
+                    title="Add to bookmarks"
+                    onClick={e => bookmarking(e)} />}
+                    {/* {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon">
                         <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
-                    </label>}
+                    </label>} */}
+                    <input type="image" src={Agent} className="agent-grid-card" title="Add to jobs list"/>
                 </Card.Header>
                 <Card.Body>
                     <Card.Img variant="top" src={mockImg} className="card-img-grid" />

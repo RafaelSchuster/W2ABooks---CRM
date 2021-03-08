@@ -46,5 +46,21 @@
 }
 
 .work-list-icon {
-    width: 32px;
+    width: 27px;
+}
+.info-list-contact{
+    width: 27px;
+}
+.trash-list-contact{
+    width: 27px;
+
+}
+.edit-contact-list{
+    width: 27px;
+
+}
+.container-list-more{
+    position: relative;
+    right: 5%;
+    bottom: -2px;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import Modal from 'react-modal';
 import '../Styles/ContactCard.css';
 import { useEffect } from 'react';
@@ -12,6 +12,7 @@ import Trash from '../images/trash.png';
 import Job from '../images/workplace.png';
 import People from '../images/people.png';
 import Work from '../images/working-time.png';
+import Edit from '../images/edit.png'
 
 function ContactCard(props) {
     const [modalIsOpen1, setModalIsOpen1] = useState(false);
@@ -20,15 +21,29 @@ function ContactCard(props) {
     return (
         <>
             <Card className="my-card">
-                <Card.Header><img srcSet={Person} />
-                    <span className="text-center ml-2"> {props.firstName} {props.lastName}
-                    </span>
-                    <img srcSet={Trash} className="trash-contact-card" title="Delete this contact" />
-                    {props.workHistoryDescription &&
-                        <input type='image' src={Work}
-                            className="work-grid-icon"
-                            title="Work history"
-                            onClick={() => setModalIsOpen2(true)} />}
+                <Card.Header>
+                    <Container className="container-header-contact-card">
+                        <Row>
+                            <Col xs="9">
+                                <img srcSet={Person} />
+                                <span> {props.firstName} {props.lastName}
+                                </span>
+                            </Col>
+                            <Col>
+                                {props.workHistoryDescription &&
+                                    <input type='image' src={Work}
+                                        className="work-grid-icon"
+                                        title="Work history"
+                                        onClick={() => setModalIsOpen2(true)} />}
+                            </Col>
+                            <Col>
+                                <img srcSet={Trash} className="trash-contact-card" title="Delete contact" />
+                            </Col>
+                            <Col>
+                                <img srcSet={Edit} className="edit-contact-card" title="Edit contact"></img>
+                            </Col>
+                        </Row>
+                    </Container>
                 </Card.Header>
                 <Card.Body>
                     <Card.Text><img srcSet={Phone}></img><span className="text-center ml-2">{props.telephone}</span>  </Card.Text>

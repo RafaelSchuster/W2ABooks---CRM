@@ -5,6 +5,8 @@ import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
 import BookMark from "../images/bookmark1.png";
 import { MainContext } from '../Context/Context';
+import Agent from '../images/agent.png';
+
 
 
 function BookItemListView(props) {
@@ -26,10 +28,14 @@ function BookItemListView(props) {
         <>
             <Card className="book-card">
                 <Card.Header className="card-title-header"><h3 className="boldening">{props.bookName}</h3>
-                    <input type="button" value="" id={JSON.stringify(props)} hidden onClick={e => bookmarking(e)} />
-                    {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon-list">
-                        <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
-                    </label>} </Card.Header>
+                <input type="image" src={Agent} className="agent-list-card" title="Add to jobs list"/>
+                {!props.isBookmarks && <input type="image" 
+                    id={JSON.stringify(props)}  
+                    src={BookMark} 
+                    className="bookmark-icon-list" 
+                    title="Add to bookmarks"
+                    onClick={e => bookmarking(e)} />}                   
+                     </Card.Header>
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}

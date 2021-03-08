@@ -1,12 +1,10 @@
 .company-img-contact {
     width: 32px;
-
 }
 
 .trash-contact-card {
     width: 26px !important;
     position: relative;
-    left: 75%;
 }
 
 .contact-bio {
@@ -15,6 +13,7 @@
 }
 
 .my-card {
+    position: relative;
     min-width: 540px;
     max-width: 540px;
     margin-bottom: 30px !important;
@@ -36,6 +35,15 @@
 
 .work-grid-icon {
     position: absolute;
-    left: 84%;
-    width: 32px;
+    width: 29px;
+}
+.edit-contact-card{
+    position: absolute;
+    width: 25px;
+}
+.container-header-contact-card{
+    position: relative;
+    top: 10% !important;
+    right: 4%;
+    width: 107% !important;
 }

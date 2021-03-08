@@ -81,6 +81,11 @@ function Main() {
                         <Contacts />
                     </Route>
                 </Switch>
+                <Switch>
+                    <Route path='/job_history'>
+                        {/* <Jobs/> */}
+                    </Route>
+                </Switch>
             </div>
         </Router>
     )
