@@ -7,6 +7,7 @@ Modal.setAppElement('#root')
 function NoteItem(props) {
     let valueText = '';
     let valueTitle = '';
+
     const onDelete = (date) => {
         props.onDeleting(date);
     }
@@ -32,7 +33,7 @@ function NoteItem(props) {
                 <h2 className=" card-title">{props.title.toUpperCase()}</h2>
                 <h3 className="text-muted text">{props.text}</h3>
                 <button className="btn btn-danger delBtn" onClick={() => onDelete(props.date)}>Delete</button>
-                <button type="button" className="btn btn-success openModalBtn" onClick={() => setModalIsOpen(true)}>Open Note</button>
+                <button type="button" className="btn btn-warning openModalBtn" onClick={() => setModalIsOpen(true)}>Open Note</button>
                 <Modal
                     portalClassName="note-modal"
                     isOpen={modalIsOpen}

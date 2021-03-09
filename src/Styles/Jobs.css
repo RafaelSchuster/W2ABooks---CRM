@@ -1,0 +1,49 @@
+.start-date-label {
+    position: relative;
+    left: 16px !important;
+}
+
+.start-date-box {
+    width: 20% !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/calendar.png) no-repeat;
+    width: 30px;
+    height: 30px;
+    border-width: thin;
+    position: relative;
+    left: -39px;
+}
+
+input[type="date"] {
+    border: white;
+}
+
+.end-date-group {
+    position: relative;
+    left: 20px;
+}
+
+.end-date-box {
+    width: 23% !important;
+    position: relative;
+    left: 23px !important;
+}
+
+.end-date-box::-webkit-calendar-picker-indicator {
+    position: relative;
+    left: -55px !important;
+}
+
+.job-status-dropd {
+    position: relative;
+    left: 16px;
+}
+
+.actions-list {
+    min-width: 110px;
+}

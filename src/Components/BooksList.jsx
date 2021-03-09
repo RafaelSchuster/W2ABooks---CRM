@@ -18,7 +18,7 @@ function BooksList(props) {
         <>
             <ul className="main-ul">
                 {props.isThisBookmarks && <h1 className="bookmarks-header">Your Bookmarks</h1>}
-                <input type="image" src={Grid} className="grid-list" onClick={changeView} ></input>
+                <input type="image" src={Grid} className="grid-list" onClick={changeView} title="Change display" ></input>
                 {!props.isThisBookmarks && !gridView && books && books.map(book =>
                     <BookItemListView
                         key={Math.random()}
@@ -41,34 +41,34 @@ function BooksList(props) {
                         aboutAuthor={book.aboutAuthor}
                         progress={book.progress}
                         addedOn={book.addedOn}
-                        isBookmarks = {props.isThisBookmarks}
+                        isBookmarks={props.isThisBookmarks}
                     />
                 )}
                 {props.isThisBookmarks && !gridView && bookmarks && bookmarks.map(book =>
-                        <BookItemListView
-                            key={Math.random()}
-                            bookName={book.bookName}
-                            author={book.author}
-                            email={book.authorEmail}
-                            summaryTitle={book.summaryTitle}
-                            summary={book.summary}
-                            id={book.id}
-                            proofReaderGrade={book.proofReaderGrade}
-                            stagesDone={book.stagesDone}
-                            processStatus={book.processStatus}
-                            genre={book.genre}
-                            datePresenting={book.datePresenting}
-                            dateResponse={book.dateResponse}
-                            responseStatus={book.responseStatus}
-                            meetingDate={book.meetingDate}
-                            summaryMeeting={book.summaryMeeting}
-                            wordCount={book.wordCount}
-                            aboutAuthor={book.aboutAuthor}
-                            progress={book.progress}
-                            addedOn={book.addedOn}
-                            isBookmarks = {props.isThisBookmarks}
-                        />
-                    )}
+                    <BookItemListView
+                        key={Math.random()}
+                        bookName={book.bookName}
+                        author={book.author}
+                        email={book.authorEmail}
+                        summaryTitle={book.summaryTitle}
+                        summary={book.summary}
+                        id={book.id}
+                        proofReaderGrade={book.proofReaderGrade}
+                        stagesDone={book.stagesDone}
+                        processStatus={book.processStatus}
+                        genre={book.genre}
+                        datePresenting={book.datePresenting}
+                        dateResponse={book.dateResponse}
+                        responseStatus={book.responseStatus}
+                        meetingDate={book.meetingDate}
+                        summaryMeeting={book.summaryMeeting}
+                        wordCount={book.wordCount}
+                        aboutAuthor={book.aboutAuthor}
+                        progress={book.progress}
+                        addedOn={book.addedOn}
+                        isBookmarks={props.isThisBookmarks}
+                    />
+                )}
             </ul>
             <div className="book-view-container">
                 {!props.isThisBookmarks && gridView && books && books.map(book =>
@@ -93,34 +93,34 @@ function BooksList(props) {
                         aboutAuthor={book.aboutAuthor}
                         progress={book.progress}
                         addedOn={book.addedOn}
-                        isBookmarks = {props.isThisBookmarks}
+                        isBookmarks={props.isThisBookmarks}
                     />
                 )}
                 {props.isThisBookmarks && gridView && bookmarks && bookmarks.map(book =>
-                        <BookItemGridView
-                            key={Math.random()}
-                            bookName={book.bookName}
-                            author={book.author}
-                            email={book.authorEmail}
-                            summaryTitle={book.summaryTitle}
-                            summary={book.summary}
-                            id={book.id}
-                            proofReaderGrade={book.proofReaderGrade}
-                            stagesDone={book.stagesDone}
-                            processStatus={book.processStatus}
-                            genre={book.genre}
-                            datePresenting={book.datePresenting}
-                            dateResponse={book.dateResponse}
-                            responseStatus={book.responseStatus}
-                            meetingDate={book.meetingDate}
-                            summaryMeeting={book.summaryMeeting}
-                            wordCount={book.wordCount}
-                            aboutAuthor={book.aboutAuthor}
-                            progress={book.progress}
-                            addedOn={book.addedOn}
-                            isBookmarks = {props.isThisBookmarks}
-                        />
-                    )}
+                    <BookItemGridView
+                        key={Math.random()}
+                        bookName={book.bookName}
+                        author={book.author}
+                        email={book.authorEmail}
+                        summaryTitle={book.summaryTitle}
+                        summary={book.summary}
+                        id={book.id}
+                        proofReaderGrade={book.proofReaderGrade}
+                        stagesDone={book.stagesDone}
+                        processStatus={book.processStatus}
+                        genre={book.genre}
+                        datePresenting={book.datePresenting}
+                        dateResponse={book.dateResponse}
+                        responseStatus={book.responseStatus}
+                        meetingDate={book.meetingDate}
+                        summaryMeeting={book.summaryMeeting}
+                        wordCount={book.wordCount}
+                        aboutAuthor={book.aboutAuthor}
+                        progress={book.progress}
+                        addedOn={book.addedOn}
+                        isBookmarks={props.isThisBookmarks}
+                    />
+                )}
             </div>
         </>
     )

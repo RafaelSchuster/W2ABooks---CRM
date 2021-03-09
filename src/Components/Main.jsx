@@ -16,6 +16,8 @@ import Reminders from './Reminders';
 import MessageComponent from './MessageComponent';
 import Contacts from './Contacts';
 import ContactAdd from './ContactAdd';
+import JobForm from './JobsForm';
+import Jobs from './Jobs';
 
 function Main() {
     return (
@@ -83,7 +85,7 @@ function Main() {
                 </Switch>
                 <Switch>
                     <Route path='/job_history'>
-                        {/* <Jobs/> */}
+                        <Jobs />
                     </Route>
                 </Switch>
             </div>

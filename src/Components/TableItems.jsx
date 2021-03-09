@@ -8,7 +8,7 @@ import Info from '../images/info.png'
 import Trash from '../images/trash.png'
 import People from '../images/people.png';
 import Work from '../images/working-time.png';
-import Edit from '../images/edit.png'
+import Edit from '../images/edit.png';
 
 
 function TableItems(props) {
@@ -39,7 +39,7 @@ function TableItems(props) {
                             <input type="image" variant="primary" id="about" className="info-list-contact" src={Info} title="About" onClick={() => setModalIsOpen1(true)}></input>
                         </Col>
                         <Col>
-                            <img srcSet={Edit} className="edit-contact-list" title="Edit contact"></img>
+                            <input type="image" src={Edit} className="edit-contact-list" title="Edit contact" />
                         </Col>
                         <Col>
                             <input type="image" variant="primary" src={Trash} className="trash-list-contact" id="delete" title="Delete contact"></input>
