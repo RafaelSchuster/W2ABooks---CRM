@@ -60,7 +60,7 @@ class JobsForm extends React.Component {
                     <Form.Group>
                         <Row>
                             <Col>
-                                <h1 className="text-center">Add Job To List</h1>
+                                <h3 className="text-center boldening">Add Job To List</h3>
 
                             </Col>
                         </Row>
@@ -139,7 +139,7 @@ class JobsForm extends React.Component {
                             onChange={event => this.onJobDescriptionChange(event)}
                             required />
                         <Button
-                            className='btn btn-secondary btn-block m-3'
+                            className='btn btn-primary btn-block m-3'
                             type='submit'
                         >Add Job</Button>
                     </Form.Group>

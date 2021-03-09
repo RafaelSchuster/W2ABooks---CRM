@@ -324,16 +324,16 @@ html body {
   }
 
   .profile-internal-card {
-    position: absolute;
+    position: relative;
     width: 1100px;
-    height: 220px;
+    height: 220px !important;
     left: 23%;
     bottom: 215px !important;
 
   }
 
   .summary-card {
-    position: absolute;
+    position: relative;
     width: 1100px;
     height: 220px;
     left: 23%;
@@ -341,7 +341,7 @@ html body {
   }
 
   .contact-card {
-    position: absolute;
+    position: relative;
     width: 1100px;
     height: 220px;
     left: 23%;
@@ -359,16 +359,16 @@ html body {
   }
 
   .profile-internal-card {
-    position: absolute;
+    position: relative;
     width: 900px;
-    height: 220px;
+    height: 220px !important;
     left: 23%;
     bottom: 215px !important;
 
   }
 
   .summary-card {
-    position: absolute;
+    position: relative;
     width: 900px;
     height: 220px;
     left: 23%;
@@ -376,7 +376,7 @@ html body {
   }
 
   .contact-card {
-    position: absolute;
+    position: relative;
     width: 900px;
     height: 220px;
     left: 23%;
@@ -413,16 +413,16 @@ html body {
   }
 
   .profile-internal-card {
-    position: absolute;
+    position: relative;
     width: 800px;
-    height: 220px;
+    height: 220px !important;
     left: 23%;
     bottom: 215px !important;
 
   }
 
   .summary-card {
-    position: absolute;
+    position: relative;
     width: 800px;
     height: 220px;
     left: 23%;
@@ -430,7 +430,7 @@ html body {
   }
 
   .contact-card {
-    position: absolute;
+    position: relative;
     width: 800px;
     height: 220px;
     left: 23%;
@@ -468,16 +468,16 @@ html body {
   }
 
   .profile-internal-card {
-    position: absolute;
+    position: relative;
     width: 600px;
-    height: 220px;
+    height: 220px !important;
     left: 32%;
     bottom: 215px !important;
 
   }
 
   .summary-card {
-    position: absolute;
+    position: relative;
     width: 600px;
     height: 220px;
     left: 32%;
@@ -485,7 +485,7 @@ html body {
   }
 
   .contact-card {
-    position: absolute;
+    position: relative;
     width: 600px;
     height: 220px;
     left: 32%;
@@ -511,16 +511,16 @@ html body {
   }
 
   .profile-internal-card {
-    position: absolute;
+    position: relative;
     width: 400px;
-    height: 220px;
+    height: 220px !important;
     left: 39%;
     bottom: 215px !important;
 
   }
 
   .summary-card {
-    position: absolute;
+    position: relative;
     width: 500px;
     height: 220px;
     left: 36%;
@@ -528,7 +528,7 @@ html body {
   }
 
   .contact-card {
-    position: absolute;
+    position: relative;
     width: 400px;
     height: 220px;
     left: 39%;
@@ -716,7 +716,6 @@ html body {
   left: 25vw;
   top: 12vh;
   font-weight: bold !important;
-  background-color: #00C67E;
   border: 0 !important;
 }
 
@@ -797,7 +796,8 @@ a:hover {
   text-decoration: none;
 
 }
-.agent-list-card{
+
+.agent-list-card {
   position: absolute;
   top: 4%;
   left: 96%;

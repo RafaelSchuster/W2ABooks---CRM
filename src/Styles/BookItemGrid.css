@@ -450,10 +450,11 @@ img:hover {
 
 .bookmarks-header {
     position: absolute;
-    top: 20%;
-    left: 40%;
+    top: 20px !important;
+    left: 43%;
     color: #6C757D !important;
     font-weight: 500;
+    z-index: 6;
 }
 
 .messaging-grid-btn:hover {
@@ -466,7 +467,8 @@ img:hover {
     left: 87%;
 
 }
-.agent-grid-card{
+
+.agent-grid-card {
     position: absolute;
     width: 36px;
     top: 15px;

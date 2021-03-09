@@ -32,7 +32,7 @@ function Contacts() {
     return (
         <>
             <div>
-                <h3 className="header-profile mb-5"> Your Contacts</h3>
+                <h3 className="header-profile mb-5 boldening"> Your Contacts</h3>
             </div>
             <input type="image" src={Grid} className="grid-list-contacts" onClick={changeView} title="Change display" ></input>
             <Card className="contact-count-header">

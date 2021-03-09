@@ -6,7 +6,7 @@ import Upload from '../images/upload.png';
 function FileManager() {
     return (
         <>
-            <h1 className="file-manager-header">File Manager</h1>
+            <h1 className="file-manager-header boldening">File Manager</h1>
             <Container className="file-manager-container">
                 <Row>
                     <Col>

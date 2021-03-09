@@ -17,7 +17,7 @@ function BooksList(props) {
     return (
         <>
             <ul className="main-ul">
-                {props.isThisBookmarks && <h1 className="bookmarks-header">Your Bookmarks</h1>}
+                {props.isThisBookmarks && <h3 className="bookmarks-header boldening">Your Bookmarks</h3>}
                 <input type="image" src={Grid} className="grid-list" onClick={changeView} title="Change display" ></input>
                 {!props.isThisBookmarks && !gridView && books && books.map(book =>
                     <BookItemListView

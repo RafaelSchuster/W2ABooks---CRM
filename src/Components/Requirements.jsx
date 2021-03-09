@@ -42,14 +42,14 @@ function Requirements() {
 
     return (
         <>
-            <h3 className="requirements-header" >What are your requirements for promoting a book?</h3>
+            <h3 className="requirements-header boldening" >What are your requirements for promoting a book?</h3>
             <div class="list-of-requirements">
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="bookData" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="bookData">
                         <img src={BookPage} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Book Data
                             </span>
                         </div>
@@ -60,7 +60,7 @@ function Requirements() {
                     <label for="aReader">
                         <img src={AReader} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 A Reader
                             </span>
                         </div>
@@ -71,7 +71,7 @@ function Requirements() {
                     <label for="bReader">
                         <img src={BReader} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 B Reader
                             </span>
                         </div>
@@ -82,7 +82,7 @@ function Requirements() {
                     <label for="editors">
                         <img src={Editor} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Editors
                             </span>
                         </div>
@@ -93,7 +93,7 @@ function Requirements() {
                     <label for="proofreader">
                         <img src={Glasses} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Proofreader
                             </span>
                         </div>
@@ -104,7 +104,7 @@ function Requirements() {
                     <label for="graphics">
                         <img src={Graphics} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Book Graphics
                             </span>
                         </div>
@@ -115,7 +115,7 @@ function Requirements() {
                     <label for="query">
                         <img src={Query} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Query Letter
                             </span>
                         </div>
@@ -125,7 +125,7 @@ function Requirements() {
                     <label for="synopsis">
                         <img src={Pen} alt="" srcset="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Synopsis Review
                             </span>
                         </div>
@@ -136,7 +136,7 @@ function Requirements() {
                     <label for="digital">
                         <img src={Digital} alt="" srcset="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Digital Publishing
                             </span>
                         </div>
@@ -144,7 +144,7 @@ function Requirements() {
                 </div>
             </div>
             {showAllEditors && <Card border="light" className="editors-requirements-card">
-                <Card.Header className="text-center">Which editors do you require?</Card.Header>
+                <Card.Header className="text-center boldening">Which editors do you require?</Card.Header>
                 <Card.Body>
                     <ButtonGroup toggle>
                         {!copyEditor && <ToggleButton
@@ -153,7 +153,7 @@ function Requirements() {
                             value="copyEditor"
                             id="copyEditor"
                             checked={copyEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setCopyEditor(true); handleInputChange(e) }}
                         >
                             Copy Editor
@@ -164,7 +164,7 @@ function Requirements() {
                             value="copyEditor"
                             id="copyEditor"
                             checked={copyEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setCopyEditor(false); handleInputChange(e) }}
                         >
                             Copy Editor
@@ -175,7 +175,7 @@ function Requirements() {
                             value="pageEditor"
                             id='pageEditor'
                             checked={pageEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setPageEditor(true); handleInputChange(e) }}
                         >
                             Page Editor
@@ -186,7 +186,7 @@ function Requirements() {
                             value="pageEditor"
                             id='pageEditor'
                             checked={pageEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setPageEditor(false); handleInputChange(e) }}
                         >
                             Page Editor
@@ -197,7 +197,7 @@ function Requirements() {
                             value="lineEditor"
                             id="lineEditor"
                             checked={lineEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setLineEditor(true); handleInputChange(e) }}
                         >
                             Line Editor
@@ -208,7 +208,7 @@ function Requirements() {
                             value="lineEditor"
                             id="lineEditor"
                             checked={lineEditor}
-                            className="mr-3 editors-check-req"
+                            className="mr-3 editors-check-req boldening"
                             onChange={(e) => { setLineEditor(false); handleInputChange(e) }}
                         >
                             Line Editor
@@ -219,7 +219,7 @@ function Requirements() {
                             value="devEditor"
                             id="devEditor"
                             checked={devEditor}
-                            className="editors-check-req"
+                            className="editors-check-req boldening"
                             onChange={(e) => { setDevEditor(true); handleInputChange(e) }}
                         >
                             Developmental Editor
@@ -230,7 +230,7 @@ function Requirements() {
                             value="devEditor"
                             id="devEditor"
                             checked={devEditor}
-                            className="editors-check-req"
+                            className="editors-check-req boldening"
                             onChange={(e) => { setDevEditor(false); handleInputChange(e) }}
                         >
                             Developmental Editor

@@ -51,14 +51,14 @@ function GenreProfile() {
 
     return (
         <>
-            <h3 className="genres-header" >Which genres you like working with?</h3>
+            <h3 className="genres-header boldening" >Which genres you like working with?</h3>
             <div class="list-of-ganres">
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="classic" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="classic">
                         <img src={Classic} alt="" srcset="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Classic
                             </span>
                         </div>
@@ -69,7 +69,7 @@ function GenreProfile() {
                     <label for="comics">
                         <img src={Comics} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Comics / Graphic novel
                             </span>
                         </div>
@@ -80,7 +80,7 @@ function GenreProfile() {
                     <label for="crime">
                         <img src={Crime} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Crime / detective
                             </span>
                         </div>
@@ -91,7 +91,7 @@ function GenreProfile() {
                     <label for="fable">
                         <img src={Fable} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Fable
                             </span>
                         </div>
@@ -102,7 +102,7 @@ function GenreProfile() {
                     <label for="fairy">
                         <img src={Fairy} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Fairy tale
                             </span>
                         </div>
@@ -113,7 +113,7 @@ function GenreProfile() {
                     <label for="fan">
                         <img src={Fan} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Fan fiction
                             </span>
                         </div>
@@ -124,7 +124,7 @@ function GenreProfile() {
                     <label for="fantasy">
                         <img src={Fantasy} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Fantasy
                             </span>
                         </div>
@@ -134,7 +134,7 @@ function GenreProfile() {
                     <label for="folklore">
                         <img src={Folklore} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Folklore
                             </span>
                         </div>
@@ -145,7 +145,7 @@ function GenreProfile() {
                     <label for="historical">
                         <img src={Historical} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Historical fiction
                             </span>
                         </div>
@@ -156,7 +156,7 @@ function GenreProfile() {
                     <label for="horror">
                         <img src={Horror} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Horror
                             </span>
                         </div>
@@ -167,7 +167,7 @@ function GenreProfile() {
                     <label for="humor">
                         <img src={Humor} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Humor
                             </span>
                         </div>
@@ -178,7 +178,7 @@ function GenreProfile() {
                     <label for="legend">
                         <img src={Legend} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Legend
                             </span>
                         </div>
@@ -189,7 +189,7 @@ function GenreProfile() {
                     <label for="magic">
                         <img src={Magic} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Magical realism
                             </span>
                         </div>
@@ -200,7 +200,7 @@ function GenreProfile() {
                     <label for="meta">
                         <img src={Meta} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Meta fiction
                             </span>
                         </div>
@@ -211,7 +211,7 @@ function GenreProfile() {
                     <label for="mystery">
                         <img src={Mystery} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Mystery
                             </span>
                         </div>
@@ -222,7 +222,7 @@ function GenreProfile() {
                     <label for="mythology">
                         <img src={Mythology} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Mythology
                             </span>
                         </div>
@@ -233,7 +233,7 @@ function GenreProfile() {
                     <label for="mythopoeia">
                         <img src={Mythopoeia} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Mythopoeia
                             </span>
                         </div>
@@ -244,7 +244,7 @@ function GenreProfile() {
                     <label for="picture">
                         <img src={Picture} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Picture book
                             </span>
                         </div>
@@ -255,7 +255,7 @@ function GenreProfile() {
                     <label for="real">
                         <img src={Real} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Realistic fiction
                             </span>
                         </div>
@@ -266,7 +266,7 @@ function GenreProfile() {
                     <label for="science">
                         <img src={Science} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Science fiction
                             </span>
                         </div>
@@ -277,7 +277,7 @@ function GenreProfile() {
                     <label for="short">
                         <img src={Short} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Short story
                             </span>
                         </div>
@@ -288,7 +288,7 @@ function GenreProfile() {
                     <label for="suspense">
                         <img src={Suspense} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Suspense / Thriller
                             </span>
                         </div>
@@ -299,7 +299,7 @@ function GenreProfile() {
                     <label for="swash">
                         <img src={Swash} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Swashbuckler
                             </span>
                         </div>
@@ -310,7 +310,7 @@ function GenreProfile() {
                     <label for="tall">
                         <img src={Tall} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Tall tale
                             </span>
                         </div>
@@ -321,7 +321,7 @@ function GenreProfile() {
                     <label for="western">
                         <img src={Western} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Western
                             </span>
                         </div>
@@ -332,7 +332,7 @@ function GenreProfile() {
                     <label for="biography">
                         <img src={Biography} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Biography
                             </span>
                         </div>
@@ -343,7 +343,7 @@ function GenreProfile() {
                     <label for="essay">
                         <img src={Essay} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Essay
                             </span>
                         </div>
@@ -354,7 +354,7 @@ function GenreProfile() {
                     <label for="guide">
                         <img src={Guide} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Owner's manual / User's guide
                             </span>
                         </div>
@@ -365,7 +365,7 @@ function GenreProfile() {
                     <label for="journalism">
                         <img src={Journalism} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Journalism
                             </span>
                         </div>
@@ -376,7 +376,7 @@ function GenreProfile() {
                     <label for="lab">
                         <img src={Lab} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Lab Report
                             </span>
                         </div>
@@ -387,7 +387,7 @@ function GenreProfile() {
                     <label for="memoir">
                         <img src={Memoir} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Memoir
                             </span>
                         </div>
@@ -398,7 +398,7 @@ function GenreProfile() {
                     <label for="narrative">
                         <img src={Narrative} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Narrative nonfiction / personal narrative
                             </span>
                         </div>
@@ -409,7 +409,7 @@ function GenreProfile() {
                     <label for="reference">
                         <img src={Reference} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Reference book
                             </span>
                         </div>
@@ -420,7 +420,7 @@ function GenreProfile() {
                     <label for="self">
                         <img src={Self} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Self-help book
                             </span>
                         </div>
@@ -431,7 +431,7 @@ function GenreProfile() {
                     <label for="speech">
                         <img src={Speech} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Speech
                             </span>
                         </div>
@@ -442,7 +442,7 @@ function GenreProfile() {
                     <label for="textbook">
                         <img src={Textbook} alt="" />
                         <div>
-                            <span class="ng-binding">
+                            <span class="ng-binding boldening">
                                 Textbook
                             </span>
                         </div>

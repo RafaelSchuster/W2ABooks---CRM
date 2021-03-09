@@ -1,6 +1,6 @@
 .container-profile {
     position: absolute;
-    top: 20%;
+    top: 15%;
     left: 30%;
 }
 
@@ -17,7 +17,7 @@
     margin-bottom: 0px;
     position: relative;
     top: 0px;
-    left: 40%;
+    left: 50%;
     display: inline;
 }
 
@@ -54,9 +54,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-width: thin;
 }
 
-input[type='date'] {
+.date-input {
     position: relative;
-    left: 9%;
-    top: 0%;
-    width: 320px;
+    left: 23%;
+    top: 38%;
+    width: 56px;
 }

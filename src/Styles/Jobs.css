@@ -1,10 +1,12 @@
 .start-date-label {
     position: relative;
     left: 16px !important;
+    z-index: 5;
 }
 
 .start-date-box {
-    width: 20% !important;
+    position: relative;
+    width: 18% !important;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -16,7 +18,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 30px;
     border-width: thin;
     position: relative;
-    left: -39px;
+    left: 0px;
 }
 
 input[type="date"] {

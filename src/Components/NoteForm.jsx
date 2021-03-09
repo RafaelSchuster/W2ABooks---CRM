@@ -28,7 +28,7 @@ class MyForm extends React.Component {
     render() {
         return (
             <Container>
-                <h1 className="reminders-header">Your Reminders Note Book</h1>
+                <h3 className="reminders-header boldening">Your Reminders Note Book</h3>
                 <Form className='mt-5' onSubmit={event => this.onSubmiting(event)}>
                     <Form.Group>
                         <h1 className='text-white'>Notes</h1>
