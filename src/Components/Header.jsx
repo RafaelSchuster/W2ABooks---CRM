@@ -10,7 +10,7 @@ function Header() {
     return (
         <>
             <div className="grid-item grid-item-header">
-                <div className="logo"><a href="82.81.73.230:101">Company Logo</a></div>
+                <div className="logo"><a href="/">Company Logo</a></div>
             </div>
             <div className="grid-item grid-item-header2">
                 <Form className="form-hp" onSubmit={e => basicSearching(e)}>

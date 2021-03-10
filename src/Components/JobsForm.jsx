@@ -50,6 +50,7 @@ class JobsForm extends React.Component {
             description: this.state.description,
             date: new Date().toString().split(' ').slice(0, 5).join(' ')
         };
+        !newJob.projectName ? newJob.projectName = this.props.defaultBookName : newJob.projectName = this.state.projectName
         this.setState({ title: '', projectName: '', payment: '', startDate: '', endDate: '', status: '', description: '' });
         this.props.onAddJob(newJob);
     }
@@ -76,14 +77,22 @@ class JobsForm extends React.Component {
                                     onChange={event => this.onTitleChange(event)} />
                             </Col>
                             <Col>
-                                <Form.Control
+                                {this.props.defaultBookName && <Form.Control
+                                    className='m-3'
+                                    placeholder='Project Name'
+                                    as="textarea" rows={1}
+                                    name='projectName'
+                                    id='projectName'
+                                    value={this.props.defaultBookName}
+                                    onChange={event => this.onProjectNameChange(event)} />}
+                                {!this.props.defaultBookName && <Form.Control
                                     className='m-3'
                                     placeholder='Project Name'
                                     as="textarea" rows={1}
                                     name='projectName'
                                     id='projectName'
                                     value={this.state.projectName}
-                                    onChange={event => this.onProjectNameChange(event)} />
+                                    onChange={event => this.onProjectNameChange(event)} />}
                             </Col>
                             <Col>
                                 <Form.Control

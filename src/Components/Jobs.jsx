@@ -21,14 +21,8 @@ class Jobs extends React.Component {
         let confirmation = window.confirm("Are you sure you want to delete this job?");
         if (confirmation) {
             let arr = this.state.jobs;
-            let indexForDelete;
-            arr.forEach(element => {
-                if (element.date === date) {
-                    indexForDelete = arr.indexOf(element);
-                };
-            });
-            arr.splice(indexForDelete, 1);
-            this.setState({ jobs: arr });
+            let arr2 = arr.filter(item => item.date !== date)
+            this.setState({ jobs: arr2 });
         };
     }
 
@@ -37,12 +31,7 @@ class Jobs extends React.Component {
         let confirmation = window.confirm("Are you sure you want to change this job?");
         let arr2 = this.state.jobs;
         if (confirmation) {
-            let indexForEdit;
-            arr2.forEach(element => {
-                if (element.date === date) {
-                    indexForEdit = arr2.indexOf(element);
-                }
-            })
+            let indexForEdit = arr2.findIndex(el => el.date === date);
             if (title) { arr2[indexForEdit].title = title };
             if (projectName) { arr2[indexForEdit].projectName = projectName };
             if (payment) { arr2[indexForEdit].payment = payment };
@@ -67,7 +56,7 @@ class Jobs extends React.Component {
     render() {
         return (
             <div>
-                <JobsForm onAddJob={newJob => this.handleNewJobs(newJob)} />
+                <JobsForm onAddJob={newJob => this.handleNewJobs(newJob)} defaultBookName={this.props.defaultBookName} />
                 <JobsList jobs={this.state.jobs}
                     onJobDelete={date => this.handleDeletes(date)}
                     jobChange={(title, projectName, payment,

@@ -8,6 +8,8 @@ import StatusProgress from './StatusProgress';
 import BookMark from "../images/bookmark1.png";
 import Agent from '../images/agent.png';
 import { MainContext } from '../Context/Context';
+import Jobs from './Jobs';
+import JobsForm from './JobsForm';
 
 
 
@@ -15,6 +17,7 @@ function BookItemGridView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+    const [modalJobsIsOpen, setModalJobsIsOpen] = useState(false);
     const { setBookmarks } = useContext(MainContext);
 
     const useLocalState = (localItem) => {
@@ -46,16 +49,16 @@ function BookItemGridView(props) {
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
                     <h3 className="boldening">{props.bookName}</h3>
-                    {!props.isBookmarks && <input type="image" 
-                    id={JSON.stringify(props)}  
-                    src={BookMark} 
-                    className="bookmark-icon" 
-                    title="Add to bookmarks"
-                    onClick={e => bookmarking(e)} />}
+                    {!props.isBookmarks && <input type="image"
+                        id={JSON.stringify(props)}
+                        src={BookMark}
+                        className="bookmark-icon"
+                        title="Add to bookmarks"
+                        onClick={e => bookmarking(e)} />}
                     {/* {!props.isBookmarks && <label for={JSON.stringify(props)} className="bookmark-icon">
                         <img src={BookMark} alt="" srcset="" title="Bookmark this book" />
                     </label>} */}
-                    <input type="image" src={Agent} className="agent-grid-card" title="Add to jobs list"/>
+                    <input type="image" src={Agent} className="agent-grid-card" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />
                 </Card.Header>
                 <Card.Body>
                     <Card.Img variant="top" src={mockImg} className="card-img-grid" />
@@ -114,6 +117,12 @@ function BookItemGridView(props) {
                         <Card.Body>
                             <Card.Text className="text-center summary-on-modal">{props.summary}</Card.Text>
                         </Card.Body>
+                    </Modal>
+                    <Modal isOpen={modalJobsIsOpen}
+                        onRequestClose={() => setModalJobsIsOpen(false)}>
+                        <Jobs
+                            defaultBookName={props.bookName}
+                        />
                     </Modal>
                     <Button type="button" className="btn-modal-summary-grid" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
                 </Card.Body>

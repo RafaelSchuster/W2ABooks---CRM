@@ -20,27 +20,16 @@ class Reminders extends React.Component {
         let confirmation = window.confirm("Are you sure you want to delete this note?");
         if (confirmation) {
             let arr = this.state.notes;
-            let indexForDelete;
-            arr.forEach(element => {
-                if (element.date === date) {
-                    indexForDelete = arr.indexOf(element);
-                };
-            });
-            arr.splice(indexForDelete, 1);
-            this.setState({ notes: arr });
+            let arr2 = arr.filter(item => item.date !== date)
+            this.setState({ notes: arr2 });
         };
     }
 
     changeNote(title, text, date) {
         let confirmation = window.confirm("Are you sure you want to change this note?");
+        let arr2 = this.state.notes;
         if (confirmation) {
-            let arr2 = this.state.notes;
-            let indexForEdit;
-            arr2.forEach(element => {
-                if (element.date === date) {
-                    indexForEdit = arr2.indexOf(element);
-                }
-            })
+            let indexForEdit = arr2.findIndex(el => el.date === date);
             if (title) { arr2[indexForEdit].title = title };
             if (text) { arr2[indexForEdit].text = text; arr2[indexForEdit].date = new Date().toString().split(' ').slice(0, 5).join(' ') };
             this.setState({ notes: arr2 });
