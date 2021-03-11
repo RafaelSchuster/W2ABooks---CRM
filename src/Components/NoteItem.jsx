@@ -27,20 +27,20 @@ function NoteItem(props) {
     return (
         <Card className="note-item-card">
             <div className="card-header card-note-header">
-                <h4>{props.date}</h4>
+                {props.date && <h4>{props.date}</h4>}
             </div>
             <div className="card-body">
-                <h2 className=" card-title">{props.title.toUpperCase()}</h2>
-                <h3 className="text-muted text">{props.text}</h3>
+                {props.title && <h2 className=" card-title">{props.title.toUpperCase()}</h2>}
+                {props.text && <h3 className="text-muted text">{props.text}</h3>}
                 <button className="btn btn-danger delBtn" onClick={() => onDelete(props.date)}>Delete</button>
                 <button type="button" className="btn btn-warning openModalBtn" onClick={() => setModalIsOpen(true)}>Open Note</button>
                 <Modal
                     portalClassName="note-modal"
                     isOpen={modalIsOpen}
                     onRequestClose={() => setModalIsOpen(false)}>
-                    <h1 className='display-4 text-center mt-5 '>({props.date})</h1>
-                    <h1 className='display-1 text-center mb-4 mt-5' > {props.title.toUpperCase()}</h1>
-                    <h2 className='display-3 text-center '>{props.text}</h2>
+                    {props.date && <h1 className='display-4 text-center mt-5 '>{props.date}</h1>}
+                    {props.title && <h1 className='display-1 text-center mb-4 mt-5' > {props.title.toUpperCase()}</h1>}
+                    {props.text && <h2 className='display-3 text-center '>{props.text}</h2>}
                     <div>
                         <button className="btn btn-outline-warning btn-lg btn-block closeModalBtn"
                             onClick={() => setModalIsOpen(false)} >

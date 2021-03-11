@@ -5,18 +5,9 @@ function MessageItem(props) {
     return (
         <div
             className='msgItem'>
-            <span
-                className='userName'>
-                {props.username}
-            </span>
-            <span
-                className='msgDate'>
-                {props.date}
-            </span>
-            <span
-                className='msgTxt'>
-                {props.text}
-            </span>
+            {props.username && <span className='userName'>{props.username}</span>}
+            {props.date && <span className='msgDate'>{props.date}</span>}
+            {props.text && <span className='msgTxt'>{props.text}</span>}
         </div>
     )
 }

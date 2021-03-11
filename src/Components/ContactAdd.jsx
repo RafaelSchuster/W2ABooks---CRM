@@ -1,16 +1,13 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Container, Form, Col, Alert, Card } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
 import '../Styles/AccountProfile.css';
-import NationalitiesDrop from './NationalitiesDrop';
 import '../Styles/ContactAdd.css';
 
 function ContactAdd() {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
     const [workHistory, setWorkHistory] = useState(false);
-    const { nationality, thisUser } = useContext(MainContext);
-
 
     const handleInputChange = (e) => {
         const { value, name } = e.target;
@@ -24,12 +21,6 @@ function ContactAdd() {
         const { value } = e.target
         setWorkHistory(!!parseInt(value)) //Turn into a boolean
     }
-
-    useEffect(() => {
-        const profileValuesCopy = { ...profileValues };
-        if (nationality) profileValuesCopy['agentNationality'] = nationality;
-        setProfileValues(profileValuesCopy);
-    }, [nationality])
 
     const submitProfile = () => {
 

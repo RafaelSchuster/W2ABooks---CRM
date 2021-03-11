@@ -18,7 +18,7 @@ function BooksList(props) {
         <>
             <ul className="main-ul">
                 {props.isThisBookmarks && <h3 className="bookmarks-header boldening">Your Bookmarks</h3>}
-                <input type="image" src={Grid} className="grid-list" onClick={changeView} title="Change display" ></input>
+                <input type="image" src={Grid} alt="" className="grid-list" onClick={changeView} title="Change display" ></input>
                 {!props.isThisBookmarks && !gridView && books && books.map(book =>
                     <BookItemListView
                         key={Math.random()}

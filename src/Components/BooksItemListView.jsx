@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import mockImg from '../images/BookCover_MockUp.png';
@@ -27,15 +27,16 @@ function BookItemListView(props) {
     return (
         <>
             <Card className="book-card">
-                <Card.Header className="card-title-header"><h3 className="boldening">{props.bookName}</h3>
-                <input type="image" src={Agent} className="agent-list-card" title="Add to jobs list"/>
-                {!props.isBookmarks && <input type="image" 
-                    id={JSON.stringify(props)}  
-                    src={BookMark} 
-                    className="bookmark-icon-list" 
-                    title="Add to bookmarks"
-                    onClick={e => bookmarking(e)} />}                   
-                     </Card.Header>
+                <Card.Header className="card-title-header">
+                    {props.bookName && <h3 className="boldening">{props.bookName}</h3>}
+                    <input type="image" src={Agent} alt="" className="agent-list-card" title="Add to jobs list" />
+                    {!props.isBookmarks && <input type="image"
+                        id={JSON.stringify(props)}
+                        src={BookMark}
+                        className="bookmark-icon-list"
+                        title="Add to bookmarks"
+                        onClick={e => bookmarking(e)} />}
+                </Card.Header>
                 <Tabs
                     id="controlled-tab-example"
                     activeKey={key}
@@ -49,15 +50,15 @@ function BookItemListView(props) {
                             <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
                                 <Card.Body>
-                                    <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>
-                                    <Button type="button" className="btn-modal-status" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                                    {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
+                                    {props.processStatus && <Button type="button" className="btn-modal-status" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>}
                                     <Button type="button" className="btn-modal-meeting" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
-                                    <Card.Text className="status-date"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>
-                                    <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>
-                                    <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>
-                                    <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>
-                                    <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>
-                                    {props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
+                                    {props.datePresenting && <Card.Text className="status-date"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
+                                    {props.dateResponse && <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
+                                    {props.responseStatus && <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
+                                    {props.meetingDate && <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                    {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>}
+                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
                                     <Modal
                                         className="status-modal"
                                         overlayClassName="overlay-modal-status"
@@ -97,10 +98,10 @@ function BookItemListView(props) {
                             <Card border="light" className="profile-internal-card">
                                 <Card.Header className="text-center" >Book Profile</Card.Header>
                                 <Card.Body>
-                                    <Card.Text className=""><span className="boldening">Author: </span>{props.author}</Card.Text>
-                                    <Card.Text className="about-author"><span className="boldening">About the Author: </span>{props.aboutAuthor}</Card.Text>
-                                    <Card.Text className=""><span className="boldening">Genre: </span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                                    <Card.Text className=""><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>
+                                    {props.author && <Card.Text className=""><span className="boldening">Author: </span>{props.author}</Card.Text>}
+                                    {props.aboutAuthor && <Card.Text className="about-author"><span className="boldening">About the Author: </span>{props.aboutAuthor}</Card.Text>}
+                                    <Card.Text ><span className="boldening">Genre: </span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                    {props.wordCount && <Card.Text ><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                                 </Card.Body>
                             </Card>
                             <Card.Text className="book-author"></Card.Text>
@@ -112,7 +113,7 @@ function BookItemListView(props) {
                             <Card border="light" className="summary-card" >
                                 <Card.Header className="text-center" >Summary</Card.Header>
                                 <Card.Body>
-                                    <Card.Title className="text-center"><span className="boldening">{props.summaryTitle}</span></Card.Title>
+                                    {props.summaryTitle && <Card.Title className="text-center"><span className="boldening">{props.summaryTitle}</span></Card.Title>}
                                     <Button type="button" className="btn-modal-summary" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Summary</Button>
                                 </Card.Body>
                             </Card>
@@ -126,7 +127,7 @@ function BookItemListView(props) {
                             <Card className="modal-card" border="light">
                                 <Card.Header as="h1" className="text-center">Full Summary</Card.Header>
                                 <Card.Body>
-                                    <Card.Text className="text-center summary-on-modal">{props.summary}</Card.Text>
+                                    {props.summary && <Card.Text className="text-center summary-on-modal">{props.summary}</Card.Text>}
                                 </Card.Body>
                             </Card>
                         </Modal>

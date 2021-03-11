@@ -16,7 +16,6 @@ import Reminders from './Reminders';
 import MessageComponent from './MessageComponent';
 import Contacts from './Contacts';
 import ContactAdd from './ContactAdd';
-import JobForm from './JobsForm';
 import Jobs from './Jobs';
 
 function Main() {

@@ -13,9 +13,6 @@ function JobsTable(props) {
         props.onEditing(title, projectName, payment,
             date, startDate, endDate, status, description);
     }
-    useEffect(() => {
-        console.log(props);
-    }, [])
 
     return (
         <Container >

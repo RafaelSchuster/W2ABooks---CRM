@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Form } from 'react-bootstrap';
+import { Container, Row, Col, Form } from 'react-bootstrap';
 import '../Styles/FileManager.css';
 import Upload from '../images/upload.png';
 

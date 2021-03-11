@@ -34,7 +34,7 @@ function Contacts() {
             <div>
                 <h3 className="header-profile mb-5 boldening"> Your Contacts</h3>
             </div>
-            <input type="image" src={Grid} className="grid-list-contacts" onClick={changeView} title="Change display" ></input>
+            <input type="image" src={Grid} alt="" className="grid-list-contacts" onClick={changeView} title="Change display" ></input>
             <Card className="contact-count-header">
                 {contacts ? <Card.Body className="head-status text-center">{`You have ${contacts.length} Contacts.`}</Card.Body> :
                     <Card.Body className="head-status">{`You have 0 Contacts.`}</Card.Body>}

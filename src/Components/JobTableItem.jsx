@@ -6,8 +6,6 @@ import '../Styles/Jobs.css';
 import Page from '../images/bio.png'
 import Info from '../images/info.png'
 import Trash from '../images/trash.png'
-import People from '../images/people.png';
-import Work from '../images/working-time.png';
 import Edit from '../images/edit.png'
 
 
@@ -50,13 +48,13 @@ function JobsTableItems(props) {
                 <Container className="container-list-more">
                     <Row>
                         <Col>
-                            <input type="image" variant="primary" id="about" className="info-list-contact" src={Info} title="About" onClick={() => setModalIsOpen1(true)}></input>
+                            <input type="image" variant="primary" id="about" className="info-list-contact" src={Info} alt="" title="About" onClick={() => setModalIsOpen1(true)}></input>
                         </Col>
                         <Col>
-                            <input type="image" src={Edit} className="edit-contact-list" title="Edit" onClick={() => { setModalIsOpen2(true) }} />
+                            <input type="image" src={Edit} alt="" className="edit-contact-list" title="Edit" onClick={() => { setModalIsOpen2(true) }} />
                         </Col>
                         <Col>
-                            <input type="image" variant="primary" src={Trash} className="trash-list-contact" id="delete" title="Delete" onClick={() => onDelete(props.date)}></input>
+                            <input type="image" variant="primary" src={Trash} alt="" className="trash-list-contact" id="delete" title="Delete" onClick={() => onDelete(props.date)}></input>
                         </Col>
                     </Row>
                 </Container>
@@ -70,7 +68,7 @@ function JobsTableItems(props) {
                             <Card.Title></Card.Title>
                             {props.description &&
                                 <Card.Text>
-                                    <Card.Text><img srcSet={Page}></img><span className="text-center contact-bio ml-3">{props.description}</span>  </Card.Text>
+                                    <Card.Text><img srcSet={Page} alt=""></img><span className="text-center contact-bio ml-3">{props.description}</span>  </Card.Text>
                                 </Card.Text>}
                         </Card.Body>
                     </Card>

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Button, ToggleButton, ButtonGroup } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Card, ToggleButton, ButtonGroup } from 'react-bootstrap';
 import '../Styles/StatusProgress.css';
 
 function StatusProgress() {

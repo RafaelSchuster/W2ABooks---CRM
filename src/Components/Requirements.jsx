@@ -13,13 +13,12 @@ import Digital from '../images/digital1.png';
 
 
 function Requirements() {
-    const [genres, setGenres] = useState({});
+    const [requirements, setRequirements] = useState({});
     const [showAllEditors, setShowAllEditors] = useState(false);
     const [copyEditor, setCopyEditor] = useState(false);
     const [pageEditor, setPageEditor] = useState(false);
     const [lineEditor, setLineEditor] = useState(false);
     const [devEditor, setDevEditor] = useState(false);
-    const [checked, setChecked] = useState(false);
 
     const allEditors = () => {
         setShowAllEditors(!showAllEditors);
@@ -27,16 +26,16 @@ function Requirements() {
 
     const handleInputChange = (e) => {
         const { id, value } = e.target;
-        const genreValuesCopy = { ...genres };
+        const reqValuesCopy = { ...requirements };
         if (value !== 'on') {
-            if (!genreValuesCopy[value]) genreValuesCopy[value] = true;
-            else if (genreValuesCopy[value]) genreValuesCopy[value] = !genreValuesCopy[value];
-            setGenres(genreValuesCopy);
+            if (!reqValuesCopy[value]) reqValuesCopy[value] = true;
+            else if (reqValuesCopy[value]) reqValuesCopy[value] = !reqValuesCopy[value];
+            setRequirements(reqValuesCopy);
         }
         else if (value === 'on') {
-            if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
-            else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
-            setGenres(genreValuesCopy);
+            if (!reqValuesCopy[id]) reqValuesCopy[id] = true;
+            else if (reqValuesCopy[id]) reqValuesCopy[id] = !reqValuesCopy[id];
+            setRequirements(reqValuesCopy);
         }
     };
 
@@ -78,7 +77,7 @@ function Requirements() {
                     </label>
                 </div>
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
-                    <input type="checkbox" id="editors" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange, allEditors} />
+                    <input type="checkbox" id="editors" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={() => handleInputChange, allEditors} />
                     <label for="editors">
                         <img src={Editor} alt="" />
                         <div>

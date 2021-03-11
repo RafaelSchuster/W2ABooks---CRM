@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styles/Jobs.css';
 import JobsForm from './JobsForm';
-import JobForm from './JobsForm';
 import JobsList from './JobsList';
 
 class Jobs extends React.Component {

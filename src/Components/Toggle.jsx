@@ -62,7 +62,6 @@ function Toggle() {
                 <Accordion.Collapse eventKey="2">
                     <Card.Body className="toggle-content">
                         <Card.Link href="index.html#/file_manager" className="toggle-link">File Manager</Card.Link>
-                        {/* <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link> */}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -74,7 +73,6 @@ function Toggle() {
                     <Card.Body className="toggle-content">
                         <Card.Link href="index.html#/add_contact" className="toggle-link">Add Contact</Card.Link>
                         <Card.Link href="index.html#/contacts" className="toggle-link">Your Contacts</Card.Link>
-                        {/* <Card.Link href="index.html#/files_uploaded" className="toggle-link">Files Uploaded</Card.Link> */}
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>

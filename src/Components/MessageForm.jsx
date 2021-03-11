@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Alert, Button, Container, Form, FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MsgContext } from '../Context/Context';
 // import { createMsg} from '../lib/api';
 import '../Styles/MessageForm.css';
-import { createMsg } from '../Api/MessageApi';
+// import { createMsg } from '../Api/MessageApi';
 
 let msgText;
 let newMsg;
