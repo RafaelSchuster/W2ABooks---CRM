@@ -26,7 +26,8 @@ class Reminders extends React.Component {
         let confirmation = window.confirm("Are you sure you want to delete this note?");
         if (confirmation) {
             let arr = this.state.notes;
-            let arr2 = arr.filter(item => item.date !== date)
+            let arr2 = arr.filter(item => item.date !== date);
+            localStorage.setItem('notes', JSON.stringify(arr2));
             this.setState({ notes: arr2 });
         };
     }
@@ -38,6 +39,7 @@ class Reminders extends React.Component {
             let indexForEdit = arr2.findIndex(el => el.date === date);
             if (title) { arr2[indexForEdit].title = title };
             if (text) { arr2[indexForEdit].text = text; arr2[indexForEdit].date = new Date().toString().split(' ').slice(0, 5).join(' ') };
+            localStorage.setItem('notes', JSON.stringify(arr2));
             this.setState({ notes: arr2 });
         };
     }
