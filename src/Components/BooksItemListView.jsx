@@ -3,9 +3,9 @@ import { Card, Button, Tabs, Tab, ProgressBar } from 'react-bootstrap';
 import Modal from 'react-modal';
 import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
-import BookMark from "../images/bookmark1.png";
+import BookMark from "../images/star.png";
 import { MainContext } from '../Context/Context';
-import Agent from '../images/agent.png';
+import Agent from '../images/check.png';
 
 
 

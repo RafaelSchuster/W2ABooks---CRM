@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Button, Container, Form, Col, Alert, Card } from 'react-bootstrap';
-import { MainContext } from '../Context/Context';
 import '../Styles/AccountProfile.css';
-import '../Styles/ContactAdd.css';
+import '../Styles/Contacts.css';
 
-function ContactAdd() {
+function ContactForm() {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
     const [workHistory, setWorkHistory] = useState(false);
@@ -30,7 +29,7 @@ function ContactAdd() {
         <div>
             <Container className="container-profile">
                 <Card border="light">
-                    <Card.Header as="h2" className="text-center card-title-header"><span className="boldening">Add New Contact</span></Card.Header>
+                    <Card.Header as="h2" className="text-center purple"><span className="boldening">Add New Contact</span></Card.Header>
                     <Card.Body className="add-contact-form">
                         <Card.Text>
                             {error && <Alert variant="danger">{error}</Alert>}
@@ -102,4 +101,4 @@ function ContactAdd() {
         </div>
     )
 }
-export default ContactAdd;
+export default ContactForm;

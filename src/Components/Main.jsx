@@ -15,7 +15,7 @@ import FileManager from './FileManager';
 import Reminders from './Reminders';
 import MessageComponent from './MessageComponent';
 import Contacts from './Contacts';
-import ContactAdd from './ContactAdd';
+import ContactForm from './ContactForm';
 import Jobs from './Jobs';
 
 function Main() {
@@ -74,7 +74,7 @@ function Main() {
                 </Switch>
                 <Switch>
                     <Route path='/add_contact'>
-                        <ContactAdd />
+                        <ContactForm />
                     </Route>
                 </Switch>
                 <Switch>

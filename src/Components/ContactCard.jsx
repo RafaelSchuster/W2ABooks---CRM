@@ -7,11 +7,11 @@ import Mail from '../images/mail.png';
 import Phone from '../images/phone.png';
 import Page from '../images/bio.png';
 import Company from '../images/company.png';
-import Trash from '../images/trash.png';
+import Trash from '../images/trash1.png';
 import Job from '../images/workplace.png';
 import People from '../images/people.png';
 import Work from '../images/working-time.png';
-import Edit from '../images/edit.png'
+import Edit from '../images/edit1.png'
 
 function ContactCard(props) {
     const [modalIsOpen1, setModalIsOpen1] = useState(false);

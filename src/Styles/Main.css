@@ -45,11 +45,11 @@ html body {
   height: 40%;
   background: #FFFFFF;
   text-align: center;
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.377);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0);
 
 }
 
-@media(max-width:1575px) {
+@media(max-width:1574px) {
   .hello {
     position: absolute;
     top: 9%;
@@ -65,6 +65,7 @@ html body {
     width: 110px;
 
   }
+
 }
 
 @media(min-width: 1575px) {
@@ -119,8 +120,8 @@ html body {
 
 .toggle-btn {
   width: 100%;
-  border: 1px solid #00C67E !important;
-  background-color: rgb(241, 239, 239) !important;
+  border: 1px solid #9982da !important;
+  background-color: white !important;
   font-weight: 600;
   font-size: 18px;
   border-radius: 5px;
@@ -189,7 +190,7 @@ html body {
     position: absolute;
     margin-top: 10px;
     padding: 0px;
-    left: 40%;
+    left: 40% !important;
   }
 
   .btn-modal-summary {
@@ -349,7 +350,7 @@ html body {
   }
 }
 
-@media(max-width : 1900px) {
+@media(max-width : 1899px) {
   .status-card {
     position: relative;
     width: 1000px;
@@ -392,13 +393,19 @@ html body {
   }
 }
 
-@media(max-width:1696px) {
+@media(max-width:1778px) {
   .status-card {
     position: relative;
     width: 900px;
     height: 220px;
     left: 23%;
     bottom: 215px !important;
+  }
+  .tabs {
+    position: absolute;
+    margin-top: 10px;
+    padding: 0px;
+    left: 52%;
   }
 }
 
@@ -498,6 +505,23 @@ html body {
     top: 12vh;
     font-weight: bold !important;
     border: 0 !important;
+  }
+  .agent-list-card {
+    position: absolute;
+    top: 6% !important;
+    left: 96%;
+    width: 26px;
+  
+  
+  }
+  
+  .bookmark-icon-list {
+    position: absolute;
+    top: 5% !important;
+    left: 92% !important;
+    width: 23px;
+  
+  
   }
 }
 
@@ -799,15 +823,19 @@ a:hover {
 
 .agent-list-card {
   position: absolute;
-  top: 4%;
+  top: 8%;
   left: 96%;
+  width: 26px;
+
 
 }
 
 .bookmark-icon-list {
   position: absolute;
-  top: 4%;
+  top: 7%;
   left: 93%;
+  width: 23px;
+
 
 }
 
@@ -826,4 +854,11 @@ a:hover {
 
 .messaging-btn:hover {
   color: white !important;
+}
+.main-logo{
+  position: relative;
+  bottom: 120%;
+  width: 90px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.377);
+  border-radius: 10px;
 }

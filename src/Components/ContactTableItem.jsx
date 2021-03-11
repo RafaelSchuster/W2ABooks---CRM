@@ -4,13 +4,13 @@ import { Card, Container, Row, Col } from 'react-bootstrap';
 import Modal from 'react-modal';
 import '../Styles/ContactCard.css';
 import Page from '../images/bio.png'
-import Info from '../images/info.png'
-import Trash from '../images/trash.png'
+import Info from '../images/info-green.png'
+import Trash from '../images/trash1.png'
 import Work from '../images/working-time.png';
-import Edit from '../images/edit.png';
+import Edit from '../images/edit1.png';
 
 
-function TableItems(props) {
+function ContactTableItem(props) {
     const [modalIsOpen1, setModalIsOpen1] = useState(false);
     const [modalIsOpen2, setModalIsOpen2] = useState(false);
 
@@ -81,4 +81,4 @@ function TableItems(props) {
     )
 }
 
-export default TableItems;
+export default ContactTableItem;

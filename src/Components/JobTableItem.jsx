@@ -4,9 +4,9 @@ import { Card, Button, Container, Row, Col, Form } from 'react-bootstrap';
 import Modal from 'react-modal';
 import '../Styles/Jobs.css';
 import Page from '../images/bio.png'
-import Info from '../images/info.png'
-import Trash from '../images/trash.png'
-import Edit from '../images/edit.png'
+import Info from '../images/info-green.png'
+import Trash from '../images/trash1.png'
+import Edit from '../images/edit1.png'
 
 
 function JobsTableItems(props) {
@@ -42,10 +42,9 @@ function JobsTableItems(props) {
             <td className="text-center">{props.startDate}</td>
             <td className="text-center">{props.endDate}</td>
             <td className="text-center">{props.status}</td>
-            {/* <td className="text-center">{props.description}</td> */}
 
             <td className="actions-list">
-                <Container className="container-list-more">
+                <Container className="container-list-more-jobs">
                     <Row>
                         <Col>
                             <input type="image" variant="primary" id="about" className="info-list-contact" src={Info} alt="" title="About" onClick={() => setModalIsOpen1(true)}></input>

@@ -33,7 +33,7 @@ function AccountProfile() {
         <div>
             <Container className="container-profile">
                 <Card border="light">
-                    <Card.Header as="h2" className="text-center card-title-header"><span className="boldening">Agent's Profile</span></Card.Header>
+                    <Card.Header as="h2" className="text-center card-title-header-profile"><span className="boldening">Agent's Profile</span></Card.Header>
                     <Card.Body>
                         <Col>
                             <input type="file" id="actual-btn" hidden />

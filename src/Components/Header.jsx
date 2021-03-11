@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import Profile from '../images/profile.png';
+import Logo from '../images/logo-white.png'
 
 
 function Header() {
@@ -10,7 +11,7 @@ function Header() {
     return (
         <>
             <div className="grid-item grid-item-header">
-                <div className="logo"><a href="/">Company Logo</a></div>
+                <div className="logo"><a href="/"><img src={Logo} alt="" srcset="" className="main-logo"/></a></div>
             </div>
             <div className="grid-item grid-item-header2">
                 <Form className="form-hp" onSubmit={e => basicSearching(e)}>

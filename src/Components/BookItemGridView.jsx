@@ -5,8 +5,8 @@ import mockImg from '../images/BookCover_MockUp.png';
 import GenreItem from './GenreItem';
 import '../Styles/BookItemGrid.css';
 import StatusProgress from './StatusProgress';
-import BookMark from "../images/bookmark1.png";
-import Agent from '../images/agent.png';
+import BookMark from "../images/star.png";
+import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
 
