@@ -50,7 +50,7 @@ class MyForm extends React.Component {
                             onChange={event => this.onNoteChange(event)}
                             required />
                         <Button
-                            className='btn btn-success btn-block m-3'
+                            className='btn add-note btn-block m-3'
                             type='submit'
                         >Create a Note</Button>
                     </Form.Group>

@@ -150,3 +150,12 @@
     background-color: #4285F4 !important;
     color: white;
 }
+.add-note{
+    background-color: #9982da !important;
+    border: none !important;
+}
+.open-note-btn{
+    background-color: #01c67e!important;
+    border: none !important;
+    color: white;
+}

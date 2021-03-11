@@ -33,7 +33,7 @@ function NoteItem(props) {
                 {props.title && <h2 className=" card-title">{props.title.toUpperCase()}</h2>}
                 {props.text && <h3 className="text-muted text">{props.text}</h3>}
                 <button className="btn btn-danger delBtn" onClick={() => onDelete(props.date)}>Delete</button>
-                <button type="button" className="btn btn-warning openModalBtn" onClick={() => setModalIsOpen(true)}>Open Note</button>
+                <button type="button" className="btn open-note-btn openModalBtn" onClick={() => setModalIsOpen(true)}>Open Note</button>
                 <Modal
                     portalClassName="note-modal"
                     isOpen={modalIsOpen}
