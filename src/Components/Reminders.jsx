@@ -12,8 +12,14 @@ class Reminders extends React.Component {
     }
     handleNewNotes(newNote) {
         this.setState(state => {
-            if (state.notes) return { notes: [...state.notes, newNote] }
-            else if (!state.notes) return { notes: [newNote] }
+            if (state.notes) {
+                localStorage.setItem('notes', JSON.stringify([...state.notes, newNote]));
+                return { notes: [...state.notes, newNote] }
+            }
+            else if (!state.notes) {
+                localStorage.setItem('notes', JSON.stringify([newNote]));
+                return { notes: [newNote] }
+            }
         })
     }
     handleDeletes(date) {
@@ -36,14 +42,9 @@ class Reminders extends React.Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.setState({ notes: JSON.parse(localStorage.getItem('notes')) });
     }
-
-    componentWillUpdate(nextProps, nextState) {
-        localStorage.setItem('notes', JSON.stringify(nextState.notes));
-    }
-
 
     render() {
         return (

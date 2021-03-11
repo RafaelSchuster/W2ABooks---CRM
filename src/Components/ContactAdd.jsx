@@ -18,8 +18,8 @@ function ContactAdd() {
     };
 
     const onWorkHistory = (e) => {
-        const { value } = e.target
-        setWorkHistory(!!parseInt(value)) //Turn into a boolean
+        const { value } = e.target;
+        setWorkHistory(!!parseInt(value));
     }
 
     const submitProfile = () => {
