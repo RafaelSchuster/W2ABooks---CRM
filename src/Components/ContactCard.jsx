@@ -64,7 +64,7 @@ function ContactCard(props) {
                         {props.jobTitle && <span className="text-center ml-2">{props.jobTitle}</span>}
                     </Card.Text>
                 </Card.Body>
-                <Button type="button" variant="primary" onClick={() => setModalIsOpen1(true)}>About</Button>
+                <Button type="button" className="about-card-btn" onClick={() => setModalIsOpen1(true)}>About</Button>
                 <Modal className="my-modal"
                     isOpen={modalIsOpen1}
                     onRequestClose={() => setModalIsOpen1(false)}

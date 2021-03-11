@@ -3,7 +3,7 @@
 }
 
 .trash-contact-card {
-    width: 26px !important;
+    width: 22px !important;
     position: relative;
 }
 
@@ -35,15 +35,22 @@
 
 .work-grid-icon {
     position: absolute;
-    width: 29px;
+    width: 23px;
 }
-.edit-contact-card{
+
+.edit-contact-card {
     position: absolute;
-    width: 25px;
+    width: 22px;
 }
-.container-header-contact-card{
+
+.container-header-contact-card {
     position: relative;
     top: 10% !important;
     right: 4%;
     width: 107% !important;
+}
+
+.about-card-btn {
+    background-color: #9982da !important;
+    border: none;
 }
