@@ -148,7 +148,7 @@ class JobsForm extends React.Component {
                             onChange={event => this.onJobDescriptionChange(event)}
                             required />
                         <Button
-                            className='btn btn-block m-3 add-job-btn'
+                            className='btn btn-block m-3 add-job-button'
                             type='submit'
                         >Add Job</Button>
                     </Form.Group>
