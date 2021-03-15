@@ -10,7 +10,6 @@ function AccountProfile() {
     const [profileValues, setProfileValues] = useState({});
     const { nationality, thisUser } = useContext(MainContext);
 
-
     const handleInputChange = (e) => {
         const { value, name } = e.target;
         const profileValuesCopy = { ...profileValues };
