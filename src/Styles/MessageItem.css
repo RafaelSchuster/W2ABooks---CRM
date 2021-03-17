@@ -1,15 +1,15 @@
 .msgItem {
   position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 850px;
   height: 100px;
-  left: 90%;
   top: 0 !important;
   border-radius: 6px;
   background-color: #eef0f1;
   color: rgb(131, 124, 124);
   margin-bottom: 15px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .msgTxt {
@@ -56,66 +56,11 @@
   color: #6C757D;
 }
 
-@media(min-width:1900px) {
-  .message-list {
-    position: absolute;
-    top: 43%;
-    right: 60%;
-  }
-}
-
-@media(max-width:1899px) {
-  .message-list {
-    position: absolute;
-    top: 43%;
-    right: 60%;
-  }
-}
-
-@media(max-width:1600px) {
-  .msgItem {
-    position: relative;
-    width: 750px;
-    height: 150px;
-    left: 90%;
-    top: 0 !important;
-    border-radius: 6px;
-    background-color: #eef0f1;
-    color: rgb(131, 124, 124);
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .message-list {
-    position: absolute;
-    top: 43%;
-    right: 57%;
-  }
-
-  .messaging-main-div {
-    position: relative;
-    right: 20%;
-  }
-
-  .form-control.msgBox {
-    position: absolute;
-    display: inline-block;
-    width: 600px;
-    height: 180px;
-    top: 15%;
-    border: 2px solid #CCCCCC !important;
-    box-sizing: border-box;
-    border-radius: 6px;
-    background-color: white !important;
-    left: 43%;
-    padding: 20px;
-    color: rgb(88, 84, 84) !important;
-  }
-
-  .msgBtn {
-    position: absolute;
-    top: 31%;
-    left: 82%;
-  }
+.message-list {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10%;
+  right: 2%;
 }

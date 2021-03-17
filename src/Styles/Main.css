@@ -1,7 +1,6 @@
 html body {
   font-family: 'Montserrat', sans-serif;
   color: #121518;
-  overflow: hidden;
 }
 
 *:focus {
@@ -10,13 +9,13 @@ html body {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 100px 850px;
+  grid-template-rows: 100px auto;
   grid-template-columns: 20% 80%;
 }
 
 .grid-item {
   border: 1px solid rgba(128, 128, 128, 0.151);
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.26);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.096);
 }
 
 .grid-item-header {
@@ -33,7 +32,8 @@ html body {
 }
 
 .grid-item-main {
-  overflow-y: scroll;
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
 }
 
 .logo {
@@ -49,47 +49,29 @@ html body {
 
 }
 
-@media(max-width:1574px) {
-  .hello {
-    position: absolute;
-    top: 9%;
-    font-weight: 900;
-    font-size: 20px;
-    right: 15%;
-  }
-
-  .btn-logout {
-    position: absolute;
-    top: 55%;
-    right: 15%;
-    width: 110px;
-
-  }
-
+.flex-header-profile {
+  position: absolute;
+  left: 83%;
+  top: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@media(min-width: 1575px) {
-  .hello {
-    position: absolute;
-    top: 9%;
-    font-weight: 900;
-    font-size: 20px;
-    right: 11%;
-  }
+.flex-hello {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
-  .btn-logout {
-    position: absolute;
-    top: 55%;
-    right: 11%;
-    width: 110px;
-  }
+.hello {
+  font-weight: 900;
+  font-size: 20px;
 }
 
 .thumbnail {
-  width: 75px;
-  position: absolute;
-  right: 3%;
-  top: 10%;
+   width: 75px;
+   margin-left: 30px;
 }
 
 .dropdown-toggle {
@@ -132,123 +114,45 @@ html body {
   color: white;
 }
 
-@media(min-width : 1258px) {
-  .search-bar {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 300px !important;
-  }
-
-  .search-btn {
-    position: absolute;
-    left: 32%;
-    top: 25%;
-  }
+.flex-header-form{
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
 }
 
-@media(max-width : 1258px) and (min-width:996px) {
-  .search-bar {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 300px !important;
-  }
-
-  .search-btn {
-    position: absolute;
-    left: 50%;
-    top: 25%;
-  }
-}
-
-@media(max-width : 996px) {
-  .search-bar {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 300px !important;
-  }
-
-  .search-btn {
-    position: absolute;
-    left: 10%;
-    top: 55%;
-    width: 300px
-  }
+.search-bar {
+  width: 300px !important;
 }
 
 .tabs {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  top: 45%;
   margin-top: 10px;
   padding: 0px;
-  left: 56%;
+  left: 95% !important;
 }
-
-@media(max-width: 1556px) {
-  .tabs {
-    position: absolute;
-    margin-top: 10px;
-    padding: 0px;
-    left: 40% !important;
-  }
-
-  .btn-modal-summary {
-    position: absolute;
-    left: 43% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
-
-}
-
-@media(max-width:1356px) {
-  .tabs {
-    position: absolute;
-    margin-top: 10px;
-    padding: 0px;
-    left: 30%;
-  }
-}
-
-@media(max-width:983px) {
-  .tabs {
-    position: absolute;
-    margin-top: 10px;
-    padding: 0px;
-    left: 20%;
-  }
-}
-
-@media(max-width:873px) {
-  .tabs {
-    position: absolute;
-    margin-top: 10px;
-    padding: 0px;
-    left: 26%;
-  }
-
-  .tabs>a {
-    background-color: #00C67E !important;
-    color: white !important;
-    margin-right: 0px;
-  }
-}
-
-@media(min-width:873px) {
-  .tabs>a {
-    background-color: #00C67E !important;
-    font-weight: bold;
-    color: white !important;
-    margin-right: 30px;
-  }
-}
-
 
 .tabs>a:hover {
   background-color: rgba(39, 202, 126, 0.836) !important;
   color: white !important;
+}
+
+.tabs>a {
+  background-color: #565d63 !important;
+  color: white !important;
+  font-size: 12px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 70px;
+  padding: 5px 5px !important;
 }
 
 .book-card {
@@ -315,301 +219,25 @@ html body {
   top: 30%;
 }
 
-@media(min-width : 1900px) {
-  .status-card {
-    position: relative;
-    width: 1100px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .profile-internal-card {
-    position: relative;
-    width: 1100px;
-    height: 220px !important;
-    left: 23%;
-    bottom: 215px !important;
-
-  }
-
-  .summary-card {
-    position: relative;
-    width: 1100px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .contact-card {
-    position: relative;
-    width: 1100px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
+.status-card,
+.profile-internal-card,
+.summary-card,
+.contact-card {
+  position: relative;
+  width: 70%;
+  height: 220px;
+  left: 28% !important;
+  bottom: 215px !important;
 }
 
-@media(max-width : 1899px) {
-  .status-card {
-    position: relative;
-    width: 1000px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .profile-internal-card {
-    position: relative;
-    width: 900px;
-    height: 220px !important;
-    left: 23%;
-    bottom: 215px !important;
-
-  }
-
-  .summary-card {
-    position: relative;
-    width: 900px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .contact-card {
-    position: relative;
-    width: 900px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .btn-modal-summary {
-    position: absolute;
-    left: 43% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
-}
-
-@media(max-width:1778px) {
-  .status-card {
-    position: relative;
-    width: 900px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-  .tabs {
-    position: absolute;
-    margin-top: 10px;
-    padding: 0px;
-    left: 52%;
-  }
-}
-
-
-@media(max-width : 1541px) {
-  .status-card {
-    position: relative;
-    width: 800px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .profile-internal-card {
-    position: relative;
-    width: 800px;
-    height: 220px !important;
-    left: 23%;
-    bottom: 215px !important;
-
-  }
-
-  .summary-card {
-    position: relative;
-    width: 800px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .contact-card {
-    position: relative;
-    width: 800px;
-    height: 220px;
-    left: 23%;
-    bottom: 215px !important;
-  }
-
-  .btn-modal-summary {
-    position: absolute;
-    left: 42% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
-}
-
-@media(max-width : 1376px) {
-  .book-card {
-    position: relative;
-    left: -38px;
-    top: 0;
-    width: 100% !important;
-    min-height: 300px;
-    max-height: 400px;
-    margin-top: 15px;
-    margin-left: 20px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
-  }
-
-  .status-card {
-    position: relative;
-    width: 700px;
-    height: 220px;
-    left: 28%;
-    bottom: 215px !important;
-  }
-
-  .profile-internal-card {
-    position: relative;
-    width: 600px;
-    height: 220px !important;
-    left: 32%;
-    bottom: 215px !important;
-
-  }
-
-  .summary-card {
-    position: relative;
-    width: 600px;
-    height: 220px;
-    left: 32%;
-    bottom: 215px !important;
-  }
-
-  .contact-card {
-    position: relative;
-    width: 600px;
-    height: 220px;
-    left: 32%;
-    bottom: 215px !important;
-  }
-
-  .btn-modal-summary {
-    position: absolute;
-    left: 39% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
-  .agent-list-card {
-    position: absolute;
-    top: 6% !important;
-    left: 96%;
-    width: 26px;
-  
-  
-  }
-  
-  .bookmark-icon-list {
-    position: absolute;
-    top: 5% !important;
-    left: 92% !important;
-    width: 23px;
-  
-  
-  }
-}
-
-@media(max-width : 1175px) {
-  .status-card {
-    position: relative;
-    width: 600px;
-    height: 220px;
-    left: 29%;
-    bottom: 215px !important;
-  }
-
-  .profile-internal-card {
-    position: relative;
-    width: 400px;
-    height: 220px !important;
-    left: 39%;
-    bottom: 215px !important;
-
-  }
-
-  .summary-card {
-    position: relative;
-    width: 500px;
-    height: 220px;
-    left: 36%;
-    bottom: 215px !important;
-  }
-
-  .contact-card {
-    position: relative;
-    width: 400px;
-    height: 220px;
-    left: 39%;
-    bottom: 215px !important;
-  }
-
-  .btn-modal-summary {
-    position: absolute;
-    left: 36% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
-
-  .response-date {
-    position: absolute;
-    left: 60% !important;
-    top: 31%;
-  }
-
-  .response-status {
-    position: absolute;
-    left: 60% !important;
-    top: 49%;
-  }
-
-  .meeting-date {
-    position: absolute;
-    left: 60% !important;
-    top: 69%;
-  }
-
-  .status-date {
-    position: absolute;
-    top: 88%;
-    left: 60% !important;
-  }
-}
-
-
-.response-date {
+.btn-modal-summary {
   position: absolute;
-  left: 50%;
-  top: 31%;
+  left: 43% !important;
+  top: 12vh;
+  font-weight: bold !important;
+  border: 0 !important;
 }
 
-.response-status {
-  position: absolute;
-  left: 50%;
-  top: 49%;
-}
-
-.meeting-date {
-  position: absolute;
-  left: 50%;
-  top: 69%;
-}
 
 .meeting-summary {
   position: absolute;
@@ -621,27 +249,12 @@ html body {
   background-color: #00C67E !important;
   border: 0 !important;
   font-weight: bold !important;
-  position: absolute;
-  top: 48%;
-  left: 2%;
-  width: 300px;
-
 }
 
 .btn-modal-meeting {
   background-color: #00C67E !important;
   border: 0 !important;
   font-weight: bold !important;
-  position: absolute;
-  top: 75%;
-  left: 2%;
-  width: 300px;
-}
-
-.status-date {
-  position: absolute;
-  top: 88%;
-  left: 50%;
 }
 
 .status-modal {
@@ -725,6 +338,10 @@ html body {
   font-weight: 900;
 }
 
+.hover-shrink:hover{
+  width: 25px;
+}
+
 .greening {
   color: #00C67E;
   font-weight: bold;
@@ -733,6 +350,7 @@ html body {
 .card-title-header {
   background-color: #4285F4 !important;
   color: white;
+  height: auto;
 }
 
 .btn-modal-summary {
@@ -754,29 +372,13 @@ html body {
   padding: 5px 15px 5px 15px;
 }
 
-@media(min-width : 1301px) {
-  .progressBar {
-    width: 150px;
-    position: absolute;
-    top: 47%;
-    left: 80%;
-    transform: rotate(270deg);
-    height: 75px !important;
-  }
+.status-card {
+  position: relative;
+  width: 70%;
+  height: 220px;
+  left: 23%;
+  bottom: 215px !important;
 }
-
-@media(max-width:1300px) {
-  .progressBar {
-    width: 330px;
-    position: absolute;
-    top: 110%;
-    left: 0%;
-    height: 45px !important;
-    font-size: 17px !important;
-  }
-}
-
-
 
 .toggle-link {
   display: block;
@@ -806,9 +408,13 @@ a:hover {
 
 }
 
+.green-btn:hover{
+  background-color: #245845 !important;
+}
+
 .main-ul {
   position: relative;
-  top: 16px;
+  top: 40px;
   left: 1px;
 }
 
@@ -816,7 +422,7 @@ a:hover {
   position: relative;
   width: 80px;
   left: 90%;
-  top: 10px;
+  top: 40px;
   text-decoration: none;
 
 }
@@ -855,10 +461,106 @@ a:hover {
 .messaging-btn:hover {
   color: white !important;
 }
-.main-logo{
+
+.main-logo {
   position: relative;
   bottom: 120%;
   width: 90px;
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.377);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.185);
   border-radius: 10px;
+}
+
+@media(max-width :1468px) {
+  .flex-status {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+
+  .flex-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 300px;
+  }
+
+  .flex-status-dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .book-card {
+    position: relative;
+    left: -38px;
+    top: 0;
+    width: 100% !important;
+    min-height: 300px;
+    max-height: 500px;
+    margin-top: 15px;
+    margin-left: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  }
+
+  .btn-modal-summary {
+    position: absolute;
+    left: 39% !important;
+    top: 12vh;
+    font-weight: bold !important;
+    border: 0 !important;
+  }
+
+  .agent-list-card {
+    position: absolute;
+    top: 6% !important;
+    left: 96%;
+    width: 26px;
+  }
+
+  .bookmark-icon-list {
+    position: absolute;
+    top: 5% !important;
+    left: 92% !important;
+    width: 23px;
+  }
+
+  .progressBar {
+    width: 330px;
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    height: 45px !important;
+    font-size: 17px !important;
+  }
+}
+
+@media(min-width: 1469px) {
+  .flex-status {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .flex-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flex-status-dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .progressBar {
+    width: 150px;
+    position: absolute;
+    top: 47%;
+    left: 80%;
+    transform: rotate(270deg);
+    height: 75px !important;
+  }
 }

@@ -33,7 +33,7 @@ class MyForm extends React.Component {
                     <Form.Group>
                         <h1 className='text-white'>Notes</h1>
                         <Form.Control
-                            className='m-3'
+                            className='m-3 note-title-form'
                             placeholder='Write Your Title Here...'
                             as="textarea" rows={1}
                             name='title'
@@ -41,7 +41,7 @@ class MyForm extends React.Component {
                             value={this.state.title}
                             onChange={event => this.onTitleChange(event)} />
                         <Form.Control
-                            className='m-3'
+                            className='m-3 note-text-form'
                             placeholder='Write Your Note Here...'
                             as="textarea" rows={5}
                             name='note'
@@ -50,7 +50,7 @@ class MyForm extends React.Component {
                             onChange={event => this.onNoteChange(event)}
                             required />
                         <Button
-                            className='btn add-note btn-block m-3'
+                            className='btn add-note'
                             type='submit'
                         >Create a Note</Button>
                     </Form.Group>

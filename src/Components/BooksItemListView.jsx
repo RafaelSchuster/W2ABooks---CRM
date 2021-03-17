@@ -6,6 +6,10 @@ import GenreItem from './GenreItem';
 import BookMark from "../images/star.png";
 import { MainContext } from '../Context/Context';
 import Agent from '../images/check.png';
+import Status from '../images/status.png';
+import BookProfile from '../images/info_book.png';
+import Summary from '../images/summary.png';
+import Contact from '../images/phoneIcon.png';
 
 
 
@@ -44,21 +48,29 @@ function BookItemListView(props) {
                     variant="pills"
                     className="tabs"
                 >
-                    <Tab eventKey="status" title="Status">
+                    <Tab eventKey="status" title="Status">                     
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
                                 <Card.Body>
+                                    <div className="flex-status">
+                                    <div className="flex-btns">
                                     {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
-                                    {props.processStatus && <Button type="button" className="btn-modal-status" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>}
-                                    <Button type="button" className="btn-modal-meeting" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
-                                    {props.datePresenting && <Card.Text className="status-date"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
-                                    {props.dateResponse && <Card.Text className="response-date"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
-                                    {props.responseStatus && <Card.Text className="response-status"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
-                                    {props.meetingDate && <Card.Text className="meeting-date"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                    <Button type="button" className="btn-modal-status green-btn" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                                    <Button type="button" className="btn-modal-meeting green-btn" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                                    </div>
+                                    <div className="flex-status-dates">
+                                    {props.datePresenting && <Card.Text className=""><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
+                                    {props.dateResponse && <Card.Text className=""><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
+                                    {props.responseStatus && <Card.Text className=""><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
+                                    {props.meetingDate && <Card.Text className=""><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                    </div>
+                                    <div className="flex-progressBar">
                                     {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>}
                                     {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
+                                    </div>
+                                    </div>
                                     <Modal
                                         className="status-modal"
                                         overlayClassName="overlay-modal-status"
@@ -89,10 +101,10 @@ function BookItemListView(props) {
                                         </Card>
                                     </Modal>
                                 </Card.Body>
-                            </Card>
+                            </Card>                         
                         </Card.Body>
                     </Tab>
-                    <Tab eventKey="home" title="Book Profile" className="tab">
+                    <Tab eventKey="home" title="Profile" className="tab">
                         <Card.Body>
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="profile-internal-card">

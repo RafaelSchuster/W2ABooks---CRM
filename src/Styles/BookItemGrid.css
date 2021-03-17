@@ -1,9 +1,25 @@
-@media(min-width:1235px) {
-    .book-view-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 25px;
-    }
+.card-title-header-grid {
+    background-color: #4285F4 !important;
+    color: white;
+}
+
+.list-view-icon {
+    position: absolute;
+    top: 115px;
+    left: 95% !important;
+    width: 30px !important;
+}
+
+.list-view-icon:hover {
+    width: 27px !important;
+
+}
+
+.grid-view-icon {
+    position: absolute;
+    top: 116px;
+    left: 95% !important;
+    width: 30px !important;
 }
 
 .card-img-grid {
@@ -11,11 +27,30 @@
     width: 230px;
 }
 
+.grid-icon {
+    position: absolute;
+    top: 100px;
+    width: 30px;
+    z-index: 5 !important;
+}
+
+.grid-view-icon:hover {
+    width: 28px !important;
+}
+
 @media(min-width:1744px) {
+
+    .book-view-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 25px;
+        padding-bottom: 55px !important;
+    }
+
     .book-card-grid {
         position: relative;
         left: 3%;
-        top: 16px;
+        top: 37px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 94%;
         margin: 0 !important;
@@ -27,7 +62,7 @@
         font-weight: bold !important;
         position: absolute;
         top: 45%;
-        left: 36%;
+        left: 38%;
         width: 300px;
     }
 
@@ -37,7 +72,7 @@
         font-weight: bold !important;
         position: absolute;
         top: 52%;
-        left: 36%;
+        left: 38%;
         width: 300px;
     }
 
@@ -47,7 +82,7 @@
         font-weight: bold !important;
         position: absolute;
         top: 59%;
-        left: 36%;
+        left: 38%;
         width: 300px;
     }
 
@@ -57,7 +92,7 @@
         font-weight: bold !important;
         position: absolute;
         top: 66%;
-        left: 36%;
+        left: 38%;
         width: 300px;
         color: white !important;
     }
@@ -83,284 +118,32 @@
     }
 }
 
-@media(max-width : 1744px) {
-    .book-card-grid {
-        position: relative;
-        left: 2%;
-        top: 16px;
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
-        width: 97%;
-        margin: 0 !important;
-    }
 
-    .btn-modal-status-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 45%;
-        left: 42%;
-        width: 250px;
-    }
+@media(max-width:1870px) {
 
-    .btn-modal-meeting-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 52%;
-        left: 42%;
-        width: 250px;
-    }
-
-    .btn-modal-summary-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 59%;
-        left: 42%;
-        width: 250px;
-    }
-
-    .messaging-grid-btn {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 66%;
-        left: 42%;
-        width: 250px;
-        color: white !important;
-    }
-
-    .progress-bar-grid {
-        position: absolute;
-        right: -250px !important;
-    }
-
-    .about-author-grid {
-        position: absolute;
-        top: 15%;
-        left: 48%;
-        width: 50%;
-    }
-
-    .added-on {
-        position: absolute;
-        top: 30%;
-        left: 48%;
-
-    }
-
-    .grid-book-length {
-        position: absolute;
-        top: 37%;
-        left: 48%;
-    }
-}
-
-@media(max-width:1457px) {
-    .book-card-grid {
-        position: relative;
-        left: 2%;
-        top: 16px;
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
-        width: 97%;
-        margin: 0 !important;
-    }
-
-    .btn-modal-status-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 45%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .btn-modal-meeting-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 52%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .btn-modal-summary-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 59%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .messaging-grid-btn {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 66%;
-        left: 55%;
-        width: 190px;
-        color: white !important;
-    }
-
-    .progress-bar-grid {
-        position: absolute !important;
-        top: 443px;
-        left: 75%;
-    }
-
-    .about-author-grid {
-        position: absolute;
-        top: 15%;
-        left: 48%;
-        width: 50%;
-    }
-
-    .added-on {
-        position: absolute;
-        top: 34%;
-        left: 48%;
-
-    }
-
-    .grid-book-length {
-        position: absolute;
-        top: 39%;
-        left: 48%;
-    }
-
-    .summary-title-grid {
-        position: absolute;
-        left: 22px;
-    }
-}
-
-@media(max-width:1296px) and (min-width : 1235px) {
-    .book-card-grid {
-        position: relative;
-        left: 2%;
-        top: 16px;
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
-        width: 97%;
-        margin: 0 !important;
-    }
-
-    .btn-modal-status-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 49%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .btn-modal-meeting-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 56%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .btn-modal-summary-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 64%;
-        left: 55%;
-        width: 190px;
-    }
-
-    .messaging-grid-btn {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 71%;
-        left: 55%;
-        width: 190px;
-        color: white !important;
-    }
-
-    .progress-bar-grid {
-        position: absolute !important;
-        top: 81%;
-        left: 75%;
-        max-height: 50px;
-        max-width: 110px;
-    }
-
-    .about-author-grid {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        width: 50%;
-    }
-
-    .added-on {
-        position: absolute;
-        top: 36%;
-        left: 50%;
-
-    }
-
-    .grid-book-length {
-        position: absolute;
-        top: 43%;
-        left: 50%;
-    }
-
-    .summary-title-grid {
-        position: absolute;
-        left: 22px;
-        font-size: 15px;
-    }
-}
-
-.card-title-header-grid {
-    background-color: #4285F4 !important;
-    color: white;
-}
-
-.boldening-grid {
-    font-weight: bold;
-    font-size: 17px;
-}
-
-@media(max-width:1235px) {
     .book-view-container {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 25px;
+        padding-bottom: 55px !important;
     }
 
     .book-card-grid {
         position: relative;
         left: 3%;
-        top: 16px;
+        top: 37px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 94%;
         margin: 0 !important;
     }
+
 
     .btn-modal-status-grid {
         background-color: #00C67E !important;
         border: 0 !important;
         font-weight: bold !important;
         position: absolute;
-        top: 49%;
+        top: 46%;
         left: 36%;
         width: 300px;
     }
@@ -370,7 +153,7 @@
         border: 0 !important;
         font-weight: bold !important;
         position: absolute;
-        top: 56%;
+        top: 53%;
         left: 36%;
         width: 300px;
     }
@@ -380,7 +163,7 @@
         border: 0 !important;
         font-weight: bold !important;
         position: absolute;
-        top: 63%;
+        top: 60%;
         left: 36%;
         width: 300px;
     }
@@ -390,7 +173,7 @@
         border: 0 !important;
         font-weight: bold !important;
         position: absolute;
-        top: 70%;
+        top: 67%;
         left: 36%;
         width: 300px;
         color: white !important;
@@ -399,36 +182,40 @@
     .about-author-grid {
         position: absolute;
         top: 15%;
-        left: 46%;
+        left: 37%;
         width: 50%;
     }
 
     .added-on {
         position: absolute;
-        top: 31%;
-        left: 46%;
+        top: 28%;
+        left: 37%;
 
     }
 
     .grid-book-length {
         position: absolute;
         top: 37%;
-        left: 46%;
+        left: 37%;
     }
 
-    .progress-bar-grid {
-        position: absolute;
-        top: 59%;
-        left: 70%;
-        transform: rotate(270deg);
-    }
 
     .summary-title-grid {
-        position: absolute;
+        position: relative;
         font-size: 24px;
-        left: 25%;
+        display: block;
+        margin-left: 0 auto;
+        margin-right: 0 auto;
     }
+}
 
+.progressBar-gridView {
+    width: 150px;
+    position: absolute;
+    top: 52%;
+    left: 80%;
+    transform: rotate(270deg);
+    height: 75px !important;
 }
 
 .progressbar-modal-grid {
@@ -442,18 +229,17 @@
     left: 30%;
 }
 
-
-
 img:hover {
     cursor: pointer;
 }
 
 .bookmarks-header {
     position: absolute;
-    top: 20px !important;
-    left: 43%;
+    top: -27px !important;
+    left: 44%;
     color: #6C757D !important;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 25px;
     z-index: 6;
 }
 
@@ -466,7 +252,7 @@ img:hover {
     top: 20px;
     left: 88%;
     width: 22px;
-    
+
 }
 
 .agent-grid-card {

@@ -1,56 +1,20 @@
+.flex-form{
+  position: relative;
+}
 .form-control.msgBox {
-  position: absolute;
-  display: inline-block;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 3rem;
   width: 600px;
   height: 180px;
-  top: 20%;
   border: 2px solid #CCCCCC !important;
   box-sizing: border-box;
   border-radius: 6px;
   background-color: white !important;
-  left: 43%;
   padding: 20px;
   color: rgb(88, 84, 84) !important;
-}
-
-@media(min-width:1900px) {
-  .msgBtn {
-    position: absolute;
-    right: 27%;
-    top: 33%;
-  }
-}
-
-@media(min-width:1977px) {
-  .msgBtn {
-    position: absolute;
-    left: 66%;
-    top: 32%;
-  }
-}
-
-@media(max-width:1899px) {
-  .msgBtn {
-    position: absolute;
-    left: 69%;
-    top: 32%;
-  }
-}
-
-@media(max-width:1761px) {
-  .msgBtn {
-    position: absolute;
-    left: 71%;
-    top: 32%;
-  }
-}
-
-@media(max-width:1570px) {
-  .msgBtn {
-    position: absolute;
-    left: 74%;
-    top: 32%;
-  }
 }
 
 .maxChar {
@@ -60,4 +24,9 @@
   left: 22%;
   top: 165px;
   padding: 4px 10px 0px 7px !important;
+}
+.msgBtn{
+  position: absolute;
+  top: 99%;
+  left: 66%;
 }

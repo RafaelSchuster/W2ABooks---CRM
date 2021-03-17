@@ -39,10 +39,10 @@ function MessageForm() {
     return (
         <MsgContext.Consumer>
             {() => {
-                return <Container>
+                return <Container className="container-msgs">
                     <Form
                         onSubmit={event => onSubmiting(event)}
-                        className="form-group">
+                        className="form-group flex-form">
                         <FormControl
                             as="textarea"
                             className="form-control msgBox"

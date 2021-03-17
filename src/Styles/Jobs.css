@@ -50,6 +50,10 @@ input[type="date"] {
     min-width: 110px;
 }
 .add-job-button{
-    background-color: #9982da !important;
+    background-color: #00C67E !important;
     border: none !important;
+}
+.add-job-button:hover{
+    background-color: #234d3d !important;
+
 }

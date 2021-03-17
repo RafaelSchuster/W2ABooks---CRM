@@ -16,18 +16,17 @@ function JobsTable(props) {
 
     return (
         <Container >
-            <Table striped bordered hover className="jobs-table">
+            <Table striped bordered hover className="jobs-table ">
                 <thead>
                     <tr>
-                        <th className="text-center">#</th>
-                        <th className="text-center">Job Title</th>
-                        <th className="text-center">Name</th>
-                        <th className="text-center">Payment</th>
-                        <th className="text-center">Start-Date</th>
-                        <th className="text-center">End-Date</th>
-                        <th className="text-center">Job Status</th>
-                        {/* <th className="text-center">Description</th> */}
-                        <th className="text-center">More</th>
+                        <th className="text-center purple">#</th>
+                        <th className="text-center purple">Job Title</th>
+                        <th className="text-center purple">Name</th>
+                        <th className="text-center purple">Payment</th>
+                        <th className="text-center purple">Start-Date</th>
+                        <th className="text-center purple">End-Date</th>
+                        <th className="text-center purple">Job Status</th>
+                        <th className="text-center purple">More</th>
                     </tr>
                 </thead>
                 <tbody>

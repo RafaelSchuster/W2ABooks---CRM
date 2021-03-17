@@ -6,6 +6,8 @@ import { MainContext } from '../Context/Context';
 import ContactCard from './ContactCard';
 import Grid from "../images/grid_list_toggle.png"
 import ContactsTable from './ContactsTable';
+import ListIcon from '../images/list_view.png';
+import GridIcon from '../images/grid.png'
 
 
 function Contacts() {
@@ -31,15 +33,16 @@ function Contacts() {
 
     return (
         <>
-            <div>
-                <h3 className="header-profile mb-5 boldening"> Your Contacts</h3>
+            {gridContacts && <input type="image" src={ListIcon} alt="" className="list-view-icon grid-list-contacts" onClick={changeView} title="List display" ></input>}
+            {!gridContacts && <input type="image" src={GridIcon} alt="" className="grid-view-icon grid-list-contacts" onClick={changeView} title="Grid display" ></input>}
+            <div className="flex-contact-header">
+                <h3 className="header-profile mb-4 boldening"> Your Contacts</h3>
+                <Card className="contact-count-header">
+                    {contacts ? <Card.Body className="head-status text-center">{`You have ${contacts.length} Contacts.`}</Card.Body> :
+                        <Card.Body className="head-status">{`You have 0 Contacts.`}</Card.Body>}
+                </Card>
             </div>
-            <input type="image" src={Grid} alt="" className="grid-list-contacts" onClick={changeView} title="Change display" ></input>
-            <Card className="contact-count-header">
-                {contacts ? <Card.Body className="head-status text-center">{`You have ${contacts.length} Contacts.`}</Card.Body> :
-                    <Card.Body className="head-status">{`You have 0 Contacts.`}</Card.Body>}
-            </Card>
-            {gridContacts && <Container className="my-contacts">
+            {gridContacts && <Container className="my-contacts-container">
                 <CardDeck className="deck">
                     {contacts && contacts.map(contact =>
                         <ContactCard

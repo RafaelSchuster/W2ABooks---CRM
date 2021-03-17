@@ -1,35 +1,27 @@
-.header-profile {
+.flex-contact-header{
     position: absolute;
-    top: 14%;
-    left: 55%;
+    top: 13%;
+    left: 53%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    max-width: 400px;
+}
+.header-profile {
+    position: relative;
+    left: 3%;
 }
 
-.my-contacts {
+.my-contacts-container {
     position: absolute;
     top: 29%;
     left: 30%;
 }
 
-.contact-count-header {
-    position: absolute;
-    top: 19%;
-    width: 20%;
-    left: 50%;
-}
-
-@media(max-width:1652px) {
-    .contact-count-header {
-        position: absolute;
-        top: 19%;
-        width: 20%;
-        left: 52%;
-    }
-}
-
 .grid-list-contacts {
     position: absolute;
     width: 80px;
-    left: 92%;
+    left: 96% !important;
     top: 14%;
     text-decoration: none;
 }

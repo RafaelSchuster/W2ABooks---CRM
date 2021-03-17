@@ -4,6 +4,8 @@ import { MainContext } from '../Context/Context';
 import Grid from "../images/grid_list_toggle.png"
 import BookItemGridView from './BookItemGridView';
 import '../Styles/BookItemGrid.css';
+import ListIcon from '../images/list_view.png';
+import GridIcon from '../images/grid.png'
 
 
 function BooksList(props) {
@@ -16,9 +18,10 @@ function BooksList(props) {
 
     return (
         <>
+            {gridView && <input type="image" src={ListIcon} alt="" className="list-view-icon" onClick={changeView} title="List display" ></input>}
+            {!gridView && <input type="image" src={GridIcon} alt="" className="grid-view-icon" onClick={changeView} title="Grid display" ></input>}
             <ul className="main-ul">
-                {props.isThisBookmarks && <h3 className="bookmarks-header boldening">Your Bookmarks</h3>}
-                <input type="image" src={Grid} alt="" className="grid-list" onClick={changeView} title="Change display" ></input>
+                {props.isThisBookmarks && <h3 className="bookmarks-header">Your Bookmarks</h3>}
                 {!props.isThisBookmarks && !gridView && books && books.map(book =>
                     <BookItemListView
                         key={Math.random()}

@@ -52,21 +52,21 @@ function BookItemGridView(props) {
                         id={JSON.stringify(props)}
                         src={BookMark}
                         alt=""
-                        className="bookmark-icon"
+                        className="bookmark-icon hover-shrink"
                         title="Add to bookmarks"
                         onClick={e => bookmarking(e)} />}
-                    <input type="image" src={Agent} alt="" className="agent-grid-card" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />
+                    <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />
                 </Card.Header>
                 <Card.Body>
                     <Card.Img variant="top" src={mockImg} className="card-img-grid" />
                     {props.aboutAuthor && <Card.Text className="about-author-grid"><h4 className="boldening-grid">About the Author: </h4><div>{props.aboutAuthor}</div></Card.Text>}
                     {props.addedOn && <Card.Text className="added-on"><span className="boldening ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
                     {props.wordCount && <Card.Text className="grid-book-length"><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
-                    <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
-                    <Button type="button" className="btn-modal-meeting-grid" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
-                    <Button href="index.html#/messaging" className="messaging-grid-btn ">Contact the Author</Button>
-                    {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progress-bar-grid"></ProgressBar>}
-                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progress-bar-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                    <Button type="button" className="btn-modal-status-grid green-btn" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                    <Button type="button" className="btn-modal-meeting-grid green-btn" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                    <Button href="index.html#/messaging" className="messaging-grid-btn green-btn">Contact the Author</Button>
+                    {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView progress-bar-grid"></ProgressBar>}
+                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView progress-bar-grid"><span className="zero-percent" >0%</span></ProgressBar>}
                     <Modal
                         className="status-modal"
                         overlayClassName="overlay-modal-status"
@@ -119,7 +119,7 @@ function BookItemGridView(props) {
                         onRequestClose={() => setModalJobsIsOpen(false)}>
                         {props.bookName && <Jobs defaultBookName={props.bookName} />}
                     </Modal>
-                    <Button type="button" className="btn-modal-summary-grid" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
+                    <Button type="button" className="btn-modal-summary-grid green-btn" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
                 </Card.Body>
             </Card>
         </>

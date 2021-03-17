@@ -1,11 +1,24 @@
-.inputBox {
-    position: absolute;
-    height: 500px;
-    width: 400px;
-    left: 45rem;
-    top: 60px;
+.note-title-form{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90%;
 }
 
+.note-text-form{
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90%;
+}
+.add-note{
+    background-color: #9982da !important;
+    border: none !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
 .note-item-card {
     margin-bottom: 10px;
 }
@@ -19,79 +32,14 @@
     font-size: 30px;
 }
 
-
-
-@media(min-width:1900px) {
-    .note-item-card {
-        position: relative;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 1300px;
-        color: rgb(10, 2, 29);
-    }
-}
-
-@media(max-width:1900px) and (min-width:1750px) {
-    .note-item-card {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 1300px;
-        color: rgb(10, 2, 29);
-        right: 1%;
-    }
-
-}
-
-@media(max-width: 1749px) {
-    .note-item-card {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 1200px;
-        color: rgb(10, 2, 29);
-        right: 1%;
-    }
-}
-
-@media(max-width: 1615px) {
-    .note-item-card {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 1100px;
-        color: rgb(10, 2, 29);
-        height: 300px;
-        right: 1%;
-    }
-
-    .delBtn {
-        position: absolute;
-        right: 10px;
-        top: 100px;
-    }
-
-    .openModalBtn {
-        position: absolute;
-        top: 4% !important;
-        right: 5px;
-
-    }
-}
-
-@media(max-width: 1500px) {
-    .note-item-card {
-        margin-left: auto !important;
-        margin-right: auto !important;
-        width: 1000px;
-        color: rgb(10, 2, 29);
-        height: 350px;
-        right: 1%;
-    }
-
-    .openModalBtn {
-        position: absolute;
-        top: 3% !important;
-        right: 5px;
-
-    }
+.note-item-card {
+    position: relative;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 95%;
+    right: 2%;
+    color: rgb(10, 2, 29);
 }
 
 .delBtn {
@@ -104,7 +52,6 @@
     position: absolute;
     top: 6%;
     right: 5px;
-
 }
 
 .closeModalBtn {
@@ -131,7 +78,6 @@
 }
 
 .overlay-note-modal {
-
     color: rgb(4, 5, 19);
     top: 100px;
     width: 20%;
@@ -150,10 +96,7 @@
     background-color: #4285F4 !important;
     color: white;
 }
-.add-note{
-    background-color: #9982da !important;
-    border: none !important;
-}
+
 .open-note-btn{
     background-color: #01c67e!important;
     border: none !important;
