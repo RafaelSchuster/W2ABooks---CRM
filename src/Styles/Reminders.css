@@ -1,17 +1,18 @@
-.note-title-form{
+.note-title-form {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 90%;
 }
 
-.note-text-form{
+.note-text-form {
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 90%;
 }
-.add-note{
+
+.add-note {
     background-color: #9982da !important;
     border: none !important;
     display: block;
@@ -19,6 +20,7 @@
     margin-right: auto;
     width: 90%;
 }
+
 .note-item-card {
     margin-bottom: 10px;
 }
@@ -97,8 +99,8 @@
     color: white;
 }
 
-.open-note-btn{
-    background-color: #01c67e!important;
+.open-note-btn {
+    background-color: #01c67e !important;
     border: none !important;
     color: white;
 }

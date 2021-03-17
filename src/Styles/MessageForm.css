@@ -1,6 +1,7 @@
-.flex-form{
+.flex-form {
   position: relative;
 }
+
 .form-control.msgBox {
   position: relative;
   display: block;
@@ -25,7 +26,8 @@
   top: 165px;
   padding: 4px 10px 0px 7px !important;
 }
-.msgBtn{
+
+.msgBtn {
   position: absolute;
   top: 99%;
   left: 66%;
