@@ -11,32 +11,40 @@ html body {
   display: grid;
   grid-template-rows: 100px auto;
   grid-template-columns: 20% 80%;
+  grid-template-areas:
+    "logo main-header"
+    "sidebar main-section";
 }
 
 .grid-item {
   border: 1px solid rgba(128, 128, 128, 0.151);
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.096);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.21);
 }
 
 .grid-item-header {
+  grid-area: logo;
   position: relative;
 }
 
 .grid-item-header2 {
+  grid-area: main-header;
   position: relative;
 }
 
 .grid-item-sidebar {
+  grid-area: sidebar;
   position: relative;
   padding-top: 30px;
 }
 
 .grid-item-main {
+  grid-area: main-section;
   overflow-y: hidden !important;
   overflow-x: hidden !important;
 }
 
 .logo {
+  grid-area: logo;
   position: absolute;
   top: 30%;
   left: 20%;
@@ -53,12 +61,13 @@ html body {
   position: absolute;
   min-width: 230px;
   max-height: 80px !important;
-  right: 3%;
+  right: 0%;
   top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 
 .flex-hello {
   display: flex;
@@ -137,11 +146,11 @@ html body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  z-index: 10;
   top: 45%;
   margin-top: 10px;
   padding: 0px;
   left: 95% !important;
+  z-index: 1;
 }
 
 .tabs>a:hover {
@@ -276,6 +285,7 @@ html body {
   padding: 20px;
   width: 95vw;
   height: 80vh;
+  z-index: 2;
 }
 
 .overlay-modal-status {
@@ -285,6 +295,7 @@ html body {
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
+  z-index: 2;
 
 }
 
@@ -570,3 +581,69 @@ a:hover {
     height: 75px !important;
   }
 }
+
+.hamburger-menu {
+  grid-area: hamburger;
+  display: none;
+}
+
+@media(max-width:1000px) {
+  .grid-container {
+    display: grid;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 0% 100%;
+    grid-template-areas:
+      "logo hamburger main-header"
+      "main-section";
+  }
+
+  .grid-item-main {
+    display: flex;
+    min-width: 100% !important;
+    overflow-y: hidden !important;
+    overflow-x: hidden !important;
+  }
+
+  .grid-item-sidebar {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: inline;
+    position: relative;
+    top: 120px;
+    z-index: 7;
+  }
+
+  .book-card {
+    position: relative;
+    display: inline;
+    left: -38px;
+    top: 0;
+    max-width: 1000px !important;
+    min-height: 300px;
+    max-height: 700px;
+    margin-top: 15px;
+    margin-left: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  }
+
+  .logo {
+    margin-left: 45px;
+  }
+  .flex-header-form {
+    position: absolute;
+    top: 120%;
+    left: 30%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+  }
+  .search-bar {
+    width: 230px !important;
+    margin-right: 5px;
+  }
+  
+}
+

@@ -10,6 +10,8 @@ import Status from '../images/status.png';
 import BookProfile from '../images/info_book.png';
 import Summary from '../images/summary.png';
 import Contact from '../images/phoneIcon.png';
+import Jobs from './Jobs';
+import StatusProgress from './StatusProgress';
 
 
 
@@ -18,6 +20,7 @@ function BookItemListView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+    const [modalJobsIsOpen, setModalJobsIsOpen] = useState(false);
     const { bookmarks, setBookmarks } = useContext(MainContext);
 
 
@@ -33,11 +36,11 @@ function BookItemListView(props) {
             <Card className="book-card">
                 <Card.Header className="card-title-header">
                     {props.bookName && <h3 className="boldening">{props.bookName}</h3>}
-                    <input type="image" src={Agent} alt="" className="agent-list-card" title="Add to jobs list" />
+                    <input type="image" src={Agent} alt="" className="agent-list-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />
                     {!props.isBookmarks && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
-                        className="bookmark-icon-list"
+                        className="bookmark-icon-list hover-shrink"
                         title="Add to bookmarks"
                         onClick={e => bookmarking(e)} />}
                 </Card.Header>
@@ -77,14 +80,19 @@ function BookItemListView(props) {
                                         isOpen={modalStatusIsOpen}
                                         onRequestClose={() => setModalStatusIsOpen(false)}
                                     >
-                                        <Card className="modal-card" border="light">
-                                            <Card.Header as="h1" className="text-center" >Status</Card.Header>
-                                            <Card.Body>
-                                                <Card.Title>Special title treatment</Card.Title>
-                                                {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
-                                                {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
-                                            </Card.Body>
-                                        </Card>
+                                        <Card.Header as="h1" className="text-center" >Status</Card.Header>
+                                        <Card.Body className="status-grid-card-modal">
+                                            {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
+                                            {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
+                                            {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
+                                            {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                            {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
+                                            {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
+                                            {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
+                                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                                        </Card.Body>
+                                        <StatusProgress />
                                     </Modal>
                                     <Modal
                                         className="meeting-modal"
@@ -156,6 +164,10 @@ function BookItemListView(props) {
                         </Card.Body>
                     </Tab>
                 </Tabs>
+                <Modal isOpen={modalJobsIsOpen}
+                    onRequestClose={() => setModalJobsIsOpen(false)}>
+                    {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                </Modal>
             </Card>
         </>
     );

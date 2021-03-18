@@ -1,7 +1,8 @@
 import React from 'react';
-import { Form, FormControl, Button } from 'react-bootstrap';
+import { Form, FormControl, Button, Container } from 'react-bootstrap';
 import Profile from '../images/profile.png';
 import Logo from '../images/logo-white.png';
+import MobileMenu from './MobileMenu';
 
 
 function Header() {
@@ -14,7 +15,6 @@ function Header() {
                 <div className="logo"><a href="/"><img src={Logo} alt="" srcset="" className="main-logo" /></a></div>
             </div>
             <div className="grid-item grid-item-header2">
-                <div className="search-flex">
                     <Form className="form-hp" onSubmit={e => basicSearching(e)}>
                         <div className="flex-header-form">
                             <FormControl
@@ -30,7 +30,7 @@ function Header() {
                             <Button className="btn btn-secondary search-btn" type="submit">Search</Button>
                         </div>
                     </Form>
-                </div>
+                <MobileMenu/>
                 <div className="flex-header-profile">
                     <div className="flex-hello">
                         <span className="hello">Hello Rafael</span>

@@ -31,7 +31,6 @@
     position: absolute;
     top: 100px;
     width: 30px;
-    z-index: 5 !important;
 }
 
 .grid-view-icon:hover {
@@ -104,9 +103,17 @@
         width: 50%;
     }
 
+    .about-max {
+        max-height: 90px !important;
+        max-width: 50px !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
     .added-on {
         position: absolute;
-        top: 30%;
+        top: 31%;
         left: 40%;
 
     }
@@ -188,7 +195,7 @@
 
     .added-on {
         position: absolute;
-        top: 28%;
+        top: 31%;
         left: 37%;
 
     }
@@ -240,7 +247,6 @@ img:hover {
     color: #6C757D !important;
     font-weight: 600;
     font-size: 25px;
-    z-index: 6;
 }
 
 .messaging-grid-btn:hover {
@@ -260,4 +266,76 @@ img:hover {
     width: 28px;
     top: 21px;
     left: 93%;
+}
+
+@media(max-width: 1000px) {
+    .book-view-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+        padding-bottom: 55px !important;
+    }
+
+    .book-card-grid {
+        position: relative;
+        left: 2%;
+        top: 67px;
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
+        width: 87vw;
+        height: 1000px;
+        margin: 0 !important;
+    }
+
+    .flex-inside-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 100%;
+    }
+
+    .flex-text {
+        position: relative;
+        bottom: 40%;
+        left: 12%;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .progressBar-gridView {
+        width: 250px;
+        position: absolute;
+        top: 53%;
+        left: 1%;
+        transform: rotate(270deg);
+        height: 75px !important;
+    }
+
+    .mobile {
+        position: initial;
+    }
+
+    .flex-genre {
+        position: absolute;
+        left: 0%;
+        bottom: 10%;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .btn-modal-status-grid,
+    .btn-modal-meeting-grid,
+    .btn-modal-summary-grid,
+    .messaging-grid-btn {
+        width: 200px;
+    }
+
+    .list-view-icon {
+        top: 120px;
+        max-width: 24px;
+    }
 }

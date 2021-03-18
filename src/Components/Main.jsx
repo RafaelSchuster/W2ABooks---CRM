@@ -17,6 +17,7 @@ import MessageComponent from './MessageComponent';
 import Contacts from './Contacts';
 import ContactForm from './ContactForm';
 import Jobs from './Jobs';
+import MobileMenu from './MobileMenu';
 
 function Main() {
     return (
