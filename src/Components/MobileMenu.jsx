@@ -12,6 +12,9 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 import '../Styles/Main.css';
+import Toggle from './Toggle';
+import Logo from '../images/logo-white.png';
+
 
 const useStyles = makeStyles({
   list: {
@@ -25,10 +28,7 @@ const useStyles = makeStyles({
 export default function TemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
     left: false,
-    bottom: false,
-    right: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -45,25 +45,14 @@ export default function TemporaryDrawer() {
         [classes.fullList]: anchor === 'top' || anchor === 'bottom',
       })}
       role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
+      onClick={toggleDrawer(anchor, true)}
+      onKeyDown={toggleDrawer(anchor, true)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <div className="drawer-toggle">
+        <div className="logo-mobile-div"><a href="/"><img src={Logo} alt="" srcset="" className="drawer-logo" /></a></div>
+        <Toggle />
+        </div>
       </List>
     </div>
   );
@@ -72,8 +61,8 @@ export default function TemporaryDrawer() {
     <div>
       {['left'].map((anchor) => (
         <React.Fragment key={'left'}>
-          <Button onClick={toggleDrawer('left', true)}><div className="hamburger-menu"><MenuRoundedIcon/></div> </Button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+          <Button onClick={toggleDrawer('left', true)}><div className="hamburger-menu"><MenuRoundedIcon /></div> </Button>
+          <Drawer anchor='left' open={state['left']} onClose={toggleDrawer('left', false)}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>

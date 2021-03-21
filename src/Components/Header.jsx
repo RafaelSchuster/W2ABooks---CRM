@@ -3,6 +3,7 @@ import { Form, FormControl, Button, Container } from 'react-bootstrap';
 import Profile from '../images/profile.png';
 import Logo from '../images/logo-white.png';
 import MobileMenu from './MobileMenu';
+import '../Styles/Main.css'
 
 
 function Header() {

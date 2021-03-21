@@ -10,15 +10,15 @@ html body {
 .grid-container {
   display: grid;
   grid-template-rows: 100px auto;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: minmax(100px, 200px) auto;
   grid-template-areas:
     "logo main-header"
     "sidebar main-section";
 }
 
 .grid-item {
-  border: 1px solid rgba(128, 128, 128, 0.151);
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.21);
+  /* border: 1px solid rgba(128, 128, 128, 0.151); */
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0);
 }
 
 .grid-item-header {
@@ -100,6 +100,7 @@ html body {
 .accordion {
   background-color: white !important;
   padding: 0 !important;
+  border: none !important;
 }
 
 .header {
@@ -116,7 +117,7 @@ html body {
 
 .toggle-btn {
   width: 100%;
-  border: 1px solid #9982da !important;
+  border: 1px solid white !important;
   background-color: white !important;
   font-weight: 600;
   font-size: 18px;
@@ -167,6 +168,14 @@ html body {
   text-align: center;
   width: 70px;
   padding: 5px 5px !important;
+}
+
+.about-max {
+  max-height: 150px !important;
+  max-width: 60% !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
 }
 
 .book-card {
@@ -611,7 +620,8 @@ a:hover {
   .hamburger-menu {
     display: inline;
     position: relative;
-    top: 120px;
+    top: 30px;
+    left: 20%;
     z-index: 7;
   }
 
@@ -629,8 +639,10 @@ a:hover {
   }
 
   .logo {
-    margin-left: 45px;
+    margin-left: 55px;
+    display: none;
   }
+
   .flex-header-form {
     position: absolute;
     top: 120%;
@@ -640,10 +652,32 @@ a:hover {
     flex-direction: row;
     justify-content: space-between !important;
   }
+
   .search-bar {
     width: 230px !important;
     margin-right: 5px;
   }
-  
-}
 
+  .drawer-toggle {
+    position: relative;
+    top: 150px;
+  }
+
+  .drawer-logo {
+    display: block;
+    position: absolute;
+    right: 33%;
+    top: -125px;
+    width: 90px;
+    background: #FFFFFF;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.253);
+    border-radius: 18%;
+  }
+
+  .btn-logout,
+  .hello {
+    display: none !important;
+  }
+}

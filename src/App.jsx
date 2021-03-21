@@ -9,7 +9,7 @@ const mockBooks = [
     addedOn: 'March, 16, 2020',
     author: 'Author 1',
     authorEmail: 'test1@test.com',
-    aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
+    aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to dieCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 1',
     proofReaderGrade: '7',

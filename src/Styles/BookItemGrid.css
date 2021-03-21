@@ -96,21 +96,6 @@
         color: white !important;
     }
 
-    .about-author-grid {
-        position: absolute;
-        top: 15%;
-        left: 40%;
-        width: 50%;
-    }
-
-    .about-max {
-        max-height: 90px !important;
-        max-width: 50px !important;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
     .added-on {
         position: absolute;
         top: 31%;
@@ -186,12 +171,15 @@
         color: white !important;
     }
 
-    .about-author-grid {
+    /* .about-author-grid {
         position: absolute;
         top: 15%;
         left: 37%;
-        width: 50%;
-    }
+        max-width: 40vw!important;
+        overflow: hidden;
+        text-overflow: ellipsis !important;
+        white-space: nowrap;
+    } */
 
     .added-on {
         position: absolute;
@@ -296,7 +284,7 @@ img:hover {
     .flex-text {
         position: relative;
         bottom: 40%;
-        left: 12%;
+        left: 10%;
         min-height: 600px;
         display: flex;
         flex-direction: column;
@@ -337,5 +325,12 @@ img:hover {
     .list-view-icon {
         top: 120px;
         max-width: 24px;
+    }
+    .about-max {
+        /* max-height: 150px !important;
+        max-width: 10% !important;
+        overflow: hidden;
+        text-overflow: ellipsis !important;
+        white-space: wrap; */
     }
 }
