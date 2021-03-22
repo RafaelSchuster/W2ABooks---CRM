@@ -171,16 +171,6 @@
         color: white !important;
     }
 
-    /* .about-author-grid {
-        position: absolute;
-        top: 15%;
-        left: 37%;
-        max-width: 40vw!important;
-        overflow: hidden;
-        text-overflow: ellipsis !important;
-        white-space: nowrap;
-    } */
-
     .added-on {
         position: absolute;
         top: 31%;
@@ -284,7 +274,7 @@ img:hover {
     .flex-text {
         position: relative;
         bottom: 40%;
-        left: 10%;
+        right: 5%;
         min-height: 600px;
         display: flex;
         flex-direction: column;
@@ -326,11 +316,81 @@ img:hover {
         top: 120px;
         max-width: 24px;
     }
+
     .about-max {
-        /* max-height: 150px !important;
-        max-width: 10% !important;
+        max-height: 140px !important;
+        max-width: 30vw !important;
         overflow: hidden;
         text-overflow: ellipsis !important;
-        white-space: wrap; */
+        white-space: wrap;
+    }
+}
+
+@media(max-width:599px) {
+    .flex-inside-card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 100%;
+        right: -21vw;
+    }
+
+    .book-card-grid {
+        position: relative;
+        left: -5%;
+        top: 67px;
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
+        width: 93vw;
+        height: 1500px;
+        margin: 0 !important;
+    }
+
+    .progressBar-gridView {
+        width: 60%;
+        position: absolute;
+        top: 105%;
+        left: -4%;
+        transform: rotate(0deg) !important;
+        height: 40px !important;
+    }
+
+    .flex-genre {
+        position: absolute;
+        left: -10%;
+        top: 120%;
+        min-width: 70vw;
+        max-width: 70vw;
+        display: flex;
+        flex-direction: column;
+        /* text-align: center; */
+        justify-content: space-between;
+    }
+    .flex-text {
+        position: relative;
+        right: -3%;
+        min-height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .about-max {
+        max-height: 140px !important;
+        max-width: 50vw !important;
+        overflow: hidden;
+        text-overflow: ellipsis !important;
+        white-space: wrap;
+    }
+    .grid-view-icon {
+        position: absolute;
+        top: 92px;
+        left: 90% !important;
+        width: 25px !important;
+    }
+    .list-view-icon {
+        position: absolute;
+        top: 92px;
+        left: 90% !important;
+        width: 30px !important;
     }
 }

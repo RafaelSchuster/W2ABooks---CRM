@@ -52,15 +52,19 @@ function BookItemListView(props) {
                     className="tabs"
                 >
                     <Tab eventKey="status" title="Status">
-                        <Card.Body>
+                        <Card.Body className="main-flex-list">
+                            <div className="img-progress-flex">
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
+                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>}
+                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
+                            </div>
                             <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
                                 <Card.Body>
                                     <div className="flex-status">
                                         <div className="flex-btns">
                                             {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
-                                            <Button type="button" className="btn-modal-status green-btn" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                                            <Button type="button" className="btn-modal-status green-btn mb-1" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
                                             <Button type="button" className="btn-modal-meeting green-btn" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
                                         </div>
                                         <div className="flex-status-dates">
@@ -70,8 +74,6 @@ function BookItemListView(props) {
                                             {props.meetingDate && <Card.Text className=""><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
                                         </div>
                                         <div className="flex-progressBar">
-                                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar progressBar-list"></ProgressBar>}
-                                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
                                         </div>
                                     </div>
                                     <Modal
@@ -114,13 +116,13 @@ function BookItemListView(props) {
                     </Tab>
                     <Tab eventKey="home" title="Profile" className="tab">
                         <Card.Body>
-                            <Card.Img variant="bottom" src={mockImg} className="card-img" />
+                        <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="profile-internal-card">
                                 <Card.Header className="text-center" >Book Profile</Card.Header>
-                                <Card.Body>
+                                <Card.Body className="profile-inner-flex">
                                     {props.author && <Card.Text className=""><span className="boldening">Author: </span>{props.author}</Card.Text>}
-                                    {props.aboutAuthor && <Card.Text className="about-author"><span className="boldening">About the Author: </span>{props.aboutAuthor}</Card.Text>}
-                                    <Card.Text ><span className="boldening">Genre: </span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                    {props.aboutAuthor && <Card.Text className="about-max-list"><span className="boldening">About the Author: </span>{props.aboutAuthor}</Card.Text>}
+                                    <Card.Text ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
                                     {props.wordCount && <Card.Text ><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                                 </Card.Body>
                             </Card>
@@ -128,11 +130,11 @@ function BookItemListView(props) {
                         </Card.Body>
                     </Tab>
                     <Tab eventKey="summary" title="Summary">
-                        <Card.Body>
+                        <Card.Body >
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="summary-card" >
                                 <Card.Header className="text-center" >Summary</Card.Header>
-                                <Card.Body>
+                                <Card.Body className="flex-summary">
                                     {props.summaryTitle && <Card.Title className="text-center"><span className="boldening">{props.summaryTitle}</span></Card.Title>}
                                     <Button type="button" className="btn-modal-summary" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Summary</Button>
                                 </Card.Body>
@@ -157,7 +159,7 @@ function BookItemListView(props) {
                             <Card.Img variant="bottom" src={mockImg} className="card-img" />
                             <Card border="light" className="contact-card" >
                                 <Card.Header className="text-center">Contact</Card.Header>
-                                <Button href="index.html#/messaging" className="messaging-btn btn btn-secondary">Messaging History</Button>
+                                <Button href="index.html#/messaging" className="messaging-btn btn-secondary">Messaging History</Button>
                                 <Card.Body>
                                 </Card.Body>
                             </Card>

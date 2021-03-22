@@ -17,7 +17,6 @@ html body {
 }
 
 .grid-item {
-  /* border: 1px solid rgba(128, 128, 128, 0.151); */
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0);
 }
 
@@ -150,7 +149,7 @@ html body {
   top: 45%;
   margin-top: 10px;
   padding: 0px;
-  left: 95% !important;
+  right: 0%;
   z-index: 1;
 }
 
@@ -170,14 +169,6 @@ html body {
   padding: 5px 5px !important;
 }
 
-.about-max {
-  max-height: 150px !important;
-  max-width: 60% !important;
-  overflow: hidden;
-  text-overflow: ellipsis !important;
-  white-space: nowrap;
-}
-
 .book-card {
   position: relative;
   left: -38px;
@@ -193,6 +184,7 @@ html body {
 .card-img {
   width: 250px !important;
   max-height: 200px;
+  z-index: 2;
 }
 
 .summary-title {
@@ -205,6 +197,10 @@ html body {
   position: absolute;
   left: 10%;
   top: 50%;
+}
+.flex-summary{
+  display: flex;
+  flex-direction: column;
 }
 
 .book-title {
@@ -253,12 +249,21 @@ html body {
   bottom: 215px !important;
 }
 
-.btn-modal-summary {
-  position: absolute;
-  left: 43% !important;
-  top: 12vh;
+.about-max-list {
+  max-height: 20px !important;
+  max-width: 39vw !important;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+
+.btn-modal-summary  {
   font-weight: bold !important;
   border: 0 !important;
+  max-width: 60%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -378,22 +383,14 @@ html body {
   height: auto;
 }
 
-.btn-modal-summary {
-  position: absolute;
-  left: 25vw;
-  top: 12vh;
-  font-weight: bold !important;
-  border: 0 !important;
-}
-
 .blueing {
   font-size: 14px;
-  display: inline;
+  display: inline-block;
   margin-left: 10px;
   color: white;
   background: #4285F4;
   border-radius: 18px;
-  width: 550px !important;
+  width: fit-content;
   padding: 5px 15px 5px 15px;
 }
 
@@ -430,7 +427,6 @@ a:hover {
   top: 50%;
   left: 40%;
   font-size: 15px;
-
 }
 
 .green-btn:hover {
@@ -449,25 +445,20 @@ a:hover {
   left: 90%;
   top: 40px;
   text-decoration: none;
-
 }
 
 .agent-list-card {
   position: absolute;
   top: 8%;
-  left: 96%;
+  right: 1%;
   width: 26px;
-
-
 }
 
 .bookmark-icon-list {
   position: absolute;
   top: 7%;
-  left: 93%;
+  right: 4%;
   width: 23px;
-
-
 }
 
 .reminders-main-div {
@@ -476,7 +467,7 @@ a:hover {
 
 .messaging-btn {
   position: relative;
-  width: 30%;
+  min-width: 30%;
   color: white !important;
   top: 10%;
   margin-left: auto;
@@ -529,25 +520,19 @@ a:hover {
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
 
-  .btn-modal-summary {
-    position: absolute;
-    left: 39% !important;
-    top: 12vh;
-    font-weight: bold !important;
-    border: 0 !important;
-  }
+  
 
   .agent-list-card {
     position: absolute;
-    top: 6% !important;
-    left: 96%;
+    top: 23px !important;
+    right: 1%;
     width: 26px;
   }
 
   .bookmark-icon-list {
     position: absolute;
-    top: 5% !important;
-    left: 92% !important;
+    top: 20px !important;
+    right: 5%;
     width: 23px;
   }
 
@@ -626,16 +611,19 @@ a:hover {
   }
 
   .book-card {
-    position: relative;
-    display: inline;
-    left: -38px;
-    top: 0;
-    max-width: 1000px !important;
-    min-height: 300px;
-    max-height: 700px;
+    position: absolute;
+    left: -4px;
+    top: 12px;
+    width: 272% !important;
+    max-width: 87vw !important;
+    min-height: 650px !important;
     margin-top: 15px;
-    margin-left: 20px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  }
+
+  .tabs {
+    right: 0%;
+    top: 50%;
   }
 
   .logo {
@@ -680,4 +668,170 @@ a:hover {
   .hello {
     display: none !important;
   }
+
+  .status-card,
+  .profile-internal-card,
+  .summary-card,
+  .contact-card {
+    position: relative;
+    width: 50%;
+    height: 420px;
+    left: 40vw !important;
+  }
+
+  .flex-status {
+    display: flex;
+    position: absolute;
+    right: 28%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 500px;
+  }
+
+  .flex-btns {
+    display: flex;
+    min-height: 150px;
+    flex-direction: column;
+    justify-content: space-around !important;
+  }
+
+  .flex-status-dates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .img-progress-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progressBar {
+    width: 250px;
+    position: absolute;
+    top: 65%;
+    transform: rotate(270deg);
+    height: 45px !important;
+  }
+  .agent-list-card {
+    position: absolute;
+    top: 23px !important;
+    right: 1%;
+    width: 26px;
+  }
+
+  .bookmark-icon-list {
+    position: absolute;
+    top: 20px !important;
+    right: 7%;
+    width: 23px;
+  }
+
+}
+
+@media(max-width:600px) {
+  .flex-header-form {
+    position: absolute;
+    top: 120%;
+    left: 8%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+  }
+
+  .book-card {
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: -20px;
+    top: 12px;
+    width: 272% !important;
+    max-width: 92vw !important;
+    min-height: 950px !important;
+    margin-top: 15px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  }
+
+  .flex-status {
+    display: flex;
+    position: absolute;
+    right: 28%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 500px;
+  }
+
+  .status-card,
+  .summary-card,
+  .contact-card {
+    position: relative;
+    width: 85%;
+    bottom: -80% !important;
+    height: 420px;
+    left: 7% !important;
+  }
+
+  .main-flex-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-progress-flex {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .progressBar {
+    width: 60%;
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    transform: rotate(0deg);
+    height: 45px !important;
+  }
+
+  .card-img {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-internal-card {
+    width: 85%;
+    bottom: -80% !important;
+    left: 7% !important;
+  }
+
+  .profile-inner-flex {
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-direction: column !important;
+  }
+
+  .about-max-list {
+    max-height: 180px !important;
+    max-width: 189vw !important;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    white-space: wrap !important;
+  }
+  .agent-list-card {
+    position: absolute;
+    top: 23px !important;
+    right: 2%;
+    width: 26px;
+  }
+
+  .bookmark-icon-list {
+    position: absolute;
+    top: 20px !important;
+    right: 12%;
+    width: 23px;
+  }
+
 }

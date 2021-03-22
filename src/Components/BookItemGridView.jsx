@@ -61,8 +61,8 @@ function BookItemGridView(props) {
                     <div className="flex-inside-card">
                         <div className="flex-img-progress">
                             <Card.Img variant="top" src={mockImg} className="card-img-grid" />
-                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView progress-bar-grid"></ProgressBar>}
-                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView progress-bar-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
                         </div>
                         <div className="flex-text">
                             {props.author && <Card.Text className="author"><span className="boldening">Author: </span>{props.author}</Card.Text>}
@@ -107,7 +107,7 @@ function BookItemGridView(props) {
                                 </Card.Body>
                             </Modal>
                         <div className="flex-genre">
-                            <Card.Text  ><span className="boldening">Genre: </span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                            <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
                             {props.summaryTitle && <Card.Title className="text-center summary-title-grid mobile"><span className="boldening">{props.summaryTitle}</span></Card.Title>}
                         </div>
                         <Modal
