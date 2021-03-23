@@ -68,10 +68,10 @@
 
 .progressBar-gridView {
     width: 190px;
-    position: absolute;
-    top: 52%;
-    left: 82%;
-    transform: rotate(270deg);
+    /* position: absolute;
+    top: 48%;
+    left: 82%; */
+    transform: rotate(0deg) !important;
     height: 45px !important;
 }
 
@@ -93,8 +93,9 @@
         margin: 0 !important;
         border: none !important;
     }
+}
 
-    .btn-modal-status-grid,
+.btn-modal-status-grid,
     .btn-modal-meeting-grid,
     .btn-modal-summary-grid,
     .messaging-grid-btn {
@@ -105,9 +106,8 @@
         width: 200px;
         color: #00C67E !important;
         margin-bottom: 3px;
+        text-align: start;
     }
-
-}
 
 .boldening {
     font-weight: 600;
@@ -141,57 +141,32 @@
         margin: 0 !important;
     }
 
-
-    .btn-modal-status-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 46%;
-        left: 36%;
-        width: 300px;
-    }
-
-    .btn-modal-meeting-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 53%;
-        left: 36%;
-        width: 300px;
-    }
-
-    .btn-modal-summary-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 60%;
-        left: 36%;
-        width: 300px;
-    }
-
-    .added-on {
-        position: absolute;
-        top: 31%;
-        left: 37%;
-
-    }
-
-    .grid-book-length {
-        position: absolute;
-        top: 37%;
-        left: 37%;
-    }
-
-
     .summary-title-grid {
         position: relative;
         font-size: 24px;
         display: block;
         margin-left: 0 auto;
         margin-right: 0 auto;
+    }
+    .flex-inside-card {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .flex-text {
+        position: relative;
+        right: -16%;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px;
+        justify-content: space-between;
+    }
+    
+    .flex-img-progress {
+        max-width: 300px;
+    }
+    .flex-genre{
+        max-width: 300px;
     }
 }
 
@@ -250,7 +225,7 @@ img:hover {
         top: 67px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 87vw;
-        height: 1000px;
+        height: 750px;
         margin: 0 !important;
     }
 
@@ -263,36 +238,14 @@ img:hover {
 
     .flex-text {
         position: relative;
-        bottom: 40%;
-        right: 5%;
+        top: 20% !important;
+        right: 3%;
         min-height: 600px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
     }
-
-    .progressBar-gridView {
-        width: 250px;
-        position: absolute;
-        top: 53%;
-        left: 1%;
-        transform: rotate(270deg);
-        height: 75px !important;
-    }
-
     .mobile {
         position: initial;
-    }
-
-    .flex-genre {
-        position: absolute;
-        left: 0%;
-        bottom: 10%;
-        min-width: 100%;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-between;
     }
 
     .btn-modal-status-grid,
@@ -332,15 +285,12 @@ img:hover {
         top: 67px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 93vw;
-        height: 1500px;
+        height: 1200px;
         margin: 0 !important;
     }
 
     .progressBar-gridView {
-        width: 60%;
-        position: absolute;
-        top: 105%;
-        left: -4%;
+        width: 90%;
         transform: rotate(0deg) !important;
         height: 40px !important;
     }
@@ -348,22 +298,24 @@ img:hover {
     .flex-genre {
         position: absolute;
         left: -10%;
-        top: 120%;
+        top: 110%;
         min-width: 70vw;
         max-width: 70vw;
         display: flex;
         flex-direction: column;
         /* text-align: center; */
         justify-content: space-between;
+        
     }
 
     .flex-text {
         position: relative;
         right: -3%;
-        min-height: 600px;
+        top: 15px !important;
+        min-height: 400px;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        
     }
 
     .about-max {
@@ -386,5 +338,41 @@ img:hover {
         top: 92px;
         left: 90% !important;
         width: 30px !important;
+    }
+    .summary-max{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5; 
+        line-height: 1,5em;        
+        max-height: 4,5em;
+        max-width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about-book{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; 
+        line-height: 1,5em;        
+        max-height: 4,5em;    
+        max-width: 49vw;
+      
+      }
+      .bookmark-icon {
+        position: absolute;
+        top: 15px;
+        left: 82%;
+        width: 22px;
+    
+    }
+    .agent-grid-card {
+        position: absolute;
+        width: 28px;
+        top: 16px;
+        left: 90%;
     }
 }

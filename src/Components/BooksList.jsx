@@ -28,7 +28,6 @@ function BooksList(props) {
                         bookName={book.bookName}
                         author={book.author}
                         email={book.authorEmail}
-                        summaryTitle={book.summaryTitle}
                         summary={book.summary}
                         id={book.id}
                         proofReaderGrade={book.proofReaderGrade}
@@ -54,7 +53,6 @@ function BooksList(props) {
                         bookName={book.bookName}
                         author={book.author}
                         email={book.authorEmail}
-                        summaryTitle={book.summaryTitle}
                         summary={book.summary}
                         id={book.id}
                         proofReaderGrade={book.proofReaderGrade}
@@ -82,7 +80,6 @@ function BooksList(props) {
                         bookName={book.bookName}
                         author={book.author}
                         email={book.authorEmail}
-                        summaryTitle={book.summaryTitle}
                         summary={book.summary}
                         id={book.id}
                         proofReaderGrade={book.proofReaderGrade}
@@ -108,7 +105,6 @@ function BooksList(props) {
                         bookName={book.bookName}
                         author={book.author}
                         email={book.authorEmail}
-                        summaryTitle={book.summaryTitle}
                         summary={book.summary}
                         id={book.id}
                         proofReaderGrade={book.proofReaderGrade}

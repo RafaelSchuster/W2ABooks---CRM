@@ -60,9 +60,6 @@ function BookItemGridView(props) {
                     <div className="flex-inside-card">
                         <div className="flex-img-progress">
                             <Card.Img variant="top" src={mockImg} className="card-img-grid" />
-                            {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
-                            {props.progress && props.progress < 14 && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
-                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
                             <Button type="button" className="btn-modal-status-grid green-btn mobile" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
                             <Button type="button" className="btn-modal-meeting-grid green-btn mobile" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
                             <Button href="index.html#/messaging" className="messaging-grid-btn green-btn mobile">Contact the Author</Button>
@@ -77,7 +74,9 @@ function BookItemGridView(props) {
                             {props.wordCount && <Card.Text className="grid-book-length mobile"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <div className="flex-genre">
                             <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                            {props.summaryTitle && <Card.Title className="text-center summary-title-grid mobile summary-max "><span className="boldening">{props.summaryTitle}</span></Card.Title>}
+                            {props.progress && props.progress >= 14 &&<ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                            {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
+                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
                         </div>
                         </div>
                         
@@ -121,8 +120,8 @@ function BookItemGridView(props) {
                             onRequestClose={() => setModalSummaryIsOpen(false)}
                         >
                             <Card.Header as="h1" className="text-center">Full Book Summary</Card.Header>
-                            {props.summary && <Card.Text className="text-center summary-on-modal">{props.summary}</Card.Text>}
-                        </Modal>
+                            {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                                {props.aboutBook && <Card.Text className="full-about-book">{props.aboutBook}</Card.Text>}                        </Modal>
                         <Modal isOpen={modalJobsIsOpen}
                             onRequestClose={() => setModalJobsIsOpen(false)}>
                             {props.bookName && <Jobs defaultBookName={props.bookName} />}

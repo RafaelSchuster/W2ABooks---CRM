@@ -178,50 +178,51 @@ html body {
   top: 0;
   width: 100% !important;
   min-height: 300px;
-  max-height: 300px;
+  max-height: 400px;
   margin-top: 15px;
   margin-left: 20px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
 }
 
-.about-book{
+.about-book {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; 
-  line-height: 1,5em;        
-  max-height: 4,5em;    
+  -webkit-line-clamp: 3;
+  line-height: 1, 5em;
+  max-height: 4, 5em;
   max-width: 20vw;
 
 }
 
-.about-max{
+.about-max {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; 
-  line-height: 1,5em;        
-  max-height: 4,5em;
+  -webkit-line-clamp: 3;
+  line-height: 1, 5em;
+  max-height: 4, 5em;
   max-width: 20vw;
 
 }
-.summary-max{
+
+.summary-max {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; 
-  line-height: 1,5em;        
-  max-height: 4,5em;
+  -webkit-line-clamp: 2;
+  line-height: 1, 5em;
+  max-height: 4, 5em;
   max-width: 20vw;
 }
 
 .card-img {
   width: 250px !important;
   max-height: 200px;
-  z-index: 2;
+  z-index: 7;
 }
 
 .summary-title {
@@ -235,7 +236,8 @@ html body {
   left: 10%;
   top: 50%;
 }
-.flex-summary{
+
+.flex-summary {
   display: flex;
   flex-direction: column;
 }
@@ -294,9 +296,7 @@ html body {
   white-space: nowrap;
 }
 
-.btn-modal-summary  {
-  font-weight: bold !important;
-  border: 0 !important;
+.btn-modal-summary {
   max-width: 60%;
   display: block;
   margin-right: auto;
@@ -310,16 +310,21 @@ html body {
   top: 87%;
 }
 
-.btn-modal-status {
-  background-color: #00C67E !important;
-  border: 0 !important;
-  font-weight: bold !important;
+.progressBar{
+  display: none;
 }
 
-.btn-modal-meeting {
-  background-color: #00C67E !important;
+.btn-modal-status,
+.btn-modal-meeting,
+.btn-modal-summary {
+  background-color: white !important;
   border: 0 !important;
-  font-weight: bold !important;
+  font-weight: 500;
+  font-size: 17px;
+  width: 200px;
+  color: #00C67E !important;
+  margin-bottom: 3px;
+  text-align: start !important;
 }
 
 .status-modal {
@@ -364,6 +369,7 @@ html body {
   padding: 20px;
   width: 80vw;
   height: 80vh;
+  z-index: 2;
 }
 
 .overlay-modal-meeting {
@@ -373,6 +379,8 @@ html body {
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
+  z-index: 2;
+
 
 }
 
@@ -390,6 +398,8 @@ html body {
   padding: 20px;
   width: 80vw;
   height: 80vh;
+  z-index: 2;
+
 }
 
 .overlay-modal-summary {
@@ -399,6 +409,8 @@ html body {
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
+  z-index: 2;
+
 }
 
 .boldening {
@@ -415,8 +427,10 @@ html body {
 }
 
 .card-title-header {
-  background-color: #4285F4 !important;
+  background-color: #678aee !important;
   color: white;
+  border-top-left-radius: 13px !important;
+  border-top-right-radius: 13px !important;
   height: auto;
 }
 
@@ -486,14 +500,14 @@ a:hover {
 
 .agent-list-card {
   position: absolute;
-  top: 8%;
+  top: 6%;
   right: 1%;
   width: 26px;
 }
 
 .bookmark-icon-list {
   position: absolute;
-  top: 7%;
+  top: 5%;
   right: 4%;
   width: 23px;
 }
@@ -509,6 +523,7 @@ a:hover {
   top: 10%;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 500 !important;
 }
 
 .messaging-btn:hover {
@@ -535,8 +550,8 @@ a:hover {
   .flex-btns {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     max-width: 300px;
+    max-height: 200px !important;
   }
 
   .flex-status-dates {
@@ -554,32 +569,68 @@ a:hover {
     max-height: 500px;
     margin-top: 15px;
     margin-left: 20px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
+    border: none !important;
   }
 
-  
+
 
   .agent-list-card {
     position: absolute;
-    top: 23px !important;
+    top: 18px !important;
     right: 1%;
     width: 26px;
   }
 
   .bookmark-icon-list {
     position: absolute;
-    top: 20px !important;
+    top: 15px !important;
     right: 5%;
     width: 23px;
   }
 
-  .progressBar {
-    width: 330px;
-    position: absolute;
-    top: 110%;
-    left: 0%;
-    height: 45px !important;
-    font-size: 17px !important;
+  .about-book {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    max-width: 30vw;
+  
+  }
+  .about-book-profile{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1,5em;
+    max-height: 4,5em;
+    max-width: 40vw;
+  }
+  .about-max {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    max-width: 30vw;
+  
+  }
+  .about-max-profile {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    max-width: 40vw;
+  
   }
 }
 
@@ -594,7 +645,6 @@ a:hover {
   .flex-btns {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .flex-status-dates {
@@ -603,19 +653,56 @@ a:hover {
     justify-content: space-between;
   }
 
-  .progressBar {
-    width: 150px;
-    position: absolute;
-    top: 47%;
-    left: 80%;
-    transform: rotate(270deg);
-    height: 75px !important;
+  .profile-inner-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .profile-about-list{
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-genre-list{
+    max-width: 300px;
+  }
+  .about-book-profile{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1,5em;
+    max-height: 5em;
+    max-width: 40vw;
+  }
+  .about-max-profile {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    max-width: 40vw;
+  
   }
 }
 
+.profile-genre-list{
+  max-width: 500px;
+}
 .hamburger-menu {
   grid-area: hamburger;
   display: none;
+}
+
+@media(max-width:1467px){
+  .profile-inner-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px !important;
+  }
 }
 
 @media(max-width:1000px) {
@@ -660,7 +747,7 @@ a:hover {
 
   .tabs {
     right: 0%;
-    top: 50%;
+    top: 75%;
   }
 
   .logo {
@@ -719,6 +806,7 @@ a:hover {
   .flex-status {
     display: flex;
     position: absolute;
+    top: -20px;
     right: 28%;
     flex-direction: column;
     flex-wrap: wrap;
@@ -727,8 +815,10 @@ a:hover {
   }
 
   .flex-btns {
+    position: relative;
+    top: 40px !important;
+    left: 45px;
     display: flex;
-    min-height: 150px;
     flex-direction: column;
     justify-content: space-around !important;
   }
@@ -737,6 +827,8 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    left: 13%;
   }
 
   .img-progress-flex {
@@ -744,23 +836,16 @@ a:hover {
     flex-direction: column;
   }
 
-  .progressBar {
-    width: 250px;
-    position: absolute;
-    top: 65%;
-    transform: rotate(270deg);
-    height: 45px !important;
-  }
   .agent-list-card {
     position: absolute;
-    top: 23px !important;
+    top: 18px !important;
     right: 1%;
     width: 26px;
   }
 
   .bookmark-icon-list {
     position: absolute;
-    top: 20px !important;
+    top: 15px !important;
     right: 7%;
     width: 23px;
   }
@@ -822,6 +907,14 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
   }
+.flex-status{
+  flex-direction: column-reverse;
+}
+
+
+.flex-status-dates{
+  left: 20px !important;
+}
 
   .progressBar {
     width: 60%;
@@ -846,8 +939,9 @@ a:hover {
 
   .profile-inner-flex {
     display: flex !important;
-    justify-content: space-around !important;
+    justify-content: space-between !important;
     flex-direction: column !important;
+    min-height: 400px !important;
   }
 
   .about-max-list {
@@ -857,18 +951,22 @@ a:hover {
     text-overflow: ellipsis !important;
     white-space: wrap !important;
   }
+
   .agent-list-card {
     position: absolute;
-    top: 23px !important;
+    top: 18px !important;
     right: 2%;
     width: 26px;
   }
 
   .bookmark-icon-list {
     position: absolute;
-    top: 20px !important;
+    top: 15px !important;
     right: 12%;
     width: 23px;
   }
-
+.flex-btns{
+  position: relative;
+  left: 0px;
+}
 }

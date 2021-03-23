@@ -10,7 +10,6 @@ const mockBooks = [
   authorEmail: 'test1@test.com',
   aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
   aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my fatherrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr. Prepare to dieCCCCCCCHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC.',
-  summaryTitle: 'A journey about growth and challengeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
   summary: 'Book about something 1',
   proofReaderGrade: '7',
   stagesDone: 'proofReader, copyEditor',
@@ -22,7 +21,7 @@ const mockBooks = [
   summaryMeeting: 'positive, agent interested',
   genre: ['Classic', 'Fantasy', 'Comedy','Action', 'Western', 'Drama','Horror' ],
   wordCount: '188 words',
-  progress: '5'},
+  progress: '10'},
   {
     bookName: 'Book 1',
     addedOn: 'March, 16, 2020',
@@ -61,7 +60,7 @@ const mockBooks = [
     responseStatus: 'done',
     meetingDate: '10/01/2021',
     summaryMeeting: 'positive, agent interested',
-    genre: ['Classic', 'Fantasy', 'Drama'],
+    genre: ['Classic', 'Fantasy', 'Drama','sdsdsdsdsd','sdsdsdsdsdsd'],
     wordCount: '398 words',
     progress: '50'
 
