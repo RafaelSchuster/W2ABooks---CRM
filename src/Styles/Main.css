@@ -32,6 +32,10 @@ html body {
   grid-area: main-header;
   position: relative;
 }
+.fixed-header{
+  position: fixed;
+  z-index: 99;
+}
 
 .grid-item-sidebar {
   grid-area: sidebar;

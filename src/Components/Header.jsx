@@ -40,6 +40,7 @@ function Header() {
                     <img src={Profile} alt="No Img" srcset="" className="thumbnail" />
                 </div>
             </div>
+            
         </>
     )
 }
