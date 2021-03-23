@@ -45,6 +45,7 @@ function BooksList(props) {
                         progress={book.progress}
                         addedOn={book.addedOn}
                         isBookmarks={props.isThisBookmarks}
+                        aboutBook={book.aboutBook}
                     />
                 )}
                 {props.isThisBookmarks && !gridView && bookmarks && bookmarks.map(book =>
@@ -70,6 +71,7 @@ function BooksList(props) {
                         progress={book.progress}
                         addedOn={book.addedOn}
                         isBookmarks={props.isThisBookmarks}
+                        aboutBook={book.aboutBook}
                     />
                 )}
             </ul>
@@ -97,6 +99,7 @@ function BooksList(props) {
                         progress={book.progress}
                         addedOn={book.addedOn}
                         isBookmarks={props.isThisBookmarks}
+                        aboutBook={book.aboutBook}
                     />
                 )}
                 {props.isThisBookmarks && gridView && bookmarks && bookmarks.map(book =>
@@ -122,6 +125,7 @@ function BooksList(props) {
                         progress={book.progress}
                         addedOn={book.addedOn}
                         isBookmarks={props.isThisBookmarks}
+                        aboutBook={book.aboutBook}
                     />
                 )}
             </div>

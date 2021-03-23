@@ -1,6 +1,13 @@
 .card-title-header-grid {
-    background-color: #4285F4 !important;
+    background-color: #678aee !important;
     color: white;
+    border-top-left-radius: 13px !important;
+    border-top-right-radius: 13px !important;
+
+}
+
+.header-size {
+    font-size: 18px;
 }
 
 .list-view-icon {
@@ -37,6 +44,37 @@
     width: 28px !important;
 }
 
+.book-card-grid {
+    border: none !important;
+}
+
+.flex-inside-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-text {
+    position: relative;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-between;
+}
+
+.flex-img-progress {
+    max-width: 300px;
+}
+
+.progressBar-gridView {
+    width: 190px;
+    position: absolute;
+    top: 52%;
+    left: 82%;
+    transform: rotate(270deg);
+    height: 45px !important;
+}
+
 @media(min-width:1744px) {
 
     .book-view-container {
@@ -53,63 +91,37 @@
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 94%;
         margin: 0 !important;
+        border: none !important;
     }
 
-    .btn-modal-status-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 45%;
-        left: 38%;
-        width: 300px;
-    }
-
-    .btn-modal-meeting-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 52%;
-        left: 38%;
-        width: 300px;
-    }
-
-    .btn-modal-summary-grid {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 59%;
-        left: 38%;
-        width: 300px;
-    }
-
+    .btn-modal-status-grid,
+    .btn-modal-meeting-grid,
+    .btn-modal-summary-grid,
     .messaging-grid-btn {
-        background-color: #00C67E !important;
+        background-color: white !important;
         border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 66%;
-        left: 38%;
-        width: 300px;
-        color: white !important;
+        font-weight: 500;
+        font-size: 17px;
+        width: 200px;
+        color: #00C67E !important;
+        margin-bottom: 3px;
     }
 
-    .added-on {
-        position: absolute;
-        top: 31%;
-        left: 40%;
-
-    }
-
-    .grid-book-length {
-        position: absolute;
-        top: 37%;
-        left: 40%;
-    }
 }
 
+.boldening {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.btn-modal-status-grid:hover,
+.btn-modal-meeting-grid:hover,
+.btn-modal-summary-grid:hover,
+.messaging-grid-btn:hover {
+    text-decoration: underline !important;
+    background-color: white !important;
+    color: #00C67E !important;
+}
 
 @media(max-width:1870px) {
 
@@ -160,17 +172,6 @@
         width: 300px;
     }
 
-    .messaging-grid-btn {
-        background-color: #00C67E !important;
-        border: 0 !important;
-        font-weight: bold !important;
-        position: absolute;
-        top: 67%;
-        left: 36%;
-        width: 300px;
-        color: white !important;
-    }
-
     .added-on {
         position: absolute;
         top: 31%;
@@ -192,15 +193,6 @@
         margin-left: 0 auto;
         margin-right: 0 auto;
     }
-}
-
-.progressBar-gridView {
-    width: 150px;
-    position: absolute;
-    top: 52%;
-    left: 80%;
-    transform: rotate(270deg);
-    height: 75px !important;
 }
 
 .progressbar-modal-grid {
@@ -227,13 +219,11 @@ img:hover {
     font-size: 25px;
 }
 
-.messaging-grid-btn:hover {
-    color: white !important;
-}
+
 
 .bookmark-icon {
     position: absolute;
-    top: 20px;
+    top: 15px;
     left: 88%;
     width: 22px;
 
@@ -242,7 +232,7 @@ img:hover {
 .agent-grid-card {
     position: absolute;
     width: 28px;
-    top: 21px;
+    top: 16px;
     left: 93%;
 }
 
@@ -366,6 +356,7 @@ img:hover {
         /* text-align: center; */
         justify-content: space-between;
     }
+
     .flex-text {
         position: relative;
         right: -3%;
@@ -374,6 +365,7 @@ img:hover {
         flex-direction: column;
         justify-content: space-evenly;
     }
+
     .about-max {
         max-height: 140px !important;
         max-width: 50vw !important;
@@ -381,12 +373,14 @@ img:hover {
         text-overflow: ellipsis !important;
         white-space: wrap;
     }
+
     .grid-view-icon {
         position: absolute;
         top: 92px;
         left: 90% !important;
         width: 25px !important;
     }
+
     .list-view-icon {
         position: absolute;
         top: 92px;

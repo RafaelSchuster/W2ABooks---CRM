@@ -30,9 +30,8 @@ function BookItemGridView(props) {
 
     const [localBookmarks, setLocalMarks] = useLocalState('bookmarks');
 
-    useEffect(() => {
-        // console.log(localBookmarks);
-    }, [localBookmarks])
+    // useEffect(() => {
+    // }, [localBookmarks])
 
     const bookmarking = (e) => {
         const arrMarks = [];
@@ -47,7 +46,7 @@ function BookItemGridView(props) {
         <>
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
-                    {props.bookName && <h3 className="boldening">{props.bookName}</h3>}
+                    {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
                     {!props.isBookmarks && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
@@ -62,54 +61,59 @@ function BookItemGridView(props) {
                         <div className="flex-img-progress">
                             <Card.Img variant="top" src={mockImg} className="card-img-grid" />
                             {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                            {props.progress && props.progress < 14 && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
                             {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
-                        </div>
-                        <div className="flex-text">
-                            {props.author && <Card.Text className="author"><span className="boldening">Author: </span>{props.author}</Card.Text>}
-                            {props.aboutAuthor && <Card.Text className="about-author-grid mobile"><h4 className="boldening">About the Author: </h4><div className="about-max">{props.aboutAuthor}</div></Card.Text>}
-                            {props.addedOn && <Card.Text className="added-on mobile"><span className="boldening ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
-                            {props.wordCount && <Card.Text className="grid-book-length mobile"><span className="boldening">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <Button type="button" className="btn-modal-status-grid green-btn mobile" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
                             <Button type="button" className="btn-modal-meeting-grid green-btn mobile" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
                             <Button href="index.html#/messaging" className="messaging-grid-btn green-btn mobile">Contact the Author</Button>
                             <Button type="button" className="btn-modal-summary-grid green-btn mobile" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
-                            </div>
-                            <Modal
-                                className="status-modal"
-                                overlayClassName="overlay-modal-status"
-                                isOpen={modalStatusIsOpen}
-                                onRequestClose={() => setModalStatusIsOpen(false)}
-                            >
-                                <Card.Header as="h1" className="text-center" >Status</Card.Header>
-                                <Card.Body className="status-grid-card-modal">
-                                    {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
-                                    {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
-                                    {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
-                                    {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
-                                    {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
-                                    {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
-                                    {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
-                                    {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
-                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
-                                </Card.Body>
-                                <StatusProgress />
-                            </Modal>
-                            <Modal
-                                className="meeting-modal"
-                                overlayClassName="overlay-modal-meeting"
-                                isOpen={modalMeetingIsOpen}
-                                onRequestClose={() => setModalMeetingIsOpen(false)}
-                            >
-                                <Card.Header as="h1" className="text-center">Meeting</Card.Header>
-                                <Card.Body>
-                                    <Card.Title className="text-center">Meeting Summary</Card.Title>
-                                    {props.summaryMeeting && <Card.Text className="meeting-summary-grid"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
-                                </Card.Body>
-                            </Modal>
-                        <div className="flex-genre">
-                            <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                            {props.summaryTitle && <Card.Title className="text-center summary-title-grid mobile"><span className="boldening">{props.summaryTitle}</span></Card.Title>}
                         </div>
+                        <div className="flex-text">
+                            {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                            {props.aboutBook && <Card.Text className="about-book">{props.aboutBook}</Card.Text>}
+                            {/* {props.author && <Card.Text className="author"><span className="boldening">Author: </span>{props.author}</Card.Text>} */}
+                            {props.aboutAuthor && <Card.Text className="about-author-grid mobile"><span className="boldening">About the Author: </span><div className="about-max ">{props.aboutAuthor}</div></Card.Text>}
+                            {props.addedOn && <Card.Text className="added-on mobile"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
+                            {props.wordCount && <Card.Text className="grid-book-length mobile"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
+                            <div className="flex-genre">
+                            <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                            {props.summaryTitle && <Card.Title className="text-center summary-title-grid mobile summary-max "><span className="boldening">{props.summaryTitle}</span></Card.Title>}
+                        </div>
+                        </div>
+                        
+                        <Modal
+                            className="status-modal"
+                            overlayClassName="overlay-modal-status"
+                            isOpen={modalStatusIsOpen}
+                            onRequestClose={() => setModalStatusIsOpen(false)}
+                        >
+                            <Card.Header as="h1" className="text-center" >Status</Card.Header>
+                            <Card.Body className="status-grid-card-modal">
+                                {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
+                                {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
+                                {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
+                                {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
+                                {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
+                                {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                            </Card.Body>
+                            <StatusProgress />
+                        </Modal>
+                        <Modal
+                            className="meeting-modal"
+                            overlayClassName="overlay-modal-meeting"
+                            isOpen={modalMeetingIsOpen}
+                            onRequestClose={() => setModalMeetingIsOpen(false)}
+                        >
+                            <Card.Header as="h1" className="text-center">Meeting</Card.Header>
+                            <Card.Body>
+                                <Card.Title className="text-center">Meeting Summary</Card.Title>
+                                {props.summaryMeeting && <Card.Text className="meeting-summary-grid"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
+                            </Card.Body>
+                        </Modal>
+                        
                         <Modal
                             className="summary-modal"
                             overlayClassName="overlay-modal-summary"
