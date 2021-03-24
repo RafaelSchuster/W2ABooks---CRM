@@ -50,8 +50,8 @@ export default function TemporaryDrawer() {
     >
       <List>
         <div className="drawer-toggle">
-        <div className="logo-mobile-div"><a href="/"><img src={Logo} alt="" srcset="" className="drawer-logo" /></a></div>
-        <Toggle />
+          <div className="logo-mobile-div"><a href="/"><img src={Logo} alt="" srcset="" className="drawer-logo" /></a></div>
+          <Toggle />
         </div>
       </List>
     </div>

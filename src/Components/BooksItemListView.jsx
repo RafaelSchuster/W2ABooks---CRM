@@ -120,13 +120,13 @@ function BookItemListView(props) {
                                 <Card.Header className="text-center" >Profile</Card.Header>
                                 <Card.Body className="profile-inner-flex">
                                     <div className="profile-about-list">
-                                    {props.aboutBook && <Card.Text className="about-book-profile">{props.aboutBook}</Card.Text>}
-                                    {/* {props.author && <Card.Text className=""><span className="boldeningg">Author: </span>{props.author}</Card.Text>} */}
-                                    {props.aboutAuthor && <Card.Text className="about-max-profile"><span className="boldeningg">About the Author: </span>{props.aboutAuthor}</Card.Text>}
+                                        {props.aboutBook && <Card.Text className="about-book-profile">{props.aboutBook}</Card.Text>}
+                                        {/* {props.author && <Card.Text className=""><span className="boldeningg">Author: </span>{props.author}</Card.Text>} */}
+                                        {props.aboutAuthor && <Card.Text className="about-max-profile"><span className="boldeningg">About the Author: </span>{props.aboutAuthor}</Card.Text>}
                                     </div>
                                     <div className="profile-genre-list">
-                                    <Card.Text ><span className="boldeningg"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                                    {props.wordCount && <Card.Text ><span className="boldeningg">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
+                                        <Card.Text ><span className="boldeningg"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                        {props.wordCount && <Card.Text ><span className="boldeningg">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                                     </div>
                                 </Card.Body>
                             </Card>

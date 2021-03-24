@@ -130,7 +130,7 @@ function Requirements() {
                         </div>
                     </label>
                 </div>
-                <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
+                {/* <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="digital" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-empty" onClick={handleInputChange} />
                     <label for="digital">
                         <img src={Digital} alt="" srcset="" />
@@ -140,7 +140,7 @@ function Requirements() {
                             </span>
                         </div>
                     </label>
-                </div>
+                </div> */}
             </div>
             {showAllEditors && <Card border="light" className="editors-requirements-card">
                 <Card.Header className="text-center boldening">Which editors do you require?</Card.Header>

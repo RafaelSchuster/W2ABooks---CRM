@@ -32,7 +32,8 @@ html body {
   grid-area: main-header;
   position: relative;
 }
-.fixed-header{
+
+.fixed-header {
   position: fixed;
   z-index: 99;
 }
@@ -140,6 +141,7 @@ html body {
   top: 25%;
   left: 10%;
   min-width: 400px;
+  max-height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between !important;
@@ -314,7 +316,7 @@ html body {
   top: 87%;
 }
 
-.progressBar{
+.progressBar {
   display: none;
 }
 
@@ -418,7 +420,7 @@ html body {
 }
 
 .boldening {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .hover-shrink:hover {
@@ -602,18 +604,20 @@ a:hover {
     line-height: 1, 5em;
     max-height: 4, 5em;
     max-width: 30vw;
-  
+
   }
-  .about-book-profile{
+
+  .about-book-profile {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    line-height: 1,5em;
-    max-height: 4,5em;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
     max-width: 40vw;
   }
+
   .about-max {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -623,8 +627,9 @@ a:hover {
     line-height: 1, 5em;
     max-height: 4, 5em;
     max-width: 30vw;
-  
+
   }
+
   .about-max-profile {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -634,7 +639,7 @@ a:hover {
     line-height: 1, 5em;
     max-height: 4, 5em;
     max-width: 40vw;
-  
+
   }
 }
 
@@ -657,28 +662,32 @@ a:hover {
     justify-content: space-between;
   }
 
-  .profile-inner-flex{
+  .profile-inner-flex {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  .profile-about-list{
+
+  .profile-about-list {
     display: flex;
     flex-direction: column;
   }
-  .profile-genre-list{
+
+  .profile-genre-list {
     max-width: 300px;
   }
-  .about-book-profile{
+
+  .about-book-profile {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    line-height: 1,5em;
+    line-height: 1, 5em;
     max-height: 5em;
     max-width: 40vw;
   }
+
   .about-max-profile {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -688,20 +697,21 @@ a:hover {
     line-height: 1, 5em;
     max-height: 4, 5em;
     max-width: 40vw;
-  
+
   }
 }
 
-.profile-genre-list{
+.profile-genre-list {
   max-width: 500px;
 }
+
 .hamburger-menu {
   grid-area: hamburger;
   display: none;
 }
 
-@media(max-width:1467px){
-  .profile-inner-flex{
+@media(max-width:1467px) {
+  .profile-inner-flex {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -860,7 +870,7 @@ a:hover {
   .flex-header-form {
     position: absolute;
     top: 120%;
-    left: 8%;
+    left: 4%;
     min-width: 300px;
     display: flex;
     flex-direction: row;
@@ -911,14 +921,15 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
   }
-.flex-status{
-  flex-direction: column-reverse;
-}
+
+  .flex-status {
+    flex-direction: column-reverse;
+  }
 
 
-.flex-status-dates{
-  left: 20px !important;
-}
+  .flex-status-dates {
+    left: 20px !important;
+  }
 
   .progressBar {
     width: 60%;
@@ -969,8 +980,13 @@ a:hover {
     right: 12%;
     width: 23px;
   }
-.flex-btns{
-  position: relative;
-  left: 0px;
-}
+
+  .flex-btns {
+    position: relative;
+    left: 0px;
+  }
+
+  .search-btn {
+    padding: 2px !important;
+  }
 }

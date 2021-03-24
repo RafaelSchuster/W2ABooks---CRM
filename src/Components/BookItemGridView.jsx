@@ -66,20 +66,19 @@ function BookItemGridView(props) {
                             <Button type="button" className="btn-modal-summary-grid green-btn mobile" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
                         </div>
                         <div className="flex-text">
-                            {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
-                            {props.aboutBook && <Card.Text className="about-book">{props.aboutBook}</Card.Text>}
+                            {props.aboutBook && <Card.Text className="">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book">{props.aboutBook}</Card.Text>}</Card.Text>}
                             {/* {props.author && <Card.Text className="author"><span className="boldening">Author: </span>{props.author}</Card.Text>} */}
                             {props.aboutAuthor && <Card.Text className="about-author-grid mobile"><span className="boldening">About the Author: </span><div className="about-max ">{props.aboutAuthor}</div></Card.Text>}
                             {props.addedOn && <Card.Text className="added-on mobile"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
                             {props.wordCount && <Card.Text className="grid-book-length mobile"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <div className="flex-genre">
-                            <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                            {props.progress && props.progress >= 14 &&<ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
-                            {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
-                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
+                                <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                                {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
+                            </div>
                         </div>
-                        </div>
-                        
+
                         <Modal
                             className="status-modal"
                             overlayClassName="overlay-modal-status"
@@ -112,7 +111,7 @@ function BookItemGridView(props) {
                                 {props.summaryMeeting && <Card.Text className="meeting-summary-grid"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
                             </Card.Body>
                         </Modal>
-                        
+
                         <Modal
                             className="summary-modal"
                             overlayClassName="overlay-modal-summary"
@@ -121,7 +120,7 @@ function BookItemGridView(props) {
                         >
                             <Card.Header as="h1" className="text-center">Full Book Summary</Card.Header>
                             {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
-                                {props.aboutBook && <Card.Text className="full-about-book">{props.aboutBook}</Card.Text>}                        </Modal>
+                            {props.aboutBook && <Card.Text className="full-about-book">{props.aboutBook}</Card.Text>}                        </Modal>
                         <Modal isOpen={modalJobsIsOpen}
                             onRequestClose={() => setModalJobsIsOpen(false)}>
                             {props.bookName && <Jobs defaultBookName={props.bookName} />}
