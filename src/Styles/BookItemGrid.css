@@ -123,8 +123,8 @@
     color: #00C67E !important;
 }
 
-@media(max-width:1168px) {
 
+@media(max-width:1168px) {
     .book-view-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -276,13 +276,6 @@ img:hover {
         max-width: 24px;
     }
 
-    .about-max {
-        max-height: 140px !important;
-        max-width: 30vw !important;
-        overflow: hidden;
-        text-overflow: ellipsis !important;
-        white-space: wrap;
-    }
 
     .about-book,
     .about-max {

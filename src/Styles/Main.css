@@ -33,11 +33,6 @@ html body {
   position: relative;
 }
 
-.fixed-header {
-  position: fixed;
-  z-index: 99;
-}
-
 .grid-item-sidebar {
   grid-area: sidebar;
   position: relative;
@@ -184,10 +179,11 @@ html body {
   top: 0;
   width: 100% !important;
   min-height: 300px;
-  max-height: 350px;
+  max-height: 380px;
   margin-top: 15px;
   margin-left: 20px;
-  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
+  border:none !important;
 }
 
 .about-book {
@@ -227,7 +223,7 @@ html body {
 
 .card-img {
   width: 250px !important;
-  max-height: 200px;
+  max-height: 270px !important;
   z-index: 7;
 }
 
@@ -253,7 +249,87 @@ html body {
   left: 50%;
   top: 30%;
 }
+.flex-all-btns{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  max-width: 65%;
+  right: 2%;
+}
 
+.flex-left{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 40%;
+  left: 100px;
+}
+
+.flex-text-list{
+  position: relative;
+    right: -5%;
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    justify-content: space-between;
+}
+.flex-inside-list{
+  display: flex;
+}
+.flex-genre-list{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+}
+
+@media(max-width:1650px){
+  .flex-inside-list{
+    display: flex;
+  }
+}
+
+.about-maximum-list{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1, 5em;
+  max-height: 4, 5em;
+  max-width: 31vw;
+}
+.about-book-list{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1, 5em;
+  max-height: 4, 5em;
+  max-width: 27vw;
+}
+.progressBar-list {
+  width: 27vw;
+  transform: rotate(0deg) !important;
+  height: 45px !important;
+}
+
+.bookmark-icon-list{
+  position: absolute;
+    top: 15px !important;
+    left: 95%;
+    width: 22px;
+}
+.agent-list-card{
+  position: absolute;
+    width: 28px;
+    top: 18px !important;
+    left: 97%;
+}
+.added-length{
+  display: flex;
+  flex-direction: column;
+}
 .book-status {
   position: absolute;
   left: 10%;
