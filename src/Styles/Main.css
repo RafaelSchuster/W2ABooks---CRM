@@ -184,7 +184,7 @@ html body {
   top: 0;
   width: 100% !important;
   min-height: 300px;
-  max-height: 400px;
+  max-height: 350px;
   margin-top: 15px;
   margin-left: 20px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
@@ -314,10 +314,6 @@ html body {
   position: absolute;
   left: 1%;
   top: 87%;
-}
-
-.progressBar {
-  display: none;
 }
 
 .btn-modal-status,
@@ -544,6 +540,32 @@ a:hover {
   border-radius: 10px;
 }
 
+.progressBar {
+  width: 60%;
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  transform: rotate(0deg);
+  height: 25px !important;
+}
+
+.full-summary-tab {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-height: 1, 5em;
+  max-height: 10, 5em;
+  max-width: 45vw;
+}
+
+.profile-about-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 @media(max-width :1468px) {
   .flex-status {
     display: flex;
@@ -572,7 +594,7 @@ a:hover {
     top: 0;
     width: 100% !important;
     min-height: 300px;
-    max-height: 500px;
+    max-height: 420px;
     margin-top: 15px;
     margin-left: 20px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
@@ -607,6 +629,8 @@ a:hover {
 
   }
 
+  /* Change this for the -700 screen */
+
   .about-book-profile {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -615,7 +639,7 @@ a:hover {
     -webkit-line-clamp: 3;
     line-height: 1, 5em;
     max-height: 4, 5em;
-    max-width: 40vw;
+    max-width: 40vw; 
   }
 
   .about-max {
@@ -701,10 +725,6 @@ a:hover {
   }
 }
 
-.profile-genre-list {
-  max-width: 500px;
-}
-
 .hamburger-menu {
   grid-area: hamburger;
   display: none;
@@ -715,7 +735,10 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 400px !important;
+    min-height: 320px !important;
+  }
+  .full-summary-tab {
+    -webkit-line-clamp: 9;
   }
 }
 
@@ -754,14 +777,15 @@ a:hover {
     top: 12px;
     width: 272% !important;
     max-width: 87vw !important;
-    min-height: 650px !important;
+    min-height: 500px !important;
     margin-top: 15px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
 
   .tabs {
     right: 0%;
-    top: 75%;
+    top: auto;
+    bottom: 0%;
   }
 
   .logo {
@@ -813,8 +837,8 @@ a:hover {
   .contact-card {
     position: relative;
     width: 50%;
-    height: 420px;
-    left: 40vw !important;
+    height: 350px;
+    left: 36vw !important;
   }
 
   .flex-status {
@@ -825,7 +849,7 @@ a:hover {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    min-height: 500px;
+    min-height: 400px;
   }
 
   .flex-btns {
@@ -864,9 +888,27 @@ a:hover {
     width: 23px;
   }
 
+  .progressBar {
+    width: 60%;
+    position: absolute;
+    top: 90%;
+    left: 25%;
+
+  }
+
+  .full-summary-tab {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 12;
+    line-height: 1, 5em;
+    max-height: 10, 5em;
+    max-width: 45vw;
+  }
 }
 
-@media(max-width:600px) {
+@media(max-width:700px) {
   .flex-header-form {
     position: absolute;
     top: 120%;
@@ -878,7 +920,7 @@ a:hover {
   }
 
   .book-card {
-    position: absolute;
+    position: relative;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -886,28 +928,17 @@ a:hover {
     top: 12px;
     width: 272% !important;
     max-width: 92vw !important;
-    min-height: 950px !important;
+    min-height: 700px !important;
     margin-top: 15px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
 
-  .flex-status {
-    display: flex;
-    position: absolute;
-    right: 28%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    min-height: 500px;
-  }
-
   .status-card,
   .summary-card,
-  .contact-card {
-    position: relative;
+  .contact-card,
+  .profile-internal-card {
     width: 85%;
     bottom: -80% !important;
-    height: 420px;
     left: 7% !important;
   }
 
@@ -918,6 +949,7 @@ a:hover {
 
   .img-progress-flex {
     display: flex;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
   }
@@ -926,18 +958,19 @@ a:hover {
     flex-direction: column-reverse;
   }
 
-
   .flex-status-dates {
-    left: 20px !important;
+   top: 50px !important;
+   left: auto;
   }
 
   .progressBar {
-    width: 60%;
+    width: 90%;
     position: absolute;
-    top: 90%;
-    left: 20%;
+    top: auto;
+    bottom: -410px;
+    left: 0%;
     transform: rotate(0deg);
-    height: 45px !important;
+    height: 35px !important;
   }
 
   .card-img {
@@ -946,17 +979,14 @@ a:hover {
     margin-right: auto;
   }
 
-  .profile-internal-card {
-    width: 85%;
-    bottom: -80% !important;
-    left: 7% !important;
+  .flex-btns {
+    top: 0px !important;
   }
-
   .profile-inner-flex {
     display: flex !important;
     justify-content: space-between !important;
     flex-direction: column !important;
-    min-height: 400px !important;
+    min-height: 370px !important;
   }
 
   .about-max-list {
@@ -983,10 +1013,65 @@ a:hover {
 
   .flex-btns {
     position: relative;
-    left: 0px;
+    left: auto;
   }
 
   .search-btn {
     padding: 2px !important;
   }
+  .full-summary-tab {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 11;
+    line-height: 1, 5em;
+    max-height: 10, 5em;
+    max-width: 58vw;
+  }
+  .btn-modal-summary{
+    min-width: 140px;
+  }
+  .tabs{
+    top: 70%;
+  }
+  .profile-genre-list {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    min-width: 200px;
+    position: relative;
+    left: -20px;
+    top: -0%;
+  }
+}
+@media(max-width:400px){
+  .flex-status {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    right: 8%;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 400px;
+  }
+}
+@media(min-width :1468px){
+  .profile-genre-list {
+    left: -35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    min-width: 200px;
+    top: -11%;
+}
 }

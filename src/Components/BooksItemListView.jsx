@@ -55,9 +55,9 @@ function BookItemListView(props) {
                         <Card.Body className="main-flex-list">
                             <div className="img-progress-flex">
                                 <Card.Img variant="bottom" src={mockImg} className="card-img" />
-                                {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBarr"></ProgressBar>}
-                                {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBarr"></ProgressBar>}
-                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBare"><span className="zero-percent" >0%</span></ProgressBar>}
+                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar"></ProgressBar>}
+                                {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar"></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar"><span className="zero-percent" >0%</span></ProgressBar>}
                             </div>
                             <Card border="light" className="status-card">
                                 <Card.Header className="text-center">Status</Card.Header>
@@ -124,8 +124,8 @@ function BookItemListView(props) {
                                         {/* {props.author && <Card.Text className=""><span className="boldeningg">Author: </span>{props.author}</Card.Text>} */}
                                         {props.aboutAuthor && <Card.Text className="about-max-profile"><span className="boldeningg">About the Author: </span>{props.aboutAuthor}</Card.Text>}
                                     </div>
-                                    <div className="profile-genre-list">
-                                        <Card.Text ><span className="boldeningg"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                    <div>
+                                        <Card.Text className="profile-genre-list"><span className="boldeningg"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
                                         {props.wordCount && <Card.Text ><span className="boldeningg">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                                     </div>
                                 </Card.Body>
@@ -139,7 +139,7 @@ function BookItemListView(props) {
                             <Card border="light" className="summary-card" >
                                 <Card.Header className="text-center" >Summary</Card.Header>
                                 <Card.Body className="flex-summary">
-                                    {props.summaryTitle && <Card.Title className="text-center"><span className="boldeningg">{props.summaryTitle}</span></Card.Title>}
+                                    {props.aboutBook && <Card.Title className="text-center"><span className="boldeningg full-summary-tab">{props.aboutBook}</span></Card.Title>}
                                     <Button type="button" className="btn-modal-summary" variant="secondary" onClick={() => setModalSummaryIsOpen(true)}>Full Summary</Button>
                                 </Card.Body>
                             </Card>
