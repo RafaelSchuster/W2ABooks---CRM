@@ -151,9 +151,29 @@ function BookItemListView(props) {
                             isOpen={modalListIsOpen}
                             onRequestClose={() => setModalListIsOpen(false)}
                         >
-                            <Card.Header as="h1" className="text-center" >Full Description</Card.Header>
+                            <Card.Header as="h1" className="text-center" >More</Card.Header>
                             <Card.Body className="list-grid-card-modal">
-
+                            <div className="flex-inside-card">
+                        <div className="flex-img-progress">
+                            <Card.Img variant="top" src={mockImg} className="card-img-grid" />
+                            <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                            <Button type="button" className="btn-modal-meeting-grid" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                            <Button href="index.html#/messaging" className="messaging-grid-btn">Contact the Author</Button>
+                            <Button type="button" className="btn-modal-summary-grid" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
+                        </div>
+                        <div className="flex-text">
+                            {props.aboutBook && <Card.Text className="">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book">{props.aboutBook}</Card.Text>}</Card.Text>}
+                            {props.aboutAuthor && <Card.Text className="about-author-grid"><span className="boldening">About the Author: </span><div className="about-max ">{props.aboutAuthor}</div></Card.Text>}
+                            {props.addedOn && <Card.Text className="added-on"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
+                            {props.wordCount && <Card.Text className="grid-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
+                            <div className="flex-genre">
+                                <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                                {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
+                            </div>
+                        </div>
+                        </div>
                             </Card.Body>
                         </Modal>
                     </div>
