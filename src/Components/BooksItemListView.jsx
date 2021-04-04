@@ -62,17 +62,17 @@ function BookItemListView(props) {
                         <Card.Img variant="top" src={mockImg} className="card-img" />
                         <div className="flex-left">
                             {props.aboutBook && <Card.Text className="">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book-list">{props.aboutBook}</Card.Text>}</Card.Text>}
-                            {props.addedOn && <Card.Text className="added-on mobile"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
-                            {props.wordCount && <Card.Text className="grid-book-length mobile"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
+                            {props.addedOn && <Card.Text className="added-on"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
+                            {props.wordCount && <Card.Text className="grid-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <div className="flex-all-btns">
-                            <div className="flex-first-btns">
-                            <Button type="button" className="btn-modal-status-grid green-btn mobile" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
-                            <Button type="button" className="btn-modal-meeting-grid green-btn mobile" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
-                            </div>
-                            <div className="flex-second-btns">
-                            <Button href="index.html#/messaging" className="messaging-grid-btn green-btn mobile">Contact the Author</Button>
-                            <Button type="button" className="btn-modal-summary-grid green-btn mobile" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
-                            </div>
+                                <div className="flex-first-btns">
+                                    <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
+                                    <Button type="button" className="btn-modal-meeting-grid" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
+                                </div>
+                                <div className="flex-second-btns">
+                                    <Button href="index.html#/messaging" className="messaging-grid-btn green-btn mobile">Contact the Author</Button>
+                                    <Button type="button" className="btn-modal-summary-grid green-btn mobile" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
+                                </div>
                             </div>
                         </div>
                         <div className="flex-text-list">
@@ -84,7 +84,7 @@ function BookItemListView(props) {
                                 {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
                             </div>
                         </div>
-
+                        <Button className="read-more-list">Read More</Button>
                         <Modal
                             className="status-modal"
                             overlayClassName="overlay-modal-status"

@@ -146,33 +146,6 @@ html body {
   width: 300px !important;
 }
 
-.tabs {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 45%;
-  margin-top: 10px;
-  padding: 0px;
-  right: 0%;
-  z-index: 1;
-}
-
-.tabs>a:hover {
-  background-color: rgba(39, 202, 126, 0.836) !important;
-  color: white !important;
-}
-
-.tabs>a {
-  background-color: #565d63 !important;
-  color: white !important;
-  font-size: 12px;
-  margin-right: 8px;
-  margin-bottom: 5px;
-  text-align: center;
-  width: 70px;
-  padding: 5px 5px !important;
-}
-
 .book-card {
   position: relative;
   left: -38px;
@@ -183,7 +156,7 @@ html body {
   margin-top: 15px;
   margin-left: 20px;
   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
-  border:none !important;
+  border: none !important;
 }
 
 .about-book {
@@ -210,46 +183,14 @@ html body {
 
 }
 
-.summary-max {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-height: 1, 5em;
-  max-height: 4, 5em;
-  max-width: 20vw;
-}
-
 .card-img {
   width: 250px !important;
   max-height: 270px !important;
   z-index: 7;
 }
 
-.summary-title {
-  position: absolute;
-  left: 10%;
-  top: 30%;
-}
 
-.summary-text {
-  position: absolute;
-  left: 10%;
-  top: 50%;
-}
-
-.flex-summary {
-  display: flex;
-  flex-direction: column;
-}
-
-.book-title {
-  position: absolute;
-  left: 50%;
-  top: 30%;
-}
-.flex-all-btns{
+.flex-all-btns {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -257,7 +198,7 @@ html body {
   right: 2%;
 }
 
-.flex-left{
+.flex-left {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -265,30 +206,26 @@ html body {
   left: 100px;
 }
 
-.flex-text-list{
+.flex-text-list {
   position: relative;
-    right: -5%;
-    display: flex;
-    flex-direction: column;
-    min-height: 200px;
-    justify-content: space-between;
+  right: -5%;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  justify-content: space-between;
 }
-.flex-inside-list{
+
+.flex-inside-list {
   display: flex;
 }
-.flex-genre-list{
+
+.flex-genre-list {
   display: flex;
   flex-direction: column;
   max-width: 90%;
 }
 
-@media(max-width:1650px){
-  .flex-inside-list{
-    display: flex;
-  }
-}
-
-.about-maximum-list{
+.about-maximum-list {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -298,7 +235,8 @@ html body {
   max-height: 4, 5em;
   max-width: 31vw;
 }
-.about-book-list{
+
+.about-book-list {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -308,101 +246,25 @@ html body {
   max-height: 4, 5em;
   max-width: 27vw;
 }
+
 .progressBar-list {
   width: 27vw;
   transform: rotate(0deg) !important;
   height: 45px !important;
 }
 
-.bookmark-icon-list{
+.bookmark-icon-list {
   position: absolute;
-    top: 15px !important;
-    left: 95%;
-    width: 22px;
+  top: 15px !important;
+  left: 95%;
+  width: 22px;
 }
-.agent-list-card{
+
+.agent-list-card {
   position: absolute;
-    width: 28px;
-    top: 18px !important;
-    left: 97%;
-}
-.added-length{
-  display: flex;
-  flex-direction: column;
-}
-.book-status {
-  position: absolute;
-  left: 10%;
-  top: 40%;
-}
-
-.status-done {
-  position: absolute;
-  left: 10%;
-  top: 70%;
-}
-
-.status-grade {
-  position: absolute;
-  left: 10%;
-  top: 50%;
-}
-
-.status-process {
-  position: absolute;
-  left: 10%;
-  top: 30%;
-}
-
-.book-author {
-  position: absolute;
-  top: 30%;
-}
-
-.status-card,
-.profile-internal-card,
-.summary-card,
-.contact-card {
-  position: relative;
-  width: 70%;
-  height: 220px;
-  left: 28% !important;
-  bottom: 215px !important;
-}
-
-.about-max-list {
-  max-height: 20px !important;
-  max-width: 39vw !important;
-  overflow: hidden;
-  text-overflow: ellipsis !important;
-  white-space: nowrap;
-}
-
-.btn-modal-summary {
-  max-width: 60%;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-
-.meeting-summary {
-  position: absolute;
-  left: 1%;
-  top: 87%;
-}
-
-.btn-modal-status,
-.btn-modal-meeting,
-.btn-modal-summary {
-  background-color: white !important;
-  border: 0 !important;
-  font-weight: 500;
-  font-size: 17px;
-  width: 200px;
-  color: #00C67E !important;
-  margin-bottom: 3px;
-  text-align: start !important;
+  width: 28px;
+  top: 18px !important;
+  left: 97%;
 }
 
 .status-modal {
@@ -458,8 +320,6 @@ html body {
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
   z-index: 2;
-
-
 }
 
 .summary-modal {
@@ -523,14 +383,6 @@ html body {
   padding: 5px 15px 5px 15px;
 }
 
-.status-card {
-  position: relative;
-  width: 70%;
-  height: 220px;
-  left: 23%;
-  bottom: 215px !important;
-}
-
 .toggle-link {
   display: block;
   margin: auto !important;
@@ -558,22 +410,10 @@ a:hover {
   font-size: 15px;
 }
 
-.green-btn:hover {
-  background-color: #245845 !important;
-}
-
 .main-ul {
   position: relative;
   top: 40px;
   left: 1px;
-}
-
-.grid-list {
-  position: relative;
-  width: 80px;
-  left: 90%;
-  top: 40px;
-  text-decoration: none;
 }
 
 .agent-list-card {
@@ -594,20 +434,6 @@ a:hover {
   overflow-y: auto;
 }
 
-.messaging-btn {
-  position: relative;
-  min-width: 30%;
-  color: white !important;
-  top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 500 !important;
-}
-
-.messaging-btn:hover {
-  color: white !important;
-}
-
 .main-logo {
   position: relative;
   bottom: 120%;
@@ -616,53 +442,7 @@ a:hover {
   border-radius: 10px;
 }
 
-.progressBar {
-  width: 60%;
-  position: absolute;
-  top: 90%;
-  left: 30%;
-  transform: rotate(0deg);
-  height: 25px !important;
-}
-
-.full-summary-tab {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7;
-  line-height: 1, 5em;
-  max-height: 10, 5em;
-  max-width: 45vw;
-}
-
-.profile-about-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 @media(max-width :1468px) {
-  .flex-status {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-  }
-
-  .flex-btns {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    max-height: 200px !important;
-  }
-
-  .flex-status-dates {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
   .book-card {
     position: relative;
@@ -670,14 +450,12 @@ a:hover {
     top: 0;
     width: 100% !important;
     min-height: 300px;
-    max-height: 420px;
+    max-height: 600px;
     margin-top: 15px;
     margin-left: 20px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
     border: none !important;
   }
-
-
 
   .agent-list-card {
     position: absolute;
@@ -705,19 +483,6 @@ a:hover {
 
   }
 
-  /* Change this for the -700 screen */
-
-  .about-book-profile {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-height: 1, 5em;
-    max-height: 4, 5em;
-    max-width: 40vw; 
-  }
-
   .about-max {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -730,75 +495,14 @@ a:hover {
 
   }
 
-  .about-max-profile {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-height: 1, 5em;
-    max-height: 4, 5em;
-    max-width: 40vw;
-
+  .flex-inside-list {
+    display: flex;
   }
+
 }
 
-@media(min-width: 1469px) {
-  .flex-status {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .flex-btns {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .flex-status-dates {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .profile-inner-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .profile-about-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .profile-genre-list {
-    max-width: 300px;
-  }
-
-  .about-book-profile {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-height: 1, 5em;
-    max-height: 5em;
-    max-width: 40vw;
-  }
-
-  .about-max-profile {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-height: 1, 5em;
-    max-height: 4, 5em;
-    max-width: 40vw;
-
-  }
+.read-more-list {
+  display: none !important;
 }
 
 .hamburger-menu {
@@ -806,17 +510,6 @@ a:hover {
   display: none;
 }
 
-@media(max-width:1467px) {
-  .profile-inner-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 320px !important;
-  }
-  .full-summary-tab {
-    -webkit-line-clamp: 9;
-  }
-}
 
 @media(max-width:1000px) {
   .grid-container {
@@ -858,11 +551,6 @@ a:hover {
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
 
-  .tabs {
-    right: 0%;
-    top: auto;
-    bottom: 0%;
-  }
 
   .logo {
     margin-left: 55px;
@@ -907,49 +595,6 @@ a:hover {
     display: none !important;
   }
 
-  .status-card,
-  .profile-internal-card,
-  .summary-card,
-  .contact-card {
-    position: relative;
-    width: 50%;
-    height: 350px;
-    left: 36vw !important;
-  }
-
-  .flex-status {
-    display: flex;
-    position: absolute;
-    top: -20px;
-    right: 28%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    min-height: 400px;
-  }
-
-  .flex-btns {
-    position: relative;
-    top: 40px !important;
-    left: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around !important;
-  }
-
-  .flex-status-dates {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    left: 13%;
-  }
-
-  .img-progress-flex {
-    display: flex;
-    flex-direction: column;
-  }
-
   .agent-list-card {
     position: absolute;
     top: 18px !important;
@@ -964,24 +609,6 @@ a:hover {
     width: 23px;
   }
 
-  .progressBar {
-    width: 60%;
-    position: absolute;
-    top: 90%;
-    left: 25%;
-
-  }
-
-  .full-summary-tab {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 12;
-    line-height: 1, 5em;
-    max-height: 10, 5em;
-    max-width: 45vw;
-  }
 }
 
 @media(max-width:700px) {
@@ -1009,68 +636,10 @@ a:hover {
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
 
-  .status-card,
-  .summary-card,
-  .contact-card,
-  .profile-internal-card {
-    width: 85%;
-    bottom: -80% !important;
-    left: 7% !important;
-  }
-
-  .main-flex-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .img-progress-flex {
-    display: flex;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .flex-status {
-    flex-direction: column-reverse;
-  }
-
-  .flex-status-dates {
-   top: 50px !important;
-   left: auto;
-  }
-
-  .progressBar {
-    width: 90%;
-    position: absolute;
-    top: auto;
-    bottom: -410px;
-    left: 0%;
-    transform: rotate(0deg);
-    height: 35px !important;
-  }
-
   .card-img {
     display: flex;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .flex-btns {
-    top: 0px !important;
-  }
-  .profile-inner-flex {
-    display: flex !important;
-    justify-content: space-between !important;
-    flex-direction: column !important;
-    min-height: 370px !important;
-  }
-
-  .about-max-list {
-    max-height: 180px !important;
-    max-width: 189vw !important;
-    overflow: hidden;
-    text-overflow: ellipsis !important;
-    white-space: wrap !important;
   }
 
   .agent-list-card {
@@ -1087,14 +656,10 @@ a:hover {
     width: 23px;
   }
 
-  .flex-btns {
-    position: relative;
-    left: auto;
-  }
-
   .search-btn {
     padding: 2px !important;
   }
+
   .full-summary-tab {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1105,49 +670,4 @@ a:hover {
     max-height: 10, 5em;
     max-width: 58vw;
   }
-  .btn-modal-summary{
-    min-width: 140px;
-  }
-  .tabs{
-    top: 70%;
-  }
-  .profile-genre-list {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    line-height: 1, 5em;
-    max-height: 4, 5em;
-    min-width: 200px;
-    position: relative;
-    left: -20px;
-    top: -0%;
-  }
-}
-@media(max-width:400px){
-  .flex-status {
-    display: flex;
-    position: absolute;
-    top: -20px;
-    right: 8%;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    min-height: 400px;
-  }
-}
-@media(min-width :1468px){
-  .profile-genre-list {
-    left: -35px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-    line-height: 1, 5em;
-    max-height: 4, 5em;
-    min-width: 200px;
-    top: -11%;
-}
 }

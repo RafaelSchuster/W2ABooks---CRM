@@ -3,7 +3,6 @@
     color: white;
     border-top-left-radius: 13px !important;
     border-top-right-radius: 13px !important;
-
 }
 
 .header-size {
@@ -34,11 +33,6 @@
     width: 230px;
 }
 
-.grid-icon {
-    position: absolute;
-    top: 100px;
-    width: 30px;
-}
 
 .grid-view-icon:hover {
     width: 28px !important;
@@ -67,16 +61,12 @@
 }
 
 .progressBar-gridView {
-    width: 190px;
-    /* position: absolute;
-    top: 48%;
-    left: 82%; */
+    width: 85%;
     transform: rotate(0deg) !important;
     height: 45px !important;
 }
 
 @media(min-width:1169px) {
-
     .book-view-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -141,14 +131,6 @@
         margin: 0 !important;
     }
 
-    .summary-title-grid {
-        position: relative;
-        font-size: 24px;
-        display: block;
-        margin-left: 0 auto;
-        margin-right: 0 auto;
-    }
-
     .flex-inside-card {
         display: flex;
         flex-direction: row;
@@ -180,9 +162,7 @@
         line-height: 1, 5em;
         max-height: 4, 5em;
         max-width: 44vw;
-
     }
-
 }
 
 .progressbar-modal-grid {
@@ -258,10 +238,6 @@ img:hover {
         min-height: 600px;
         display: flex;
         flex-direction: column;
-    }
-
-    .mobile {
-        position: initial;
     }
 
     .btn-modal-status-grid,
@@ -361,19 +337,6 @@ img:hover {
         width: 30px !important;
     }
 
-    .summary-max {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 5;
-        line-height: 1, 5em;
-        max-height: 4, 5em;
-        max-width: 40vw;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .about-book {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -383,7 +346,6 @@ img:hover {
         line-height: 1, 5em;
         max-height: 4, 5em;
         max-width: 49vw;
-
     }
 
     .bookmark-icon {
