@@ -186,7 +186,7 @@ html body {
 .card-img {
   width: 250px !important;
   max-height: 270px !important;
-  z-index: 7;
+  z-index: 3;
 }
 
 
@@ -248,7 +248,7 @@ html body {
 }
 
 .progressBar-list {
-  width: 27vw;
+  width: 25vw;
   transform: rotate(0deg) !important;
   height: 45px !important;
 }
@@ -256,23 +256,22 @@ html body {
 .bookmark-icon-list {
   position: absolute;
   top: 15px !important;
-  left: 95%;
+  right: 5%;
   width: 22px;
 }
 
 .agent-list-card {
   position: absolute;
   width: 28px;
-  top: 18px !important;
-  left: 97%;
+  top: 17px !important;
+  right: 1%;
 }
 
 .status-modal {
   position: absolute;
-  top: 8vh;
-  left: 3vw;
-  right: 40px;
-  bottom: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid #ccc;
   background: #fff;
   overflow: auto;
@@ -281,26 +280,42 @@ html body {
   padding: 20px;
   width: 95vw;
   height: 80vh;
-  z-index: 2;
+  z-index: 99;
 }
 
-.overlay-modal-status {
+.list-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 7px;
+  outline: none;
+  padding: 20px;
+  width: 80vw;
+  height: 80vh;
+  z-index: 99;
+}
+
+.overlay-modal-status,
+.overlay-modal-list {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
-  z-index: 2;
+  z-index: 99;
 
 }
 
 .meeting-modal {
   position: absolute;
-  top: 8vh;
-  left: 12vw;
-  right: 40px;
-  bottom: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid #ccc;
   background: #fff;
   overflow: auto;
@@ -416,20 +431,6 @@ a:hover {
   left: 1px;
 }
 
-.agent-list-card {
-  position: absolute;
-  top: 6%;
-  right: 1%;
-  width: 26px;
-}
-
-.bookmark-icon-list {
-  position: absolute;
-  top: 5%;
-  right: 4%;
-  width: 23px;
-}
-
 .reminders-main-div {
   overflow-y: auto;
 }
@@ -442,8 +443,7 @@ a:hover {
   border-radius: 10px;
 }
 
-@media(max-width :1468px) {
-
+@media(max-width :1600px) {
   .book-card {
     position: relative;
     left: -38px;
@@ -455,20 +455,6 @@ a:hover {
     margin-left: 20px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
     border: none !important;
-  }
-
-  .agent-list-card {
-    position: absolute;
-    top: 18px !important;
-    right: 1%;
-    width: 26px;
-  }
-
-  .bookmark-icon-list {
-    position: absolute;
-    top: 15px !important;
-    right: 5%;
-    width: 23px;
   }
 
   .about-book {
@@ -499,10 +485,83 @@ a:hover {
     display: flex;
   }
 
+
+  .about-maximum-list {
+    max-width: 25vw;
+  }
+
+  .about-book-list {
+    max-width: 25vw;
+  }
+
+  .flex-left {
+    left: 4%;
+  }
 }
 
-.read-more-list {
-  display: none !important;
+@media(min-width:1601px) {}
+
+@media(min-width:1301px) {
+  .small-screen-div {
+    display: none;
+  }
+}
+
+@media(max-width:1300px) {
+
+  .flex-left,
+  .flex-text-list {
+    display: none;
+  }
+
+  .small-screen-div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 5%;
+  }
+
+  .about-book-list {
+    max-width: 44vw;
+  }
+
+  .progressBar-small-screen {
+    width: 25vw;
+    transform: rotate(0deg) !important;
+    height: 45px !important;
+    position: absolute;
+    bottom: 0ch;
+  }
+
+  .genre-list {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1, 5em;
+    max-height: 4, 5em;
+    max-width: 40vw;
+  }
+
+  .read-more-list {
+    position: absolute;
+    bottom: 0ch;
+    right: 3rem;
+    background-color: white !important;
+    border: 0 !important;
+    font-weight: 500;
+    font-size: 17px;
+    width: auto;
+    color: #00C67E !important;
+    margin-bottom: 3px;
+    max-width: 39px;
+  }
+
+  .progress-read-more {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .hamburger-menu {
@@ -546,7 +605,6 @@ a:hover {
     top: 12px;
     width: 272% !important;
     max-width: 87vw !important;
-    min-height: 500px !important;
     margin-top: 15px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
@@ -595,20 +653,9 @@ a:hover {
     display: none !important;
   }
 
-  .agent-list-card {
-    position: absolute;
-    top: 18px !important;
-    right: 1%;
-    width: 26px;
-  }
-
   .bookmark-icon-list {
-    position: absolute;
-    top: 15px !important;
-    right: 7%;
-    width: 23px;
+    right: 6%;
   }
-
 }
 
 @media(max-width:700px) {
@@ -631,7 +678,7 @@ a:hover {
     top: 12px;
     width: 272% !important;
     max-width: 92vw !important;
-    min-height: 700px !important;
+    min-height: 550px;
     margin-top: 15px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
@@ -642,32 +689,49 @@ a:hover {
     margin-right: auto;
   }
 
-  .agent-list-card {
-    position: absolute;
-    top: 18px !important;
-    right: 2%;
-    width: 26px;
-  }
-
-  .bookmark-icon-list {
-    position: absolute;
-    top: 15px !important;
-    right: 12%;
-    width: 23px;
-  }
 
   .search-btn {
     padding: 2px !important;
   }
 
-  .full-summary-tab {
+  .book-description {
+    display: none;
+  }
+
+  .genre-list {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 11;
+    -webkit-line-clamp: 3;
     line-height: 1, 5em;
-    max-height: 10, 5em;
-    max-width: 58vw;
+    max-height: 4, 5em;
+    min-width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+
+  .flex-inside-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .progress-read-more {
+    position: relative;
+    top: 190px;
+  }
+
+  .progressBar-small-screen {
+    width: 49vw;
+  }
+
+  .bookmark-icon-list {
+    right: 13%;
+  }
+
+  .agent-list-card {
+    right: 2%;
   }
 }

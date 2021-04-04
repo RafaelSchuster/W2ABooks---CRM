@@ -10,6 +10,7 @@ import BookMark from "../images/star.png";
 import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
+import Plus from '../images/plus2.png'
 
 
 
@@ -17,6 +18,7 @@ function BookItemListView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
     const [modalMeetingIsOpen, setModalMeetingIsOpen] = useState(false);
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
+    const [modalListIsOpen, setModalListIsOpen] = useState(false)
     const [modalJobsIsOpen, setModalJobsIsOpen] = useState(false);
     const { setBookmarks } = useContext(MainContext);
 
@@ -61,9 +63,9 @@ function BookItemListView(props) {
                     <div className="flex-inside-list">
                         <Card.Img variant="top" src={mockImg} className="card-img" />
                         <div className="flex-left">
-                            {props.aboutBook && <Card.Text className="">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book-list">{props.aboutBook}</Card.Text>}</Card.Text>}
+                            {props.aboutBook && <Card.Text className="book-description">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book-list">{props.aboutBook}</Card.Text>}</Card.Text>}
                             {props.addedOn && <Card.Text className="added-on"><span className=" ">Added On: </span> <span>{props.addedOn}</span></Card.Text>}
-                            {props.wordCount && <Card.Text className="grid-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
+                            {props.wordCount && <Card.Text className="list-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <div className="flex-all-btns">
                                 <div className="flex-first-btns">
                                     <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
@@ -78,13 +80,24 @@ function BookItemListView(props) {
                         <div className="flex-text-list">
                             {props.aboutAuthor && <Card.Text className="about-author-grid mobile"><span className="boldening">About the Author: </span><div className="about-maximum-list ">{props.aboutAuthor}</div></Card.Text>}
                             <div className="flex-genre-list">
-                                <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
+                                <Card.Text>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
                                 {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-list"></ProgressBar>}
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"></ProgressBar>}
                                 {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
                             </div>
                         </div>
-                        <Button className="read-more-list">Read More</Button>
+                        <div className="small-screen-div">
+                            {props.aboutBook && <Card.Text className="book-description">{props.bookName && <span className="boldening header-size">{props.bookName}</span>}{props.aboutBook && <Card.Text className="about-book-list">{props.aboutBook}</Card.Text>}</Card.Text>}
+                            <div className="flex-genre-list">
+                                <Card.Text className="genre-list">{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}</Card.Text>
+                            </div>
+                            <div className="progress-read-more">
+                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-small-screen"></ProgressBar>}
+                                {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"><span className="zero-percent" >0%</span></ProgressBar>}
+                                <input type="image" src={Plus} className="read-more-list" onClick={() => setModalListIsOpen(true)} />
+                            </div>
+                        </div>
                         <Modal
                             className="status-modal"
                             overlayClassName="overlay-modal-status"
@@ -130,6 +143,18 @@ function BookItemListView(props) {
                         <Modal isOpen={modalJobsIsOpen}
                             onRequestClose={() => setModalJobsIsOpen(false)}>
                             {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                        </Modal>
+
+                        <Modal
+                            className="list-modal"
+                            overlayClassName="overlay-modal-list"
+                            isOpen={modalListIsOpen}
+                            onRequestClose={() => setModalListIsOpen(false)}
+                        >
+                            <Card.Header as="h1" className="text-center" >Full Description</Card.Header>
+                            <Card.Body className="list-grid-card-modal">
+
+                            </Card.Body>
                         </Modal>
                     </div>
                 </Card.Body>
