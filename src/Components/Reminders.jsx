@@ -50,7 +50,7 @@ class Reminders extends React.Component {
 
     render() {
         return (
-            <div className="reminders-main-div">
+            <div>
                 <MyForm onAddNote={newNote => this.handleNewNotes(newNote)} />
                 <NotesList notes={this.state.notes}
                     onNoteDelete={date => this.handleDeletes(date)}
