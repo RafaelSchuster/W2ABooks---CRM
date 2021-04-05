@@ -14,6 +14,7 @@
     top: 115px;
     left: 95% !important;
     width: 30px !important;
+    z-index: 99;
 }
 
 .list-view-icon:hover {
@@ -26,6 +27,7 @@
     top: 116px;
     left: 95% !important;
     width: 30px !important;
+    z-index: 99;
 }
 
 .card-img-grid {

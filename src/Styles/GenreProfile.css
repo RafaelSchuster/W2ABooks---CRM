@@ -3,9 +3,9 @@ html body {
 }
 
 .list-of-ganres {
-    position: relative;
-    top: 4%;
-    left: 5%;
+    position: absolute;
+    top: 14%;
+    left: 29%;
     padding: 20px;
     height: 110vh;
 }
@@ -99,20 +99,29 @@ html body {
 @media(max-width:1000px) {
     .list-of-ganres {
         position: relative;
-        top: 12%;
-        left: 5%;
+        top: 120%;
+        transform: translate(9%);
         padding: 20px;
         height: 110vh;
         display: flex;
-        min-width: 115vw !important;
+        min-width: 100vw !important;
         flex-direction: row;
         flex-wrap: wrap;
     }
 }
 
+@media(max-width:700px){
+    .list-of-ganres {
+        top: 190%;
+        transform: translate(15%);     
+        min-width: 100vw !important;    
+    }
+
+}
+
 @media(max-width:424px) {
     .list-of-ganres {
-        top: 10%;
+        top: 200%;
         transform: translate(20%);
         min-width: 115vw !important;
 

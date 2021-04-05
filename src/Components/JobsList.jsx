@@ -11,7 +11,7 @@ class JobsList extends React.Component {
             date, startDate, endDate, status, description);
     }
     render() {
-        return <ul className="grid">
+        return <ul >
             <JobsTable jobs={this.props.jobs}
                 onDeleting={date => this.deleting(date)}
                 onEditing={(title, projectName, payment,

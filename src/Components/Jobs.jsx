@@ -54,7 +54,7 @@ class Jobs extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="job-main-div">
                 <JobsForm onAddJob={newJob => this.handleNewJobs(newJob)} defaultBookName={this.props.defaultBookName} />
                 <JobsList jobs={this.state.jobs}
                     onJobDelete={date => this.handleDeletes(date)}

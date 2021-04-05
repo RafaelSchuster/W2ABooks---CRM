@@ -45,11 +45,19 @@ html body {
   overflow-x: hidden !important;
 }
 
+.outer-div-header {
+  position: fixed;
+  background-color: white !important;
+  width: 100%;
+  z-index: 99;
+  height: 100px;
+}
+
 .logo {
   grid-area: logo;
   position: absolute;
   top: 30%;
-  left: 20%;
+  left: -20%;
   padding-top: 10px;
   width: 50%;
   height: 40%;
@@ -133,8 +141,8 @@ html body {
 
 .flex-header-form {
   position: absolute;
-  top: 25%;
-  left: 10%;
+  top: 145%;
+  left: 20%;
   min-width: 400px;
   max-height: 40px;
   display: flex;
@@ -296,11 +304,10 @@ html body {
   padding: 20px;
   width: 80vw;
   height: 65vh;
-  z-index: 99;
+  z-index: 39;
 }
 
-.overlay-modal-status,
-.overlay-modal-list {
+.overlay-modal-status {
   position: fixed;
   top: 0;
   left: 0;
@@ -309,6 +316,16 @@ html body {
   background-color: rgba(173, 170, 170, 0.411);
   z-index: 99;
 
+}
+
+.overlay-modal-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 170, 170, 0.411);
+  z-index: 39;
 }
 
 .meeting-modal {
@@ -324,7 +341,7 @@ html body {
   padding: 20px;
   width: 80vw;
   height: 80vh;
-  z-index: 2;
+  z-index: 99;
 }
 
 .overlay-modal-meeting {
@@ -334,7 +351,7 @@ html body {
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
-  z-index: 2;
+  z-index: 99;
 }
 
 .summary-modal {
@@ -351,7 +368,7 @@ html body {
   padding: 20px;
   width: 80vw;
   height: 80vh;
-  z-index: 2;
+  z-index: 99;
 
 }
 
@@ -362,8 +379,7 @@ html body {
   right: 0;
   bottom: 0;
   background-color: rgba(173, 170, 170, 0.411);
-  z-index: 2;
-
+  z-index: 99;
 }
 
 .boldening {
@@ -498,8 +514,6 @@ a:hover {
     left: 4%;
   }
 }
-
-@media(min-width:1601px) {}
 
 @media(min-width:1301px) {
   .small-screen-div {
@@ -666,7 +680,7 @@ a:hover {
 @media(max-width:700px) {
   .flex-header-form {
     position: absolute;
-    top: 120%;
+    top: 330%;
     left: 4%;
     min-width: 300px;
     display: flex;
@@ -739,12 +753,35 @@ a:hover {
   .agent-list-card {
     right: 2%;
   }
+  .outer-div-header {
+    height: 20%;
+  }
 }
 
 @media(max-width:724px) {
   .list-modal {
     width: 96vw;
     height: 63vh;
+  }
+  .outer-div-header {
+    height: 160px;
+  }
+}
 
+@media(max-width:424px){
+  .outer-div-header {
+    height: 160px;
+  }
+}
+
+@media(max-width:320px) {
+  .search-bar {
+    width: 170px !important;
+    margin-right: 5px;
+  }
+
+  .search-btn {
+    position: relative;
+    right: 20%;
   }
 }

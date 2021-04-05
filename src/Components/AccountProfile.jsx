@@ -62,7 +62,7 @@ function AccountProfile() {
                                         <Form.Label></Form.Label>
                                         <Form.Group controlId="exampleForm.ControlSelect1">
                                             <Form.Control as="select" onChange={handleInputChange} name="gender">
-                                                <option value="">-- Gender --</option>
+                                                <option value="">Gender</option>
                                                 <option value='male'>Male</option>
                                                 <option value='female'>Female</option>
                                             </Form.Control>

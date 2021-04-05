@@ -90,12 +90,16 @@
 }
 
 .reminders-header {
-    position: absolute;
-    top: 20%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    transform: translate(40%, 280%)
 }
-
+.reminders-main-div{
+    position: absolute;
+    min-width: 60vw;
+    top: 5%;
+    left: 25%;
+    overflow-x: hidden;
+}
 .card-note-header {
     background-color: #4285F4 !important;
     color: white;
