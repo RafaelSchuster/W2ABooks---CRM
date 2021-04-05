@@ -4,16 +4,10 @@ html body {
 
 .list-of-ganres {
     position: relative;
-    top: 10%;
+    top: 4%;
     left: 5%;
     padding: 20px;
     height: 110vh;
-}
-
-.genres-header {
-    position: absolute;
-    top: 15%;
-    left: 45%;
 }
 
 .ganer-block {
@@ -100,4 +94,27 @@ html body {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
+}
+
+@media(max-width:1000px) {
+    .list-of-ganres {
+        position: relative;
+        top: 12%;
+        left: 5%;
+        padding: 20px;
+        height: 110vh;
+        display: flex;
+        min-width: 115vw !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:424px) {
+    .list-of-ganres {
+        top: 10%;
+        transform: translate(20%);
+        min-width: 115vw !important;
+
+    }
 }

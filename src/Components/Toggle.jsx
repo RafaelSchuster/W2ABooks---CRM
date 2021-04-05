@@ -36,7 +36,7 @@ function Toggle() {
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="toggle-content">
                         <Card.Link href="index.html#/account_profile" className="toggle-link">Agent's Profile</Card.Link>
-                        <Card.Link href="index.html#/genre_profile" className="toggle-link" >Genres</Card.Link>
+                        <Card.Link href="index.html#/genre_profile" className="toggle-link" >Agent's Genres</Card.Link>
                         <Card.Link href="index.html#/requirements" className="toggle-link" >Requirements</Card.Link>
                         <Card.Link href="index.html#/job_history" className="toggle-link">Jobs List</Card.Link>
                     </Card.Body>

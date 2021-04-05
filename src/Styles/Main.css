@@ -558,6 +558,11 @@ a:hover {
     max-width: 39px;
   }
 
+  .read-more-list:hover {
+    max-width: 36px;
+
+  }
+
   .progress-read-more {
     display: flex;
     flex-direction: row;
@@ -734,19 +739,12 @@ a:hover {
   .agent-list-card {
     right: 2%;
   }
+}
+
+@media(max-width:724px) {
   .list-modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #ccc;
-    background: #fff;
-    overflow: auto;
-    border-radius: 7px;
-    outline: none;
-    padding: 20px;
     width: 96vw;
-    height: 93vh;
-    z-index: 99;
+    height: 63vh;
+
   }
 }

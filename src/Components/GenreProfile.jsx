@@ -51,7 +51,6 @@ function GenreProfile() {
 
     return (
         <>
-            <h3 className="genres-header boldening" >Which genres you like working with?</h3>
             <div class="list-of-ganres">
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="classic" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />

@@ -41,7 +41,6 @@ function Requirements() {
 
     return (
         <>
-            <h3 className="requirements-header boldening" >What are your requirements for promoting a book?</h3>
             <div class="list-of-requirements">
                 <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="bookData" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />

@@ -1,22 +1,16 @@
+.list-of-requirements {
+    position: relative;
+    top: 5%;
+    left: 5%;
+    padding: 20px;
+    height: 110vh;
+}
+
 .requirements-header {
     position: absolute;
-    top: 15%;
-    left: 40%;
-}
-
-.list-of-requirements {
-    position: absolute;
-    display: inline-block;
-    top: 20%;
-    left: 35%;
-    padding: 20px;
-    width: 40%;
-}
-
-.genres-header {
-    position: absolute;
-    top: 15%;
-    left: 45%;
+    top: 17%;
+    left: 55%;
+    transform: translate(-50%, -50%);
 }
 
 .ganer-block {
@@ -109,4 +103,24 @@
     position: absolute;
     top: 75%;
     left: 42%;
+}
+
+@media(max-width:1000px) {
+    .list-of-requirements {
+        position: relative;
+        top: 17%;
+        display: flex;
+        min-width: 100vw !important;
+        max-height: 60vh;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 485px) {
+    .list-of-requirements {
+        top: 22%;
+        left: 20vw;
+        min-width: 100vw !important;
+    }
 }

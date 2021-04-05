@@ -91,7 +91,9 @@
 
 .reminders-header {
     position: absolute;
-    left: 53%;
+    top: 20%;
+    left: 55%;
+    transform: translate(-50%, -50%);
 }
 
 .card-note-header {
