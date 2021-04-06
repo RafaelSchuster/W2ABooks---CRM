@@ -28,13 +28,13 @@ class MyForm extends React.Component {
     render() {
         return (
             <Container>
-                <h3 className="reminders-header boldening">Reminders Note Book</h3>
+                {/* <h3 className="reminders-header boldening">Reminders Note Book</h3> */}
                 <Form className='mt-5' onSubmit={event => this.onSubmiting(event)}>
                     <Form.Group>
                         <h1 className='text-white'>Notes</h1>
                         <Form.Control
                             className='m-3 note-title-form'
-                            placeholder='Write Your Title Here...'
+                            placeholder="Write Your Note's Title Here..."
                             as="textarea" rows={1}
                             name='title'
                             id='title'

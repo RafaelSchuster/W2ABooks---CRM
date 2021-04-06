@@ -24,6 +24,10 @@ const mockMsgs = [{
   date: new Date().toISOString(),
   userName: 'Rafael Schuster',
   content: 'Fantastic!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
 }]
 
 function MessageComponent() {

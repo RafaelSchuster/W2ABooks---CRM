@@ -27,7 +27,7 @@ function ContactForm() {
 
     return (
         <div>
-            <Container className="container-profile">
+            <Container className="container-profile add-contact-container">
                 <Card border="light">
                     <Card.Header as="h2" className="text-center purple"><span className="boldening">Add New Contact</span></Card.Header>
                     <Card.Body className="add-contact-form">
@@ -35,53 +35,60 @@ function ContactForm() {
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={e => submitProfile(e)}>
                                 <Form.Row>
-                                    <Col>
+                                    <Col xs={12} sm={6} lg={4}>
+                                        <Form.Label></Form.Label>
+
                                         <Form.Control placeholder="First name" name="firstName"
                                             onChange={handleInputChange} required />
                                     </Col>
-                                    <Col>
+                                    <Col xs={12} sm={6} lg={4}>
+                                        <Form.Label></Form.Label>
+
                                         <Form.Control placeholder="Last name" name="lastName"
                                             onChange={handleInputChange} required />
                                     </Col>
-                                    <Col>
+                                    <Col xs={12} sm={6} lg={4}>
+                                        <Form.Label></Form.Label>
+
                                         <Form.Control type='number' placeholder="Telephone Number" name="telephone"
                                             onChange={handleInputChange} />
                                     </Col>
-                                </Form.Row>
-                                <Form.Row >
-                                    <Col>
-                                        <Form.Group controlId="formGroupEmail">
-                                            <Form.Label></Form.Label>
-                                            <Form.Control type="email" placeholder="Email" name="email"
-                                                onChange={handleInputChange} />
-                                        </Form.Group>
+                                    <Col xs={12} sm={6} lg={4} >
+                                        {/* <Form.Group controlId="formGroupEmail"> */}
+                                        <Form.Label></Form.Label>
+                                        <Form.Control type="email" placeholder="Email" name="email"
+                                            onChange={handleInputChange} />
+                                        {/* </Form.Group> */}
                                     </Col>
-                                    <Col>
+                                    <Col xs={12} sm={6} lg={4}>
                                         <Form.Label></Form.Label>
                                         <Form.Control name="company" placeholder="Company" onChange={handleInputChange}></Form.Control>
                                     </Col>
-                                    <Col>
+                                    <Col xs={12} sm={6} lg={4}>
                                         <Form.Label></Form.Label>
                                         <Form.Control name="job_title" placeholder="Job Title" onChange={handleInputChange}></Form.Control>
                                     </Col>
                                 </Form.Row>
+
                                 <Form.Row>
-                                    <Col xs="4">
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
-                                            <Form.Label></Form.Label>
-                                            <Form.Control as="select" onChange={onWorkHistory} name="workHistory">
-                                                <option value="">-- Ever worked together? --</option>
-                                                <option value='1'>Yes</option>
-                                                <option value='0'>No</option>
-                                            </Form.Control>
-                                        </Form.Group>
+                                    <Col xs={12} sm={6} lg={4}>
+                                        {/* <Form.Group controlId="exampleForm.ControlSelect1"> */}
+                                        <Form.Label></Form.Label>
+
+                                        <Form.Control as="select" onChange={onWorkHistory} name="workHistory">
+                                            <option value="">Worked together?</option>
+                                            <option value='1'>Yes</option>
+                                            <option value='0'>No</option>
+                                        </Form.Control>
+                                        {/* </Form.Group> */}
                                     </Col>
-                                    {<Col>
-                                        <Form.Group controlId="exampleForm.ControlTextarea1">
-                                            <Form.Label></Form.Label>
-                                            <Form.Control as="textarea" rows={1} placeholder="Please describe your work history together"
-                                                name="workHistoryDescription" onChange={handleInputChange} disabled={!workHistory} />
-                                        </Form.Group>
+                                    {<Col xs={12} sm={6} lg={8}>
+                                        {/* <Form.Group controlId="exampleForm.ControlTextarea1"> */}
+                                        <Form.Label></Form.Label>
+
+                                        <Form.Control as="textarea" rows={1} placeholder="Work Description"
+                                            name="workHistoryDescription" onChange={handleInputChange} disabled={!workHistory} />
+                                        {/* </Form.Group> */}
                                     </Col>}
                                 </Form.Row>
                                 <Form.Group controlId="exampleForm.ControlTextarea1">

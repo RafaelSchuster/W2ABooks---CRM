@@ -22,11 +22,14 @@ function ContactCard(props) {
             <Card className="my-card">
                 <Card.Header>
                     <Container className="container-header-contact-card">
+
                         <Row>
-                            <Col xs="9">
+                            <Col xs="9" className="header-card-contact-name">
                                 <img srcSet={Person} alt="" />
-                                {props.firstName && <span> {props.firstName} </span>}
-                                {props.lastName && <span> {props.lastName} </span>}
+                                <span >
+                                    {props.firstName && <span> {props.firstName} </span>}
+                                    {props.lastName && <span> {props.lastName} </span>}
+                                </span>
                             </Col>
                             <Col>
                                 {props.workHistoryDescription &&

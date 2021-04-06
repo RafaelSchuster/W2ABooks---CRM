@@ -588,7 +588,6 @@ a:hover {
   display: none;
 }
 
-
 @media(max-width:1000px) {
   .grid-container {
     display: grid;
@@ -753,8 +752,9 @@ a:hover {
   .agent-list-card {
     right: 2%;
   }
+
   .outer-div-header {
-    height: 20%;
+    height: 160px;
   }
 }
 
@@ -763,12 +763,10 @@ a:hover {
     width: 96vw;
     height: 63vh;
   }
-  .outer-div-header {
-    height: 160px;
-  }
+
 }
 
-@media(max-width:424px){
+@media(max-width:424px) {
   .outer-div-header {
     height: 160px;
   }

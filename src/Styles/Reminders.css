@@ -21,17 +21,13 @@
     width: 90%;
 }
 
-.note-item-card {
-    margin-bottom: 10px;
-}
-
 .grid {
     position: relative;
     margin: 20px;
 }
 
 .text {
-    font-size: 30px;
+    font-size: 17px;
 }
 
 .note-item-card {
@@ -39,20 +35,20 @@
     display: block;
     margin-left: auto !important;
     margin-right: auto !important;
-    width: 95%;
+    margin-bottom: 10px;
+    width: 100%;
     right: 2%;
     color: rgb(10, 2, 29);
 }
 
 .delBtn {
-    position: absolute;
-    right: 10px;
-    top: 100px;
+    position: relative;
+    top: 10px;
 }
 
 .openModalBtn {
     position: absolute;
-    top: 6%;
+    top: 9px;
     right: 5px;
 }
 
@@ -93,14 +89,16 @@
     position: relative;
     transform: translate(40%, 280%)
 }
-.reminders-main-div{
+
+.reminders-main-div {
     position: absolute;
     min-width: 60vw;
-    top: 5%;
-    left: 25%;
+    top: 0%;
+    left: 20%;
     overflow-x: hidden;
 }
-.card-note-header {
+
+.note-date-header {
     background-color: #4285F4 !important;
     color: white;
 }
@@ -109,4 +107,67 @@
     background-color: #01c67e !important;
     border: none !important;
     color: white;
+}
+
+.card-title {
+    font-size: 21px;
+}
+
+.date-header {
+    font-size: 18px !important;
+}
+
+@media(max-width:1000px) {
+    .reminders-main-div {
+        position: absolute;
+        min-width: 90vw;
+        top: 5%;
+        left: 5%;
+
+    }
+}
+
+@media(max-width:700px) {
+    .reminders-main-div {
+        position: absolute;
+        min-width: 90vw;
+        top: 80px;
+        left: 5%;
+
+    }
+
+    .note-item-card {
+        position: relative;
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 10px;
+        width: 100%;
+        height: auto;
+        right: 5%;
+        color: rgb(10, 2, 29);
+    }
+
+    .date-header {
+        font-size: 16px !important;
+    }
+
+    .openModalBtn {
+        position: relative;
+        top: 7px;
+
+    }
+
+    .delBtn {
+        margin-bottom: 5px;
+        margin-right: 10px;
+
+    }
+}
+
+@media(max-width:475px) {
+    .note-item-card {
+        right: none;
+        left: -8%;
+    }
 }

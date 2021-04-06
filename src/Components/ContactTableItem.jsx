@@ -18,12 +18,13 @@ function ContactTableItem(props) {
     return (
         <tr>
             {props.id && <td className="text-center">{props.id}</td>}
-            {props.firstName && <td className="text-center">{props.firstName}</td>}
-            {props.lastName && <td className="text-center">{props.lastName}</td>}
+            {!props.mobile && props.firstName && <td className="text-center">{props.firstName}</td>}
+            {!props.mobile && props.lastName && <td className="text-center">{props.lastName}</td>}
+            {props.mobile && <td className="text-center">{`${props.firstName} ${props.lastName}`}</td>}
             {props.telephone && <td className="text-center">{props.telephone}</td>}
-            {props.email && <td className="text-center">{props.email}</td>}
-            {props.company && <td className="text-center">{props.company}</td>}
-            {props.jobTitle && <td className="text-center">{props.jobTitle}</td>}
+            {!props.mobile && props.email && <td className="text-center">{props.email}</td>}
+            {!props.mobile && props.company && <td className="text-center">{props.company}</td>}
+            {!props.mobile && props.jobTitle && <td className="text-center">{props.jobTitle}</td>}
             <td className="actions-list">
                 <Container className="container-list-more">
                     <Row>

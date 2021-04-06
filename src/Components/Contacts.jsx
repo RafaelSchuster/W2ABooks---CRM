@@ -36,14 +36,14 @@ function Contacts() {
             {gridContacts && <input type="image" src={ListIcon} alt="" className="list-view-icon grid-list-contacts" onClick={changeView} title="List display" ></input>}
             {!gridContacts && <input type="image" src={GridIcon} alt="" className="grid-view-icon grid-list-contacts" onClick={changeView} title="Grid display" ></input>}
             <div className="flex-contact-header">
-                <h3 className="header-profile mb-4 boldening"> Your Contacts</h3>
+                {/* <h3 className="header-profile mb-4 boldening"> Your Contacts</h3>
                 <Card className="contact-count-header">
                     {contacts ? <Card.Body className="head-status text-center">{`You have ${contacts.length} Contacts.`}</Card.Body> :
                         <Card.Body className="head-status">{`You have 0 Contacts.`}</Card.Body>}
-                </Card>
+                </Card> */}
             </div>
             {gridContacts && <Container className="my-contacts-container">
-                <CardDeck className="deck">
+                <CardDeck>
                     {contacts && contacts.map(contact =>
                         <ContactCard
                             key={Math.random()}

@@ -26,8 +26,8 @@ function NoteItem(props) {
     const [modal2IsOpen, setModal2IsOpen] = useState(false);
     return (
         <Card className="note-item-card">
-            <div className="card-header card-note-header">
-                {props.date && <h4>{props.date}</h4>}
+            <div className="card-header note-date-header">
+                {props.date && <h4 className="date-header">{props.date}</h4>}
             </div>
             <div className="card-body">
                 {props.title && <h2 className=" card-title">{props.title.toUpperCase()}</h2>}

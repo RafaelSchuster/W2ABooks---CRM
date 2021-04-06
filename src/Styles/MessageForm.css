@@ -2,13 +2,19 @@
   position: relative;
 }
 
+.messaging-main-div {
+  position: absolute;
+  top: 5rem;
+  left: 15rem;
+}
+
 .form-control.msgBox {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   top: 3rem;
-  width: 600px;
+  width: 38vw;
   height: 180px;
   border: 2px solid #CCCCCC !important;
   box-sizing: border-box;
@@ -30,5 +36,33 @@
 .msgBtn {
   position: absolute;
   top: 99%;
-  left: 66%;
+  right: 19vw;
+}
+
+@media(max-width: 1000px) {
+  .messaging-main-div {
+    position: absolute;
+    top: 5rem;
+    left: 0rem;
+  }
+
+  .form-control.msgBox {
+    top: 3rem;
+    width: 68vw;
+    height: 180px;
+  }
+}
+
+@media(max-width:700px) {
+  .messaging-main-div {
+    position: absolute;
+    top: 9rem;
+    left: -1rem;
+  }
+
+  .form-control.msgBox {
+    top: 3rem;
+    width: 82vw;
+    height: 180px;
+  }
 }

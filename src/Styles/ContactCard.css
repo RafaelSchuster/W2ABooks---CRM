@@ -14,8 +14,8 @@
 
 .my-card {
     position: relative;
-    min-width: 540px;
-    max-width: 540px;
+    min-width: 335px;
+    max-width: 335px;
     margin-bottom: 30px !important;
 }
 
@@ -46,8 +46,8 @@
 .container-header-contact-card {
     position: relative;
     top: 10% !important;
-    right: 4%;
-    width: 107% !important;
+    right: 5%;
+    width: 360px !important;
 }
 
 .about-card-btn {

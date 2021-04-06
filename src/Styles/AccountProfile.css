@@ -55,12 +55,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-right: auto;
     width: 56px;
 }
+
 .container-profile {
     position: absolute;
     top: 13%;
     left: 20%;
     min-width: 70vw;
 }
+
 @media(max-width:1000px) {
     .container-profile {
         position: relative;

@@ -110,11 +110,11 @@ html body {
     }
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
     .list-of-ganres {
         top: 190%;
-        transform: translate(15%);     
-        min-width: 100vw !important;    
+        transform: translate(15%);
+        min-width: 100vw !important;
     }
 
 }

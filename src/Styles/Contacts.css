@@ -1,3 +1,7 @@
+html body {
+    overflow-x: hidden;
+}
+
 .flex-contact-header {
     position: absolute;
     top: 13%;
@@ -8,16 +12,34 @@
     max-width: 400px;
 }
 
+.container-header-contact-card {
+    position: relative;
+    top: 10% !important;
+    right: 22% !important;
+    max-width: 360px !important;
+}
+
+.header-card-contact-name {
+    position: relative;
+    right: -14%;
+}
+
 .header-profile {
     position: relative;
     left: 3%;
 }
 
 .my-contacts-container {
-    position: absolute;
-    top: 29%;
-    left: 30%;
+    position: relative;
+    top: 168%;
+    left: 20rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 84vw;
+    max-width: 84vw;
 }
+
 
 .grid-list-contacts {
     position: absolute;
@@ -29,7 +51,7 @@
 
 .contact-table {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 19%;
     width: 78%;
 }
@@ -58,8 +80,10 @@
 
 .container-list-more {
     position: relative;
-    right: 5%;
+    right: 27%;
     bottom: -2px;
+    min-width: 120px !important;
+    max-width: 100px;
 }
 
 .purple {
@@ -70,4 +94,93 @@
 .add-contact-form {
     position: relative;
     margin-top: 20px;
+}
+
+@media(max-width:1000px) {
+    .add-contact-container {
+        position: relative;
+        top: 110px !important;
+    }
+
+    .contact-table {
+        /* position: absolute;
+        top: 23%; */
+        left: 1%;
+        width: 98%;
+    }
+
+    .container-list-more {
+        position: relative;
+        right: 15%;
+        bottom: -2px;
+        min-width: 120px !important;
+    }
+
+    .my-contacts-container {
+        position: relative;
+        top: 168%;
+        left: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        min-width: 98vw;
+        max-width: 98vw;
+    }
+
+}
+
+
+
+@media(max-width:745px) {
+    .add-contact-container {
+        position: relative;
+        top: 170px !important;
+    }
+
+    .add-contact-form {
+        margin-top: 0px;
+    }
+
+    .contact-table {
+        position: absolute;
+        top: 180px;
+        left: 1%;
+        width: 98%;
+    }
+
+    .container-list-more {
+        position: relative;
+        right: 4%;
+        bottom: -2px;
+        min-width: 160px !important;
+    }
+
+    .my-contacts-container {
+        position: relative;
+        top: 200px;
+        transform: translate(-9%);
+        min-width: 44vw;
+        max-width: 44vw;
+    }
+
+    .my-card {
+        position: relative;
+        min-width: 90vw !important;
+        max-width: 90vw !important;
+        margin-bottom: 30px !important;
+    }
+
+    .container-header-contact-card {
+        position: absolute;
+        left: 42%;
+        transform: translate(-20px, -20px);
+        max-width: 100px !important;
+    }
+
+    .header-card-contact-name {
+        position: relative;
+        top: 26px;
+        right: 58vw;
+        min-width: 120px;
+    }
 }

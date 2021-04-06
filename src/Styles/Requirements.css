@@ -117,13 +117,15 @@
         flex-wrap: wrap;
     }
 }
-@media(max-width:700px){
+
+@media(max-width:700px) {
     .list-of-requirements {
         top: 180px;
         left: 15%;
         min-width: 85vw !important;
     }
 }
+
 @media(max-width: 570px) {
     .list-of-requirements {
         top: 160px;
