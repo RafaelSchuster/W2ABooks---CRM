@@ -9,8 +9,7 @@ import BookMark from "../images/star.png";
 import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
-
-
+import Close from '../images/close.png';
 
 function BookItemGridView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
@@ -84,7 +83,8 @@ function BookItemGridView(props) {
                             isOpen={modalStatusIsOpen}
                             onRequestClose={() => setModalStatusIsOpen(false)}
                         >
-                            <Card.Header as="h1" className="text-center" >Status</Card.Header>
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalStatusIsOpen(false)} />
+                            <Card.Header as="h4" className="text-center" >Status</Card.Header>
                             <Card.Body className="status-grid-card-modal">
                                 {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
                                 {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
@@ -104,7 +104,8 @@ function BookItemGridView(props) {
                             isOpen={modalMeetingIsOpen}
                             onRequestClose={() => setModalMeetingIsOpen(false)}
                         >
-                            <Card.Header as="h1" className="text-center">Meeting</Card.Header>
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalMeetingIsOpen(false)} />
+                            <Card.Header as="h4" className="text-center">Meeting</Card.Header>
                             <Card.Body>
                                 <Card.Title className="text-center">Meeting Summary</Card.Title>
                                 {props.summaryMeeting && <Card.Text className="meeting-summary-grid"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
@@ -117,12 +118,19 @@ function BookItemGridView(props) {
                             isOpen={modalSummaryIsOpen}
                             onRequestClose={() => setModalSummaryIsOpen(false)}
                         >
-                            <Card.Header as="h1" className="text-center">Full Book Summary</Card.Header>
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalSummaryIsOpen(false)} />
+                            <Card.Header as="h4" className="text-center">Full Book Summary</Card.Header>
                             {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
                             {props.aboutBook && <Card.Text className="full-about-book">{props.aboutBook}</Card.Text>}                        </Modal>
-                        <Modal isOpen={modalJobsIsOpen}
+                        <Modal
+                            className="jobs-modal"
+                            overlayClassName="overlay-modal-jobs"
+                            isOpen={modalJobsIsOpen}
                             onRequestClose={() => setModalJobsIsOpen(false)}>
-                            {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalJobsIsOpen(false)} />
+                            <div className="jobs-modal-inner-div">
+                                {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                            </div>
                         </Modal>
                     </div>
                 </Card.Body>

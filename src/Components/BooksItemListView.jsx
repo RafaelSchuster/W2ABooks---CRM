@@ -10,7 +10,8 @@ import BookMark from "../images/star.png";
 import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
-import Plus from '../images/plus2.png'
+import Plus from '../images/plus2.png';
+import Close from '../images/close.png';
 
 
 
@@ -104,8 +105,11 @@ function BookItemListView(props) {
                             isOpen={modalStatusIsOpen}
                             onRequestClose={() => setModalStatusIsOpen(false)}
                         >
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalStatusIsOpen(false)} />
                             <Card.Header as="h1" className="text-center" >Status</Card.Header>
+
                             <Card.Body className="status-grid-card-modal">
+
                                 {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
                                 {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
                                 {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
@@ -124,6 +128,7 @@ function BookItemListView(props) {
                             isOpen={modalMeetingIsOpen}
                             onRequestClose={() => setModalMeetingIsOpen(false)}
                         >
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalMeetingIsOpen(false)} />
                             <Card.Header as="h1" className="text-center">Meeting</Card.Header>
                             <Card.Body>
                                 <Card.Title className="text-center">Meeting Summary</Card.Title>
@@ -137,12 +142,19 @@ function BookItemListView(props) {
                             isOpen={modalSummaryIsOpen}
                             onRequestClose={() => setModalSummaryIsOpen(false)}
                         >
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalSummaryIsOpen(false)} />
                             <Card.Header as="h1" className="text-center">Full Book Summary</Card.Header>
                             {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
                             {props.aboutBook && <Card.Text className="full-about-book">{props.aboutBook}</Card.Text>}                        </Modal>
-                        <Modal isOpen={modalJobsIsOpen}
+                        <Modal
+                            className="jobs-modal"
+                            overlayClassName="overlay-modal-jobs"
+                            isOpen={modalJobsIsOpen}
                             onRequestClose={() => setModalJobsIsOpen(false)}>
-                            {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                            <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalJobsIsOpen(false)} />
+                            <div className="jobs-modal-inner-div">
+                                {props.bookName && <Jobs defaultBookName={props.bookName} />}
+                            </div>
                         </Modal>
 
                         <Modal
@@ -151,6 +163,7 @@ function BookItemListView(props) {
                             isOpen={modalListIsOpen}
                             onRequestClose={() => setModalListIsOpen(false)}
                         >
+                            <input type="image" src={Close} className="close-modal-small-btn" onClick={() => setModalListIsOpen(false)} />
                             <Card.Body className="list-grid-card-modal">
                                 <div className="flex-inside-card">
                                     <div className="flex-img-progress">

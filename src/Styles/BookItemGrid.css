@@ -364,6 +364,9 @@ img:hover {
         top: 16px;
         left: 90%;
     }
+    .close-modal-small-btn{
+        max-width: 27px;
+      }
 }
 
 @media(max-width:480px) {

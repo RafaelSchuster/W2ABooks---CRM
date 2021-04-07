@@ -5,6 +5,9 @@ import MessageForm from './MessageForm';
 // import { getMsg } from './lib/api';
 // import MsgForm from './MessageForm';
 import MessageList from './MessageList';
+import Check from '../images/check_circle.png';
+import { Button } from 'react-bootstrap';
+
 
 // let msgResponse;
 // let arrItems = [];
@@ -24,6 +27,18 @@ const mockMsgs = [{
   date: new Date().toISOString(),
   userName: 'Rafael Schuster',
   content: 'Fantastic!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
 }, {
   date: new Date().toISOString(),
   userName: 'Rafael Schuster',

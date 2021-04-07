@@ -288,12 +288,12 @@ html body {
   padding: 20px;
   width: 95vw;
   height: 80vh;
-  z-index: 99;
+  z-index: 98;
 }
 
 .list-modal {
   position: absolute;
-  top: 50%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #ccc;
@@ -303,7 +303,7 @@ html body {
   outline: none;
   padding: 20px;
   width: 80vw;
-  height: 65vh;
+  height: 70vh;
   z-index: 39;
 }
 
@@ -382,6 +382,37 @@ html body {
   z-index: 99;
 }
 
+.jobs-modal{
+  position: absolute;
+  top: 8vh;
+  left: 12vw;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 7px;
+  outline: none;
+  padding: 20px;
+  width: 80vw;
+  height: 80vh;
+  z-index: 99;
+}
+.overlay-modal-jobs{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(173, 170, 170, 0.411);
+  z-index: 99;
+}
+.jobs-modal-inner-div{
+  position: absolute;
+  top: -6%;
+  left: 13%;
+  transform: translate(-50%);
+}
 .boldening {
   font-weight: 400;
 }
@@ -459,6 +490,19 @@ a:hover {
   border-radius: 10px;
 }
 
+.close-modal-btn{
+  position: absolute;
+  max-width: 30px;
+  top: 30px;
+  right: 2vw;
+
+}
+.close-modal-small-btn{
+  position: absolute;
+  max-width: 28px;
+  top: 8px;
+  right: 1vw;
+}
 @media(max-width :1600px) {
   .book-card {
     position: relative;
@@ -674,6 +718,9 @@ a:hover {
   .bookmark-icon-list {
     right: 6%;
   }
+  .list-modal {
+    height: 78vh;
+  }
 }
 
 @media(max-width:700px) {
@@ -760,8 +807,9 @@ a:hover {
 
 @media(max-width:724px) {
   .list-modal {
+    top: 59%;
     width: 96vw;
-    height: 63vh;
+    height: 78vh;
   }
 
 }

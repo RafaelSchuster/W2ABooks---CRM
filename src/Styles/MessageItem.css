@@ -1,3 +1,6 @@
+html body{
+  overflow-x: hidden !important;
+}
 .msgItem {
   position: relative;
   display: block;
@@ -46,7 +49,7 @@
 
 .msgDate {
   position: absolute;
-  left: 70%;
+  right: 1vw;
   top: 18px;
   font-family: Roboto;
   font-style: normal;
@@ -65,17 +68,11 @@
   right: 2%;
 }
 
+
 @media(max-width:1000px) {
   .msgItem {
-    width: 96vw;
+    width: 92vw;
     height: 160px;
-  }
-
-  .msgDate {
-    position: absolute;
-    left: 70%;
-    top: 18px;
-
   }
 }
 
@@ -87,15 +84,13 @@
   .msgTxt {
     top: 70px;
   }
-
-  .msgDate {
-    position: absolute;
-    left: 60%;
-    top: 18px;
-
-  }
-
   .message-list {
     right: 3%;
+  }
+}
+
+@media(max-width:450px){
+  .msgDate {
+    top: 45px;
   }
 }

@@ -1,4 +1,3 @@
-import { computeHeadingLevel } from '@testing-library/dom';
 import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import JobsTableItems from './JobTableItem';

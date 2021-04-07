@@ -59,6 +59,8 @@ function MessageForm() {
                             type='submit'
                         >Message
                         </Button>
+                        <Button variant="outline-success" className="agent-confirmation">Accept Book</Button>
+
                     </Form>
                     <Alert
                         className="maxChar"

@@ -38,6 +38,11 @@
   top: 99%;
   right: 19vw;
 }
+.agent-confirmation{
+  position: absolute;
+  top: 99%;
+  right: 36vw;
+}
 
 @media(max-width: 1000px) {
   .messaging-main-div {
@@ -64,5 +69,11 @@
     top: 3rem;
     width: 82vw;
     height: 180px;
+  }
+  .agent-confirmation{
+    position: absolute;
+    top: 130%;
+    right: 16vw;
+  
   }
 }
