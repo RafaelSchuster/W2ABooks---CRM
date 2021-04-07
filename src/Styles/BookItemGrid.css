@@ -10,22 +10,21 @@
 }
 
 .list-view-icon {
-    position: absolute;
-    top: 115px;
-    left: 95% !important;
+    position: relative;
+    top: -10px;
+    left: 97% !important;
     width: 30px !important;
-    z-index: 99;
+    z-index: 89;
 }
 
 .list-view-icon:hover {
-    width: 27px !important;
-
+    transform: translate(-3px);    
 }
 
 .grid-view-icon {
-    position: absolute;
-    top: 116px;
-    left: 95% !important;
+    position: relative;
+    top: -10px;
+    left: 97% !important;
     width: 30px !important;
     z-index: 99;
 }
@@ -37,7 +36,7 @@
 
 
 .grid-view-icon:hover {
-    width: 28px !important;
+    transform: translate(-3px);    
 }
 
 .book-card-grid {
@@ -79,7 +78,7 @@
     .book-card-grid {
         position: relative;
         left: 3%;
-        top: 37px;
+        top: -22px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 94%;
         margin: 0 !important;
@@ -127,7 +126,7 @@
     .book-card-grid {
         position: relative;
         left: 3%;
-        top: 37px;
+        top: -22px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 94%;
         margin: 0 !important;
@@ -196,8 +195,17 @@ img:hover {
 .bookmark-icon {
     position: absolute;
     top: 15px;
-    left: 88%;
+    right: 4vw;
     width: 22px;
+}
+
+.remove-icon{
+    position: absolute;
+    right: 1vw;
+    width: 29px;
+}
+.bookmark-icon:hover{
+    width: 20px;
 
 }
 
@@ -208,6 +216,15 @@ img:hover {
     left: 93%;
 }
 
+.remove-icon{
+    position: absolute;
+    right: 1vw;
+    width: 29px;
+}
+.remove-icon:hover{
+    width: 27px;
+
+}
 @media(max-width: 1000px) {
     .book-view-container {
         display: grid;
@@ -219,7 +236,7 @@ img:hover {
     .book-card-grid {
         position: relative;
         left: 2%;
-        top: 67px;
+        top: -22px;
         box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
         width: 87vw;
         /* height: 700px; */
@@ -250,11 +267,14 @@ img:hover {
     }
 
     .list-view-icon {
-        top: 120px;
+        top: -10px;
         max-width: 24px;
     }
 
+    .grid-view-icon{
+        max-width: 24px;
 
+    }
     .about-book,
     .about-max {
         overflow: hidden;
@@ -266,6 +286,13 @@ img:hover {
         max-height: 4, 5em;
         max-width: 45vw;
 
+    }
+    .bookmark-icon {
+        right: 6vw;
+    }
+    
+    .remove-icon{
+        right: 1vw;
     }
 }
 
@@ -279,9 +306,9 @@ img:hover {
 
     .book-card-grid {
         position: relative;
-        left: -3%;
-        top: 67px;
-        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247);
+        left: -2%;
+        top: -22px;
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.137);
         width: 90vw;
         margin: 0 !important;
     }
@@ -326,16 +353,16 @@ img:hover {
     }
 
     .grid-view-icon {
-        position: absolute;
-        top: 92px;
-        left: 90% !important;
+        position: relative;
+        top: -10px;
+        right: 1vw;
         width: 25px !important;
     }
 
     .list-view-icon {
-        position: absolute;
-        top: 92px;
-        left: 90% !important;
+        position: relative;
+        top: -10px;
+        right: 1vw;
         width: 30px !important;
     }
 
@@ -353,9 +380,14 @@ img:hover {
     .bookmark-icon {
         position: absolute;
         top: 15px;
-        left: 82%;
+        right: 13vw;
         width: 22px;
-
+    }
+    
+    .remove-icon{
+        position: absolute;
+        right: 2vw;
+        width: 29px;
     }
 
     .agent-grid-card {
@@ -364,9 +396,10 @@ img:hover {
         top: 16px;
         left: 90%;
     }
-    .close-modal-small-btn{
+
+    .close-modal-small-btn {
         max-width: 27px;
-      }
+    }
 }
 
 @media(max-width:480px) {
@@ -380,7 +413,7 @@ img:hover {
     }
 
     .book-card-grid {
-        left: -5%;
+        left: -2%;
     }
 }
 
@@ -395,7 +428,7 @@ img:hover {
     }
 
     .book-card-grid {
-        left: -7%;
+        left: -3%;
     }
 }
 
@@ -410,7 +443,7 @@ img:hover {
     }
 
     .book-card-grid {
-        left: -9%;
+        left: -5%;
         width: 91vw;
     }
 

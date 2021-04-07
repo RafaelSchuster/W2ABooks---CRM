@@ -18,6 +18,7 @@ import Contacts from './Contacts';
 import ContactForm from './ContactForm';
 import Jobs from './Jobs';
 import MobileMenu from './MobileMenu';
+import ToggleGrid from './ToggleMain';
 
 function Main() {
     return (
@@ -30,7 +31,7 @@ function Main() {
                 <Switch>
                     <Route path='/' exact>
                         <div className="grid-item grid-item-main">
-                            <BooksSection bookmarking={false} />
+                            <ToggleGrid/>
                         </div>
                     </Route>
                 </Switch>
@@ -47,13 +48,6 @@ function Main() {
                 <Switch>
                     <Route path='/requirements'>
                         <Requirements />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/bookmarks'>
-                        <div className="grid-item grid-item-main">
-                            <BooksSection bookmarking={true} />
-                        </div>
                     </Route>
                 </Switch>
                 <Switch>

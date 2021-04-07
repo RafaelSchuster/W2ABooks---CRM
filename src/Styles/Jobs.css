@@ -9,6 +9,7 @@
     position: absolute;
     max-width: 96%;
     transform: translate(-3%);
+    border: 1px solid white !important;
 }
 
 .start-date-label {

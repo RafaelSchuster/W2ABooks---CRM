@@ -1,7 +1,7 @@
 html body {
   font-family: 'Montserrat', sans-serif;
   color: #121518;
-  font-size: 14px;
+  font-size: 14px !important;
   font-weight: 500;
   word-break: break-word;
 }
@@ -156,9 +156,9 @@ html body {
 
 .book-card {
   position: relative;
-  left: -38px;
-  top: 0;
-  width: 100% !important;
+  left: -68px !important;
+  top: -60px;
+  width: 75vw !important;
   min-height: 300px;
   max-height: 380px;
   margin-top: 15px;
@@ -241,7 +241,7 @@ html body {
   -webkit-line-clamp: 3;
   line-height: 1, 5em;
   max-height: 4, 5em;
-  max-width: 31vw;
+  max-width: 26vw;
 }
 
 .about-book-list {
@@ -252,7 +252,7 @@ html body {
   -webkit-line-clamp: 3;
   line-height: 1, 5em;
   max-height: 4, 5em;
-  max-width: 27vw;
+  max-width: 22vw;
 }
 
 .progressBar-list {
@@ -264,8 +264,12 @@ html body {
 .bookmark-icon-list {
   position: absolute;
   top: 15px !important;
-  right: 5%;
+  right: 3vw;
   width: 22px;
+}
+
+.bookmark-icon-list:hover{
+  width: 20px;
 }
 
 .agent-list-card {
@@ -417,10 +421,6 @@ html body {
   font-weight: 400;
 }
 
-.hover-shrink:hover {
-  width: 25px;
-}
-
 .greening {
   color: #00C67E;
   font-weight: bold;
@@ -503,12 +503,12 @@ a:hover {
   top: 8px;
   right: 1vw;
 }
-@media(max-width :1600px) {
+@media(max-width :1700px) {
   .book-card {
     position: relative;
-    left: -38px;
-    top: 0;
-    width: 100% !important;
+    left: -73px !important;
+    top: -60px;
+    width: 76vw !important;
     min-height: 300px;
     max-height: 600px;
     margin-top: 15px;
@@ -557,15 +557,18 @@ a:hover {
   .flex-left {
     left: 4%;
   }
+  .bookmark-icon-list {
+    right: 5vw;
+  }
 }
 
-@media(min-width:1301px) {
+@media(min-width:1432px) {
   .small-screen-div {
     display: none;
   }
 }
 
-@media(max-width:1300px) {
+@media(max-width:1432px) {
 
   .flex-left,
   .flex-text-list {
@@ -604,7 +607,7 @@ a:hover {
 
   .read-more-list {
     position: absolute;
-    bottom: 0ch;
+    bottom: -1ch;
     right: 3rem;
     background-color: white !important;
     border: 0 !important;
@@ -613,7 +616,7 @@ a:hover {
     width: auto;
     color: #00C67E !important;
     margin-bottom: 3px;
-    max-width: 39px;
+    max-width: 89px;
   }
 
   .read-more-list:hover {
@@ -624,6 +627,10 @@ a:hover {
   .progress-read-more {
     display: flex;
     flex-direction: row;
+  }
+  .book-card{
+    width: 75vw !important;
+
   }
 }
 
@@ -663,10 +670,11 @@ a:hover {
 
   .book-card {
     position: absolute;
-    left: -4px;
-    top: 12px;
+    left: auto;
+    right: 5vw !important;
+    top: -60px;
     width: 272% !important;
-    max-width: 87vw !important;
+    max-width: 91vw !important;
     margin-top: 15px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
   }
@@ -716,10 +724,15 @@ a:hover {
   }
 
   .bookmark-icon-list {
-    right: 6%;
+    right: 8vw;
   }
   .list-modal {
     height: 78vh;
+  }
+  .read-more-list {
+    position: absolute;
+    bottom: -1ch;
+    right: 0rem;
   }
 }
 
@@ -739,13 +752,13 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    left: -20px;
-    top: 12px;
+    left: -59px !important;
+    top: -52px;
     width: 272% !important;
     max-width: 92vw !important;
     min-height: 550px;
     margin-top: 15px;
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.247)
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.137)
   }
 
   .card-img {
@@ -793,7 +806,7 @@ a:hover {
   }
 
   .bookmark-icon-list {
-    right: 13%;
+    right: 14vw;
   }
 
   .agent-list-card {
@@ -802,6 +815,11 @@ a:hover {
 
   .outer-div-header {
     height: 160px;
+  }
+  .read-more-list {
+    position: absolute;
+    bottom: -1ch;
+    right: 10vw;
   }
 }
 
@@ -814,9 +832,20 @@ a:hover {
 
 }
 
+@media(max-width:600px){
+  .book-card{
+    top: -60px;
+  }
+}
+
 @media(max-width:424px) {
   .outer-div-header {
     height: 160px;
+  }
+  .read-more-list {
+    position: absolute;
+    bottom: -1ch;
+    right: 0rem;
   }
 }
 

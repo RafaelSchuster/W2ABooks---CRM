@@ -10,6 +10,7 @@ import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
 import Close from '../images/close.png';
+import Remove from '../images/remove.png';
 
 function BookItemGridView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
@@ -46,14 +47,15 @@ function BookItemGridView(props) {
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
                     {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
-                    {!props.isBookmarks && <input type="image"
+                    {props.starred && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
                         alt=""
                         className="bookmark-icon hover-shrink"
-                        title="Add to bookmarks"
+                        title="Add to starred"
                         onClick={e => bookmarking(e)} />}
-                    <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />
+                    {/* {!props.working && <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />} */}
+                    <input type="image" src={Remove} className="remove-icon" title="Remove from list"/>
                 </Card.Header>
                 <Card.Body>
                     <div className="flex-inside-card">

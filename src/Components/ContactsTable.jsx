@@ -21,17 +21,17 @@ function ContactsTable() {
 
     return (
         <Container >
-            {!isMobile && <Table striped bordered hover className="contact-table">
+            {!isMobile && <Table striped hover className="contact-table">
                 <thead>
                     <tr>
-                        <th className="text-center purple">#</th>
-                        <th className="text-center purple">First Name</th>
-                        <th className="text-center purple">Last Name</th>
-                        <th className="text-center purple">Phone</th>
-                        <th className="text-center purple">Email</th>
-                        <th className="text-center purple">Company</th>
-                        <th className="text-center purple">Title</th>
-                        <th className="text-center purple">More</th>
+                        <th className="text-center">#</th>
+                        <th className="text-center">First Name</th>
+                        <th className="text-center">Last Name</th>
+                        <th className="text-center">Phone</th>
+                        <th className="text-center">Email</th>
+                        <th className="text-center">Company</th>
+                        <th className="text-center">Title</th>
+                        <th className="text-center">More</th>
                     </tr>
                 </thead>
                 <tbody>

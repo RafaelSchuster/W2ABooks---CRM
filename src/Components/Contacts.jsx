@@ -33,8 +33,8 @@ function Contacts() {
 
     return (
         <>
-            {gridContacts && <input type="image" src={ListIcon} alt="" className="list-view-icon grid-list-contacts" onClick={changeView} title="List display" ></input>}
-            {!gridContacts && <input type="image" src={GridIcon} alt="" className="grid-view-icon grid-list-contacts" onClick={changeView} title="Grid display" ></input>}
+            {gridContacts && <input type="image" src={ListIcon} alt="" className="list-view-contacts" onClick={changeView} title="List display" ></input>}
+            {!gridContacts && <input type="image" src={GridIcon} alt="" className="grid-view-contacts" onClick={changeView} title="Grid display" ></input>}
             <div className="flex-contact-header">
                 {/* <h3 className="header-profile mb-4 boldening"> Your Contacts</h3>
                 <Card className="contact-count-header">
