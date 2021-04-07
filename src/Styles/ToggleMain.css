@@ -58,17 +58,17 @@
     text-decoration: underline;
 }
 
-@media(max-width:1000px){
+@media(max-width:1000px) {
     .grid-main-toggle {
         position: absolute;
         top: 12%;
         right: 3vw;
         width: 95vw;
         min-height: 100vh;
-    } 
+    }
 }
 
-@media(max-width:700px){
+@media(max-width:700px) {
     .grid-main-toggle {
         position: absolute;
         top: 160px;
@@ -76,13 +76,14 @@
         width: 95vw;
         min-height: 100vh;
     }
+
     .minimize-icon {
         position: absolute;
         max-width: 22px;
         top: 40px;
         right: 6vw;
     }
-    
+
     .maximize-icon {
         position: absolute;
         max-width: 22px;
@@ -90,14 +91,16 @@
         right: 6vw;
     }
 }
-@media(max-width:400px){
-    .toggle-books-title{
+
+@media(max-width:400px) {
+    .toggle-books-title {
         font-size: 15px;
     }
+
     .minimize-icon {
         right: 10vw;
     }
-    
+
     .maximize-icon {
         right: 10vw;
     }

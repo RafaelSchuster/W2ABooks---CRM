@@ -14,7 +14,7 @@ function Header() {
         <>
             <div className="outer-div-header">
                 <div className="grid-item grid-item-header">
-                    <div className="logo"><a href="/"><img src={Logo} alt="" srcset="" className="main-logo" title="Home"/></a></div>
+                    <div className="logo"><a href="/"><img src={Logo} alt="" srcset="" className="main-logo" title="Home" /></a></div>
                 </div>
                 <div className="grid-item grid-item-header2">
                     <Form className="form-hp" onSubmit={e => basicSearching(e)}>

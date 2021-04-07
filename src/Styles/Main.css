@@ -268,7 +268,7 @@ html body {
   width: 22px;
 }
 
-.bookmark-icon-list:hover{
+.bookmark-icon-list:hover {
   width: 20px;
 }
 
@@ -386,7 +386,7 @@ html body {
   z-index: 99;
 }
 
-.jobs-modal{
+.jobs-modal {
   position: absolute;
   top: 8vh;
   left: 12vw;
@@ -402,7 +402,8 @@ html body {
   height: 80vh;
   z-index: 99;
 }
-.overlay-modal-jobs{
+
+.overlay-modal-jobs {
   position: fixed;
   top: 0;
   left: 0;
@@ -411,12 +412,14 @@ html body {
   background-color: rgba(173, 170, 170, 0.411);
   z-index: 99;
 }
-.jobs-modal-inner-div{
+
+.jobs-modal-inner-div {
   position: absolute;
   top: -6%;
   left: 13%;
   transform: translate(-50%);
 }
+
 .boldening {
   font-weight: 400;
 }
@@ -490,19 +493,21 @@ a:hover {
   border-radius: 10px;
 }
 
-.close-modal-btn{
+.close-modal-btn {
   position: absolute;
   max-width: 30px;
   top: 30px;
   right: 2vw;
 
 }
-.close-modal-small-btn{
+
+.close-modal-small-btn {
   position: absolute;
   max-width: 28px;
   top: 8px;
   right: 1vw;
 }
+
 @media(max-width :1700px) {
   .book-card {
     position: relative;
@@ -557,6 +562,7 @@ a:hover {
   .flex-left {
     left: 4%;
   }
+
   .bookmark-icon-list {
     right: 5vw;
   }
@@ -628,7 +634,8 @@ a:hover {
     display: flex;
     flex-direction: row;
   }
-  .book-card{
+
+  .book-card {
     width: 75vw !important;
 
   }
@@ -726,9 +733,11 @@ a:hover {
   .bookmark-icon-list {
     right: 8vw;
   }
+
   .list-modal {
     height: 78vh;
   }
+
   .read-more-list {
     position: absolute;
     bottom: -1ch;
@@ -816,6 +825,7 @@ a:hover {
   .outer-div-header {
     height: 160px;
   }
+
   .read-more-list {
     position: absolute;
     bottom: -1ch;
@@ -832,8 +842,8 @@ a:hover {
 
 }
 
-@media(max-width:600px){
-  .book-card{
+@media(max-width:600px) {
+  .book-card {
     top: -60px;
   }
 }
@@ -842,6 +852,7 @@ a:hover {
   .outer-div-header {
     height: 160px;
   }
+
   .read-more-list {
     position: absolute;
     bottom: -1ch;

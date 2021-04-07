@@ -4,30 +4,32 @@ import Main from './Components/Main';
 import { useEffect, useState } from 'react';
 
 const mockWorkingOnBooks = [
-  {bookName: 'Game Of Thrones',
-  addedOn: 'January 14, 2019',
-  author: 'Author 1',
-  authorEmail: 'test1@test.com',
-  aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
-  aboutAuthor: 'Hello, My name is Bob Dash Hifen. Who? You might ask.. Nevertheless, you will hear a lot about me. Oh you can doubt it, it wont matter when my time to shine will come they will ask Shakespeare who?, yes yes my friend.',
-  summary: 'Book about something 1',
-  proofReaderGrade: '7',
-  stagesDone: 'proofReader, copyEditor',
-  processStatus: 'Waiting for line editor',
-  datePresenting: '01/01/2021',
-  dateResponse: '05/01/2021',
-  responseStatus: 'done',
-  meetingDate: '10/01/2021',
-  summaryMeeting: 'positive, agent interested',
-  genre: ['Classic', 'Fantasy', 'Comedy','Action', 'Western', 'Drama','Horror','sdsdsds','tytytyt','ytyggrgr' ],
-  wordCount: '188 words',
-  progress: '10'},
+  {
+    bookName: 'Game Of Thrones',
+    addedOn: 'January 14, 2019',
+    author: 'Author 1',
+    authorEmail: 'test1@test.com',
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutAuthor: 'Hello, My name is Bob Dash Hifen. Who? You might ask.. Nevertheless, you will hear a lot about me. Oh you can doubt it, it wont matter when my time to shine will come they will ask Shakespeare who?, yes yes my friend.',
+    summary: 'Book about something 1',
+    proofReaderGrade: '7',
+    stagesDone: 'proofReader, copyEditor',
+    processStatus: 'Waiting for line editor',
+    datePresenting: '01/01/2021',
+    dateResponse: '05/01/2021',
+    responseStatus: 'done',
+    meetingDate: '10/01/2021',
+    summaryMeeting: 'positive, agent interested',
+    genre: ['Classic', 'Fantasy', 'Comedy', 'Action', 'Western', 'Drama', 'Horror', 'sdsdsds', 'tytytyt', 'ytyggrgr'],
+    wordCount: '188 words',
+    progress: '10'
+  },
   {
     bookName: 'Book 1',
     addedOn: 'March, 16, 2020',
     author: 'Author 1',
     authorEmail: 'test1@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
     aboutAuthor: 'Hello, My name is Bob Dash Hifen. Who? You might ask.. Nevertheless, you will hear a lot about me, I am the next Shakespeare. Oh you can doubt it, it wont matter when my time to shine will come and my destiny materialize they will ask Shakespeare who?, yes yes my friend. ',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 1',
@@ -48,7 +50,7 @@ const mockWorkingOnBooks = [
     addedOn: 'March, 16, 2020',
     author: 'Author 2',
     authorEmail: 'test2@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 2',
@@ -60,7 +62,7 @@ const mockWorkingOnBooks = [
     responseStatus: 'done',
     meetingDate: '10/01/2021',
     summaryMeeting: 'positive, agent interested',
-    genre: ['Classic', 'Fantasy', 'Drama','sdsdsdsdsd','sdsdsdsdsdsd'],
+    genre: ['Classic', 'Fantasy', 'Drama', 'sdsdsdsdsd', 'sdsdsdsdsdsd'],
     wordCount: '398 words',
     progress: '50'
 
@@ -69,7 +71,7 @@ const mockWorkingOnBooks = [
     addedOn: 'March, 16, 2020',
     author: 'Author 3',
     authorEmail: 'test3@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 3',
@@ -90,7 +92,7 @@ const mockWorkingOnBooks = [
     addedOn: 'March, 16, 2020',
     author: 'Author 4',
     authorEmail: 'test4@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 4',
@@ -107,12 +109,12 @@ const mockWorkingOnBooks = [
     progress: '0'
   }
 ];
-const mockRecommendedBooks=[{
+const mockRecommendedBooks = [{
   bookName: 'Book 1',
   addedOn: 'March, 16, 2020',
   author: 'Author 1',
   authorEmail: 'test1@test.com',
-  aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+  aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
   aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
   summaryTitle: 'A journey about growth and challenge',
   summary: 'Book about something 1',
@@ -127,12 +129,12 @@ const mockRecommendedBooks=[{
   genre: ['Classic', 'Fantasy', 'Comedy'],
   wordCount: '188 words',
   progress: '90'
-},{
+}, {
   bookName: 'Book 1',
   addedOn: 'March, 16, 2020',
   author: 'Author 1',
   authorEmail: 'test1@test.com',
-  aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+  aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
   aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
   summaryTitle: 'A journey about growth and challenge',
   summary: 'Book about something 1',
@@ -148,13 +150,13 @@ const mockRecommendedBooks=[{
   wordCount: '188 words',
   progress: '90'
 }]
-const mockStarredBooks=[,
+const mockStarredBooks = [,
   {
     bookName: 'Book 1',
     addedOn: 'March, 16, 2020',
     author: 'Author 1',
     authorEmail: 'test1@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+    aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
     aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
     summaryTitle: 'A journey about growth and challenge',
     summary: 'Book about something 1',
@@ -171,28 +173,28 @@ const mockStarredBooks=[,
     progress: '90'
   }]
 
-  const mockDeletedBooks=[{
-    bookName: 'Book 3',
-    addedOn: 'March, 16, 2020',
-    author: 'Author 3',
-    authorEmail: 'test3@test.com',
-    aboutBook:"AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
-    aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
-    summaryTitle: 'A journey about growth and challenge',
-    summary: 'Book about something 3',
-    proofReaderGrade: '7',
-    stagesDone: 'proofReader, copyEditor',
-    processStatus: 'Waiting for line editor',
-    datePresenting: '01/01/2021',
-    dateResponse: '05/01/2021',
-    responseStatus: 'done',
-    meetingDate: '10/01/2021',
-    summaryMeeting: 'positive, agent interested',
-    genre: ['Classic', 'Monologue'],
-    wordCount: '688 words',
-    progress: '60'
+const mockDeletedBooks = [{
+  bookName: 'Book 3',
+  addedOn: 'March, 16, 2020',
+  author: 'Author 3',
+  authorEmail: 'test3@test.com',
+  aboutBook: "AAA  A Song of Ice and Fire takes place in a fictional world in which seasons last for years and end unpredictably. Nearly three centuries before the events of the first novel,the Seven Kingdoms of Westeros were united under the Targaryen dynasty by Aegon I and his sister wives Visenya and Rhaenys, establishing military supremacy through their control of dragons. Aegon became the first king of the entire continent of Westeros, save for the southerly region of Dorne. The Targaryen dynasty ruled for three hundred years, although civil war and infighting between the Targaryens resulted in the death of all their dragons. At the beginning of A Game of Thrones',",
+  aboutAuthor: 'Hello, My name is Inigo Montoya. You killed my father. Prepare to die.',
+  summaryTitle: 'A journey about growth and challenge',
+  summary: 'Book about something 3',
+  proofReaderGrade: '7',
+  stagesDone: 'proofReader, copyEditor',
+  processStatus: 'Waiting for line editor',
+  datePresenting: '01/01/2021',
+  dateResponse: '05/01/2021',
+  responseStatus: 'done',
+  meetingDate: '10/01/2021',
+  summaryMeeting: 'positive, agent interested',
+  genre: ['Classic', 'Monologue'],
+  wordCount: '688 words',
+  progress: '60'
 
-  }]
+}]
 const thisMockUser = {
   firstName: 'Rafael',
   lastName: 'Schuster',
@@ -291,7 +293,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ workingBooks,recommendedBooks,starredBooks,deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts }}>
+      < MainContext.Provider value={{ workingBooks, recommendedBooks, starredBooks, deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts }}>
         <Main />
       </MainContext.Provider >
     </>

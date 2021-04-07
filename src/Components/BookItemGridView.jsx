@@ -55,7 +55,7 @@ function BookItemGridView(props) {
                         title="Add to starred"
                         onClick={e => bookmarking(e)} />}
                     {/* {!props.working && <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />} */}
-                    <input type="image" src={Remove} className="remove-icon" title="Remove from list"/>
+                    <input type="image" src={Remove} className="remove-icon" title="Remove from list" />
                 </Card.Header>
                 <Card.Body>
                     <div className="flex-inside-card">

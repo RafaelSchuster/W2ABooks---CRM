@@ -31,7 +31,7 @@ function Main() {
                 <Switch>
                     <Route path='/' exact>
                         <div className="grid-item grid-item-main">
-                            <ToggleGrid/>
+                            <ToggleGrid />
                         </div>
                     </Route>
                 </Switch>

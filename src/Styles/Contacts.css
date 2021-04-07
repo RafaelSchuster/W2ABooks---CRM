@@ -56,8 +56,10 @@ html body {
     top: 14%;
     text-decoration: none;
 }
-.list-view-contacts:hover,.grid-view-contacts:hover {
-    transform: translate(-3px);    
+
+.list-view-contacts:hover,
+.grid-view-contacts:hover {
+    transform: translate(-3px);
 }
 
 .contact-table {

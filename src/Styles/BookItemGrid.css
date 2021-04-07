@@ -18,7 +18,7 @@
 }
 
 .list-view-icon:hover {
-    transform: translate(-3px);    
+    transform: translate(-3px);
 }
 
 .grid-view-icon {
@@ -36,7 +36,7 @@
 
 
 .grid-view-icon:hover {
-    transform: translate(-3px);    
+    transform: translate(-3px);
 }
 
 .book-card-grid {
@@ -199,12 +199,13 @@ img:hover {
     width: 22px;
 }
 
-.remove-icon{
+.remove-icon {
     position: absolute;
     right: 1vw;
     width: 29px;
 }
-.bookmark-icon:hover{
+
+.bookmark-icon:hover {
     width: 20px;
 
 }
@@ -216,15 +217,17 @@ img:hover {
     left: 93%;
 }
 
-.remove-icon{
+.remove-icon {
     position: absolute;
     right: 1vw;
     width: 29px;
 }
-.remove-icon:hover{
+
+.remove-icon:hover {
     width: 27px;
 
 }
+
 @media(max-width: 1000px) {
     .book-view-container {
         display: grid;
@@ -271,10 +274,11 @@ img:hover {
         max-width: 24px;
     }
 
-    .grid-view-icon{
+    .grid-view-icon {
         max-width: 24px;
 
     }
+
     .about-book,
     .about-max {
         overflow: hidden;
@@ -287,11 +291,12 @@ img:hover {
         max-width: 45vw;
 
     }
+
     .bookmark-icon {
         right: 6vw;
     }
-    
-    .remove-icon{
+
+    .remove-icon {
         right: 1vw;
     }
 }
@@ -383,8 +388,8 @@ img:hover {
         right: 13vw;
         width: 22px;
     }
-    
-    .remove-icon{
+
+    .remove-icon {
         position: absolute;
         right: 2vw;
         width: 29px;

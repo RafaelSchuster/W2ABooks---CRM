@@ -61,7 +61,7 @@ function BookItemListView(props) {
                         title="Add to starred"
                         onClick={e => bookmarking(e)} />}
                     {/* <input type="image" src={Agent} alt="" className="agent-list-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} /> */}
-                    <input type="image" src={Remove} className="remove-icon" title="Remove from list"/>
+                    <input type="image" src={Remove} className="remove-icon" title="Remove from list" />
                 </Card.Header>
                 <Card.Body>
                     <div className="flex-inside-list">
@@ -100,7 +100,7 @@ function BookItemListView(props) {
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"></ProgressBar>}
                                 {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"><span className="zero-percent" >0%</span></ProgressBar>}
                                 <button type="image" src={Plus} className="read-more-list" onClick={() => setModalListIsOpen(true)}>More Details</button>
-                                
+
                             </div>
                         </div>
                         <Modal
