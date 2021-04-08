@@ -110,7 +110,7 @@ const mockWorkingOnBooks = [
   }
 ];
 const mockRecommendedBooks = [{
-  bookName: 'Book 1',
+  bookName: 'Book 5',
   addedOn: 'March, 16, 2020',
   author: 'Author 1',
   authorEmail: 'test1@test.com',
@@ -128,9 +128,11 @@ const mockRecommendedBooks = [{
   summaryMeeting: 'positive, agent interested',
   genre: ['Classic', 'Fantasy', 'Comedy'],
   wordCount: '188 words',
-  progress: '90'
+  progress: '90',
+  recommendationDate: 'August, 19, 2020'
+
 }, {
-  bookName: 'Book 1',
+  bookName: 'Book 6',
   addedOn: 'March, 16, 2020',
   author: 'Author 1',
   authorEmail: 'test1@test.com',
@@ -148,7 +150,8 @@ const mockRecommendedBooks = [{
   summaryMeeting: 'positive, agent interested',
   genre: ['Classic', 'Fantasy', 'Comedy'],
   wordCount: '188 words',
-  progress: '90'
+  progress: '90',
+  recommendationDate: 'April, 29, 2020'
 }]
 const mockStarredBooks = [,
   {
@@ -277,6 +280,36 @@ const mockMonthsToRecommend = [
   { value: 'january', label: 'January' },
   { value: 'february', label: 'February' }]
 
+const mockMsgs = [{
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'I love your book, give me a call',
+}, {
+  date: new Date().toISOString(),
+  userName: 'Writer1',
+  content: 'Right away!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Fantastic!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}, {
+  date: new Date().toISOString(),
+  userName: 'Rafael Schuster',
+  content: 'Waiting to meet you!!'
+}]
+
 
 function App() {
   const [workingBooks, setWorkingBooks] = useState(mockWorkingOnBooks);
@@ -288,6 +321,7 @@ function App() {
   const [nationality, setNationality] = useState('');
   const [contacts, setContacts] = useState(mockContacts);
   const [monthsToRecommend, setMonthsToRecommend] = useState(mockMonthsToRecommend)
+  const [msgs, setMsgs] = useState(mockMsgs);
 
   useEffect(() => {
     setWorkingBooks(mockWorkingOnBooks);
@@ -299,7 +333,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ workingBooks, recommendedBooks, starredBooks, deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts, monthsToRecommend, setMonthsToRecommend }}>
+      < MainContext.Provider value={{ workingBooks, recommendedBooks, starredBooks, deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts, monthsToRecommend, setMonthsToRecommend, msgs }}>
         <Main />
       </MainContext.Provider >
     </>

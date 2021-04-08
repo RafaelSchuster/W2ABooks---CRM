@@ -67,6 +67,21 @@
         width: 95vw;
         min-height: 100vh;
     }
+
+    .minimize-icon {
+        position: absolute;
+        max-width: 17px;
+        min-height: 30px;
+        top: 27px;
+        right: 4vw;
+    }
+
+    .maximize-icon {
+        position: absolute;
+        max-width: 17px;
+        top: 33px;
+        right: 4vw;
+    }
 }
 
 @media(max-width:700px) {
@@ -81,14 +96,15 @@
     .minimize-icon {
         position: absolute;
         max-width: 22px;
-        top: 40px;
+        min-height: 30px;
+        top: 29px;
         right: 6vw;
     }
 
     .maximize-icon {
         position: absolute;
         max-width: 22px;
-        top: 25px;
+        top: 33px;
         right: 6vw;
     }
 }
@@ -99,10 +115,17 @@
     }
 
     .minimize-icon {
-        right: 10vw;
+        position: absolute;
+        max-width: 16px;
+        min-height: 16px;
+        top: 30px;
+        right: 9vw;
     }
 
     .maximize-icon {
-        right: 10vw;
+        position: absolute;
+        max-width: 16px;
+        top: 30px;
+        right: 9vw;
     }
 }

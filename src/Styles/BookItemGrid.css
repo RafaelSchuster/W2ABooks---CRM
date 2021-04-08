@@ -17,7 +17,23 @@
     z-index: 89;
 }
 
-.list-view-icon:hover {
+.add-new-book {
+    position: relative;
+    top: -6px;
+    right: 0vw;
+    width: 32px !important;
+    z-index: 89;
+}
+
+.new-book-modal-div {
+    position: relative;
+    top: 15%;
+    right: 6vw;
+}
+
+.list-view-icon:hover,
+.grid-view-icon:hover,
+.add-new-book:hover {
     transform: translate(-3px);
 }
 
@@ -32,11 +48,6 @@
 .card-img-grid {
     display: inline;
     width: 230px;
-}
-
-
-.grid-view-icon:hover {
-    transform: translate(-3px);
 }
 
 .book-card-grid {
@@ -94,10 +105,15 @@
     border: 0 !important;
     font-weight: 500;
     font-size: 17px;
-    width: 200px;
+    width: 210px;
     color: #00C67E !important;
     margin-bottom: 3px;
     text-align: start;
+}
+
+.sup-msgs {
+    color: #de7b0b;
+    font-size: 15px;
 }
 
 .boldening {
@@ -195,13 +211,19 @@ img:hover {
 .bookmark-icon {
     position: absolute;
     top: 15px;
-    right: 4vw;
+    right: 3vw;
     width: 22px;
 }
 
 .remove-icon {
     position: absolute;
     right: 1vw;
+    width: 29px;
+}
+
+.check-icon {
+    position: absolute;
+    right: 3vw;
     width: 29px;
 }
 
@@ -273,6 +295,7 @@ img:hover {
         top: -10px;
         max-width: 24px;
     }
+
 
     .grid-view-icon {
         max-width: 24px;

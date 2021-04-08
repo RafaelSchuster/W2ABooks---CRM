@@ -19,6 +19,8 @@ import ContactForm from './ContactForm';
 import Jobs from './Jobs';
 import MobileMenu from './MobileMenu';
 import ToggleGrid from './ToggleMain';
+import AddBookForm from './AddBookForm';
+import ToggleMain from './ToggleMain';
 
 function Main() {
     return (
@@ -31,7 +33,7 @@ function Main() {
                 <Switch>
                     <Route path='/' exact>
                         <div className="grid-item grid-item-main">
-                            <ToggleGrid />
+                            <ToggleMain />
                         </div>
                     </Route>
                 </Switch>

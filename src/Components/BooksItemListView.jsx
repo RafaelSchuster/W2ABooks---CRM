@@ -10,11 +10,9 @@ import BookMark from "../images/star.png";
 import Agent from '../images/check.png';
 import { MainContext } from '../Context/Context';
 import Jobs from './Jobs';
-import Plus from '../images/plus2.png';
 import Close from '../images/close.png';
 import Remove from '../images/remove.png';
-
-
+import Check from '../images/check_circle.png';
 
 
 function BookItemListView(props) {
@@ -52,7 +50,8 @@ function BookItemListView(props) {
         <>
             <Card className="book-card">
                 <Card.Header className="card-title-header">
-                    {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                    {!props.recommended && props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                    {props.recommended && props.bookName && <span className="boldening header-size">{`${props.bookName}/Sent on ${props.recommendationDate}`}</span>}
                     {props.starred && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
@@ -61,6 +60,7 @@ function BookItemListView(props) {
                         title="Add to starred"
                         onClick={e => bookmarking(e)} />}
                     {/* <input type="image" src={Agent} alt="" className="agent-list-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} /> */}
+                    {props.deleted && <input type="image" src={Check} className="check-icon" title="Remove from list" />}
                     <input type="image" src={Remove} className="remove-icon" title="Remove from list" />
                 </Card.Header>
                 <Card.Body>
@@ -99,7 +99,7 @@ function BookItemListView(props) {
                                 {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-small-screen"></ProgressBar>}
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"></ProgressBar>}
                                 {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"><span className="zero-percent" >0%</span></ProgressBar>}
-                                <button type="image" src={Plus} className="read-more-list" onClick={() => setModalListIsOpen(true)}>More Details</button>
+                                <button type="image" className="read-more-list" onClick={() => setModalListIsOpen(true)}>More Details</button>
 
                             </div>
                         </div>

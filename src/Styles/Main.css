@@ -413,11 +413,34 @@ html body {
   z-index: 99;
 }
 
+.new-book-modal {
+  position: absolute;
+  top: 12vh;
+  left: 0vw;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid #ccc;
+  background: #fff;
+  overflow: auto;
+  border-radius: 7px;
+  outline: none;
+  padding: 20px;
+  width: 100vw;
+  height: 70vh;
+  z-index: 99;
+}
+
 .jobs-modal-inner-div {
   position: absolute;
   top: -6%;
   left: 13%;
   transform: translate(-50%);
+}
+
+.add-book-container {
+  position: relative;
+  top: -0px;
+  left: 7vw;
 }
 
 .boldening {
@@ -743,6 +766,10 @@ a:hover {
     bottom: -1ch;
     right: 0rem;
   }
+
+  .new-book-modal {
+    height: 80vh;
+  }
 }
 
 @media(max-width:700px) {
@@ -845,6 +872,17 @@ a:hover {
 @media(max-width:600px) {
   .book-card {
     top: -60px;
+  }
+
+  .new-book-modal {
+    top: 8vh;
+    height: 85vh;
+  }
+
+  .add-book-container {
+    position: relative;
+    top: -80px;
+    left: 7vw;
   }
 }
 

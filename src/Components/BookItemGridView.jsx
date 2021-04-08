@@ -7,10 +7,11 @@ import '../Styles/BookItemGrid.css';
 import StatusProgress from './StatusProgress';
 import BookMark from "../images/star.png";
 import Agent from '../images/check.png';
-import { MainContext } from '../Context/Context';
+import { MainContext, MsgContext } from '../Context/Context';
 import Jobs from './Jobs';
 import Close from '../images/close.png';
 import Remove from '../images/remove.png';
+import Check from '../images/check_circle.png';
 
 function BookItemGridView(props) {
     const [modalStatusIsOpen, setModalStatusIsOpen] = useState(false);
@@ -18,6 +19,7 @@ function BookItemGridView(props) {
     const [modalSummaryIsOpen, setModalSummaryIsOpen] = useState(false);
     const [modalJobsIsOpen, setModalJobsIsOpen] = useState(false);
     const { setBookmarks } = useContext(MainContext);
+    const { msgs } = useContext(MainContext);
 
     const useLocalState = (localItem) => {
         const [localBMarks, setState] = useState(localStorage.getItem(localItem));
@@ -46,7 +48,8 @@ function BookItemGridView(props) {
         <>
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
-                    {props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                    {!props.recommended && props.bookName && <span className="boldening header-size">{props.bookName}</span>}
+                    {props.recommended && props.bookName && <span className="boldening header-size">{`${props.bookName}/Sent on ${props.recommendationDate}`}</span>}
                     {props.starred && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
@@ -55,6 +58,7 @@ function BookItemGridView(props) {
                         title="Add to starred"
                         onClick={e => bookmarking(e)} />}
                     {/* {!props.working && <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />} */}
+                    {props.deleted && <input type="image" src={Check} className="check-icon" title="Add to recommended" />}
                     <input type="image" src={Remove} className="remove-icon" title="Remove from list" />
                 </Card.Header>
                 <Card.Body>
@@ -63,7 +67,7 @@ function BookItemGridView(props) {
                             <Card.Img variant="top" src={mockImg} className="card-img-grid" />
                             <Button type="button" className="btn-modal-status-grid" onClick={() => setModalStatusIsOpen(true)}>Process Status</Button>
                             <Button type="button" className="btn-modal-meeting-grid" onClick={() => setModalMeetingIsOpen(true)}>Meeting Summary</Button>
-                            <Button href="index.html#/messaging" className="messaging-grid-btn">Contact the Author</Button>
+                            <Button href="index.html#/messaging" className="messaging-grid-btn">Contact the Author<sup className="sup-msgs">{`(${msgs.length})`}</sup></Button>
                             <Button type="button" className="btn-modal-summary-grid" onClick={() => setModalSummaryIsOpen(true)}>Full Book Summary</Button>
                         </div>
                         <div className="flex-text">

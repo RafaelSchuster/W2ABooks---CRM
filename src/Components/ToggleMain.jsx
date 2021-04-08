@@ -10,7 +10,7 @@ import Minimize from '../images/minimize.png';
 import Maximize from '../images/maximize.png';
 import Plus from '../images/plus_sign.png';
 
-function ToggleGrid() {
+function ToggleMain() {
     const { workingBooks, recommendedBooks, starredBooks, deletedBooks } = useContext(MainContext);
     const [workingMaximize, setWorkingMaximize] = useState(true);
     const [recommendedMaximize, setRecommendedMaximize] = useState(false);
@@ -57,7 +57,7 @@ function ToggleGrid() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="grid-toggle-content">
-                        <BooksList books={workingBooks} starred={false} />
+                        <BooksList books={workingBooks} starred={false} recommended={false} deleted={false} />
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -71,7 +71,7 @@ function ToggleGrid() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body className="grid-toggle-content">
-                        <BooksList books={recommendedBooks} starred={true} />
+                        <BooksList books={recommendedBooks} starred={true} recommended={true} deleted={false} />
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -85,7 +85,7 @@ function ToggleGrid() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
                     <Card.Body className="grid-toggle-content">
-                        <BooksList books={starredBooks} starred={false} />
+                        <BooksList books={starredBooks} starred={false} recommended={false} deleted={false} />
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -99,7 +99,7 @@ function ToggleGrid() {
                 </Card.Header>
                 <Accordion.Collapse eventKey="3">
                     <Card.Body className="grid-toggle-content">
-                        <BooksList books={deletedBooks} starred={false} />
+                        <BooksList books={deletedBooks} starred={false} recommended={false} deleted={true} />
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
@@ -107,4 +107,4 @@ function ToggleGrid() {
     </>
     );
 }
-export default ToggleGrid;
+export default ToggleMain;

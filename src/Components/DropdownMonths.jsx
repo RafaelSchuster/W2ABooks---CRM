@@ -8,10 +8,7 @@ const MonthsDropdown = () => {
 
     const animatedComponents = makeAnimated();
 
-    const monthsChosen = [];
-
     const updateMonths = (myMonths) => {
-        // for(const month of myMonths) month && monthsChosen.push(month.value)
         setMonthsToRecommend(myMonths);
     }
 
@@ -32,7 +29,7 @@ const MonthsDropdown = () => {
     return (
         <Select
             isMulti
-            name="colors"
+            name="months"
             options={months}
             components={animatedComponents}
             className="basic-multi-select"
