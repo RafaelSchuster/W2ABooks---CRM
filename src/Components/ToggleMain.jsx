@@ -8,30 +8,7 @@ import { MainContext } from '../Context/Context';
 import BooksList from './BooksList';
 import Minimize from '../images/minimize.png';
 import Maximize from '../images/maximize.png';
-
-const AccordionContext = React.createContext({});
-
-function ContextAwareToggle({ children, eventKey, callback }) {
-    const currentEventKey = useContext(AccordionContext);
-
-    const decoratedOnClick = useAccordionToggle(
-        eventKey,
-        () => callback && callback(eventKey),
-    );
-
-    const isCurrentEventKey = currentEventKey === eventKey;
-
-    return (
-        <button
-            type="button"
-            style={{ backgroundColor: isCurrentEventKey ? 'black' : 'white' }}
-            onClick={decoratedOnClick}
-            className="grid-toggle-btn"
-        >
-            {children}
-        </button>
-    );
-}
+import Plus from '../images/plus_sign.png';
 
 function ToggleGrid() {
     const { workingBooks, recommendedBooks, starredBooks, deletedBooks } = useContext(MainContext);
@@ -40,14 +17,42 @@ function ToggleGrid() {
     const [starredMaximize, setStarredMaximize] = useState(false);
     const [deletedMaximize, setDeletedMaximize] = useState(false);
 
+    const atSetWorkingMaximize = () => {
+        setWorkingMaximize(!workingMaximize);
+        setRecommendedMaximize(false);
+        setStarredMaximize(false);
+        setDeletedMaximize(false);
+    }
+
+    const atSetRecommendedMaximize = () => {
+        setWorkingMaximize(false);
+        setRecommendedMaximize(!recommendedMaximize);
+        setStarredMaximize(false);
+        setDeletedMaximize(false);
+    }
+
+    const atSetStarredMaximize = () => {
+        setWorkingMaximize(false);
+        setRecommendedMaximize(false);
+        setStarredMaximize(!starredMaximize);
+        setDeletedMaximize(false);
+    }
+
+    const atSetDeletedMaximize = () => {
+        setWorkingMaximize(false);
+        setRecommendedMaximize(false);
+        setStarredMaximize(false);
+        setDeletedMaximize(!deletedMaximize);
+    }
+
     return (<>
         <Accordion className="grid-main-toggle" defaultActiveKey="0" >
             <Card className="grid-toggle-card" >
                 <Card.Header className="">
-                    <Accordion.Toggle as={Card.Header} eventKey="0" className="grid-toggle-btn" title="Change View" onClick={() => setWorkingMaximize(!workingMaximize)}>
+                    <Accordion.Toggle as={Card.Header} eventKey="0" className="grid-toggle-btn" title="Change View" onClick={() => atSetWorkingMaximize()}>
                         <button className="toggle-books-title" title="Change View">What I am Working on</button>
                         {workingMaximize && <input type="image" src={Minimize} className="minimize-icon" title="Close" />}
-                        {!workingMaximize && <input type="image" src={Maximize} className="maximize-icon" title="Open" />}
+                        {!workingMaximize && <input type="image" src={Plus} className="maximize-icon" title="Open" />}
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="0">
@@ -58,10 +63,10 @@ function ToggleGrid() {
             </Card>
             <Card className="grid-toggle-card">
                 <Card.Header className="">
-                    <Accordion.Toggle as={Card.Header} eventKey="1" className="grid-toggle-btn" title="Change View" onClick={() => setRecommendedMaximize(!recommendedMaximize)}>
+                    <Accordion.Toggle as={Card.Header} eventKey="1" className="grid-toggle-btn" title="Change View" onClick={() => atSetRecommendedMaximize()}>
                         <button className="toggle-books-title" title="Change View">Recommended For You!</button>
                         {recommendedMaximize && <input type="image" src={Minimize} className="minimize-icon" title="Close" />}
-                        {!recommendedMaximize && <input type="image" src={Maximize} className="maximize-icon" title="Open" />}
+                        {!recommendedMaximize && <input type="image" src={Plus} className="maximize-icon" title="Open" />}
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="1">
@@ -72,10 +77,10 @@ function ToggleGrid() {
             </Card>
             <Card className="grid-toggle-card">
                 <Card.Header className="">
-                    <Accordion.Toggle as={Card.Header} eventKey="2" className="grid-toggle-btn" title="Change View" onClick={() => setStarredMaximize(!starredMaximize)}>
+                    <Accordion.Toggle as={Card.Header} eventKey="2" className="grid-toggle-btn" title="Change View" onClick={() => atSetStarredMaximize()}>
                         <button className="toggle-books-title" title="Change View">Starred!</button>
                         {starredMaximize && <input type="image" src={Minimize} className="minimize-icon" title="Close" />}
-                        {!starredMaximize && <input type="image" src={Maximize} className="maximize-icon" title="Open" />}
+                        {!starredMaximize && <input type="image" src={Plus} className="maximize-icon" title="Open" />}
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="2">
@@ -86,10 +91,10 @@ function ToggleGrid() {
             </Card>
             <Card className="grid-toggle-card">
                 <Card.Header className="">
-                    <Accordion.Toggle as={Card.Header} eventKey="3" className="grid-toggle-btn" title="Change View" onClick={() => setDeletedMaximize(!deletedMaximize)}>
+                    <Accordion.Toggle as={Card.Header} eventKey="3" className="grid-toggle-btn" title="Change View" onClick={() => atSetDeletedMaximize()}>
                         <button className="toggle-books-title" title="Change View">Deleted</button>
                         {deletedMaximize && <input type="image" src={Minimize} className="minimize-icon" title="Close" />}
-                        {!deletedMaximize && <input type="image" src={Maximize} className="maximize-icon" title="Open" />}
+                        {!deletedMaximize && <input type="image" src={Plus} className="maximize-icon" title="Open" />}
                     </Accordion.Toggle>
                 </Card.Header>
                 <Accordion.Collapse eventKey="3">

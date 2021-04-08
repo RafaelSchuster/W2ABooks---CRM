@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Button, Container, Form, Col, Alert, Card } from 'react-bootstrap';
+import { Button, Container, Form, Col, Alert, Card, DropdownButton, Dropdown } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
 import '../Styles/AccountProfile.css'
 import NationalitiesDrop from './NationalitiesDrop';
 import DefaultImg from '../images/default_user.png';
+import MonthsDropdown from './DropdownMonths';
 
 function AccountProfile() {
     const [error, setError] = useState();
@@ -70,22 +71,25 @@ function AccountProfile() {
                                     </Col>
                                 </Form.Row>
                                 <Form.Row >
-                                    <Col xs={12} md={5} lg={4}>
+                                    <Col xs={12} md={5} lg={3}>
                                         <Form.Group controlId="formGroupEmail">
                                             <Form.Label></Form.Label>
                                             <Form.Control type="email" placeholder="Email" name="email"
                                                 onChange={handleInputChange} />
                                         </Form.Group>
                                     </Col>
-
-                                    <Col xs={7} md={5} lg={4}>
+                                    <Col xs={7} md={5} lg={3}>
                                         <Form.Label></Form.Label>
                                         <Form.Control name="website" placeholder="Agent's Website" onChange={handleInputChange}></Form.Control>
                                     </Col>
-                                    <Col xs={5} md={2} lg={4}>
+                                    <Col xs={5} md={2} lg={3}>
                                         <div className="date-label">Date of Birth:
                                         <input type="date" onChange={handleInputChange} name="dateOfBirth" id="birthDate" className="date-input" />
                                         </div>
+                                    </Col>
+                                    <Col xs={12} md={5} lg={3}>
+                                        <Form.Label></Form.Label>
+                                        <MonthsDropdown />
                                     </Col>
                                 </Form.Row>
                                 <Form.Row>

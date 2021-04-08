@@ -273,6 +273,11 @@ const mockContacts = [{
   workHistoryDescription: "Worked together on Microsoft"
 }]
 
+const mockMonthsToRecommend = [
+  { value: 'january', label: 'January' },
+  { value: 'february', label: 'February' }]
+
+
 function App() {
   const [workingBooks, setWorkingBooks] = useState(mockWorkingOnBooks);
   const [recommendedBooks, setRecommendedBooks] = useState(mockRecommendedBooks);
@@ -282,6 +287,7 @@ function App() {
   const [gridView, setGridView] = useState(true);
   const [nationality, setNationality] = useState('');
   const [contacts, setContacts] = useState(mockContacts);
+  const [monthsToRecommend, setMonthsToRecommend] = useState(mockMonthsToRecommend)
 
   useEffect(() => {
     setWorkingBooks(mockWorkingOnBooks);
@@ -293,7 +299,7 @@ function App() {
 
   return (
     <>
-      < MainContext.Provider value={{ workingBooks, recommendedBooks, starredBooks, deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts }}>
+      < MainContext.Provider value={{ workingBooks, recommendedBooks, starredBooks, deletedBooks, thisUser, gridView, setGridView, nationality, setNationality, contacts, setContacts, monthsToRecommend, setMonthsToRecommend }}>
         <Main />
       </MainContext.Provider >
     </>
