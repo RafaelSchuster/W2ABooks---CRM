@@ -76,8 +76,40 @@
     width: 85%;
     transform: rotate(0deg) !important;
     height: 45px !important;
+    animation: slideInFromLeft 1s ease forwards;
+}
+.meter { 
+    width: 85%;
+    height: 45px;
+    position: relative;
+    background: #ece7da;
+    overflow: hidden;
 }
 
+.meter span {
+    display: block;
+    height: 100%;
+}
+
+.progress {
+    background-color: #e4c465;
+    animation: progressBar 3s ease-in-out;
+    animation-fill-mode:both; 
+}
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.progress-label{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    color: rgb(7, 6, 6);
+    font-size: 14px;
+}
 .progressbar-modal-grid {
     position: relative;
     width: 100%;

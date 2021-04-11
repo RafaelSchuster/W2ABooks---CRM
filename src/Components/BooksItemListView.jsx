@@ -85,9 +85,12 @@ function BookItemListView(props) {
                             {props.aboutAuthor && <Card.Text className="about-author-grid mobile"><span className="boldening">About the Author: </span><div className="about-maximum-list ">{props.aboutAuthor}</div></Card.Text>}
                             <div className="flex-genre-list">
                                 <Card.Text>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-list"></ProgressBar>}
+                                {/* {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-list"></ProgressBar>}
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"></ProgressBar>}
-                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-list"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                <div class="meter-list">
+                                    <span style={{ width: `${props.progress}%` }}><span class="progress-list"><span className="progress-label-list">{props.progress}%</span></span></span>
+                                </div>
                             </div>
                         </div>
                         <div className="small-screen-div">
@@ -96,9 +99,12 @@ function BookItemListView(props) {
                                 <Card.Text className="genre-list">{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}</Card.Text>
                             </div>
                             <div className="progress-read-more">
-                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-small-screen"></ProgressBar>}
+                                {/* {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-small-screen"></ProgressBar>}
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"></ProgressBar>}
-                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"><span className="zero-percent" >0%</span></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-small-screen"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                <div class="small-meter-list">
+                                    <span style={{ width: `${props.progress}%` }}><span class="small-progress-list"><span className="small-progress-label-list">{props.progress}%</span></span></span>
+                                </div>
                                 <button type="image" className="read-more-list" onClick={() => setModalListIsOpen(true)}>More Details</button>
 
                             </div>
@@ -120,9 +126,12 @@ function BookItemListView(props) {
                                     {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
                                     {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
                                     {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
-                                    {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                    {/* {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
                                     {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
-                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                    <div class="meter">
+                                        <span style={{ width: `${props.progress}%` }}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                    </div>
                                 </Card.Body>
                             </div>
                         </Modal>
@@ -184,9 +193,12 @@ function BookItemListView(props) {
                                         {props.wordCount && <Card.Text className="grid-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                                         <div className="flex-genre">
                                             <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                                            {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                                            {/* {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
                                             {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
-                                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
+                                            {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                            <div class="meter">
+                                                <span style={{ width: `${props.progress}%` }}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

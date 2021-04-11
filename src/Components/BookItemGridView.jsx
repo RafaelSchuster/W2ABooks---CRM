@@ -76,9 +76,12 @@ function BookItemGridView(props) {
                             {props.wordCount && <Card.Text className="grid-book-length"><span className="">Book Length: </span><span className="greening">{props.wordCount}</span></Card.Text>}
                             <div className="flex-genre">
                                 <Card.Text  ><span className="boldening"></span>{props.genre && props.genre.map(genre => <GenreItem genre={genre} />)}  </Card.Text>
-                                {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
+                                {/* {props.progress && props.progress >= 14 && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressBar-gridView"></ProgressBar>}
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
-                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>}
+                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                <div class="meter">
+                                    <span style={{width:`${props.progress}%`}}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                </div>
                             </div>
                         </div>
 
@@ -99,9 +102,12 @@ function BookItemGridView(props) {
                                     {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
                                     {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
                                     {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
-                                    {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                    {/* {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
                                     {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
-                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>} */}
+                                    <div class="meter">
+                                    <span style={{width:`${props.progress}%`}}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                </div>
                                 </Card.Body>
                             </div>
                         </Modal>
