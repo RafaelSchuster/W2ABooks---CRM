@@ -21,6 +21,7 @@ import MobileMenu from './MobileMenu';
 import ToggleGrid from './ToggleMain';
 import AddBookForm from './AddBookForm';
 import ToggleMain from './ToggleMain';
+import MainDashboard from './MainDashboard';
 
 function Main() {
     return (
@@ -35,6 +36,11 @@ function Main() {
                         <div className="grid-item grid-item-main">
                             <ToggleMain />
                         </div>
+                    </Route>
+                </Switch>
+                <Switch>
+                    <Route path='/main_dashboard'>
+                        <MainDashboard/>
                     </Route>
                 </Switch>
                 <Switch>
