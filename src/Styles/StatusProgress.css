@@ -3,9 +3,16 @@
 .progress-div {
     position: relative;
     top: 10px;
-    left: 0%;
+    min-width: 845px;
 }
-
+@media(max-width:599px){
+    .progress-div {
+        position: relative;
+        top: 10px;
+        min-width: 145px;
+        display: block;
+    }
+}
 :root {
     --dedult-color: #F8F8FA;
     --hover-color: #eee;

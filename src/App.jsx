@@ -129,7 +129,7 @@ const mockRecommendedBooks = [{
   genre: ['Classic', 'Fantasy', 'Comedy'],
   wordCount: '188 words',
   progress: '90',
-  recommendationDate: 'August, 19, 2020'
+  recommendationDate: '09-04-20'
 
 }, {
   bookName: 'Book 6',
@@ -151,7 +151,7 @@ const mockRecommendedBooks = [{
   genre: ['Classic', 'Fantasy', 'Comedy'],
   wordCount: '188 words',
   progress: '90',
-  recommendationDate: 'April, 29, 2020'
+  recommendationDate: '19-08-20'
 }]
 const mockStarredBooks = [,
   {

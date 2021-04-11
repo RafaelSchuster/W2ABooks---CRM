@@ -290,8 +290,8 @@ html body {
   border-radius: 7px;
   outline: none;
   padding: 20px;
-  width: 95vw;
-  height: 80vh;
+  width: 90vw;
+  height: 90vh;
   z-index: 98;
 }
 
@@ -412,8 +412,7 @@ html body {
   background-color: rgba(173, 170, 170, 0.411);
   z-index: 99;
 }
-
-.new-book-modal {
+.new-book-modal{
   position: absolute;
   top: 12vh;
   left: 0vw;
@@ -429,7 +428,6 @@ html body {
   height: 70vh;
   z-index: 99;
 }
-
 .jobs-modal-inner-div {
   position: absolute;
   top: -6%;
@@ -437,7 +435,7 @@ html body {
   transform: translate(-50%);
 }
 
-.add-book-container {
+.add-book-container{
   position: relative;
   top: -0px;
   left: 7vw;
@@ -646,6 +644,9 @@ a:hover {
     color: #00C67E !important;
     margin-bottom: 3px;
     max-width: 89px;
+    min-height: 50px;
+    max-height: 80px !important;
+    overflow: hidden;
   }
 
   .read-more-list:hover {
@@ -766,8 +767,7 @@ a:hover {
     bottom: -1ch;
     right: 0rem;
   }
-
-  .new-book-modal {
+  .new-book-modal{
     height: 80vh;
   }
 }
@@ -862,7 +862,7 @@ a:hover {
 
 @media(max-width:724px) {
   .list-modal {
-    top: 59%;
+    top: 70vh;
     width: 96vw;
     height: 78vh;
   }
@@ -873,13 +873,11 @@ a:hover {
   .book-card {
     top: -60px;
   }
-
-  .new-book-modal {
+  .new-book-modal{
     top: 8vh;
     height: 85vh;
   }
-
-  .add-book-container {
+  .add-book-container{
     position: relative;
     top: -80px;
     left: 7vw;

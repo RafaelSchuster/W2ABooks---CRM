@@ -49,7 +49,7 @@ function BookItemGridView(props) {
             <Card className="book-card-grid">
                 <Card.Header className="card-title-header-grid">
                     {!props.recommended && props.bookName && <span className="boldening header-size">{props.bookName}</span>}
-                    {props.recommended && props.bookName && <span className="boldening header-size">{`${props.bookName}/Sent on ${props.recommendationDate}`}</span>}
+                    {props.recommended && props.bookName && <span className="recommended-header">{`${props.bookName}/Date ${props.recommendationDate}`}</span>}
                     {props.starred && <input type="image"
                         id={JSON.stringify(props)}
                         src={BookMark}
@@ -57,7 +57,6 @@ function BookItemGridView(props) {
                         className="bookmark-icon hover-shrink"
                         title="Add to starred"
                         onClick={e => bookmarking(e)} />}
-                    {/* {!props.working && <input type="image" src={Agent} alt="" className="agent-grid-card hover-shrink" title="Add to jobs list" onClick={() => setModalJobsIsOpen(true)} />} */}
                     {props.deleted && <input type="image" src={Check} className="check-icon" title="Add to recommended" />}
                     <input type="image" src={Remove} className="remove-icon" title="Remove from list" />
                 </Card.Header>
@@ -91,18 +90,20 @@ function BookItemGridView(props) {
                         >
                             <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalStatusIsOpen(false)} />
                             <Card.Header as="h4" className="text-center" >Status</Card.Header>
-                            <Card.Body className="status-grid-card-modal">
-                                {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
-                                {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
-                                {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
-                                {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
-                                {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
-                                {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
-                                {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
-                                {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
-                                {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
-                            </Card.Body>
-                            <StatusProgress />
+                            <div className="flex-inside-status-modal">
+                                <StatusProgress />
+                                <Card.Body className="status-grid-details-modal">
+                                    {props.datePresenting && <Card.Text className="status-date-grid"><span className="boldening">Date Presenting: </span>{props.datePresenting}</Card.Text>}
+                                    {props.dateResponse && <Card.Text className="response-date-grid"><span className="boldening">Response Date: </span>{props.dateResponse}</Card.Text>}
+                                    {props.responseStatus && <Card.Text className="response-status-grid"><span className="boldening">Response Status: </span>{props.responseStatus}</Card.Text>}
+                                    {props.meetingDate && <Card.Text className="meeting-date-grid"><span className="boldening">Meeting Date: </span>{props.meetingDate}</Card.Text>}
+                                    {props.proofReaderGrade && <Card.Text className=""><span className="boldening">Proofreader's Grade: </span>{props.proofReaderGrade}</Card.Text>}
+                                    {props.stagesDone && <Card.Text className=""><span className="boldening">Stages Done: </span>{props.stagesDone}</Card.Text>}
+                                    {props.processStatus && <Card.Text className=""><span className="boldening">Process Status: </span>{props.processStatus}</Card.Text>}
+                                    {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
+                                    {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>}
+                                </Card.Body>
+                            </div>
                         </Modal>
                         <Modal
                             className="meeting-modal"
@@ -113,7 +114,6 @@ function BookItemGridView(props) {
                             <input type="image" src={Close} className="close-modal-btn" onClick={() => setModalMeetingIsOpen(false)} />
                             <Card.Header as="h4" className="text-center">Meeting</Card.Header>
                             <Card.Body>
-                                <Card.Title className="text-center">Meeting Summary</Card.Title>
                                 {props.summaryMeeting && <Card.Text className="meeting-summary-grid"><span className="boldening">Meeting Summary: </span>{props.summaryMeeting}</Card.Text>}
                             </Card.Body>
                         </Modal>
