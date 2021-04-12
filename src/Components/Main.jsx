@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-    HashRouter as Router,
+    BrowserRouter as Router,
     Switch,
     Route,
 } from 'react-router-dom';
@@ -22,75 +22,35 @@ import ToggleGrid from './ToggleMain';
 import AddBookForm from './AddBookForm';
 import ToggleMain from './ToggleMain';
 import MainDashboard from './MainDashboard';
+import SignLogin from './SignLogin';
+import { ProtectedRoute } from './ProtectedRoute';
 
 function Main() {
+
     return (
         <Router>
-            <div className="grid-container">
-                <Header />
-                <div className="grid-item grid-item-sidebar">
-                    <Toggle />
+            <Switch>
+                <div className="grid-container">
+                    <Header />
+                    <div className="grid-item grid-item-sidebar">
+                        <Toggle />
+                    </div>
+                    <ProtectedRoute path='/' exact component={ToggleMain} />
+                    <ProtectedRoute path='/main_dashboard' component={MainDashboard} />
+                    <ProtectedRoute path='/account_profile' component={AccountProfile} />
+                    <ProtectedRoute path='/genre_profile' component={GenreProfile} />
+                    <ProtectedRoute path='/requirements' component={Requirements} />
+                    <ProtectedRoute path='/file_manager' component={FileManager} />
+                    <ProtectedRoute path='/Reminders' component={Reminders} />
+                    <ProtectedRoute path='/messaging' component={MessageComponent} />
+                    <ProtectedRoute path='/add_contact' component={ContactForm} />
+                    <ProtectedRoute path='/contacts' component={Contacts} />
+                    <ProtectedRoute path='/job_history' component={Jobs} />
+                    <Route path='/login'>
+                        <SignLogin />
+                    </Route>
                 </div>
-                <Switch>
-                    <Route path='/' exact>
-                        <div className="grid-item grid-item-main">
-                            <ToggleMain />
-                        </div>
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/main_dashboard'>
-                        <MainDashboard/>
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/account_profile'>
-                        <AccountProfile />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/genre_profile'>
-                        <GenreProfile />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/requirements'>
-                        <Requirements />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/file_manager'>
-                        <FileManager />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/Reminders'>
-                        <div className="reminders-main-div">
-                            <Reminders />
-                        </div>
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/messaging'>
-                        <MessageComponent />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/add_contact'>
-                        <ContactForm />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/contacts'>
-                        <Contacts />
-                    </Route>
-                </Switch>
-                <Switch>
-                    <Route path='/job_history'>
-                        <Jobs />
-                    </Route>
-                </Switch>
-            </div>
+            </Switch>
         </Router>
     )
 }

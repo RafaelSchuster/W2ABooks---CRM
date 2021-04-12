@@ -46,6 +46,7 @@ function ToggleMain() {
     }
 
     return (<>
+    <div className="grid-item grid-item-main">
         <Accordion className="grid-main-toggle" defaultActiveKey="0" >
             <Card className="grid-toggle-card" >
                 <Card.Header className="">
@@ -104,6 +105,7 @@ function ToggleMain() {
                 </Accordion.Collapse>
             </Card>
         </Accordion>
+        </div>
     </>
     );
 }

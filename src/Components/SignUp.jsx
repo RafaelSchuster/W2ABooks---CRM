@@ -5,11 +5,23 @@ import '../Styles/AccountProfile.css'
 import NationalitiesDrop from './NationalitiesDrop';
 import DefaultImg from '../images/default_user.png';
 import MonthsDropdown from './DropdownMonths';
+import '../Styles/SignLogin.css';
 
-function AccountProfile() {
+
+function SignUp(props) {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
     const { nationality, thisUser } = useContext(MainContext);
+
+    const useLocalState = (localItem) => {
+        const [localToken, setState] = useState(localStorage.getItem(localItem));
+        const setLocalToken = (newItem) => {
+            localStorage.setItem(localItem, newItem);
+            setState(newItem);
+        }
+        return [localToken, setLocalToken];
+    }
+    const [token, setToken] = useLocalState('token');
 
     const handleInputChange = (e) => {
         const { value, name } = e.target;
@@ -25,15 +37,17 @@ function AccountProfile() {
         setProfileValues(profileValuesCopy);
     }, [nationality])
 
-    const submitProfile = () => {
-
+    const submitProfile = (e) => {
+        e.preventDefault()
+        setToken(true)
+        window.location.href = '/'
     }
 
     return (
         <div>
-            <Container className="container-profile">
+            <Container className="sign-container">
                 <Card border="light">
-                    <Card.Header as="h2" className="text-center card-title-header-profile"><span className="boldening">Agent's Profile</span></Card.Header>
+                    <Card.Header as="h2" className="text-center card-title-header-profile"><span className="boldening">Sign-In</span></Card.Header>
                     <Card.Body className="flex-internal-general">
                         <Col xs={12}>
                             <input type="file" id="actual-btn" hidden />
@@ -47,17 +61,17 @@ function AccountProfile() {
                                     <Col xs={12} md={6} lg={3}>
                                         <Form.Label></Form.Label>
                                         <Form.Control placeholder="First name" name="firstName"
-                                            onChange={handleInputChange} defaultValue={thisUser.firstName} required />
+                                            onChange={handleInputChange} required />
                                     </Col>
                                     <Col xs={12} md={6} lg={3}>
                                         <Form.Label></Form.Label>
                                         <Form.Control placeholder="Last name" name="lastName"
-                                            onChange={handleInputChange} defaultValue={thisUser.lastName} required />
+                                            onChange={handleInputChange} required />
                                     </Col>
                                     <Col >
                                         <Form.Label></Form.Label>
                                         <Form.Control type='number' placeholder="Telephone" name="telephone"
-                                            onChange={handleInputChange} defaultValue={thisUser.telephone} />
+                                            onChange={handleInputChange} />
                                     </Col>
                                     <Col>
                                         <Form.Label></Form.Label>
@@ -93,25 +107,19 @@ function AccountProfile() {
                                     </Col>
                                 </Form.Row>
                                 <Form.Row>
-                                        <Col xs={12} md={6} lg={4}>
-                                            <Form.Group controlId="formGroupPassword">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control type="password" name="password1" placeholder="Old Password" onChange={handleInputChange}></Form.Control>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col xs={12} md={6} lg={4}>
-                                            <Form.Group controlId="formGroupPassword">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control type="password" name="password2" placeholder="New Password" onChange={handleInputChange}></Form.Control>
-                                            </Form.Group>
-                                        </Col>
-                                        <Col xs={12} md={6} lg={4}>
-                                            <Form.Group controlId="formGroupPassword">
-                                                <Form.Label></Form.Label>
-                                                <Form.Control type="password" name="password2" placeholder="Confirm New Password" onChange={handleInputChange}></Form.Control>
-                                            </Form.Group>
-                                        </Col>
-                                    </Form.Row>
+                                    <Col xs={12} md={6} lg={6}>
+                                        <Form.Group controlId="formGroupPassword">
+                                            <Form.Label></Form.Label>
+                                            <Form.Control type="password" name="password1" placeholder="Password" onChange={handleInputChange}></Form.Control>
+                                        </Form.Group>
+                                    </Col>
+                                    <Col xs={12} md={6} lg={6}>
+                                        <Form.Group controlId="formGroupPassword">
+                                            <Form.Label></Form.Label>
+                                            <Form.Control type="password" name="password2" placeholder="Confirm Password" onChange={handleInputChange}></Form.Control>
+                                        </Form.Group>
+                                    </Col>
+                                </Form.Row>
                                 <Form.Row>
                                     <Col xs={12} md={6} lg={3}>
                                         <Form.Label></Form.Label>
@@ -147,10 +155,14 @@ function AccountProfile() {
                                     <Form.Control as="textarea" rows={3} placeholder="About Me" defaultValue={thisUser.bio}
                                         name="personalBio" onChange={handleInputChange} />
                                 </Form.Group>
-                                <Button className="w-100 mt-4" variant="success" type="submit"
+                                <Button className="w-100 mt-4 sign-btn" variant="success" type="submit"
                                 >
-                                    Submit Changes
+                                    Submit
                                 </Button>
+                                <p> Already have an account?<Button className="login-btn"
+                                    onClick={() => {
+                                        props.setLogin(true)
+                                    }}>Click here to Login</Button></p>
                             </Form>
                         </Card.Text>
                     </Card.Body>
@@ -160,4 +172,4 @@ function AccountProfile() {
         </div>
     )
 }
-export default AccountProfile;
+export default SignUp;

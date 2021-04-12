@@ -1,0 +1,33 @@
+.logged-out {
+    position: absolute;
+    background-image: url(../images/home4.jpg);
+    width: 100vw;
+    height: 100vh;
+  
+}
+
+.login-btn,
+.signin-btn {
+    background-color: white !important;
+    border: 0 !important;
+    font-weight: 500;
+    font-size: 17px;
+    width: 210px;
+    color: #00C67E !important;
+    margin-bottom: 3px;
+    text-align: start;
+}
+
+.login-container{
+    position: relative;
+    top: 180px;
+    opacity: 93%;
+}
+.sign-container{
+    position: relative;
+    top: 80px;
+    opacity: 93%;
+}
+.sign-btn{
+    background-color:#4f0090 ;
+}

@@ -78,6 +78,11 @@ html body {
   justify-content: space-between;
 }
 
+.logout-toggle-btn{
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+}
 
 .flex-hello {
   display: flex;

@@ -320,7 +320,7 @@ function App() {
   const [gridView, setGridView] = useState(true);
   const [nationality, setNationality] = useState('');
   const [contacts, setContacts] = useState(mockContacts);
-  const [monthsToRecommend, setMonthsToRecommend] = useState(mockMonthsToRecommend)
+  const [monthsToRecommend, setMonthsToRecommend] = useState();
   const [msgs, setMsgs] = useState(mockMsgs);
 
   useEffect(() => {
