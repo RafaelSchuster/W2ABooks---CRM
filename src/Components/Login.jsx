@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Button, Container, Form, Col, Alert, Card, DropdownButton, Dropdown } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
 import '../Styles/SignLogin.css';
+import axios from 'axios';
 
 function Login(props) {
     const [error, setError] = useState();
@@ -28,14 +29,30 @@ function Login(props) {
 
     useEffect(() => {
         const profileValuesCopy = { ...profileValues };
-        if (nationality) profileValuesCopy['agentNationality'] = nationality;
+        if (nationality) profileValuesCopy['nationality_name'] = nationality;
         setProfileValues(profileValuesCopy);
     }, [nationality])
 
     const submitProfile = (e) => {
         e.preventDefault()
-        setToken(true)
-        window.location.href = '/'
+        setError('');
+        const newUser = profileValues;
+        let config = {
+            headers: {
+                "Content-Type": "application/json;charset=UTF-8"
+            },
+        };
+        try {
+            axios.post('http://82.81.73.230:5011/ws/login', newUser, config).then(res => {
+                if (res.data.message) setError(res.data.message)
+                else if (!res.data.message) {
+                    setToken(true)
+                    window.location.href = '/';
+                }
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     return (
@@ -58,7 +75,7 @@ function Login(props) {
                                     <Col xs={12} md={6} lg={6}>
                                         <Form.Group controlId="formGroupPassword">
                                             <Form.Label></Form.Label>
-                                            <Form.Control type="password" name="password1" placeholder="Password" onChange={handleInputChange}></Form.Control>
+                                            <Form.Control type="password" name="password" placeholder="Password" onChange={handleInputChange}></Form.Control>
                                         </Form.Group>
                                     </Col>
                                 </Form.Row>

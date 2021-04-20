@@ -47,7 +47,7 @@ function ToggleMain() {
 
     return (<>
     <div className="grid-item grid-item-main">
-        <Accordion className="grid-main-toggle" defaultActiveKey="0" >
+        <Accordion className="grid-main-toggle" defaultActiveKey='0' >
             <Card className="grid-toggle-card" >
                 <Card.Header className="">
                     <Accordion.Toggle as={Card.Header} eventKey="0" className="grid-toggle-btn" title="Change View" onClick={() => atSetWorkingMaximize()}>

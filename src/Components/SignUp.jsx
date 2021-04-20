@@ -6,6 +6,7 @@ import NationalitiesDrop from './NationalitiesDrop';
 import DefaultImg from '../images/default_user.png';
 import MonthsDropdown from './DropdownMonths';
 import '../Styles/SignLogin.css';
+import axios from 'axios';
 
 
 function SignUp(props) {
@@ -33,15 +34,35 @@ function SignUp(props) {
 
     useEffect(() => {
         const profileValuesCopy = { ...profileValues };
-        if (nationality) profileValuesCopy['agentNationality'] = nationality;
+        if (nationality) profileValuesCopy['nationality_name'] = nationality;
         setProfileValues(profileValuesCopy);
     }, [nationality])
 
-    const submitProfile = (e) => {
-        e.preventDefault()
-        setToken(true)
-        window.location.href = '/'
+    const submitSignUp = async (e) => {
+        e.preventDefault();
+        if (profileValues.password === profileValues.password2) {
+            setError('');
+            const newUser = profileValues;
+            let config = {
+                headers: {
+                    "Content-Type": "application/json;charset=UTF-8"
+                },
+            };
+            try {
+                axios.post('http://82.81.73.230:5011/ws/register_agent', newUser, config).then(res => {
+                    if (res.data.message) setError(res.data.message)
+                    else if (!res.data.message) {
+                        setToken(true)
+                        window.location.href = '/';
+                    }
+                })
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        else return setError('Passwords do not match');
     }
+
 
     return (
         <div>
@@ -56,7 +77,7 @@ function SignUp(props) {
                         </Col>
                         <Card.Text>
                             {error && <Alert variant="danger">{error}</Alert>}
-                            <Form onSubmit={e => submitProfile(e)}>
+                            <Form onSubmit={e => submitSignUp(e)}>
                                 <Form.Row>
                                     <Col xs={12} md={6} lg={3}>
                                         <Form.Label></Form.Label>
@@ -75,7 +96,7 @@ function SignUp(props) {
                                     </Col>
                                     <Col>
                                         <Form.Label></Form.Label>
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                        <Form.Group >
                                             <Form.Control as="select" onChange={handleInputChange} name="gender">
                                                 <option value="">Gender</option>
                                                 <option value='male'>Male</option>
@@ -88,7 +109,7 @@ function SignUp(props) {
                                     <Col xs={12} md={5} lg={3}>
                                         <Form.Group controlId="formGroupEmail">
                                             <Form.Label></Form.Label>
-                                            <Form.Control type="email" placeholder="Email" name="email"
+                                            <Form.Control type="email" placeholder="Email" name="email" required
                                                 onChange={handleInputChange} />
                                         </Form.Group>
                                     </Col>
@@ -108,15 +129,15 @@ function SignUp(props) {
                                 </Form.Row>
                                 <Form.Row>
                                     <Col xs={12} md={6} lg={6}>
-                                        <Form.Group controlId="formGroupPassword">
+                                        <Form.Group >
                                             <Form.Label></Form.Label>
-                                            <Form.Control type="password" name="password1" placeholder="Password" onChange={handleInputChange}></Form.Control>
+                                            <Form.Control type="password" name="password" placeholder="Password" onChange={handleInputChange} required></Form.Control>
                                         </Form.Group>
                                     </Col>
                                     <Col xs={12} md={6} lg={6}>
-                                        <Form.Group controlId="formGroupPassword">
+                                        <Form.Group >
                                             <Form.Label></Form.Label>
-                                            <Form.Control type="password" name="password2" placeholder="Confirm Password" onChange={handleInputChange}></Form.Control>
+                                            <Form.Control type="password" name="password2" placeholder="Confirm Password" onChange={handleInputChange} required></Form.Control>
                                         </Form.Group>
                                     </Col>
                                 </Form.Row>
@@ -130,7 +151,7 @@ function SignUp(props) {
                                         <Form.Control name="agencyName" placeholder="Agency Name" onChange={handleInputChange}></Form.Control>
                                     </Col>
                                     <Col xs={12} md={6} lg={3}>
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                        <Form.Group >
                                             <Form.Label></Form.Label>
                                             <Form.Control as="select" onChange={handleInputChange} name="aar">
                                                 <option value="">-- AAR Member? --</option>
@@ -140,7 +161,7 @@ function SignUp(props) {
                                         </Form.Group>
                                     </Col>
                                     <Col xs={12} md={6} lg={3}>
-                                        <Form.Group controlId="exampleForm.ControlSelect1">
+                                        <Form.Group >
                                             <Form.Label></Form.Label>
                                             <Form.Control as="select" onChange={handleInputChange} name="status">
                                                 <option value="">-- Current Status --</option>
