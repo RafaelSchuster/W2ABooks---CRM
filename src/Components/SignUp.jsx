@@ -29,7 +29,6 @@ function SignUp(props) {
         const profileValuesCopy = { ...profileValues };
         profileValuesCopy[name] = value;
         setProfileValues(profileValuesCopy);
-        console.log(profileValues);
     };
 
     useEffect(() => {

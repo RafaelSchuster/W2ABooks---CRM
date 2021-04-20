@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../Styles/GenreProfile.css';
 import Classic from '../images/Classic.png';
 import Comics from '../images/Comics Or Graphic novel.png';
@@ -36,23 +36,33 @@ import Reference from '../images/Reference book.png';
 import Self from '../images/Self-help book.png';
 import Speech from '../images/Speech.png';
 import Textbook from '../images/Textbook.png';
+import axios from 'axios';
+import GenreMenuItem from './GenreMenuItem';
 
 
 function GenreProfile() {
     const [genres, setGenres] = useState({});
+    const [allGenres, setAllGenres] = useState([])
+
+    useEffect(() => {
+        axios.post('http://82.81.73.230:5011/ws/GetGenres').then(res => { 
+        setAllGenres(res.data.data)})
+    })
 
     const handleInputChange = (e) => {
-        const { id } = e.target;
+        const  id  = e;
         const genreValuesCopy = { ...genres };
         if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
         else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
         setGenres(genreValuesCopy);
+        // console.log(genres);
     };
 
     return (
         <>
             <div class="list-of-ganres">
-                <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
+            {allGenres && allGenres.map(genre => <GenreMenuItem genre={genre} handleInputChange={handleInputChange}/>)}
+                {/* <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">
                     <input type="checkbox" id="classic" ng-model="itm.selected_genre" class="ng-pristine ng-untouched ng-valid ng-not-empty" onClick={handleInputChange} />
                     <label for="classic">
                         <img src={Classic} alt="" srcset="" />
@@ -446,7 +456,7 @@ function GenreProfile() {
                             </span>
                         </div>
                     </label>
-                </div>
+                </div> */}
             </div>
         </>
     )

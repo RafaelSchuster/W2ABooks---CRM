@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     BrowserRouter as Router,
     Switch,
@@ -25,8 +25,8 @@ import MainDashboard from './MainDashboard';
 import SignLogin from './SignLogin';
 import { ProtectedRoute } from './ProtectedRoute';
 
-function Main() {
 
+function Main() {
     return (
         <Router>
             <Switch>

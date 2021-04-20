@@ -26,7 +26,6 @@ function Header() {
     }
 
     useEffect(()=>{
-        console.log(window.location);
     })
     if(window.location.pathname === "/login") {
         return null;
