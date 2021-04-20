@@ -7,9 +7,11 @@ import GenreMenuItem from './GenreMenuItem';
 function GenreProfile() {
     const [genres, setGenres] = useState({});
     const [allGenres, setAllGenres] = useState([]);
+    const {URL} = process.env;
+
 
     useEffect(() => {
-        axios.post('http://82.81.73.230:5011/ws/GetGenres').then(res => { 
+        axios.post(`${URL}/ws/GetGenres`).then(res => { 
         setAllGenres(res.data.data)});
     })
 

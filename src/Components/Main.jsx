@@ -25,7 +25,6 @@ import MainDashboard from './MainDashboard';
 import SignLogin from './SignLogin';
 import { ProtectedRoute } from './ProtectedRoute';
 
-
 function Main() {
     return (
         <Router>

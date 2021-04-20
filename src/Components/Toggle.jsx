@@ -43,7 +43,7 @@ function Toggle() {
         window.location.href="/login";
     }
 
-    if(window.location.hash === "#/login") {
+    if(window.location.pathname === "/login") {
         return null;
     }
     else{

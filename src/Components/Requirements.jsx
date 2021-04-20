@@ -7,9 +7,11 @@ import RequirementsMenuItem from './RequirementsMenuItem';
 function Requirements() {
     const [requirements, setRequirements] = useState({});
     const [allRequirements, setAllRequirements] = useState([]);
+    const {URL} = process.env;
+
 
     useEffect(() => {
-        axios.post('http://82.81.73.230:5011/ws/GetAllServiceProvidesTypes').then(res => {
+        axios.post(`${URL}/ws/GetAllServiceProvidesTypes`).then(res => {
             setAllRequirements(res.data.data);
         })
     })

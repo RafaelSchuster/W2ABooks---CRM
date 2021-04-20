@@ -13,6 +13,7 @@ function SignUp(props) {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
     const { nationality, thisUser } = useContext(MainContext);
+    const {URL} = process.env;
 
     const useLocalState = (localItem) => {
         const [localToken, setState] = useState(localStorage.getItem(localItem));
@@ -48,7 +49,7 @@ function SignUp(props) {
                 },
             };
             try {
-                axios.post('http://82.81.73.230:5011/ws/register_agent', newUser, config).then(res => {
+                axios.post(`${URL}/ws/register_agent`, newUser, config).then(res => {
                     if (res.data.message) setError(res.data.message)
                     else if (!res.data.message) {
                         setToken(true)

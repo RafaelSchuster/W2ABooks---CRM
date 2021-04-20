@@ -42,7 +42,7 @@ function Login(props) {
             },
         };
         try {
-            axios.post('http://82.81.73.230:5011/ws/login', newUser, config).then(res => {
+            axios.post(`${URL}/ws/login`, newUser, config).then(res => {
                 if (res.data.message) setError(res.data.message)
                 else if (!res.data.message) {
                     setToken(true)

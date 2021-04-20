@@ -19,35 +19,24 @@ function ToggleMain() {
 
     const atSetWorkingMaximize = () => {
         setWorkingMaximize(!workingMaximize);
-        setRecommendedMaximize(false);
-        setStarredMaximize(false);
-        setDeletedMaximize(false);
     }
 
-    const atSetRecommendedMaximize = () => {
-        setWorkingMaximize(false);
-        setRecommendedMaximize(!recommendedMaximize);
-        setStarredMaximize(false);
-        setDeletedMaximize(false);
+    const atSetRecommendedMaximize = () => {  
+        setRecommendedMaximize(!recommendedMaximize); 
     }
 
     const atSetStarredMaximize = () => {
-        setWorkingMaximize(false);
-        setRecommendedMaximize(false);
         setStarredMaximize(!starredMaximize);
-        setDeletedMaximize(false);
     }
 
     const atSetDeletedMaximize = () => {
-        setWorkingMaximize(false);
-        setRecommendedMaximize(false);
-        setStarredMaximize(false);
         setDeletedMaximize(!deletedMaximize);
     }
 
     return (<>
     <div className="grid-item grid-item-main">
-        <Accordion className="grid-main-toggle" defaultActiveKey='0' >
+        <span>
+        <Accordion className="grid-main-toggle5" defaultActiveKey="0">
             <Card className="grid-toggle-card" >
                 <Card.Header className="">
                     <Accordion.Toggle as={Card.Header} eventKey="0" className="grid-toggle-btn" title="Change View" onClick={() => atSetWorkingMaximize()}>
@@ -62,6 +51,8 @@ function ToggleMain() {
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
+            </Accordion>
+            <Accordion className="grid-main-toggle2" >
             <Card className="grid-toggle-card">
                 <Card.Header className="">
                     <Accordion.Toggle as={Card.Header} eventKey="1" className="grid-toggle-btn" title="Change View" onClick={() => atSetRecommendedMaximize()}>
@@ -76,6 +67,9 @@ function ToggleMain() {
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
+
+            </Accordion>
+            <Accordion className="grid-main-toggle3">
             <Card className="grid-toggle-card">
                 <Card.Header className="">
                     <Accordion.Toggle as={Card.Header} eventKey="2" className="grid-toggle-btn" title="Change View" onClick={() => atSetStarredMaximize()}>
@@ -90,6 +84,8 @@ function ToggleMain() {
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
+            </Accordion>
+            <Accordion className="grid-main-toggle4">
             <Card className="grid-toggle-card">
                 <Card.Header className="">
                     <Accordion.Toggle as={Card.Header} eventKey="3" className="grid-toggle-btn" title="Change View" onClick={() => atSetDeletedMaximize()}>
@@ -105,6 +101,7 @@ function ToggleMain() {
                 </Accordion.Collapse>
             </Card>
         </Accordion>
+        </span>
         </div>
     </>
     );
