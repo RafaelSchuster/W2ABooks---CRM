@@ -80,7 +80,7 @@ function BookItemGridView(props) {
                                 {props.progress && props.progress < 14 && props.progress != '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"></ProgressBar>}
                                 {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressBar-gridView"><span className="zero-percent" >0%</span></ProgressBar>} */}
                                 <div class="meter">
-                                    <span style={{width:`${props.progress}%`}}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                    <span style={{ width: `${props.progress}%` }}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
                                 </div>
                             </div>
                         </div>
@@ -106,8 +106,8 @@ function BookItemGridView(props) {
                                     {props.progress && <ProgressBar variant="warning" now={props.progress} label={`${props.progress}%`} className="progressbar-modal-grid"></ProgressBar>}
                                     {props.progress && props.progress === '0' && <ProgressBar variant="warning" now={props.progress} className="progressbar-modal-grid"><span className="zero-percent" >0%</span></ProgressBar>} */}
                                     <div class="meter">
-                                    <span style={{width:`${props.progress}%`}}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
-                                </div>
+                                        <span style={{ width: `${props.progress}%` }}><span class="progress"><span className="progress-label">{props.progress}%</span></span></span>
+                                    </div>
                                 </Card.Body>
                             </div>
                         </Modal>

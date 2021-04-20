@@ -4,7 +4,7 @@ import '../Styles/GenreProfile.css';
 function GenreMenuItem(props) {
     const { genre } = props;
     const onHandleInputChange = (e) => {
-        props.handleInputChange(e.target.id)
+        props.handleInputChange(e.target.id);
     }
     return (
         <div class="ganer-block ng-scope" ng-repeat="itm in userDataEdit.all_preferred_genres">

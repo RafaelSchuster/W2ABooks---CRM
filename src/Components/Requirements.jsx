@@ -10,22 +10,22 @@ function Requirements() {
 
     useEffect(() => {
         axios.post('http://82.81.73.230:5011/ws/GetAllServiceProvidesTypes').then(res => {
-            setAllRequirements(res.data.data)
+            setAllRequirements(res.data.data);
         })
     })
 
     const handleInputChange = (e) => {
-        const  id  = e;
+        const id = e;
         const requirementsValuesCopy = { ...requirements };
         if (!requirementsValuesCopy[id]) requirementsValuesCopy[id] = true;
         else if (requirementsValuesCopy[id]) requirementsValuesCopy[id] = !requirementsValuesCopy[id];
-        setRequirements(requirementsValuesCopy);       
+        setRequirements(requirementsValuesCopy);
     };
 
     return (
         <>
             <div class="list-of-requirements">
-            {allRequirements && allRequirements.map(requirement => <RequirementsMenuItem requirement={requirement} handleInputChange={handleInputChange}/>)}
+                {allRequirements && allRequirements.map(requirement => <RequirementsMenuItem requirement={requirement} handleInputChange={handleInputChange} />)}
             </div>
         </>
     )

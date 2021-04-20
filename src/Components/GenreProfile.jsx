@@ -10,7 +10,7 @@ function GenreProfile() {
 
     useEffect(() => {
         axios.post('http://82.81.73.230:5011/ws/GetGenres').then(res => { 
-        setAllGenres(res.data.data)})
+        setAllGenres(res.data.data)});
     })
 
     const handleInputChange = (e) => {

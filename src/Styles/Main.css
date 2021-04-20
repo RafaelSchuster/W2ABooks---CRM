@@ -78,7 +78,7 @@ html body {
   justify-content: space-between;
 }
 
-.logout-toggle-btn{
+.logout-toggle-btn {
   background-color: white !important;
   color: black !important;
   border: none !important;
@@ -417,7 +417,8 @@ html body {
   background-color: rgba(173, 170, 170, 0.411);
   z-index: 99;
 }
-.new-book-modal{
+
+.new-book-modal {
   position: absolute;
   top: 12vh;
   left: 0vw;
@@ -433,6 +434,7 @@ html body {
   height: 70vh;
   z-index: 99;
 }
+
 .jobs-modal-inner-div {
   position: absolute;
   top: -6%;
@@ -440,7 +442,7 @@ html body {
   transform: translate(-50%);
 }
 
-.add-book-container{
+.add-book-container {
   position: relative;
   top: -0px;
   left: 7vw;
@@ -534,7 +536,7 @@ a:hover {
   right: 1vw;
 }
 
-.meter-list { 
+.meter-list {
   width: 22vw;
   height: 45px;
   position: relative;
@@ -550,20 +552,25 @@ a:hover {
 .progress-list {
   background-color: #e4c465;
   animation: progressBar 3s ease-in-out;
-  animation-fill-mode:both; 
+  animation-fill-mode: both;
 }
 
 @keyframes progressBar {
-  0% { width: 0; }
-  100% { width: 100%; }
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
 }
 
-.progress-label-list{
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    color: rgb(7, 6, 6);
-    font-size: 14px;
+.progress-label-list {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: rgb(7, 6, 6);
+  font-size: 14px;
 }
 
 @media(max-width :1700px) {
@@ -650,7 +657,7 @@ a:hover {
     max-width: 44vw;
   }
 
-  .small-meter-list { 
+  .small-meter-list {
     width: 25vw;
     height: 45px;
     position: absolute;
@@ -658,31 +665,36 @@ a:hover {
     overflow: hidden;
     bottom: -1ch;
   }
-  
+
   .small-meter-list span {
     display: block;
     height: 100%;
   }
-  
+
   .small-progress-list {
     background-color: #e4c465;
     animation: progressBar 3s ease-in-out;
-    animation-fill-mode:both; 
+    animation-fill-mode: both;
   }
-  
+
   @keyframes progressBar {
-    0% { width: 0; }
-    100% { width: 100%; }
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
   }
-  
-  .small-progress-label-list{
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      color: rgb(7, 6, 6);
-      font-size: 14px;
+
+  .small-progress-label-list {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    color: rgb(7, 6, 6);
+    font-size: 14px;
   }
-  
+
   .genre-list {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -829,7 +841,8 @@ a:hover {
     bottom: -1ch;
     right: 0rem;
   }
-  .new-book-modal{
+
+  .new-book-modal {
     height: 80vh;
   }
 }
@@ -899,11 +912,11 @@ a:hover {
     top: 190px;
   }
 
-  .small-meter-list { 
+  .small-meter-list {
     width: 45vw;
     bottom: 0ch;
   }
-  
+
 
   .bookmark-icon-list {
     right: 14vw;
@@ -937,11 +950,13 @@ a:hover {
   .book-card {
     top: -60px;
   }
-  .new-book-modal{
+
+  .new-book-modal {
     top: 8vh;
     height: 85vh;
   }
-  .add-book-container{
+
+  .add-book-container {
     position: relative;
     top: -80px;
     left: 7vw;
