@@ -1,19 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import '../Styles/Requirements.css';
-import axios from 'axios';
 import RequirementsMenuItem from './RequirementsMenuItem';
+import { connectToServer } from '../HelperFunctions/ConnectToServer';
+
 
 
 function Requirements() {
     const [requirements, setRequirements] = useState({});
     const [allRequirements, setAllRequirements] = useState([]);
-    const {URL} = process.env;
+
+    const onSuccess = (res) => {
+        setAllRequirements(res.data.data);
+    }
+
+    const onError = (error) => console.log(error);
 
 
-    useEffect(() => {
-        axios.post(`${URL}/ws/GetAllServiceProvidesTypes`).then(res => {
-            setAllRequirements(res.data.data);
-        })
+    useEffect(async () => {
+        await connectToServer(`GetAllServiceProvidesTypes`, null, onSuccess, onError)
     })
 
     const handleInputChange = (e) => {

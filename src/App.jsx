@@ -2,6 +2,8 @@ import './Styles/Main.css';
 import { MainContext } from './Context/Context';
 import Main from './Components/Main';
 import { useEffect, useState } from 'react';
+import { connectToServer } from './HelperFunctions/ConnectToServer';
+
 
 const mockWorkingOnBooks = [
   {
@@ -323,12 +325,19 @@ function App() {
   const [monthsToRecommend, setMonthsToRecommend] = useState();
   const [msgs, setMsgs] = useState(mockMsgs);
 
-  useEffect(() => {
+  const onSuccess = (res) =>{
+    console.log(res);
+  }
+  const onError = (error) => console.log(error)
+
+  useEffect( async () => {
     setWorkingBooks(mockWorkingOnBooks);
     setRecommendedBooks(mockRecommendedBooks);
     setStarredBooks(mockStarredBooks);
     setDeletedBooks(mockDeletedBooks);
     setThisUser(thisMockUser);
+    await connectToServer(`GetAllBookByAgentId`,{"user_id": "3095"} , onSuccess, onError)
+
   }, [])
 
   return (

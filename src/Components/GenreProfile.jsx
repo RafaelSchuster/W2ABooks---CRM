@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import '../Styles/GenreProfile.css';
-import axios from 'axios';
 import GenreMenuItem from './GenreMenuItem';
+import { connectToServer } from '../HelperFunctions/ConnectToServer';
+
 
 
 function GenreProfile() {
     const [genres, setGenres] = useState({});
     const [allGenres, setAllGenres] = useState([]);
-    const {URL} = process.env;
+    const { REACT_APP_CONNECT_URL } = process.env;
+
+    const onSuccess = (res) => {
+        setAllGenres(res.data.data);
+    }
+
+    const onError = (error) => console.log(error);
 
 
-    useEffect(() => {
-        axios.post(`${URL}/ws/GetGenres`).then(res => { 
-        setAllGenres(res.data.data)});
+    useEffect(async () => {
+        await connectToServer(`GetGenres`, null, onSuccess, onError)
     })
 
     const handleInputChange = (e) => {
-        const  id  = e;
+        const id = e;
         const genreValuesCopy = { ...genres };
         if (!genreValuesCopy[id]) genreValuesCopy[id] = true;
         else if (genreValuesCopy[id]) genreValuesCopy[id] = !genreValuesCopy[id];
@@ -26,7 +32,7 @@ function GenreProfile() {
     return (
         <>
             <div class="list-of-ganres">
-            {allGenres && allGenres.map(genre => <GenreMenuItem genre={genre} handleInputChange={handleInputChange}/>)}
+                {allGenres && allGenres.map(genre => <GenreMenuItem genre={genre} handleInputChange={handleInputChange} />)}
             </div>
         </>
     )

@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Button, Container, Form, Col, Alert, Card, DropdownButton, Dropdown } from 'react-bootstrap';
 import { MainContext } from '../Context/Context';
 import '../Styles/SignLogin.css';
-import axios from 'axios';
+import { connectToServer } from '../HelperFunctions/ConnectToServer';
+
 
 function Login(props) {
     const [error, setError] = useState();
@@ -32,26 +33,20 @@ function Login(props) {
         setProfileValues(profileValuesCopy);
     }, [nationality])
 
-    const submitProfile = (e) => {
+    const submitProfile = async (e) => {
         e.preventDefault()
         setError('');
         const newUser = profileValues;
-        let config = {
-            headers: {
-                "Content-Type": "application/json;charset=UTF-8"
-            },
-        };
-        try {
-            axios.post(`${URL}/ws/login`, newUser, config).then(res => {
-                if (res.data.message) setError(res.data.message)
-                else if (!res.data.message) {
-                    setToken(true)
-                    window.location.href = '/';
-                }
-            })
-        } catch (error) {
-            console.log(error)
+        const onSuccess = (res) => {
+            if (res.data.message) setError(res.data.message)
+            else if (!res.data.message) {
+                setToken(true)
+                window.location.href = '/';
+            }
         }
+        const onError = (error) => console.log(error)
+
+        await connectToServer(`login`, newUser, onSuccess, onError)
     }
 
     return (

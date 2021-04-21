@@ -6,14 +6,13 @@ import NationalitiesDrop from './NationalitiesDrop';
 import DefaultImg from '../images/default_user.png';
 import MonthsDropdown from './DropdownMonths';
 import '../Styles/SignLogin.css';
-import axios from 'axios';
+import { connectToServer } from '../HelperFunctions/ConnectToServer';
 
 
 function SignUp(props) {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
     const { nationality, thisUser } = useContext(MainContext);
-    const {URL} = process.env;
 
     const useLocalState = (localItem) => {
         const [localToken, setState] = useState(localStorage.getItem(localItem));
@@ -43,22 +42,16 @@ function SignUp(props) {
         if (profileValues.password === profileValues.password2) {
             setError('');
             const newUser = profileValues;
-            let config = {
-                headers: {
-                    "Content-Type": "application/json;charset=UTF-8"
-                },
-            };
-            try {
-                axios.post(`${URL}/ws/register_agent`, newUser, config).then(res => {
-                    if (res.data.message) setError(res.data.message)
-                    else if (!res.data.message) {
-                        setToken(true)
-                        window.location.href = '/';
-                    }
-                })
-            } catch (error) {
-                console.log(error)
+            const onSuccess = (res) => {
+                if (res.data.message) setError(res.data.message)
+                else if (!res.data.message) {
+                    setToken(true)
+                    window.location.href = '/';
+                }
             }
+            const onError = (error) => console.log(error)
+
+            await connectToServer(`register_agent`, newUser, onSuccess, onError)
         }
         else return setError('Passwords do not match');
     }

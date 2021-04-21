@@ -60,6 +60,11 @@
 }
 
 @media(max-width:1000px) {
+    .toggle-main-div {
+        position: relative;
+        min-width: 100vw;
+    }
+
     .grid-main-toggle {
         position: absolute;
         top: 12%;
@@ -85,6 +90,12 @@
 }
 
 @media(max-width:700px) {
+    .toggle-main-div {
+        position: relative;
+        top: 100px;
+        min-width: 100vw;
+    }
+
     .grid-main-toggle {
         position: absolute;
         top: 160px;
