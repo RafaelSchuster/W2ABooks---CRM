@@ -4,7 +4,6 @@ import { MainContext } from '../Context/Context';
 import '../Styles/SignLogin.css';
 import { connectToServer } from '../HelperFunctions/ConnectToServer';
 
-
 function Login(props) {
     const [error, setError] = useState();
     const [profileValues, setProfileValues] = useState({});
